@@ -1,0 +1,47 @@
+include qw.sys
+
+trialfunc {
+   include qw.linear.wfout
+   }
+
+
+method {
+    dmc
+    nconfig 8
+    timestep 0.01
+    nstep 100
+    nblock 40
+    label ts_0.01
+    tmoves
+    }
+
+method {
+    dmc
+    nconfig 8
+    timestep 0.005
+    nstep 200
+    nblock 40
+    label ts_0.005
+    tmoves
+    }
+
+method {
+    dmc
+    nconfig 8
+    timestep 0.002
+    nstep 500
+    nblock 40 
+    label ts_0.002
+    tmoves
+    }
+
+method {
+    dmc
+    nconfig 8
+    timestep 0.001
+    nstep 1000
+    nblock 40
+    label ts_0.001
+    tmoves
+    }
+
