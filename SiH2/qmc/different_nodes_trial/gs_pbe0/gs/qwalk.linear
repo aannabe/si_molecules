@@ -1,0 +1,9 @@
+method { LINEAR
+	TOTAL_NSTEP 4000  #16384
+	MAX_VMC_NSTEP 8  #8
+	ITERATIONS 2  #30
+	#EN_CONVERGENCE 0.001
+}
+include qwalk.sys
+trialfunc { include fixed_basis.wf }
+
