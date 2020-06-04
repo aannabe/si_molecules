@@ -1,2 +1,2 @@
-# si_diamond
-Data for Si diamond structure solid
+# si_molecules
+Data for Si molecules paper
