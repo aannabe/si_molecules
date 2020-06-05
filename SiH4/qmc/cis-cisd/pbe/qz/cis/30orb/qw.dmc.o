@@ -1,0 +1,3082 @@
+------------------------------------------------
+Quantum Walk development version
+Contributions from: (in no particular order) 
+Michal Bajdich, Shuming Hu, Jindrich Kolorenc, Kevin Rasch, 
+Pavel Vagner, Rene Derian, Paul Kent, Jarrod McClean, 
+Fernando Reboredo, Lucas Wagner, Hiori Kino, Lubos Mitas, Brian Busemeyer, Joshua Schiller,
+Li Chen, Kiel Williams, and Huihuo Zheng
+Originated at North Carolina State University 
+Please cite J. Comp. Phys. v 228 pp 3390-3404 (2009) 
+ when publishing results from this program.
+------------------------------------------------
+Running on nid03608
+Mon Jun  1 13:45:12 2020
+
+Atomic positions 
+ Label          Charge            x               y               z   
+    SI               4               0               0               0
+     H               1         1.61458         1.61458         1.61458
+     H               1        -1.61458        -1.61458         1.61458
+     H               1        -1.61458         1.61458        -1.61458
+     H               1         1.61458        -1.61458        -1.61458
+Pseudopotential 
+atom SI
+Integration points 12
+Cutoff for static calculation 2.6
+Pseudopotential for spin up: 
+  R^n *Gaussian
+  Expansion 0
+       coeff         n  exponent
+     14.8328         0   9.44702
+     26.3497         0   2.55381
+  Expansion 1
+       coeff         n  exponent
+      7.6214         0      3.66
+     10.3316         0   1.90365
+  Expansion 2
+       coeff         n  exponent
+           4        -1   5.16832
+     20.6733         1   8.86169
+    -14.8182         0   3.93347
+Pseudopotential for spin down: 
+  R^n *Gaussian
+  Expansion 0
+       coeff         n  exponent
+     14.8328         0   9.44702
+     26.3497         0   2.55381
+  Expansion 1
+       coeff         n  exponent
+      7.6214         0      3.66
+     10.3316         0   1.90365
+  Expansion 2
+       coeff         n  exponent
+           4        -1   5.16832
+     20.6733         1   8.86169
+    -14.8182         0   3.93347
+atom H
+Integration points 6
+Cutoff for static calculation 20
+Pseudopotential for spin up: 
+  R^n *Gaussian
+  Expansion 0
+       coeff         n  exponent
+           0         0         1
+  Expansion 1
+       coeff         n  exponent
+           1        -1   21.2436
+     21.2436         1   21.2436
+    -10.8519         0    21.777
+Pseudopotential for spin down: 
+  R^n *Gaussian
+  Expansion 0
+       coeff         n  exponent
+           0         0         1
+  Expansion 1
+       coeff         n  exponent
+           1        -1   21.2436
+     21.2436         1   21.2436
+    -10.8519         0    21.777
+Slater Determinant
+116 determinants
+Determinant 0:
+Weight: 0.440484
+State: 
+spin up:
+  1 2 3 4 
+spin down: 
+  1 3 4 6 
+Determinant 1:
+Weight: 0.440484
+State: 
+spin up:
+  1 3 4 6 
+spin down: 
+  1 2 3 4 
+Determinant 2:
+Weight: 0.407297
+State: 
+spin up:
+  1 2 3 4 
+spin down: 
+  1 2 4 5 
+Determinant 3:
+Weight: 0.407297
+State: 
+spin up:
+  1 2 4 5 
+spin down: 
+  1 2 3 4 
+Determinant 4:
+Weight: -0.268126
+State: 
+spin up:
+  1 2 3 4 
+spin down: 
+  1 2 4 7 
+Determinant 5:
+Weight: -0.268126
+State: 
+spin up:
+  1 2 4 7 
+spin down: 
+  1 2 3 4 
+Determinant 6:
+Weight: -0.211079
+State: 
+spin up:
+  1 2 3 4 
+spin down: 
+  1 3 4 7 
+Determinant 7:
+Weight: -0.211079
+State: 
+spin up:
+  1 3 4 7 
+spin down: 
+  1 2 3 4 
+Determinant 8:
+Weight: -0.0803238
+State: 
+spin up:
+  1 2 3 4 
+spin down: 
+  1 3 4 5 
+Determinant 9:
+Weight: -0.0803238
+State: 
+spin up:
+  1 3 4 5 
+spin down: 
+  1 2 3 4 
+Determinant 10:
+Weight: -0.0783998
+State: 
+spin up:
+  1 2 3 4 
+spin down: 
+  1 2 3 7 
+Determinant 11:
+Weight: -0.0783998
+State: 
+spin up:
+  1 2 3 7 
+spin down: 
+  1 2 3 4 
+Determinant 12:
+Weight: -0.0680258
+State: 
+spin up:
+  1 2 3 4 
+spin down: 
+  1 2 4 6 
+Determinant 13:
+Weight: -0.0680258
+State: 
+spin up:
+  1 2 4 6 
+spin down: 
+  1 2 3 4 
+Determinant 14:
+Weight: 0.0612043
+State: 
+spin up:
+  1 2 3 4 
+spin down: 
+  1 2 3 5 
+Determinant 15:
+Weight: 0.0612043
+State: 
+spin up:
+  1 2 3 5 
+spin down: 
+  1 2 3 4 
+Determinant 16:
+Weight: 0.0514427
+State: 
+spin up:
+  1 2 3 4 
+spin down: 
+  1 2 3 6 
+Determinant 17:
+Weight: 0.0514427
+State: 
+spin up:
+  1 2 3 6 
+spin down: 
+  1 2 3 4 
+Determinant 18:
+Weight: -0.00220759
+State: 
+spin up:
+  1 2 3 4 
+spin down: 
+  1 3 4 21 
+Determinant 19:
+Weight: -0.00220759
+State: 
+spin up:
+  1 3 4 21 
+spin down: 
+  1 2 3 4 
+Determinant 20:
+Weight: 0.00217365
+State: 
+spin up:
+  1 2 3 4 
+spin down: 
+  1 2 4 20 
+Determinant 21:
+Weight: 0.00217365
+State: 
+spin up:
+  1 2 4 20 
+spin down: 
+  1 2 3 4 
+Determinant 22:
+Weight: 0.00155281
+State: 
+spin up:
+  1 2 3 4 
+spin down: 
+  1 3 4 22 
+Determinant 23:
+Weight: 0.00155281
+State: 
+spin up:
+  1 3 4 22 
+spin down: 
+  1 2 3 4 
+Determinant 24:
+Weight: 0.0014326
+State: 
+spin up:
+  1 2 3 4 
+spin down: 
+  1 3 4 23 
+Determinant 25:
+Weight: 0.0014326
+State: 
+spin up:
+  1 3 4 23 
+spin down: 
+  1 2 3 4 
+Determinant 26:
+Weight: 0.00142623
+State: 
+spin up:
+  1 2 3 4 
+spin down: 
+  1 2 4 24 
+Determinant 27:
+Weight: 0.00142623
+State: 
+spin up:
+  1 2 4 24 
+spin down: 
+  1 2 3 4 
+Determinant 28:
+Weight: -0.00116461
+State: 
+spin up:
+  1 2 3 4 
+spin down: 
+  1 2 4 21 
+Determinant 29:
+Weight: -0.00116461
+State: 
+spin up:
+  1 2 4 21 
+spin down: 
+  1 2 3 4 
+Determinant 30:
+Weight: -0.00114976
+State: 
+spin up:
+  1 2 3 4 
+spin down: 
+  1 2 4 22 
+Determinant 31:
+Weight: -0.00114976
+State: 
+spin up:
+  1 2 4 22 
+spin down: 
+  1 2 3 4 
+Determinant 32:
+Weight: -0.000526795
+State: 
+spin up:
+  1 2 3 4 
+spin down: 
+  1 2 3 21 
+Determinant 33:
+Weight: -0.000526795
+State: 
+spin up:
+  1 2 3 21 
+spin down: 
+  1 2 3 4 
+Determinant 34:
+Weight: -0.000448306
+State: 
+spin up:
+  1 2 3 4 
+spin down: 
+  1 3 4 20 
+Determinant 35:
+Weight: -0.000448306
+State: 
+spin up:
+  1 3 4 20 
+spin down: 
+  1 2 3 4 
+Determinant 36:
+Weight: 0.000323855
+State: 
+spin up:
+  1 2 3 4 
+spin down: 
+  1 2 3 20 
+Determinant 37:
+Weight: 0.000323855
+State: 
+spin up:
+  1 2 3 20 
+spin down: 
+  1 2 3 4 
+Determinant 38:
+Weight: 0.00027365
+State: 
+spin up:
+  1 2 3 4 
+spin down: 
+  1 2 4 25 
+Determinant 39:
+Weight: 0.00027365
+State: 
+spin up:
+  1 2 4 25 
+spin down: 
+  1 2 3 4 
+Determinant 40:
+Weight: 0.000249609
+State: 
+spin up:
+  1 2 3 4 
+spin down: 
+  1 2 3 24 
+Determinant 41:
+Weight: 0.000249609
+State: 
+spin up:
+  1 2 3 24 
+spin down: 
+  1 2 3 4 
+Determinant 42:
+Weight: 0.000216375
+State: 
+spin up:
+  1 2 3 4 
+spin down: 
+  1 3 4 25 
+Determinant 43:
+Weight: 0.000216375
+State: 
+spin up:
+  1 3 4 25 
+spin down: 
+  1 2 3 4 
+Determinant 44:
+Weight: 0.000206475
+State: 
+spin up:
+  1 2 3 4 
+spin down: 
+  1 2 3 23 
+Determinant 45:
+Weight: 0.000206475
+State: 
+spin up:
+  1 2 3 23 
+spin down: 
+  1 2 3 4 
+Determinant 46:
+Weight: 0.000168999
+State: 
+spin up:
+  1 2 3 4 
+spin down: 
+  1 3 4 26 
+Determinant 47:
+Weight: 0.000168999
+State: 
+spin up:
+  1 3 4 26 
+spin down: 
+  1 2 3 4 
+Determinant 48:
+Weight: 0.000154149
+State: 
+spin up:
+  1 2 3 4 
+spin down: 
+  1 2 4 27 
+Determinant 49:
+Weight: 0.000154149
+State: 
+spin up:
+  1 2 4 27 
+spin down: 
+  1 2 3 4 
+Determinant 50:
+Weight: 0.000138593
+State: 
+spin up:
+  1 2 3 4 
+spin down: 
+  1 2 4 16 
+Determinant 51:
+Weight: 0.000138593
+State: 
+spin up:
+  1 2 4 16 
+spin down: 
+  1 2 3 4 
+Determinant 52:
+Weight: -0.000103238
+State: 
+spin up:
+  1 2 3 4 
+spin down: 
+  1 3 4 17 
+Determinant 53:
+Weight: -0.000103238
+State: 
+spin up:
+  1 3 4 17 
+spin down: 
+  1 2 3 4 
+Determinant 54:
+Weight: 9.97021e-05
+State: 
+spin up:
+  1 2 3 4 
+spin down: 
+  1 2 4 30 
+Determinant 55:
+Weight: 9.97021e-05
+State: 
+spin up:
+  1 2 4 30 
+spin down: 
+  1 2 3 4 
+Determinant 56:
+Weight: -9.97021e-05
+State: 
+spin up:
+  1 2 3 4 
+spin down: 
+  1 3 4 18 
+Determinant 57:
+Weight: -9.97021e-05
+State: 
+spin up:
+  1 3 4 18 
+spin down: 
+  1 2 3 4 
+Determinant 58:
+Weight: 9.8995e-05
+State: 
+spin up:
+  1 2 3 4 
+spin down: 
+  1 3 4 28 
+Determinant 59:
+Weight: 9.8995e-05
+State: 
+spin up:
+  1 3 4 28 
+spin down: 
+  1 2 3 4 
+Determinant 60:
+Weight: 7.99031e-05
+State: 
+spin up:
+  1 2 3 4 
+spin down: 
+  1 2 3 25 
+Determinant 61:
+Weight: 7.99031e-05
+State: 
+spin up:
+  1 2 3 25 
+spin down: 
+  1 2 3 4 
+Determinant 62:
+Weight: 7.70747e-05
+State: 
+spin up:
+  1 2 3 4 
+spin down: 
+  2 3 4 33 
+Determinant 63:
+Weight: 7.70747e-05
+State: 
+spin up:
+  2 3 4 33 
+spin down: 
+  1 2 3 4 
+Determinant 64:
+Weight: 4.80833e-05
+State: 
+spin up:
+  1 2 3 4 
+spin down: 
+  1 2 3 27 
+Determinant 65:
+Weight: 4.80833e-05
+State: 
+spin up:
+  1 2 3 27 
+spin down: 
+  1 2 3 4 
+Determinant 66:
+Weight: -4.52548e-05
+State: 
+spin up:
+  1 2 3 4 
+spin down: 
+  1 2 3 33 
+Determinant 67:
+Weight: -4.52548e-05
+State: 
+spin up:
+  1 2 3 33 
+spin down: 
+  1 2 3 4 
+Determinant 68:
+Weight: -3.46482e-05
+State: 
+spin up:
+  1 2 3 4 
+spin down: 
+  1 3 4 24 
+Determinant 69:
+Weight: -3.46482e-05
+State: 
+spin up:
+  1 3 4 24 
+spin down: 
+  1 2 3 4 
+Determinant 70:
+Weight: 3.25269e-05
+State: 
+spin up:
+  1 2 3 4 
+spin down: 
+  1 2 4 17 
+Determinant 71:
+Weight: 3.25269e-05
+State: 
+spin up:
+  1 2 4 17 
+spin down: 
+  1 2 3 4 
+Determinant 72:
+Weight: -2.89914e-05
+State: 
+spin up:
+  1 2 3 4 
+spin down: 
+  1 3 4 29 
+Determinant 73:
+Weight: -2.89914e-05
+State: 
+spin up:
+  1 3 4 29 
+spin down: 
+  1 2 3 4 
+Determinant 74:
+Weight: 2.54559e-05
+State: 
+spin up:
+  1 2 3 4 
+spin down: 
+  1 2 3 16 
+Determinant 75:
+Weight: 2.54559e-05
+State: 
+spin up:
+  1 2 3 16 
+spin down: 
+  1 2 3 4 
+Determinant 76:
+Weight: 2.33345e-05
+State: 
+spin up:
+  1 2 3 4 
+spin down: 
+  1 3 4 31 
+Determinant 77:
+Weight: 2.33345e-05
+State: 
+spin up:
+  1 3 4 31 
+spin down: 
+  1 2 3 4 
+Determinant 78:
+Weight: -2.33345e-05
+State: 
+spin up:
+  1 2 3 4 
+spin down: 
+  1 2 4 26 
+Determinant 79:
+Weight: -2.33345e-05
+State: 
+spin up:
+  1 2 4 26 
+spin down: 
+  1 2 3 4 
+Determinant 80:
+Weight: 2.19203e-05
+State: 
+spin up:
+  1 2 3 4 
+spin down: 
+  1 2 4 33 
+Determinant 81:
+Weight: 2.19203e-05
+State: 
+spin up:
+  1 2 4 33 
+spin down: 
+  1 2 3 4 
+Determinant 82:
+Weight: 2.19203e-05
+State: 
+spin up:
+  1 2 3 4 
+spin down: 
+  1 2 3 32 
+Determinant 83:
+Weight: 2.19203e-05
+State: 
+spin up:
+  1 2 3 32 
+spin down: 
+  1 2 3 4 
+Determinant 84:
+Weight: 2.19203e-05
+State: 
+spin up:
+  1 2 3 4 
+spin down: 
+  1 2 4 28 
+Determinant 85:
+Weight: 2.19203e-05
+State: 
+spin up:
+  1 2 4 28 
+spin down: 
+  1 2 3 4 
+Determinant 86:
+Weight: 2.12132e-05
+State: 
+spin up:
+  1 2 3 4 
+spin down: 
+  1 2 4 32 
+Determinant 87:
+Weight: 2.12132e-05
+State: 
+spin up:
+  1 2 4 32 
+spin down: 
+  1 2 3 4 
+Determinant 88:
+Weight: 1.9799e-05
+State: 
+spin up:
+  1 2 3 4 
+spin down: 
+  1 2 4 29 
+Determinant 89:
+Weight: 1.9799e-05
+State: 
+spin up:
+  1 2 4 29 
+spin down: 
+  1 2 3 4 
+Determinant 90:
+Weight: -1.90919e-05
+State: 
+spin up:
+  1 2 3 4 
+spin down: 
+  2 3 4 32 
+Determinant 91:
+Weight: -1.90919e-05
+State: 
+spin up:
+  2 3 4 32 
+spin down: 
+  1 2 3 4 
+Determinant 92:
+Weight: 1.83848e-05
+State: 
+spin up:
+  1 2 3 4 
+spin down: 
+  1 2 3 28 
+Determinant 93:
+Weight: 1.83848e-05
+State: 
+spin up:
+  1 2 3 28 
+spin down: 
+  1 2 3 4 
+Determinant 94:
+Weight: 1.83848e-05
+State: 
+spin up:
+  1 2 3 4 
+spin down: 
+  1 2 3 22 
+Determinant 95:
+Weight: 1.83848e-05
+State: 
+spin up:
+  1 2 3 22 
+spin down: 
+  1 2 3 4 
+Determinant 96:
+Weight: -1.76777e-05
+State: 
+spin up:
+  1 2 3 4 
+spin down: 
+  1 3 4 30 
+Determinant 97:
+Weight: -1.76777e-05
+State: 
+spin up:
+  1 3 4 30 
+spin down: 
+  1 2 3 4 
+Determinant 98:
+Weight: -1.76777e-05
+State: 
+spin up:
+  1 2 3 4 
+spin down: 
+  1 2 3 18 
+Determinant 99:
+Weight: -1.76777e-05
+State: 
+spin up:
+  1 2 3 18 
+spin down: 
+  1 2 3 4 
+Determinant 100:
+Weight: -1.76777e-05
+State: 
+spin up:
+  1 2 3 4 
+spin down: 
+  1 2 4 18 
+Determinant 101:
+Weight: -1.76777e-05
+State: 
+spin up:
+  1 2 4 18 
+spin down: 
+  1 2 3 4 
+Determinant 102:
+Weight: -1.62635e-05
+State: 
+spin up:
+  1 2 3 4 
+spin down: 
+  2 3 4 31 
+Determinant 103:
+Weight: -1.62635e-05
+State: 
+spin up:
+  2 3 4 31 
+spin down: 
+  1 2 3 4 
+Determinant 104:
+Weight: 1.62635e-05
+State: 
+spin up:
+  1 2 3 4 
+spin down: 
+  1 2 3 26 
+Determinant 105:
+Weight: 1.62635e-05
+State: 
+spin up:
+  1 2 3 26 
+spin down: 
+  1 2 3 4 
+Determinant 106:
+Weight: 1.55563e-05
+State: 
+spin up:
+  1 2 3 4 
+spin down: 
+  1 2 3 31 
+Determinant 107:
+Weight: 1.55563e-05
+State: 
+spin up:
+  1 2 3 31 
+spin down: 
+  1 2 3 4 
+Determinant 108:
+Weight: 1.55563e-05
+State: 
+spin up:
+  1 2 3 4 
+spin down: 
+  1 2 3 30 
+Determinant 109:
+Weight: 1.55563e-05
+State: 
+spin up:
+  1 2 3 30 
+spin down: 
+  1 2 3 4 
+Determinant 110:
+Weight: 1.27279e-05
+State: 
+spin up:
+  1 2 3 4 
+spin down: 
+  1 3 4 13 
+Determinant 111:
+Weight: 1.27279e-05
+State: 
+spin up:
+  1 3 4 13 
+spin down: 
+  1 2 3 4 
+Determinant 112:
+Weight: 1.27279e-05
+State: 
+spin up:
+  1 2 3 4 
+spin down: 
+  1 2 4 12 
+Determinant 113:
+Weight: 1.27279e-05
+State: 
+spin up:
+  1 2 4 12 
+spin down: 
+  1 2 3 4 
+Determinant 114:
+Weight: 1.06066e-05
+State: 
+spin up:
+  1 2 3 4 
+spin down: 
+  1 3 4 33 
+Determinant 115:
+Weight: 1.06066e-05
+State: 
+spin up:
+  1 3 4 33 
+spin down: 
+  1 2 3 4 
+Molecular Orbital object : Cutoff MO 
+Number of molecular orbitals: 34
+Basis functions: 
+  Cubic spline for SI
+  14  radial functions
+    function  symmetry    cutoff
+           0         S     20.48
+           1         S      6.98
+           2         S     10.98
+           3         S     16.98
+           4         P     23.98
+           5         P      4.48
+           6         P      6.98
+           7         P     10.98
+           8        6D      4.98
+           9        6D      7.98
+          10        6D     13.48
+          11       10F      6.48
+          12       10F     10.48
+          13       15G      7.48
+  Cubic spline for H
+  10  radial functions
+    function  symmetry    cutoff
+           0         S     17.98
+           1         S     16.98
+           2         S      9.98
+           3         S      5.98
+           4         P      9.48
+           5         P      5.48
+           6         P      3.48
+           7        6D      5.98
+           8        6D      3.98
+           9       10F      4.48
+
+Jastrow2 function
+Group 0
+  Separate spin two-body
+    Coefficients frozen
+    Like coefficients 0.25  0  
+    Unlike Coefficients 0  0.5  
+
+  Electron-electron basis
+    Cutoff cusp
+    Gamma 26.806   Cusp 1
+    Cutoff cusp
+    Gamma 17.335   Cusp 1
+
+Group 1
+  One-body terms 
+    Atom   Coefficients 
+    SI  0.592638  0.240267  -0.255475  0.267773  0.195636  
+    H  0.672095  0.298775  -0.156447  -0.00639094  0.0116751  
+
+  Two-body terms 
+    Coefficients -0.00333156  -0.617967  -0.267405  0.0266479  -0.0319993  
+   Three-body terms 
+    Atom   Coefficients 
+    SI  -0.0564871  0.322524  -0.186528  0.297859  -0.162801  -0.0684434  0.0580439  0.11209  -0.183263  0.0198263  -0.0355752  0.011679  
+    H  -0.357001  0.178819  -0.0529052  -0.108373  0.164139  0.141763  0.00347008  0.000348485  -0.0518418  0.0131762  -0.0266726  0.0187721  
+
+  Electron-ion basis
+    Poly_pade function
+    beta : 0.132093  4.60735  26.7734  136.562  680.351  
+    cutoff distance : 15
+
+    Poly_pade function
+    beta : -0.0318704  3.79523  22.7509  116.639  581.67  
+    cutoff distance : 7.5
+
+
+  Electron-electron basis
+    Poly_pade function
+    beta : 0.253781  5.21007  29.7587  151.349  753.588  
+    cutoff distance : 15
+
+###########################################################
+Diffusion Monte Carlo:
+Number of processors 2176
+Blocks: 60
+Steps per block: 1000
+Timestep: 0.001
+T-moves turned on
+  recursion depth 1
+  timestep divider 1
+  restricting node crossings
+  drift type 1
+###########################################################
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 0.996875
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 0.996875
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 0.996875
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 0.996875
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 0.996875
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+***
+Block 0 etrial -5.92560579
+maximum age 0 average age 0
+Total acceptance 0.999921875
+accept_level0   0.999921875 tries 64000
+            total_energy             kinetic           potential            nonlocal
+  ##0        -5.918486273         3.987222096        -10.51944044        0.6137320764   (value)
+  &&0        0.2759931143         2.166644251         2.466644738         1.583517846   (sigma)
+Branched 11 times.  So a branch every 1582545.455 steps 
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 0.996875
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 0.996875
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 0.996875
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 0.996875
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+***
+Block 1 etrial -5.927128927
+maximum age 0 average age 0
+Total acceptance 0.9999375
+accept_level0   0.9999375 tries 64000
+            total_energy             kinetic           potential            nonlocal
+  ##0        -5.924035238         3.972060021        -10.51178633        0.6156910728   (value)
+  &&0        0.2770362407         2.164126135         2.442183601         1.556985066   (sigma)
+Branched 71 times.  So a branch every 245183.0986 steps 
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 0.996875
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+***
+Block 2 etrial -5.926500004
+maximum age 0 average age 0
+Total acceptance 0.999984375
+accept_level0   0.999984375 tries 64000
+            total_energy             kinetic           potential            nonlocal
+  ##0        -5.924824534         4.004243497        -10.54214231        0.6130742817   (value)
+  &&0        0.2737749536         2.160114893         2.474714265         1.580521841   (sigma)
+Branched 231 times.  So a branch every 75359.30736 steps 
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 0.996875
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 0.996875
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 0.996875
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 0.996875
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+***
+Block 3 etrial -5.927341468
+maximum age 0 average age 0
+Total acceptance 0.9999375
+accept_level0   0.9999375 tries 64000
+            total_energy             kinetic           potential            nonlocal
+  ##0        -5.926685378         3.994340643        -10.53350132        0.6124753031   (value)
+  &&0        0.2700309045         2.166768589         2.490958476         1.616904609   (sigma)
+Branched 344 times.  So a branch every 50604.65116 steps 
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 0.996875
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 0.996875
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 0.996875
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+***
+Block 4 etrial -5.927075638
+maximum age 0 average age 0
+Total acceptance 0.999953125
+accept_level0   0.999953125 tries 64000
+            total_energy             kinetic           potential            nonlocal
+  ##0        -5.926505972         3.995188605        -10.52544895        0.6037543721   (value)
+  &&0        0.2737017804         2.159285486         2.467861477         1.575661001   (sigma)
+Branched 393 times.  So a branch every 44295.16539 steps 
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 0.996875
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 0.996875
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 0.996875
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+***
+Block 5 etrial -5.928764496
+maximum age 0 average age 0
+Total acceptance 0.999953125
+accept_level0   0.999953125 tries 64000
+            total_energy             kinetic           potential            nonlocal
+  ##0        -5.926802135         3.985551177        -10.53205889        0.6197055783   (value)
+  &&0        0.2723610975         2.165049355         2.462434910         1.581546599   (sigma)
+Branched 449 times.  So a branch every 38770.60134 steps 
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 0.996875
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 0.996875
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 0.996875
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+***
+Block 6 etrial -5.928603748
+maximum age 0 average age 0
+Total acceptance 0.999953125
+accept_level0   0.999953125 tries 64000
+            total_energy             kinetic           potential            nonlocal
+  ##0        -5.928486849         3.988948756        -10.52634648        0.6089108806   (value)
+  &&0        0.2717527368         2.179006853         2.480826464         1.558298133   (sigma)
+Branched 455 times.  So a branch every 38259.34066 steps 
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 0.996875
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 0.996875
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+***
+Block 7 etrial -5.929840332
+maximum age 0 average age 0
+Total acceptance 0.99996875
+accept_level0   0.99996875 tries 64000
+            total_energy             kinetic           potential            nonlocal
+  ##0        -5.929428699         3.994123917        -10.53341359        0.6098609700   (value)
+  &&0        0.2683181472         2.169904499         2.472226872         1.556554746   (sigma)
+Branched 485 times.  So a branch every 35892.78351 steps 
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 0.996875
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 0.996875
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+***
+Block 8 etrial -5.929559363
+maximum age 0 average age 0
+Total acceptance 0.99996875
+accept_level0   0.99996875 tries 64000
+            total_energy             kinetic           potential            nonlocal
+  ##0        -5.929316021         3.990293676        -10.52837801        0.6087683122   (value)
+  &&0        0.2766765009         2.168408938         2.475607979         1.597930192   (sigma)
+Branched 471 times.  So a branch every 36959.6603 steps 
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 0.996875
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 0.996875
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 0.996875
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 0.996875
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+***
+Block 9 etrial -5.928172192
+maximum age 0 average age 0
+Total acceptance 0.9999375
+accept_level0   0.9999375 tries 64000
+            total_energy             kinetic           potential            nonlocal
+  ##0        -5.927995562         3.998689252        -10.53899572        0.6123109011   (value)
+  &&0        0.2825027951         2.177553430         2.491270226         1.620109594   (sigma)
+Branched 455 times.  So a branch every 38259.34066 steps 
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1
+Acceptance 1

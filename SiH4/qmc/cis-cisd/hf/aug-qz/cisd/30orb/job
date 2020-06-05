@@ -1,0 +1,21 @@
+#!/bin/bash -l
+#SBATCH -J Bi_job
+#SBATCH -q regular
+#SBATCH -N 8
+#SBATCH -C knl
+#SBATCH -t 01:20:00
+#SBATCH -o so_qwalk.o%j
+
+srun -n 2176 -c 1 --cpu_bind=threads qwalk-cori qw.hf > HF.log
+
+srun -n 2176 -c 1 --cpu_bind=threads qwalk-cori qw.opt > OPT.log
+
+python add3bodyjs.py
+
+srun -n 2176 -c 1 --cpu_bind=threads qwalk-cori qw.opt3 > OPT3.log
+
+sed s/OPTIMIZEBASIS//g qw.opt3.wfout > fixed_basis.wfout
+
+srun -n 2176 -c 1 --cpu_bind=threads qwalk-cori qw.linear > LINEAR.log
+
+srun -n 2176 -c 1 --cpu_bind=threads qwalk-cori qw.dmc > DMC.log

@@ -1,0 +1,656 @@
+------------------------------------------------
+Quantum Walk development version
+Contributions from: (in no particular order) 
+Michal Bajdich, Shuming Hu, Jindrich Kolorenc, Kevin Rasch, 
+Pavel Vagner, Rene Derian, Paul Kent, Jarrod McClean, 
+Fernando Reboredo, Lucas Wagner, Hiori Kino, Lubos Mitas, Brian Busemeyer, Joshua Schiller,
+Li Chen, Kiel Williams, and Huihuo Zheng
+Originated at North Carolina State University 
+Please cite J. Comp. Phys. v 228 pp 3390-3404 (2009) 
+ when publishing results from this program.
+------------------------------------------------
+Running on nid00077
+Sat May 30 14:58:31 2020
+
+     System 
+Atomic positions 
+ Label          Charge            x               y               z   
+    SI               4               0               0               0
+     H               1         1.61458         1.61458         1.61458
+     H               1        -1.61458        -1.61458         1.61458
+     H               1        -1.61458         1.61458        -1.61458
+     H               1         1.61458        -1.61458        -1.61458
+
+
+     Wavefunction 
+Slater Determinant
+50 determinants
+Determinant 0:
+Weight: 0.33205
+State: 
+spin up:
+  1 2 3 4 
+spin down: 
+  1 2 3 5 
+Determinant 1:
+Weight: 0.33205
+State: 
+spin up:
+  1 2 3 5 
+spin down: 
+  1 2 3 4 
+Determinant 2:
+Weight: 0.297037
+State: 
+spin up:
+  1 2 3 4 
+spin down: 
+  1 3 4 7 
+Determinant 3:
+Weight: 0.297037
+State: 
+spin up:
+  1 3 4 7 
+spin down: 
+  1 2 3 4 
+Determinant 4:
+Weight: -0.285345
+State: 
+spin up:
+  1 2 3 4 
+spin down: 
+  1 3 4 5 
+Determinant 5:
+Weight: -0.285345
+State: 
+spin up:
+  1 3 4 5 
+spin down: 
+  1 2 3 4 
+Determinant 6:
+Weight: -0.241597
+State: 
+spin up:
+  1 2 3 4 
+spin down: 
+  1 2 4 7 
+Determinant 7:
+Weight: -0.241597
+State: 
+spin up:
+  1 2 4 7 
+spin down: 
+  1 2 3 4 
+Determinant 8:
+Weight: -0.238455
+State: 
+spin up:
+  1 2 3 4 
+spin down: 
+  1 2 4 5 
+Determinant 9:
+Weight: -0.238455
+State: 
+spin up:
+  1 2 4 5 
+spin down: 
+  1 2 3 4 
+Determinant 10:
+Weight: -0.224258
+State: 
+spin up:
+  1 2 3 4 
+spin down: 
+  1 2 4 6 
+Determinant 11:
+Weight: -0.224258
+State: 
+spin up:
+  1 2 4 6 
+spin down: 
+  1 2 3 4 
+Determinant 12:
+Weight: 0.218085
+State: 
+spin up:
+  1 2 3 4 
+spin down: 
+  1 3 4 6 
+Determinant 13:
+Weight: 0.218085
+State: 
+spin up:
+  1 3 4 6 
+spin down: 
+  1 2 3 4 
+Determinant 14:
+Weight: 0.0705191
+State: 
+spin up:
+  1 2 3 4 
+spin down: 
+  1 2 3 6 
+Determinant 15:
+Weight: 0.0705191
+State: 
+spin up:
+  1 2 3 6 
+spin down: 
+  1 2 3 4 
+Determinant 16:
+Weight: 0.0451127
+State: 
+spin up:
+  1 2 3 4 
+spin down: 
+  1 2 3 7 
+Determinant 17:
+Weight: 0.0451127
+State: 
+spin up:
+  1 2 3 7 
+spin down: 
+  1 2 3 4 
+Determinant 18:
+Weight: -8.20244e-05
+State: 
+spin up:
+  1 2 3 4 
+spin down: 
+  1 3 4 24 
+Determinant 19:
+Weight: -8.20244e-05
+State: 
+spin up:
+  1 3 4 24 
+spin down: 
+  1 2 3 4 
+Determinant 20:
+Weight: -6.64681e-05
+State: 
+spin up:
+  1 2 3 4 
+spin down: 
+  1 2 4 23 
+Determinant 21:
+Weight: -6.64681e-05
+State: 
+spin up:
+  1 2 4 23 
+spin down: 
+  1 2 3 4 
+Determinant 22:
+Weight: 5.44472e-05
+State: 
+spin up:
+  1 2 3 4 
+spin down: 
+  1 3 4 22 
+Determinant 23:
+Weight: 5.44472e-05
+State: 
+spin up:
+  1 3 4 22 
+spin down: 
+  1 2 3 4 
+Determinant 24:
+Weight: -5.37401e-05
+State: 
+spin up:
+  1 2 3 4 
+spin down: 
+  1 2 4 22 
+Determinant 25:
+Weight: -5.37401e-05
+State: 
+spin up:
+  1 2 4 22 
+spin down: 
+  1 2 3 4 
+Determinant 26:
+Weight: 5.09117e-05
+State: 
+spin up:
+  1 2 3 4 
+spin down: 
+  1 2 3 23 
+Determinant 27:
+Weight: 5.09117e-05
+State: 
+spin up:
+  1 2 3 23 
+spin down: 
+  1 2 3 4 
+Determinant 28:
+Weight: 4.94975e-05
+State: 
+spin up:
+  1 2 3 4 
+spin down: 
+  1 2 3 24 
+Determinant 29:
+Weight: 4.94975e-05
+State: 
+spin up:
+  1 2 3 24 
+spin down: 
+  1 2 3 4 
+Determinant 30:
+Weight: -3.11127e-05
+State: 
+spin up:
+  1 2 3 4 
+spin down: 
+  1 2 3 16 
+Determinant 31:
+Weight: -3.11127e-05
+State: 
+spin up:
+  1 2 3 16 
+spin down: 
+  1 2 3 4 
+Determinant 32:
+Weight: 3.04056e-05
+State: 
+spin up:
+  1 2 3 4 
+spin down: 
+  1 3 4 16 
+Determinant 33:
+Weight: 3.04056e-05
+State: 
+spin up:
+  1 3 4 16 
+spin down: 
+  1 2 3 4 
+Determinant 34:
+Weight: -2.96985e-05
+State: 
+spin up:
+  1 2 3 4 
+spin down: 
+  1 3 4 15 
+Determinant 35:
+Weight: -2.96985e-05
+State: 
+spin up:
+  1 3 4 15 
+spin down: 
+  1 2 3 4 
+Determinant 36:
+Weight: 2.40416e-05
+State: 
+spin up:
+  1 2 3 4 
+spin down: 
+  1 2 4 15 
+Determinant 37:
+Weight: 2.40416e-05
+State: 
+spin up:
+  1 2 4 15 
+spin down: 
+  1 2 3 4 
+Determinant 38:
+Weight: 2.40416e-05
+State: 
+spin up:
+  1 2 3 4 
+spin down: 
+  1 2 4 14 
+Determinant 39:
+Weight: 2.40416e-05
+State: 
+spin up:
+  1 2 4 14 
+spin down: 
+  1 2 3 4 
+Determinant 40:
+Weight: 1.9799e-05
+State: 
+spin up:
+  1 2 3 4 
+spin down: 
+  1 2 4 16 
+Determinant 41:
+Weight: 1.9799e-05
+State: 
+spin up:
+  1 2 4 16 
+spin down: 
+  1 2 3 4 
+Determinant 42:
+Weight: -1.62635e-05
+State: 
+spin up:
+  1 2 3 4 
+spin down: 
+  1 3 4 14 
+Determinant 43:
+Weight: -1.62635e-05
+State: 
+spin up:
+  1 3 4 14 
+spin down: 
+  1 2 3 4 
+Determinant 44:
+Weight: 1.55563e-05
+State: 
+spin up:
+  1 2 3 4 
+spin down: 
+  1 2 3 22 
+Determinant 45:
+Weight: 1.55563e-05
+State: 
+spin up:
+  1 2 3 22 
+spin down: 
+  1 2 3 4 
+Determinant 46:
+Weight: -1.13137e-05
+State: 
+spin up:
+  1 2 3 4 
+spin down: 
+  1 2 3 14 
+Determinant 47:
+Weight: -1.13137e-05
+State: 
+spin up:
+  1 2 3 14 
+spin down: 
+  1 2 3 4 
+Determinant 48:
+Weight: -1.06066e-05
+State: 
+spin up:
+  1 2 3 4 
+spin down: 
+  1 2 4 24 
+Determinant 49:
+Weight: -1.06066e-05
+State: 
+spin up:
+  1 2 4 24 
+spin down: 
+  1 2 3 4 
+Molecular Orbital object : Cutoff MO 
+Number of molecular orbitals: 34
+Basis functions: 
+  Cubic spline for SI
+  19  radial functions
+    function  symmetry    cutoff
+           0         S     20.48
+           1         S      5.98
+           2         S      8.98
+           3         S     12.98
+           4         S     18.98
+           5         P     23.98
+           6         P      4.48
+           7         P      6.48
+           8         P      8.98
+           9         P     12.48
+          10        6D      3.48
+          11        6D      5.48
+          12        6D      8.98
+          13        6D     13.98
+          14       10F      5.98
+          15       10F      8.48
+          16       10F     11.98
+          17       15G      5.98
+          18       15G      8.98
+  Cubic spline for H
+  15  radial functions
+    function  symmetry    cutoff
+           0         S     17.98
+           1         S     18.48
+           2         S     11.98
+           3         S      7.48
+           4         S      4.98
+           5         P      9.98
+           6         P      6.48
+           7         P      3.98
+           8         P      2.48
+           9        6D      7.48
+          10        6D      4.98
+          11        6D      2.98
+          12       10F      4.98
+          13       10F      2.98
+          14       15G      3.98
+
+Jastrow2 function
+Group 0
+  Basis optimization turned on
+  Separate spin two-body
+    Coefficients frozen
+    Like coefficients 0.25  0  
+    Unlike Coefficients 0  0.5  
+
+  Electron-electron basis
+    Cutoff cusp
+    Gamma 32.0213   Cusp 1
+    Cutoff cusp
+    Gamma 11.0391   Cusp 1
+
+Group 1
+  Basis optimization turned on
+  One-body terms 
+    Atom   Coefficients 
+    SI  0.276653  0.0502245  0.0386212  0.0138189  -0.155306  
+    H  0.645463  0.0583771  -0.0206116  0.00678968  -0.00280921  
+
+  Two-body terms 
+    Coefficients -0.0310429  -0.27955  -0.12347  0.00210671  -0.00460303  
+   Three-body terms 
+    Atom   Coefficients 
+    SI  0  0  0  0  0  0  0  0  0  0  0  0  
+    H  0  0  0  0  0  0  0  0  0  0  0  0  
+
+  Electron-ion basis
+    Poly_pade function
+    beta : 0.0930893  4.41416  25.8165  131.823  656.876  
+    cutoff distance : 15
+
+    Poly_pade function
+    beta : -0.163387  3.14382  19.5245  100.658  502.517  
+    cutoff distance : 7.5
+
+
+  Electron-electron basis
+    Poly_pade function
+    beta : 0.220871  5.04706  28.9513  147.35  733.781  
+    cutoff distance : 15
+
+
+
+Pseudopotential 
+atom SI
+Integration points 12
+Cutoff for static calculation 2.6
+Pseudopotential for spin up: 
+  R^n *Gaussian
+  Expansion 0
+       coeff         n  exponent
+     14.8328         0   9.44702
+     26.3497         0   2.55381
+  Expansion 1
+       coeff         n  exponent
+      7.6214         0      3.66
+     10.3316         0   1.90365
+  Expansion 2
+       coeff         n  exponent
+           4        -1   5.16832
+     20.6733         1   8.86169
+    -14.8182         0   3.93347
+Pseudopotential for spin down: 
+  R^n *Gaussian
+  Expansion 0
+       coeff         n  exponent
+     14.8328         0   9.44702
+     26.3497         0   2.55381
+  Expansion 1
+       coeff         n  exponent
+      7.6214         0      3.66
+     10.3316         0   1.90365
+  Expansion 2
+       coeff         n  exponent
+           4        -1   5.16832
+     20.6733         1   8.86169
+    -14.8182         0   3.93347
+atom H
+Integration points 6
+Cutoff for static calculation 20
+Pseudopotential for spin up: 
+  R^n *Gaussian
+  Expansion 0
+       coeff         n  exponent
+           0         0         1
+  Expansion 1
+       coeff         n  exponent
+           1        -1   21.2436
+     21.2436         1   21.2436
+    -10.8519         0    21.777
+Pseudopotential for spin down: 
+  R^n *Gaussian
+  Expansion 0
+       coeff         n  exponent
+           0         0         1
+  Expansion 1
+       coeff         n  exponent
+           1        -1   21.2436
+     21.2436         1   21.2436
+    -10.8519         0    21.777
+
+
+-----------------------------
+Wave function optimization:  
+Number of configurations : 2048
+Maximum iterations: 60
+nparms 44
+Minimization function : Variance 
+----------------------------
+Running with reference energy -5.8683
+iteration # 1  dispersion= 0.294481
+  average gradient: 0.236901 tolerance 0.0001
+iteration # 2  dispersion= 0.291937
+  average gradient: 0.0547328 tolerance 0.0001
+iteration # 3  dispersion= 0.289885
+  average gradient: 0.053824 tolerance 0.0001
+iteration # 4  dispersion= 0.287566
+  average gradient: 0.0276827 tolerance 0.0001
+iteration # 5  dispersion= 0.285365
+  average gradient: 0.0292966 tolerance 0.0001
+iteration # 6  dispersion= 0.284482
+  average gradient: 0.0494489 tolerance 0.0001
+iteration # 7  dispersion= 0.282162
+  average gradient: 0.00680163 tolerance 0.0001
+iteration # 8  dispersion= 0.279608
+  average gradient: 0.0870381 tolerance 0.0001
+iteration # 9  dispersion= 0.277798
+  average gradient: 0.0245558 tolerance 0.0001
+iteration # 10  dispersion= 0.277138
+  average gradient: 0.0141533 tolerance 0.0001
+iteration # 11  dispersion= 0.27645
+  average gradient: 0.0113337 tolerance 0.0001
+iteration # 12  dispersion= 0.275013
+  average gradient: 0.00757313 tolerance 0.0001
+iteration # 13  dispersion= 0.274854
+  average gradient: 0.00378646 tolerance 0.0001
+iteration # 14  dispersion= 0.274424
+  average gradient: 0.00399812 tolerance 0.0001
+iteration # 15  dispersion= 0.274256
+  average gradient: 0.00287055 tolerance 0.0001
+iteration # 16  dispersion= 0.274017
+  average gradient: 0.00557852 tolerance 0.0001
+iteration # 17  dispersion= 0.273761
+  average gradient: 0.0162823 tolerance 0.0001
+iteration # 18  dispersion= 0.273132
+  average gradient: 0.00326701 tolerance 0.0001
+iteration # 19  dispersion= 0.27275
+  average gradient: 0.00272167 tolerance 0.0001
+iteration # 20  dispersion= 0.272642
+  average gradient: 0.00110565 tolerance 0.0001
+iteration # 21  dispersion= 0.272593
+  average gradient: 0.00321729 tolerance 0.0001
+iteration # 22  dispersion= 0.272364
+  average gradient: 0.00492481 tolerance 0.0001
+iteration # 23  dispersion= 0.27194
+  average gradient: 0.00125667 tolerance 0.0001
+iteration # 24  dispersion= 0.271758
+  average gradient: 0.00827911 tolerance 0.0001
+iteration # 25  dispersion= 0.271321
+  average gradient: 0.0130806 tolerance 0.0001
+iteration # 26  dispersion= 0.271032
+  average gradient: 0.00206071 tolerance 0.0001
+iteration # 27  dispersion= 0.270863
+  average gradient: 0.00156657 tolerance 0.0001
+iteration # 28  dispersion= 0.270646
+  average gradient: 0.00416955 tolerance 0.0001
+iteration # 29  dispersion= 0.270517
+  average gradient: 0.00530305 tolerance 0.0001
+iteration # 30  dispersion= 0.269934
+  average gradient: 0.0259178 tolerance 0.0001
+iteration # 31  dispersion= 0.268813
+  average gradient: 0.00183153 tolerance 0.0001
+iteration # 32  dispersion= 0.268572
+  average gradient: 0.00203158 tolerance 0.0001
+iteration # 33  dispersion= 0.268519
+  average gradient: 0.002331 tolerance 0.0001
+iteration # 34  dispersion= 0.268369
+  average gradient: 0.00124711 tolerance 0.0001
+iteration # 35  dispersion= 0.26828
+  average gradient: 0.00315673 tolerance 0.0001
+iteration # 36  dispersion= 0.267629
+  average gradient: 0.00636454 tolerance 0.0001
+iteration # 37  dispersion= 0.267463
+  average gradient: 0.00235286 tolerance 0.0001
+iteration # 38  dispersion= 0.267287
+  average gradient: 0.00267812 tolerance 0.0001
+iteration # 39  dispersion= 0.266949
+  average gradient: 0.00345006 tolerance 0.0001
+iteration # 40  dispersion= 0.26682
+  average gradient: 0.00274054 tolerance 0.0001
+iteration # 41  dispersion= 0.266698
+  average gradient: 0.00494221 tolerance 0.0001
+iteration # 42  dispersion= 0.26656
+  average gradient: 0.000709743 tolerance 0.0001
+iteration # 43  dispersion= 0.26627
+  average gradient: 0.00482891 tolerance 0.0001
+iteration # 44  dispersion= 0.266123
+  average gradient: 0.00633769 tolerance 0.0001
+iteration # 45  dispersion= 0.265937
+  average gradient: 0.00156164 tolerance 0.0001
+iteration # 46  dispersion= 0.265741
+  average gradient: 0.00814287 tolerance 0.0001
+iteration # 47  dispersion= 0.265163
+  average gradient: 0.00201264 tolerance 0.0001
+iteration # 48  dispersion= 0.265098
+  average gradient: 0.000691956 tolerance 0.0001
+iteration # 49  dispersion= 0.265043
+  average gradient: 0.000710484 tolerance 0.0001
+iteration # 50  dispersion= 0.26495
+  average gradient: 0.0015072 tolerance 0.0001
+iteration # 51  dispersion= 0.26487
+  average gradient: 0.00489441 tolerance 0.0001
+iteration # 52  dispersion= 0.264367
+  average gradient: 0.0162321 tolerance 0.0001
+iteration # 53  dispersion= 0.263902
+  average gradient: 0.00111352 tolerance 0.0001
+iteration # 54  dispersion= 0.263737
+  average gradient: 0.00412372 tolerance 0.0001
+iteration # 55  dispersion= 0.263647
+  average gradient: 0.00210223 tolerance 0.0001
+iteration # 56  dispersion= 0.26351
+  average gradient: 0.000929637 tolerance 0.0001
+iteration # 57  dispersion= 0.263334
+  average gradient: 0.00636114 tolerance 0.0001
+iteration # 58  dispersion= 0.263195
+  average gradient: 0.00164426 tolerance 0.0001
+iteration # 59  dispersion= 0.263144
+  average gradient: 0.00134372 tolerance 0.0001
+iteration # 60  dispersion= 0.262842
+  average gradient: 0.00349329 tolerance 0.0001
+Optimization finished.  New wave function is in qw.opt3.wfout
+Wall time for this method: 96 seconds.
+Total wall time so far: 97 seconds.

@@ -4,7 +4,7 @@
 #SBATCH -N 1
 #!SBATCH -n 16
 #SBATCH -C haswell
-#SBATCH -t 11:30:00
+#SBATCH -t 47:59:59
 #!SBATCH -o test_silane.o%j
 #SBATCH -o job.out
 

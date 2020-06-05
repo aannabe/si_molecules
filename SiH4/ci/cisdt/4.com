@@ -1,5 +1,5 @@
 ***,SiH4
-memory,8,g
+memory,16,g
 gthresh,twoint=1.0E-12
 
 basis={

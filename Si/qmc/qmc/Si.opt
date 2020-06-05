@@ -1,0 +1,12 @@
+include Si.sys
+
+trialfunc {
+   slater-jastrow
+   wf1 { include Si.slater }
+   wf2 { include Si.jast3 }
+   }
+
+method {
+   OPTIMIZE
+   iterations 60
+}

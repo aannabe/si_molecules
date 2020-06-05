@@ -1,0 +1,316 @@
+------------------------------------------------
+Quantum Walk development version
+Contributions from: (in no particular order) 
+Michal Bajdich, Shuming Hu, Jindrich Kolorenc, Kevin Rasch, 
+Pavel Vagner, Rene Derian, Paul Kent, Jarrod McClean, 
+Fernando Reboredo, Lucas Wagner, Hiori Kino, Lubos Mitas, Brian Busemeyer, Joshua Schiller,
+Li Chen, Kiel Williams, and Huihuo Zheng
+Originated at North Carolina State University 
+Please cite J. Comp. Phys. v 228 pp 3390-3404 (2009) 
+ when publishing results from this program.
+------------------------------------------------
+Running on nid00036
+Fri May  1 10:41:43 2020
+
+     System 
+Atomic positions 
+ Label          Charge            x               y               z   
+    Si               4               0               0               0
+     H               1         1.61458         1.61458         1.61458
+     H               1        -1.61458        -1.61458         1.61458
+     H               1        -1.61458         1.61458        -1.61458
+     H               1         1.61458        -1.61458        -1.61458
+
+
+     Wavefunction 
+Slater Determinant
+1 determinant
+State: 
+spin up:
+  1 2 3 5 
+spin down: 
+  1 2 3 4 
+Molecular Orbital object : Cutoff MO 
+Number of molecular orbitals: 5
+Basis functions: 
+  Cubic spline for Si
+  24  radial functions
+    function  symmetry    cutoff
+           0         S     20.48
+           1         S      5.98
+           2         S      8.98
+           3         S     12.98
+           4         S     18.98
+           5         S     27.98
+           6         P     23.98
+           7         P      4.48
+           8         P      6.48
+           9         P      8.98
+          10         P     12.48
+          11         P     17.98
+          12 5D_siesta      3.48
+          13 5D_siesta      5.48
+          14 5D_siesta      8.98
+          15 5D_siesta     13.98
+          16 5D_siesta     21.98
+          17 7F_siesta      5.98
+          18 7F_siesta      8.48
+          19 7F_siesta     11.98
+          20 7F_siesta     17.98
+          21  9G_pyscf      5.98
+          22  9G_pyscf      8.98
+          23  9G_pyscf     12.98
+  Cubic spline for H
+  20  radial functions
+    function  symmetry    cutoff
+           0         S     17.98
+           1         S     29.48
+           2         S     18.48
+           3         S     11.98
+           4         S      7.48
+           5         S      4.98
+           6         P     16.48
+           7         P      9.98
+           8         P      6.48
+           9         P      3.98
+          10         P      2.48
+          11 5D_siesta     11.48
+          12 5D_siesta      7.48
+          13 5D_siesta      4.98
+          14 5D_siesta      2.98
+          15 7F_siesta      7.98
+          16 7F_siesta      4.98
+          17 7F_siesta      2.98
+          18  9G_pyscf      5.98
+          19  9G_pyscf      3.98
+
+Jastrow2 function
+Group 0
+  Basis optimization turned on
+  Separate spin two-body
+    Coefficients frozen
+    Like coefficients 0.25  0  
+    Unlike Coefficients 0  0.5  
+
+  Electron-electron basis
+    Cutoff cusp
+    Gamma 24   Cusp 1
+    Cutoff cusp
+    Gamma 24   Cusp 1
+
+Group 1
+  Basis optimization turned on
+  One-body terms 
+    Atom   Coefficients 
+    Si  0  0  0  0  0  
+    H  0  0  0  0  0  
+
+  Two-body terms 
+    Coefficients 0  0  0  0  0  
+  Electron-ion basis
+    Poly_pade function
+    beta : 0.2  4.94369  28.4393  144.814  721.22  
+    cutoff distance : 15
+
+    Poly_pade function
+    beta : 0.2  4.94369  28.4393  144.814  721.22  
+    cutoff distance : 15
+
+
+  Electron-electron basis
+    Poly_pade function
+    beta : 0.5  6.4296  35.799  181.267  901.774  
+    cutoff distance : 15
+
+
+
+Pseudopotential 
+atom Si
+Integration points 12
+Cutoff for static calculation 2.6
+Pseudopotential for spin up: 
+  R^n *Gaussian
+  Expansion 0
+       coeff         n  exponent
+     14.8328         0   9.44702
+     26.3497         0   2.55381
+  Expansion 1
+       coeff         n  exponent
+      7.6214         0      3.66
+     10.3316         0   1.90365
+  Expansion 2
+       coeff         n  exponent
+           4        -1   5.16832
+    -14.8182         0   3.93347
+     20.6733         1   8.86169
+Pseudopotential for spin down: 
+  R^n *Gaussian
+  Expansion 0
+       coeff         n  exponent
+     14.8328         0   9.44702
+     26.3497         0   2.55381
+  Expansion 1
+       coeff         n  exponent
+      7.6214         0      3.66
+     10.3316         0   1.90365
+  Expansion 2
+       coeff         n  exponent
+           4        -1   5.16832
+    -14.8182         0   3.93347
+     20.6733         1   8.86169
+atom H
+Integration points 6
+Cutoff for static calculation 20
+Pseudopotential for spin up: 
+  R^n *Gaussian
+  Expansion 0
+       coeff         n  exponent
+           0         0         1
+  Expansion 1
+       coeff         n  exponent
+           1        -1   21.2436
+    -10.8519         0    21.777
+     21.2436         1   21.2436
+Pseudopotential for spin down: 
+  R^n *Gaussian
+  Expansion 0
+       coeff         n  exponent
+           0         0         1
+  Expansion 1
+       coeff         n  exponent
+           1        -1   21.2436
+    -10.8519         0    21.777
+     21.2436         1   21.2436
+
+
+-----------------------------
+Wave function optimization:  
+Number of configurations : 2048
+Maximum iterations: 60
+nparms 20
+Minimization function : Variance 
+----------------------------
+Running with reference energy -5.75601
+iteration # 1  dispersion= 0.571716
+  average gradient: 1.13519 tolerance 0.0001
+iteration # 2  dispersion= 0.471504
+  average gradient: 0.85524 tolerance 0.0001
+iteration # 3  dispersion= 0.442544
+  average gradient: 0.574469 tolerance 0.0001
+iteration # 4  dispersion= 0.37877
+  average gradient: 0.14009 tolerance 0.0001
+iteration # 5  dispersion= 0.346962
+  average gradient: 0.451844 tolerance 0.0001
+iteration # 6  dispersion= 0.332522
+  average gradient: 0.0428955 tolerance 0.0001
+iteration # 7  dispersion= 0.313459
+  average gradient: 0.0976663 tolerance 0.0001
+iteration # 8  dispersion= 0.301459
+  average gradient: 0.178727 tolerance 0.0001
+iteration # 9  dispersion= 0.292583
+  average gradient: 0.0305503 tolerance 0.0001
+iteration # 10  dispersion= 0.286593
+  average gradient: 0.0196016 tolerance 0.0001
+iteration # 11  dispersion= 0.285
+  average gradient: 0.0151165 tolerance 0.0001
+iteration # 12  dispersion= 0.281254
+  average gradient: 0.0159664 tolerance 0.0001
+iteration # 13  dispersion= 0.278433
+  average gradient: 0.0238015 tolerance 0.0001
+iteration # 14  dispersion= 0.277066
+  average gradient: 0.0124715 tolerance 0.0001
+iteration # 15  dispersion= 0.272657
+  average gradient: 0.00842168 tolerance 0.0001
+iteration # 16  dispersion= 0.271323
+  average gradient: 0.0146183 tolerance 0.0001
+iteration # 17  dispersion= 0.270257
+  average gradient: 0.00439477 tolerance 0.0001
+iteration # 18  dispersion= 0.269337
+  average gradient: 0.00283637 tolerance 0.0001
+iteration # 19  dispersion= 0.268965
+  average gradient: 0.00757143 tolerance 0.0001
+iteration # 20  dispersion= 0.267346
+  average gradient: 0.00361488 tolerance 0.0001
+iteration # 21  dispersion= 0.266619
+  average gradient: 0.00499534 tolerance 0.0001
+iteration # 22  dispersion= 0.266332
+  average gradient: 0.00263412 tolerance 0.0001
+iteration # 23  dispersion= 0.265763
+  average gradient: 0.00163993 tolerance 0.0001
+iteration # 24  dispersion= 0.265359
+  average gradient: 0.00744957 tolerance 0.0001
+iteration # 25  dispersion= 0.264827
+  average gradient: 0.0017959 tolerance 0.0001
+iteration # 26  dispersion= 0.264292
+  average gradient: 0.00355165 tolerance 0.0001
+iteration # 27  dispersion= 0.263921
+  average gradient: 0.00805601 tolerance 0.0001
+iteration # 28  dispersion= 0.26299
+  average gradient: 0.00221671 tolerance 0.0001
+iteration # 29  dispersion= 0.262202
+  average gradient: 0.00834535 tolerance 0.0001
+iteration # 30  dispersion= 0.261773
+  average gradient: 0.00263779 tolerance 0.0001
+iteration # 31  dispersion= 0.261187
+  average gradient: 0.00264615 tolerance 0.0001
+iteration # 32  dispersion= 0.260751
+  average gradient: 0.0085642 tolerance 0.0001
+iteration # 33  dispersion= 0.260153
+  average gradient: 0.00105516 tolerance 0.0001
+iteration # 34  dispersion= 0.259615
+  average gradient: 0.00593673 tolerance 0.0001
+iteration # 35  dispersion= 0.259108
+  average gradient: 0.00761675 tolerance 0.0001
+iteration # 36  dispersion= 0.257761
+  average gradient: 0.0038568 tolerance 0.0001
+iteration # 37  dispersion= 0.256553
+  average gradient: 0.00653259 tolerance 0.0001
+iteration # 38  dispersion= 0.256248
+  average gradient: 0.00115467 tolerance 0.0001
+iteration # 39  dispersion= 0.256014
+  average gradient: 0.000624119 tolerance 0.0001
+iteration # 40  dispersion= 0.255914
+  average gradient: 0.000907385 tolerance 0.0001
+iteration # 41  dispersion= 0.255871
+  average gradient: 0.00017385 tolerance 0.0001
+iteration # 42  dispersion= 0.255782
+  average gradient: 0.000351226 tolerance 0.0001
+iteration # 43  dispersion= 0.255739
+  average gradient: 0.00103046 tolerance 0.0001
+iteration # 44  dispersion= 0.255566
+  average gradient: 0.00114923 tolerance 0.0001
+iteration # 45  dispersion= 0.255184
+  average gradient: 0.00095 tolerance 0.0001
+iteration # 46  dispersion= 0.255114
+  average gradient: 0.000634866 tolerance 0.0001
+iteration # 47  dispersion= 0.254919
+  average gradient: 0.000723503 tolerance 0.0001
+iteration # 48  dispersion= 0.254765
+  average gradient: 0.00130299 tolerance 0.0001
+iteration # 49  dispersion= 0.25468
+  average gradient: 0.000884902 tolerance 0.0001
+iteration # 50  dispersion= 0.254362
+  average gradient: 0.000750965 tolerance 0.0001
+iteration # 51  dispersion= 0.254207
+  average gradient: 0.00236858 tolerance 0.0001
+iteration # 52  dispersion= 0.254038
+  average gradient: 0.00055508 tolerance 0.0001
+iteration # 53  dispersion= 0.253952
+  average gradient: 0.000135421 tolerance 0.0001
+iteration # 54  dispersion= 0.253934
+  average gradient: 0.000298488 tolerance 0.0001
+iteration # 55  dispersion= 0.253897
+  average gradient: 0.000143668 tolerance 0.0001
+iteration # 56  dispersion= 0.253823
+  average gradient: 0.000564994 tolerance 0.0001
+iteration # 57  dispersion= 0.253787
+  average gradient: 0.000561356 tolerance 0.0001
+iteration # 58  dispersion= 0.253705
+  average gradient: 0.000242727 tolerance 0.0001
+iteration # 59  dispersion= 0.253563
+  average gradient: 0.00171365 tolerance 0.0001
+iteration # 60  dispersion= 0.253491
+  average gradient: 0.000431826 tolerance 0.0001
+Optimization finished.  New wave function is in qw.opt.wfout
+Wall time for this method: 12 seconds.
+Total wall time so far: 12 seconds.

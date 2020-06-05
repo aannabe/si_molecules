@@ -1,0 +1,23 @@
+SLATER
+  ORBITALS  { 
+  CUTOFF_MO
+  MAGNIFY 1.0 
+  NMO 429 
+  ORBFILE qw.orb
+  INCLUDE qw.basis
+  CENTERS { USEGLOBAL }
+  }
+
+  CSF { 0.7071 1.0 }
+  CSF { -0.7071 1.0 }
+
+  STATES {
+  #Spin up orbitals 
+  1 2 3 5 
+  #Spin down orbitals 
+  425 426 427 428
+  #Spin up orbitals 
+  1 2 3 4 
+  #Spin down orbitals 
+  425 426 427 429
+  }
