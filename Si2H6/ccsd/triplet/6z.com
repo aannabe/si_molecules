@@ -1,7 +1,7 @@
 ***,Si2H6
 memory,8,g
 gthresh,twoint=1.0E-13
-symmetry,nosym
+!symmetry,nosym
 
 basis={
 ECP,Si,10,2,0;
