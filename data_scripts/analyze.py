@@ -87,6 +87,10 @@ for i in files:
 	energy_gaps = pd_f2s(energy_gaps)
 	if 'CIPSI' in list(energy_gaps.index):
 		energy_gaps.loc['CIPSI'] = rm_errors(energy_gaps.loc['CIPSI'])
+	if 'CISD/RHF' in list(energy_gaps.index):
+		energy_gaps.loc['CISD/RHF'] = rm_errors(energy_gaps.loc['CISD/RHF'])
+	if 'CISDT/RHF' in list(energy_gaps.index):
+		energy_gaps.loc['CISDT/RHF'] = rm_errors(energy_gaps.loc['CISDT/RHF'])
 	print(energy_gaps.to_latex())
 
 #h_scf = s2f('-0.49999965(1)')
