@@ -1,0 +1,1049 @@
+<?xml version="1.0"?>
+<molpro xmlns="http://www.molpro.net/schema/molpro-output"
+  xmlns:xsd="http://www.w3.org/1999/XMLSchema"
+  xmlns:cml="http://www.xml-cml.org/schema"
+  xmlns:stm="http://www.xml-cml.org/schema"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+ <!--
+
+ Primary working directories    : /global/cscratch1/sd/gwang18
+ Secondary working directories  : /global/cscratch1/sd/gwang18
+ Wavefunction directory         : /global/homes/g/gwang18/wfu/
+ Main file repository           : /global/cscratch1/sd/gwang18/
+
+ SHA1      : 19cd028119e0e09f93f0674bd8af7968d9b3eff6
+ NAME      : 2015.1.36
+ ARCHNAME  : linux/x86_64
+ FC        : /opt/cray/pe/craype/2.5.14/bin/ftn
+ BLASLIB   : -L/opt/intel/compilers_and_libraries_2018.1.163/linux/mkl/lib/intel64 -Wl,-_start-group -lmkl_intel_ilp64 -lmkl_intel_thread -lmkl_core -Wl,-_end-group -liomp5
+ id        : lbl
+
+ Nodes     nprocs
+ nid01305     1
+
+ Using customized tuning parameters: mindgm=7; mindgv=16; mindgc=1; mindgr=1; noblas=0; minvec=7
+ default implementation of scratch files=df  
+
+ --><job>
+  <!--
+ ***,SiH4
+ memory,4,g
+ gthresh,twoint=1.0E-12
+ 
+ basis={
+ ECP,Si,10,2,0;
+ 3;                                                                              !Vd
+ 1,5.168316,    4.000000
+ 3,8.861690,   20.673264
+ 2,3.933474,  -14.818174
+ 2;                                                                              !Vs-Vd
+ 2,9.447023,   14.832760
+ 2,2.553812,   26.349664
+ 2;                                                                              !Vp-Vd
+ 2,3.660001,    7.621400
+ 2,1.903653,   10.331583
+ 
+ Including file /global/u2/g/gwang18/projects/si_gap/sih4/ci/singlet-ex/cisd/Si.aug-cc-pVTZ.basis
+ 
+ ECP,H,0,1,0
+ 3;
+ 2,   21.77696655044365 ,     -10.85192405303825 ;
+ 1,   21.24359508259891 ,       1.00000000000000;
+ 3,   21.24359508259891 ,      21.24359508259891;
+ 1; 2,                   1.,                      0.;
+ 
+ Including file /global/u2/g/gwang18/projects/si_gap/sih4/ci/singlet-ex/cisd/H.aug-cc-pVTZ.basis
+ }
+ 
+ geometry={
+   5
+  Silane
+  Si          0.0000        0.0000        0.0000
+   H          0.8544        0.8544        0.8544
+   H         -0.8544       -0.8544        0.8544
+   H         -0.8544        0.8544       -0.8544
+   H          0.8544       -0.8544       -0.8544
+ }
+ 
+                                                                                 ! HARTREE-FOCK
+ {RHF
+    wf,8,1,0                                                                     ! nelec,symm,spin
+ }
+ scf=energy
+ pop;
+ 
+  !NOTE: Perturbative MRCC works only with UHF reference. So, here we will trick MRCC by doing zero UHF iteration right after ROHF.
+ {uhf
+ wf,8,1,0
+ maxit,0
+ }
+ scf=energy
+ pop;
+ 
+ 
+ {mrcc,method=CISD,NSING=1,SYMM=2
+ orbital,ignore_error=1                                                          !Ignore the fact that UHF WF is not converged
+ maxit,100
+ core
+ }
+ posthf=energy
+ 
+ table,scf,posthf
+ save
+ type,csv
+ 
+
+ Variables initialized (889), CPU time= 0.00 sec
+ Commands  initialized (702), CPU time= 0.00 sec, 572 directives.
+ Default parameters read. Elapsed time= 0.20 sec
+
+ Checking input...
+ Passed
+1
+
+
+                                         ***  PROGRAM SYSTEM MOLPRO  ***
+                                       Copyright, TTI GmbH Stuttgart, 2015
+                                    Version 2015.1 linked Dec 29 2018 15:55:43
+
+
+ **********************************************************************************************************************************
+ LABEL *   SiH4                                                                          
+  64 bit serial version                                                                  DATE: 09-Jun-20          TIME: 22:44:59  
+ **********************************************************************************************************************************
+
+ SHA1:             19cd028119e0e09f93f0674bd8af7968d9b3eff6
+ **********************************************************************************************************************************
+  -->
+  <!--
+
+ THRESHOLDS:
+
+ ZERO    =  1.00D-12  ONEINT  =  1.00D-12  TWOINT  =  1.00D-12  PREFAC  =  1.00D-14  LOCALI  =  1.00D-09  EORDER  =  1.00D-04
+ ENERGY  =  0.00D+00  ETEST   =  0.00D+00  EDENS   =  0.00D+00  THRDEDEF=  1.00D-06  GRADIENT=  1.00D-02  STEP    =  1.00D-03
+ ORBITAL =  1.00D-05  CIVEC   =  1.00D-05  COEFF   =  1.00D-04  PRINTCI =  5.00D-02  PUNCHCI =  9.90D+01  OPTGRAD =  3.00D-04
+ OPTENERG=  1.00D-06  OPTSTEP =  3.00D-04  THRGRAD =  1.00D-10  COMPRESS=  1.00D-11  VARMIN  =  1.00D-07  VARMAX  =  1.00D-03
+ THRDOUB =  0.00D+00  THRDIV  =  1.00D-05  THRRED  =  1.00D-07  THRPSP  =  1.00D+00  THRDC   =  1.00D-10  THRCS   =  1.00D-10
+ THRNRM  =  1.00D-08  THREQ   =  0.00D+00  THRDE   =  1.00D+00  THRREF  =  1.00D-05  SPARFAC =  1.00D+00  THRDLP  =  1.00D-07
+ THRDIA  =  1.00D-10  THRDLS  =  1.00D-07  THRGPS  =  0.00D+00  THRKEX  =  0.00D+00  THRDIS  =  2.00D-01  THRVAR  =  1.00D-10
+ THRLOC  =  1.00D-06  THRGAP  =  1.00D-06  THRLOCT = -1.00D+00  THRGAPT = -1.00D+00  THRORB  =  1.00D-06  THRMLTP =  0.00D+00
+ THRCPQCI=  1.00D-10  KEXTA   =  0.00D+00  THRCOARS=  0.00D+00  SYMTOL  =  1.00D-06  GRADTOL =  1.00D-06  THROVL  =  1.00D-08
+ THRORTH =  1.00D-08  GRID    =  1.00D-06  GRIDMAX =  1.00D-03  DTMAX   =  0.00D+00  THROCCDE=  1.00D-01  THROCCDE=  1.00D-01
+
+
+
+ Variable memory set to 4000000000 words,  buffer space   230000 words
+
+ SETTING BASIS          =    USERDEF
+
+Geometry recognized as XYZ
+
+  --><jobstep command="RHF-SCF" commandset="SCFPRO">
+   <!--
+
+
+ Recomputing integrals since basis changed
+
+
+ Using spherical harmonics
+
+
+
+ PROGRAM * SEWARD (Integral evaluation for generally contracted gaussian basis sets)     Author: Roland Lindh, 1990
+
+ Geometry written to block  1 of record 700
+
+
+ Point group  D2  
+
+
+   --><cml:molecule>
+    <cml:symmetry pointGroup="D2"/>
+    <cml:atomArray>
+     <cml:atom id="a1" elementType="Si" x3="0.0" y3="0.0" z3="0.0"/>
+     <cml:atom id="a2" elementType="H" x3="0.8544" y3="0.8544" z3="0.8544"/>
+     <cml:atom id="a3" elementType="H" x3="-0.8544" y3="-0.8544" z3="0.8544"/>
+     <cml:atom id="a4" elementType="H" x3="-0.8544" y3="0.8544" z3="-0.8544"/>
+     <cml:atom id="a5" elementType="H" x3="0.8544" y3="-0.8544" z3="-0.8544"/>
+    </cml:atomArray>
+    <cml:bondArray>
+     <cml:bond atomRefs2="a1 a2"/>
+     <cml:bond atomRefs2="a1 a3"/>
+     <cml:bond atomRefs2="a1 a4"/>
+     <cml:bond atomRefs2="a1 a5"/>
+    </cml:bondArray>
+   </cml:molecule><!--
+
+ ATOMIC COORDINATES
+
+ NR  ATOM    CHARGE       X              Y              Z
+
+   1  SI      4.00    0.000000000    0.000000000    0.000000000
+   2  H       1.00    1.614582001    1.614582001    1.614582001
+   3  H       1.00   -1.614582001   -1.614582001    1.614582001
+   4  H       1.00   -1.614582001    1.614582001   -1.614582001
+   5  H       1.00    1.614582001   -1.614582001   -1.614582001
+
+ Bond lengths in Bohr (Angstrom)
+
+ 1-2  2.796538058  1-3  2.796538058  1-4  2.796538058  1-5  2.796538058
+     ( 1.479864210)     ( 1.479864210)     ( 1.479864210)     ( 1.479864210)
+
+ Bond angles
+
+  2-1-3  109.47122063   2-1-4  109.47122063   2-1-5  109.47122063   3-1-4  109.47122063
+
+  3-1-5  109.47122063   4-1-5  109.47122063
+
+ NUCLEAR CHARGE:                    8
+ NUMBER OF PRIMITIVE AOS:         218
+ NUMBER OF SYMMETRY AOS:          201
+ NUMBER OF CONTRACTIONS:          137   (  35A   +  34B3  +  34B2  +  34B1  )
+ NUMBER OF CORE ORBITALS:           0   (   0A   +   0B3  +   0B2  +   0B1  )
+ NUMBER OF VALENCE ORBITALS:        8   (   2A   +   2B3  +   2B2  +   2B1  )
+
+
+ NUCLEAR REPULSION ENERGY    7.03521075
+
+
+ Eigenvalues of metric
+
+         1 0.474E-04 0.171E-02 0.547E-02 0.631E-02 0.631E-02 0.915E-02 0.322E-01 0.485E-01
+         2 0.290E-03 0.109E-02 0.351E-02 0.607E-02 0.118E-01 0.155E-01 0.229E-01 0.388E-01
+         3 0.290E-03 0.109E-02 0.351E-02 0.607E-02 0.118E-01 0.155E-01 0.229E-01 0.388E-01
+         4 0.290E-03 0.109E-02 0.351E-02 0.607E-02 0.118E-01 0.155E-01 0.229E-01 0.388E-01
+
+
+ Contracted 2-electron integrals neglected if value below      1.0D-12
+ AO integral compression algorithm  1   Integral accuracy      1.0D-12
+
+     117.965 MB (compressed) written to integral file ( 69.7%)
+
+
+ NUMBER OF SORTED TWO-ELECTRON INTEGRALS:   11417490.     BUFFER LENGTH:  32768
+ NUMBER OF SEGMENTS:   1  SEGMENT LENGTH:   11417490      RECORD LENGTH: 524288
+
+ Memory used in sort:      11.97 MW
+
+ SORT1 READ    21163826. AND WROTE    11155298. INTEGRALS IN     32 RECORDS. CPU TIME:     0.26 SEC, REAL TIME:     0.38 SEC
+ SORT2 READ    11155298. AND WROTE    11417490. INTEGRALS IN    450 RECORDS. CPU TIME:     0.33 SEC, REAL TIME:     0.44 SEC
+
+ FILE SIZES:   FILE 1:   138.3 MBYTE,  FILE 4:   134.3 MBYTE,   TOTAL:    272.6 MBYTE
+
+ OPERATOR DM      FOR CENTER  0  COORDINATES:    0.000000    0.000000    0.000000
+
+
+ **********************************************************************************************************************************
+ DATASETS  * FILE   NREC   LENGTH (MB)   RECORD NAMES
+              1      20       87.04       500      610      700      900      950      970     1000      129      960     1100   
+                                          VAR    BASINP    GEOM    SYMINP    ZMAT    AOBASIS   BASIS     P2S    ABASIS      S 
+                                         1400     1410     1420     1200     1210     1080     1600     1650     1300     1700   
+                                           T        V       ECP      H0       H01     AOSYM     SMH    MOLCAS    ERIS     OPER   
+
+ PROGRAMS   *        TOTAL       INT
+ CPU TIMES  *         2.25      2.17
+ REAL TIME  *         4.96 SEC
+ DISK USED  *       272.98 MB      
+ **********************************************************************************************************************************
+
+
+ PROGRAM * RHF-SCF (CLOSED SHELL)       Authors: W. Meyer, H.-J. Werner
+
+
+ NUMBER OF ELECTRONS:       4+    4-    SPACE SYMMETRY=1    SPIN SYMMETRY: Singlet 
+ CONVERGENCE THRESHOLDS:    1.00E-05 (Density)    1.00E-07 (Energy)
+ MAX. NUMBER OF ITERATIONS:       60
+ INTERPOLATION TYPE:            DIIS
+ INTERPOLATION STEPS:              2 (START)      1 (STEP)
+ LEVEL SHIFTS:                  0.00 (CLOSED)  0.00 (OPEN) 
+
+
+
+ Orbital guess generated from atomic densities. Full valence occupancy:    2   2   2   2
+
+ Molecular orbital dump at record        2100.2
+
+ Initial occupancy:   1   1   1   1
+
+ ITERATION    DDIFF          GRAD             ENERGY        2-EL.EN.            DIPOLE MOMENTS         DIIS   ORB.
+    1      0.000D+00      0.000D+00        -6.06722053     17.340524    0.00000    0.00000    0.00000    0    start
+    2      0.000D+00      0.653D-02        -6.08173110     17.452062    0.00000    0.00000    0.00000    1    diag
+    3      0.641D-02      0.204D-02        -6.08358238     17.466686    0.00000    0.00000    0.00000    2    diag
+    4      0.223D-02      0.253D-03        -6.08361121     17.467466    0.00000    0.00000    0.00000    3    diag
+    5      0.477D-03      0.337D-04        -6.08361177     17.466730    0.00000    0.00000    0.00000    4    diag
+    6      0.692D-04      0.571D-05        -6.08361178     17.466747    0.00000    0.00000    0.00000    5    diag
+    7      0.996D-05      0.424D-06        -6.08361178     17.466743    0.00000    0.00000    0.00000    0    orth
+
+ Final occupancy:   1   1   1   1
+
+ !RHF STATE 1.1 Energy                 -6.083611781144
+   --><property name="Energy" method="RHF" principal="true" stateSymmetry="1" stateNumber="1"
+     value="-6.08361178114366"/><!--
+ Nuclear energy                         7.03521075
+ One-electron energy                  -21.85219397
+ Two-electron energy                    8.73337144
+ Virial quotient                       -1.59018254
+ !RHF STATE 1.1 Dipole moment           0.00000000     0.00000000     0.00000000
+ Dipole moment /Debye                   0.00000000     0.00000000     0.00000000
+   --><property name="Dipole moment" method="RHF" principal="true" stateSymmetry="1"
+     stateNumber="1" value="0.0 0.0 0.0"/><!--
+
+ Orbital energies:
+
+         1.1          2.1          3.1
+     -0.733422     0.039229     0.143992
+
+         1.2          2.2          3.2
+     -0.486435     0.054535     0.083705
+
+         1.3          2.3          3.3
+     -0.486435     0.054535     0.083705
+
+         1.4          2.4          3.4
+     -0.486435     0.054535     0.083705
+
+ HOMO      1.2    -0.486435 =     -13.2366eV
+ LUMO      2.1     0.039229 =       1.0675eV
+ LUMO-HOMO         0.525663 =      14.3040eV
+
+
+ **********************************************************************************************************************************
+ DATASETS  * FILE   NREC   LENGTH (MB)   RECORD NAMES
+              1      20       87.04       500      610      700      900      950      970     1000      129      960     1100   
+                                          VAR    BASINP    GEOM    SYMINP    ZMAT    AOBASIS   BASIS     P2S    ABASIS      S 
+                                         1400     1410     1420     1200     1210     1080     1600     1650     1300     1700   
+                                           T        V       ECP      H0       H01     AOSYM     SMH    MOLCAS    ERIS     OPER   
+
+              2       4        2.93       700     1000      520     2100   
+                                         GEOM     BASIS   MCVARS     RHF  
+
+ PROGRAMS   *        TOTAL       RHF       INT
+ CPU TIMES  *         2.71      0.46      2.17
+ REAL TIME  *         5.72 SEC
+ DISK USED  *       272.98 MB      
+ **********************************************************************************************************************************
+   -->
+   <time start="22:45:00" end="22:45:05" cpu="2.71" system="2.29" real="5.72"/>
+   <storage units="megabyte" memory="32001.84" sf="0.0" df="272.98" eaf="0.0"/>
+  </jobstep><!--
+ SETTING SCF            =        -6.08361178  AU                              
+  --><jobstep command="POP" commandset="POP">
+   <!--
+
+
+ PROGRAM * POP (Mulliken population analysis)
+
+ 
+ Density matrix read from record         2100.2  Type=RHF/CHARGE (state 1.1)
+ 
+ Population analysis by basis function type
+
+ Unique atom        s        p        d        f        g    Total    Charge
+   1  SI      0.56708  3.32970  0.52011  0.03562  0.00000  4.45251  - 0.45251
+   2  H       0.81567  0.06794  0.00326  0.00000  0.00000  0.88687  + 0.11313
+
+
+ **********************************************************************************************************************************
+ DATASETS  * FILE   NREC   LENGTH (MB)   RECORD NAMES
+              1      20       87.04       500      610      700      900      950      970     1000      129      960     1100   
+                                          VAR    BASINP    GEOM    SYMINP    ZMAT    AOBASIS   BASIS     P2S    ABASIS      S 
+                                         1400     1410     1420     1200     1210     1080     1600     1650     1300     1700   
+                                           T        V       ECP      H0       H01     AOSYM     SMH    MOLCAS    ERIS     OPER   
+
+              2       4        2.93       700     1000      520     2100   
+                                         GEOM     BASIS   MCVARS     RHF  
+
+ PROGRAMS   *        TOTAL       POP       RHF       INT
+ CPU TIMES  *         2.71      0.00      0.46      2.17
+ REAL TIME  *         5.76 SEC
+ DISK USED  *       272.98 MB      
+ **********************************************************************************************************************************
+   -->
+   <time start="22:45:05" end="22:45:05" cpu="0.0" system="0.0" real="0.04"/>
+   <storage units="megabyte" memory="32001.84" sf="0.0" df="272.98" eaf="0.0"/>
+  </jobstep><!--
+  --><jobstep command="UHF-SCF" commandset="SCFPRO">
+   <!--
+
+
+ PROGRAM * UHF-SCF       Authors: W. Meyer, H.-J. Werner
+
+
+ NUMBER OF ELECTRONS:       4+    4-    SPACE SYMMETRY=1    SPIN SYMMETRY: Singlet 
+ CONVERGENCE THRESHOLDS:    1.00E-05 (Density)    1.00E-07 (Energy)
+ MAX. NUMBER OF ITERATIONS:        0
+ INTERPOLATION TYPE:            DIIS
+ INTERPOLATION STEPS:              2 (START)      1 (STEP)
+ LEVEL SHIFTS:                  0.20 (ALPHA)   0.20 (BETA) 
+
+
+
+ Molecular orbitals read from record     2100.2  Type=RHF/CANONICAL (state 1.1)
+
+ Molecular orbital dump at record        2200.2
+
+ Initial alpha occupation   1   1   1   1
+ Initial beta  occupation   1   1   1   1
+
+ ITERATION    DDIFF          GRAD             ENERGY        2-EL.EN.            DIPOLE MOMENTS         DIIS
+    1      0.000D+00      0.000D+00        -6.08361178     17.466743    0.00000    0.00000    0.00000    0
+ 
+ Final alpha occupancy:   1   1   1   1
+ Final beta  occupancy:   1   1   1   1
+
+ !UHF STATE 1.1 Energy                 -6.083611781144
+   --><property name="Energy" method="UHF" principal="true" stateSymmetry="1" stateNumber="1"
+     value="-6.08361178114366"/><!--
+ Nuclear energy                         7.03521075
+ One-electron energy                  -21.85219397
+ Two-electron energy                    8.73337144
+ Virial quotient                       -1.59018254
+ !UHF STATE 1.1 Dipole moment           0.00000000     0.00000000     0.00000000
+ Dipole moment /Debye                   0.00000000     0.00000000     0.00000000
+   --><property name="Dipole moment" method="UHF" principal="true" stateSymmetry="1"
+     stateNumber="1" value="0.0 0.0 0.0"/><!--
+
+ Orbital energies for positive spin:
+
+         1.1          2.1          3.1
+     -0.733422     0.039229     0.143992
+
+         1.2          2.2          3.2
+     -0.486435     0.054535     0.083705
+
+         1.3          2.3          3.3
+     -0.486435     0.054535     0.083705
+
+         1.4          2.4          3.4
+     -0.486435     0.054535     0.083705
+
+ Orbital energies for negative spin:
+
+         1.1          2.1          3.1
+     -0.733422     0.039229     0.143992
+
+         1.2          2.2          3.2
+     -0.486435     0.054535     0.083705
+
+         1.3          2.3          3.3
+     -0.486435     0.054535     0.083705
+
+         1.4          2.4          3.4
+     -0.486435     0.054535     0.083705
+
+ HOMO      1.2    -0.486435 =     -13.2366eV
+ LUMO      2.1     0.039229 =       1.0675eV
+ LUMO-HOMO         0.525663 =      14.3040eV
+
+ EXPECTATION VALUE OF S**2:            -0.00000000
+
+ Natural orbitals saved to record    2200.2 (Orbital set 3)
+
+ Orbital spaces for UNO-CAS (Min. occupation: 0.020  Max. occupation: 1.980):
+
+ Closed:        1   1   1   1
+ Active:        0   0   0   0
+
+ No convergence
+
+
+
+ **********************************************************************************************************************************
+ DATASETS  * FILE   NREC   LENGTH (MB)   RECORD NAMES
+              1      20       87.04       500      610      700      900      950      970     1000      129      960     1100   
+                                          VAR    BASINP    GEOM    SYMINP    ZMAT    AOBASIS   BASIS     P2S    ABASIS      S 
+                                         1400     1410     1420     1200     1210     1080     1600     1650     1300     1700   
+                                           T        V       ECP      H0       H01     AOSYM     SMH    MOLCAS    ERIS     OPER   
+
+              2       5        5.72       700     1000      520     2100     2200   
+                                         GEOM     BASIS   MCVARS     RHF      UHF  
+
+ PROGRAMS   *        TOTAL       UHF       POP       RHF       INT
+ CPU TIMES  *         2.78      0.07      0.00      0.46      2.17
+ REAL TIME  *         5.97 SEC
+ DISK USED  *       272.98 MB      
+ **********************************************************************************************************************************
+   -->
+   <time start="22:45:05" end="22:45:05" cpu="0.07" system="0.01" real="0.21"/>
+   <storage units="megabyte" memory="32001.84" sf="0.0" df="272.98" eaf="0.0"/>
+  </jobstep><!--
+ SETTING SCF            =        -6.08361178  AU                              
+  --><jobstep command="POP" commandset="POP">
+   <!--
+
+
+ PROGRAM * POP (Mulliken population analysis)
+
+ 
+ Density matrix read from record         2200.2  Type=UHF/CHARGE (state 1.1)
+ 
+ Population analysis by basis function type
+
+ Unique atom        s        p        d        f        g    Total    Charge
+   1  SI      0.56708  3.32970  0.52011  0.03562  0.00000  4.45251  - 0.45251
+   2  H       0.81567  0.06794  0.00326  0.00000  0.00000  0.88687  + 0.11313
+
+
+ **********************************************************************************************************************************
+ DATASETS  * FILE   NREC   LENGTH (MB)   RECORD NAMES
+              1      20       87.04       500      610      700      900      950      970     1000      129      960     1100   
+                                          VAR    BASINP    GEOM    SYMINP    ZMAT    AOBASIS   BASIS     P2S    ABASIS      S 
+                                         1400     1410     1420     1200     1210     1080     1600     1650     1300     1700   
+                                           T        V       ECP      H0       H01     AOSYM     SMH    MOLCAS    ERIS     OPER   
+
+              2       5        5.72       700     1000      520     2100     2200   
+                                         GEOM     BASIS   MCVARS     RHF      UHF  
+
+ PROGRAMS   *        TOTAL       POP       UHF       POP       RHF       INT
+ CPU TIMES  *         2.78      0.00      0.07      0.00      0.46      2.17
+ REAL TIME  *         6.01 SEC
+ DISK USED  *       272.98 MB      
+ **********************************************************************************************************************************
+   -->
+   <time start="22:45:05" end="22:45:05" cpu="0.0" system="0.01" real="0.04"/>
+   <storage units="megabyte" memory="32001.84" sf="0.0" df="272.98" eaf="0.0"/>
+  </jobstep><!--
+  --><jobstep command="MRCC" commandset="MRCC">
+   <!--
+
+
+ PROGRAM * MRCC (General Multireference Coupled Cluster)    Author: M. Kallay, 2000-2005
+
+ ***  Initialisation ***
+
+   0 Spin projections
+ 
+ Molecular orbitals read from record     2200.2  Type=UHF/ALPHA (state 1.1)
+
+ ?Warning: UHF not converged
+ Molecular orbitals read from record     2200.2  Type=UHF/BETA (state 1.1)
+
+ ?Warning: UHF not converged
+ 
+ Frozen orbitals:              0 (  0  0  0  0  0  0  0  0)
+ Active orbitals:            137 ( 35 34 34 34  0  0  0  0)
+ Active electrons:             8
+ Spin quantum number:          0.0
+
+ Transformed integrals will be written to file mrcc_55189/fort.55
+
+ Load integrals                3.0 sec
+ Transform integrals           6.2 sec
+ Storage for integrals:       67128931
+ Remaining memory:           *********
+
+ Core energy:               7.03521075
+ 
+ MRCC Input:
+     2     1     0     0     0     0     0     2     0     1     0     1     0     0     0     7     0     0   0.000     0   32000
+  ex.lev,nsing,ntrip, rest,method,dens,conver,symm, diag, CS ,spatial, HF, ndoub,nacto,nactv, tol, maxex, sacc, freq,  dboc,   mem
+  2  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  2  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  2  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  2  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+ MRCC Input end
+ Variable memory released
+ MRCC now being run, temporary output in /global/cscratch1/sd/gwang18/mrcc_55189/mrcc.out
+ **********************************************************************
+                          MRCC program system
+ **********************************************************************
+
+                              Written by
+ Mihaly Kallay, Peter R. Nagy, Zoltan Rolik, David Mester, Gyula Samu,
+   Jozsef Csontos, Jozsef Csoka, Bernat P. Szabo, Laszlo Gyevi-Nagy,
+    Istvan Ladjanszki, Lorant Szegedy, Bence Ladoczki, Klara Petrov,
+              Mate Farkas, Pal D. Mezei, and Bence Hegely
+
+        Department of Physical Chemistry and Materials Science
+            Budapest University of Technology and Economics
+                  Budapest P.O.Box 91, H-1521 Hungary
+
+                              www.mrcc.hu
+
+                     Release date: February 9, 2019
+
+ ************************ 2020-06-09 22:47:14 *************************
+ Executing goldstone...
+
+ Generation of CI equations in terms of H and C...
+ Generation of antisymmetrized Goldstone diagrams...
+ Number of diagrams in T^1 equations:     7
+ Number of diagrams in T^2 equations:     8
+ Translation of diagrams to factorized equations...
+ Optimizing intermediate calculation...
+ Number of floating-point operations per iteration step:   1.4038E+09
+ Probable CPU time per iteration step (hours):      0.01
+ Required memory (Mbytes):   40884.2
+ Number of intermediates:                                  26
+ Number of intermediates to be stored:                     11
+ Length of intermediate file (Mbytes):    1333.2
+
+ ************************ 2020-06-09 22:47:14 *************************
+ Executing xmrcc...
+
+ **********************************************************************
+ CI(                     2 ) calculation
+
+
+ Allocation of****** Mbytes of memory...
+ Number of spinorbitals:                   274
+ Number of alpha electrons:                        4
+ Number of beta electrons:                         4
+ Spin multiplicity:                     1
+ z-component of spin:  0.0
+ Spatial symmetry:                      2
+ Convergence criterion:  1.0E-07
+ Construction of occupation graphs...
+ Number of                     0 -fold excitations:                      0
+ Number of                     1 -fold excitations:                    266
+ Number of                     2 -fold excitations:                  97024
+ Total number of configurations:                  97290
+ Calculation of coupling coefficients...
+ Length of intermediate file (Mbytes):    1002.5
+
+ ======================================================================
+
+ Memory requirements /Mbyte/:
+               Minimal        Optimal
+ Real*8:        597.9242      2687.9380
+ Integer:         1.5050
+ Total:         599.4291      2689.4430
+
+
+ ************************ 2020-06-09 22:47:18 *************************
+ Executing mrcc...
+
+ **********************************************************************
+ CISD calculation
+
+
+ Allocation of 2687.9 Mbytes of memory...
+ Number of spinorbitals: 274
+ Number of alpha electrons:  4
+ Number of beta  electrons:  4
+ Spin multiplicity: 1
+ z-component of spin:  0.0
+ Spatial symmetry: 2
+ Convergence criterion:  1.0E-07
+ Construction of occupation graphs...
+ Number of excitations for irrep 1:
+ Number of 0-fold excitations: 1
+ Number of 1-fold excitations: 266
+ Number of 2-fold excitations: 97288
+ Total number of determinants: 97555
+ Number of excitations for irrep 2:
+ Number of 0-fold excitations: 0
+ Number of 1-fold excitations: 266
+ Number of 2-fold excitations: 97024
+ Total number of determinants: 97290
+ Calculation of coupling coefficients...
+ Initial cluster amplitudes are generated.
+ Length of intermediate file (Mbytes):    1002.5
+ Reading integral list from unit 55...
+ Sorting integrals...
+ Sorting integrals...
+ Sorting integrals...
+ Sorting integrals...
+ Energy of reference determinant [au]:      -6.083611781144
+ Calculation of diagonal elements of Hamiltonian...
+
+ Starting CI iteration for root                      1 ...
+ ======================================================================
+ Norm of residual vector:     0.25380177      Convergence:   1.00000000
+ CPU time [min]:     1.389                   Wall time [min]:     1.745
+
+ Iteration  1  CI energy:    -5.69415461  Energy decrease:   0.38945717
+ ======================================================================
+ Norm of residual vector:     0.14600223      Convergence:   0.49155595
+ CPU time [min]:     1.583                   Wall time [min]:     2.279
+
+ Iteration  2  CI energy:    -5.76301090  Energy decrease:   0.06885629
+ ======================================================================
+ Norm of residual vector:     0.05512934      Convergence:   0.20920225
+ CPU time [min]:     1.777                   Wall time [min]:     2.849
+
+ Iteration  3  CI energy:    -5.78461228  Energy decrease:   0.02160138
+ ======================================================================
+ Norm of residual vector:     0.02501218      Convergence:   0.07463888
+ CPU time [min]:     1.971                   Wall time [min]:     3.421
+
+ Iteration  4  CI energy:    -5.78787264  Energy decrease:   0.00326036
+ ======================================================================
+ Norm of residual vector:     0.01611894      Convergence:   0.05569893
+ CPU time [min]:     2.167                   Wall time [min]:     4.033
+
+ Iteration  5  CI energy:    -5.78888490  Energy decrease:   0.00101226
+ ======================================================================
+ Norm of residual vector:     0.00638476      Convergence:   0.01903544
+ CPU time [min]:     2.362                   Wall time [min]:     4.646
+
+ Iteration  6  CI energy:    -5.78910986  Energy decrease:   0.00022496
+ ======================================================================
+ Norm of residual vector:     0.00394095      Convergence:   0.01070977
+ CPU time [min]:     2.557                   Wall time [min]:     5.161
+
+ Iteration  7  CI energy:    -5.78915653  Energy decrease:   0.00004668
+ ======================================================================
+ Norm of residual vector:     0.00252042      Convergence:   0.00588881
+ CPU time [min]:     2.752                   Wall time [min]:     5.699
+
+ Iteration  8  CI energy:    -5.78917443  Energy decrease:   0.00001789
+ ======================================================================
+ Norm of residual vector:     0.00164153      Convergence:   0.00456037
+ CPU time [min]:     2.948                   Wall time [min]:     6.224
+
+ Iteration  9  CI energy:    -5.78918280  Energy decrease:   0.00000838
+ ======================================================================
+ Norm of residual vector:     0.00104736      Convergence:   0.00240177
+ CPU time [min]:     3.142                   Wall time [min]:     6.738
+
+ Iteration 10  CI energy:    -5.78918595  Energy decrease:   0.00000315
+ ======================================================================
+ Norm of residual vector:     0.00061943      Convergence:   0.00150338
+ CPU time [min]:     3.339                   Wall time [min]:     7.248
+
+ Iteration 11  CI energy:    -5.78918716  Energy decrease:   0.00000121
+ ======================================================================
+ Norm of residual vector:     0.00039939      Convergence:   0.00084762
+ CPU time [min]:     3.534                   Wall time [min]:     7.782
+
+ Iteration 12  CI energy:    -5.78918759  Energy decrease:   0.00000043
+ ======================================================================
+ Norm of residual vector:     0.00025804      Convergence:   0.00057712
+ CPU time [min]:     3.730                   Wall time [min]:     8.328
+
+ Iteration 13  CI energy:    -5.78918778  Energy decrease:   0.00000019
+ ======================================================================
+ Norm of residual vector:     0.00016828      Convergence:   0.00039542
+ CPU time [min]:     3.926                   Wall time [min]:     8.869
+
+ Iteration 14  CI energy:    -5.78918786  Energy decrease:   0.00000008
+ ======================================================================
+ Norm of residual vector:     0.00007553      Convergence:   0.00018511
+ CPU time [min]:     4.121                   Wall time [min]:     9.388
+
+ Iteration 15  CI energy:    -5.78918789  Energy decrease:   0.00000003
+ ======================================================================
+ Norm of residual vector:     0.00003402      Convergence:   0.00007643
+ CPU time [min]:     4.316                   Wall time [min]:     9.923
+
+ Iteration 16  CI energy:    -5.78918789  Energy decrease:   4.8903E-09
+ ======================================================================
+ Norm of residual vector:     0.00001463      Convergence:   0.00003633
+ CPU time [min]:     4.510                   Wall time [min]:    10.435
+
+ Iteration 17  CI energy:    -5.78918790  Energy decrease:   9.5698E-10
+ ======================================================================
+ Norm of residual vector:     0.00000771      Convergence:   0.00001740
+ CPU time [min]:     4.705                   Wall time [min]:    10.994
+
+ Iteration 18  CI energy:    -5.78918790  Energy decrease:   2.0327E-10
+ ======================================================================
+ Norm of residual vector:     0.00000348      Convergence:   0.00000884
+ CPU time [min]:     4.899                   Wall time [min]:    11.607
+
+ Iteration 19  CI energy:    -5.78918790  Energy decrease:   5.4413E-11
+ ======================================================================
+ Norm of residual vector:     0.00000142      Convergence:   0.00000334
+ CPU time [min]:     5.094                   Wall time [min]:    12.120
+
+ Iteration 20  CI energy:    -5.78918790  Energy decrease:   9.5559E-12
+ ======================================================================
+ Norm of residual vector:     0.00000061      Convergence:   0.00000147
+ CPU time [min]:     5.289                   Wall time [min]:    12.633
+
+ Iteration 21  CI energy:    -5.78918790  Energy decrease:   1.6227E-12
+ ======================================================================
+ Norm of residual vector:     0.00000032      Convergence:   0.00000079
+ CPU time [min]:     5.483                   Wall time [min]:    13.157
+
+ Iteration 22  CI energy:    -5.78918790  Energy decrease:   3.3484E-13
+ ======================================================================
+ Norm of residual vector:     0.00000047      Convergence:   0.00000120
+ CPU time [min]:     5.679                   Wall time [min]:    13.689
+
+ Iteration 23  CI energy:    -5.78918790  Energy decrease:   2.4603E-13
+ ======================================================================
+ Norm of residual vector:     0.00000193      Convergence:   0.00000499
+ CPU time [min]:     5.875                   Wall time [min]:    14.227
+
+ Iteration 24  CI energy:    -5.78918790  Energy decrease:   1.6334E-12
+ ======================================================================
+ Norm of residual vector:     0.05388460      Convergence:   0.13281074
+ CPU time [min]:     6.070                   Wall time [min]:    14.772
+
+ Iteration 25  CI energy:    -5.79481679  Energy decrease:   0.00562890
+ ======================================================================
+ Norm of residual vector:     0.02162544      Convergence:   0.05104640
+ CPU time [min]:     6.266                   Wall time [min]:    15.298
+
+ Iteration 26  CI energy:    -5.79708670  Energy decrease:   0.00226991
+ ======================================================================
+ Norm of residual vector:     0.00892513      Convergence:   0.02071466
+ CPU time [min]:     6.462                   Wall time [min]:    15.835
+
+ Iteration 27  CI energy:    -5.79746591  Energy decrease:   0.00037920
+ ======================================================================
+ Norm of residual vector:     0.00373854      Convergence:   0.00848978
+ CPU time [min]:     6.658                   Wall time [min]:    16.363
+
+ Iteration 28  CI energy:    -5.79752988  Energy decrease:   0.00006397
+ ======================================================================
+ Norm of residual vector:     0.00142226      Convergence:   0.00352143
+ CPU time [min]:     6.853                   Wall time [min]:    16.906
+
+ Iteration 29  CI energy:    -5.79754034  Energy decrease:   0.00001045
+ ======================================================================
+ Norm of residual vector:     0.00057485      Convergence:   0.00140709
+ CPU time [min]:     7.050                   Wall time [min]:    17.433
+
+ Iteration 30  CI energy:    -5.79754195  Energy decrease:   0.00000161
+ ======================================================================
+ Norm of residual vector:     0.00030928      Convergence:   0.00080989
+ CPU time [min]:     7.248                   Wall time [min]:    18.008
+
+ Iteration 31  CI energy:    -5.79754228  Energy decrease:   0.00000034
+ ======================================================================
+ Norm of residual vector:     0.00016706      Convergence:   0.00040998
+ CPU time [min]:     7.444                   Wall time [min]:    18.620
+
+ Iteration 32  CI energy:    -5.79754238  Energy decrease:   0.00000010
+ ======================================================================
+ Norm of residual vector:     0.00008704      Convergence:   0.00023211
+ CPU time [min]:     7.640                   Wall time [min]:    19.146
+
+ Iteration 33  CI energy:    -5.79754241  Energy decrease:   0.00000003
+ ======================================================================
+ Norm of residual vector:     0.00003786      Convergence:   0.00009688
+ CPU time [min]:     7.835                   Wall time [min]:    19.715
+
+ Iteration 34  CI energy:    -5.79754242  Energy decrease:   0.00000001
+ ======================================================================
+ Norm of residual vector:     0.00001397      Convergence:   0.00003388
+ CPU time [min]:     8.031                   Wall time [min]:    20.283
+
+ Iteration 35  CI energy:    -5.79754242  Energy decrease:   1.0431E-09
+ ======================================================================
+ Norm of residual vector:     0.00000561      Convergence:   0.00001349
+ CPU time [min]:     8.227                   Wall time [min]:    20.859
+
+ Iteration 36  CI energy:    -5.79754242  Energy decrease:   1.4609E-10
+ ======================================================================
+ Norm of residual vector:     0.00000566      Convergence:   0.00001286
+ CPU time [min]:     8.423                   Wall time [min]:    21.412
+
+ Iteration 37  CI energy:    -5.79754242  Energy decrease:   4.7245E-11
+ ======================================================================
+ Norm of residual vector:     0.00010584      Convergence:   0.00024919
+ CPU time [min]:     8.619                   Wall time [min]:    21.997
+
+ Iteration 38  CI energy:    -5.79754242  Energy decrease:   1.0862E-09
+ ======================================================================
+ Norm of residual vector:     0.06030930      Convergence:   0.14265790
+ CPU time [min]:     8.815                   Wall time [min]:    22.535
+
+ Iteration 39  CI energy:    -5.81441308  Energy decrease:   0.01687066
+ ======================================================================
+ Norm of residual vector:     0.02588410      Convergence:   0.06522452
+ CPU time [min]:     9.011                   Wall time [min]:    23.074
+
+ Iteration 40  CI energy:    -5.81734503  Energy decrease:   0.00293194
+ ======================================================================
+ Norm of residual vector:     0.01345937      Convergence:   0.03427583
+ CPU time [min]:     9.207                   Wall time [min]:    23.658
+
+ Iteration 41  CI energy:    -5.81801729  Energy decrease:   0.00067226
+ ======================================================================
+ Norm of residual vector:     0.00767849      Convergence:   0.02092196
+ CPU time [min]:     9.404                   Wall time [min]:    24.224
+
+ Iteration 42  CI energy:    -5.81821327  Energy decrease:   0.00019598
+ ======================================================================
+ Norm of residual vector:     0.00379246      Convergence:   0.00963520
+ CPU time [min]:     9.600                   Wall time [min]:    24.792
+
+ Iteration 43  CI energy:    -5.81826795  Energy decrease:   0.00005468
+ ======================================================================
+ Norm of residual vector:     0.00284818      Convergence:   0.00750850
+ CPU time [min]:     9.797                   Wall time [min]:    25.391
+
+ Iteration 44  CI energy:    -5.81828685  Energy decrease:   0.00001890
+ ======================================================================
+ Norm of residual vector:     0.00293244      Convergence:   0.00695474
+ CPU time [min]:     9.993                   Wall time [min]:    25.948
+
+ Iteration 45  CI energy:    -5.81830174  Energy decrease:   0.00001489
+ ======================================================================
+ Norm of residual vector:     0.00232467      Convergence:   0.00581565
+ CPU time [min]:    10.190                   Wall time [min]:    26.509
+
+ Iteration 46  CI energy:    -5.81831457  Energy decrease:   0.00001283
+ ======================================================================
+ Norm of residual vector:     0.00119395      Convergence:   0.00297236
+ CPU time [min]:    10.386                   Wall time [min]:    27.037
+
+ Iteration 47  CI energy:    -5.81831986  Energy decrease:   0.00000528
+ ======================================================================
+ Norm of residual vector:     0.00052567      Convergence:   0.00136944
+ CPU time [min]:    10.583                   Wall time [min]:    27.565
+
+ Iteration 48  CI energy:    -5.81832107  Energy decrease:   0.00000121
+ ======================================================================
+ Norm of residual vector:     0.00020801      Convergence:   0.00052493
+ CPU time [min]:    10.779                   Wall time [min]:    28.116
+
+ Iteration 49  CI energy:    -5.81832129  Energy decrease:   0.00000021
+ ======================================================================
+ Norm of residual vector:     0.00009295      Convergence:   0.00023072
+ CPU time [min]:    10.976                   Wall time [min]:    28.655
+
+ Iteration 50  CI energy:    -5.81832132  Energy decrease:   0.00000004
+ ======================================================================
+
+ Convergence not achieved in 50 iterations!
+
+ Final results:
+ Total CISD energy [au]:              -5.818321321989
+
+ ************************ 2020-06-09 23:15:58 *************************
+                      Normal termination of mrcc.
+ **********************************************************************
+ !CISD STATE 1.1 Energy                -5.818321321989
+   --><property name="Energy" method="CISD" principal="true" stateSymmetry="1" stateNumber="1"
+     value="-5.818321321989"/><!--
+ 
+ CPU-time for MRCC:            658.6 sec
+ Elapsed-time for MRCC:       1724.8 sec
+
+ Variable memory set to 4000000000 words,  buffer space   230000 words
+
+
+
+ **********************************************************************************************************************************
+ DATASETS  * FILE   NREC   LENGTH (MB)   RECORD NAMES
+              1      20       87.04       500      610      700      900      950      970     1000      129      960     1100   
+                                          VAR    BASINP    GEOM    SYMINP    ZMAT    AOBASIS   BASIS     P2S    ABASIS      S 
+                                         1400     1410     1420     1200     1210     1080     1600     1650     1300     1700   
+                                           T        V       ECP      H0       H01     AOSYM     SMH    MOLCAS    ERIS     OPER   
+
+              2       5        5.72       700     1000      520     2100     2200   
+                                         GEOM     BASIS   MCVARS     RHF      UHF  
+
+ PROGRAMS   *        TOTAL      MRCC       POP       UHF       POP       RHF       INT
+ CPU TIMES  *       744.02    741.24      0.00      0.07      0.00      0.46      2.17
+ REAL TIME  *      1859.11 SEC
+ DISK USED  *       272.98 MB      
+ **********************************************************************************************************************************
+   -->
+   <time start="22:45:05" end="23:15:58" cpu="741.24" system="28.9" real="1853.1"/>
+   <storage units="megabyte" memory="32001.84" sf="0.0" df="272.98" eaf="0.0"/>
+  </jobstep><!--
+ SETTING POSTHF         =        -5.81832132  AU                              
+ Output type csv         
+                                                                                                                                                                                                                                                                
+
+      SCF,POSTHF
+   -6.08361178,   -5.81832132
+                                                  
+-->
+<table xmlns="http://www.w3.org/1999/xhtml" id="table1">
+<thead><tr><th>SCF</th><th>POSTHF</th></tr></thead><tbody>
+<tr><td>   -6.08361178</td><td>   -5.81832132</td></tr>
+</tbody></table>
+<!--
+
+ CISD/USERDEF energy=     -5.818321321989
+
+        CISD            UHF-SCF         RHF-SCF 
+     -5.81832132     -6.08361178     -6.08361178
+ **********************************************************************************************************************************
+ Molpro calculation terminated
+ Variable memory released
+  --><stm:metadataList>
+   <stm:metadata name="dc:date" content="2020-06-09T23:15:58-07:00"/>
+   <stm:metadata name="dc:creator" content="gwang18"/>
+   <stm:metadata name="dc:title" content="SiH4"/>
+   <stm:metadata name="cmlm:insilico" content="Molpro"/>
+  </stm:metadataList><!--
+  --><platform>
+   <version major="2015" minor="1" SHA="19cd028119e0e09f93f0674bd8af7968d9b3eff6"
+     integer_bits="64" parallelism="serial">
+    2015.1
+    <date year="2020" month="6" day="9" hour="22" minute="44" second="59">
+     2020-06-09T22:44:59
+    </date>
+   </version>
+   <licence id="lbl"/>
+   <parallel processes="1" nodes="1" all_processes="1" openmp="1"/>
+   <machine hostname="" architecture="">
+     64 bit serial version
+    <sysinfo name="cpu MHz" content="2301.000"/>
+    <sysinfo name="MemTotal" content="131895080 kB"/>
+    <sysinfo name="vendor_id" content="GenuineIntel"/>
+    <sysinfo name="cpu family" content="6"/>
+    <sysinfo name="model name" content="Intel(R) Xeon(R) CPU E5-2698 v3 @ 2.30GHz"/>
+    <sysinfo name="flags"
+      content="fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm cpuid_fault epb invpcid_single pti intel_ppin ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid cqm xsaveopt cqm_llc cqm_occup_llc dtherm ida arat pln pts md_clear flush_l1d"/>
+    <sysinfo name="MemTotal" content="131895080 kB"/>
+    <sysinfo name="cache size" content="40960 KB"/>
+    <sysinfo name="ncpu" content="64"/>
+   </machine>
+  </platform><!--
+  -->
+  <input>
+   <p> ***,SiH4 </p>
+   <p> memory,4,g </p>
+   <p> gthresh,twoint=1.0E-12 </p>
+   <p> basis={ </p>
+   <p> ECP,Si,10,2,0; </p>
+   <p> 3;                                                                              !Vd </p>
+   <p> 1,5.168316,    4.000000 </p>
+   <p> 3,8.861690,   20.673264 </p>
+   <p> 2,3.933474,  -14.818174 </p>
+   <p> 2;                                                                              !Vs-Vd </p>
+   <p> 2,9.447023,   14.832760 </p>
+   <p> 2,2.553812,   26.349664 </p>
+   <p> 2;                                                                              !Vp-Vd </p>
+   <p> 2,3.660001,    7.621400 </p>
+   <p> 2,1.903653,   10.331583 </p>
+   <include file="/global/u2/g/gwang18/projects/si_gap/sih4/ci/singlet-ex/cisd/Si.aug-cc-pVTZ.basis"/>
+   <p> ECP,H,0,1,0 </p>
+   <p> 3; </p>
+   <p> 2,   21.77696655044365 ,     -10.85192405303825 ; </p>
+   <p> 1,   21.24359508259891 ,       1.00000000000000; </p>
+   <p> 3,   21.24359508259891 ,      21.24359508259891; </p>
+   <p> 1; 2,                   1.,                      0.; </p>
+   <include file="/global/u2/g/gwang18/projects/si_gap/sih4/ci/singlet-ex/cisd/H.aug-cc-pVTZ.basis"/>
+   <p> } </p>
+   <p> geometry={ </p>
+   <p>   5 </p>
+   <p>  Silane </p>
+   <p>  Si          0.0000        0.0000        0.0000 </p>
+   <p>   H          0.8544        0.8544        0.8544 </p>
+   <p>   H         -0.8544       -0.8544        0.8544 </p>
+   <p>   H         -0.8544        0.8544       -0.8544 </p>
+   <p>   H          0.8544       -0.8544       -0.8544 </p>
+   <p> } </p>
+   <p>                                                                                 ! HARTREE-FOCK </p>
+   <p> {RHF </p>
+   <p>    wf,8,1,0                                                                     ! nelec,symm,spin </p>
+   <p> } </p>
+   <p> scf=energy </p>
+   <p> pop; </p>
+   <p>  !NOTE: Perturbative MRCC works only with UHF reference. So, here we will trick MRCC by doing zero UHF iteration right after ROHF. </p>
+   <p> {uhf </p>
+   <p> wf,8,1,0 </p>
+   <p> maxit,0 </p>
+   <p> } </p>
+   <p> scf=energy </p>
+   <p> pop; </p>
+   <p> {mrcc,method=CISD,NSING=1,SYMM=2 </p>
+   <p> orbital,ignore_error=1                                                          !Ignore the fact that UHF WF is not converged </p>
+   <p> maxit,100 </p>
+   <p> core </p>
+   <p> } </p>
+   <p> posthf=energy </p>
+   <p> table,scf,posthf </p>
+   <p> save </p>
+   <p> type,csv </p>
+  </input>
+  <!--
+ --></job><!--
+--></molpro>

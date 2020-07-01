@@ -1,0 +1,15 @@
+#!/bin/bash -l
+#SBATCH -J silane
+#SBATCH -q regular
+#SBATCH -N 1
+#!SBATCH -n 16
+#SBATCH -C haswell
+#SBATCH -t 20:30:00
+#SBATCH -o test_silane.o%j
+
+module load molpro
+molpro -n 1 dz.com
+molpro -n 1 tz.com
+molpro -n 1 qz.com
+#molpro -n 1 5z.com
+#molpro -n 8 6z.com
