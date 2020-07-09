@@ -31,8 +31,8 @@ def f2s(x):   # float to string
         y = frmtr.format("{0:.1u}", x)
     except:
         y = x
-    if "nan" in y:
-        y = ' '
+    #if "nan" in y:
+    #    y = ' '
     return y
 
 def s2f(x):   # string to float
