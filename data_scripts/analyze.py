@@ -95,57 +95,57 @@ for i in files:
 	final = final + '/' + energy_gaps
 	print(final.to_latex())
 
-#h_scf = s2f('-0.49999965(1)')
-#si_rccsd_t = s2f('-0.088641(52)') + s2f('-3.6724778(1)')
-#si_ccsdt_q = s2f('-0.089575(57)') + s2f('-3.6724778(1)')
-#si_dmc = s2f('-3.7601(1)')
-#print(f2s(si_rccsd_t))
-#print(f2s(si_ccsdt_q))
+h_scf = s2f('-0.49999965(1)')
+si_rccsd_t = s2f('-0.088641(52)') + s2f('-3.6724778(1)')
+si_ccsdt_q = s2f('-0.089575(57)') + s2f('-3.6724778(1)')
+si_dmc = s2f('-3.7601(1)')
+print(f2s(si_rccsd_t))
+print(f2s(si_ccsdt_q))
 
-#print("\nBINDING ENERGIES:")
-#
-#atoms = pd.read_csv('atoms.csv', delim_whitespace=True, index_col=False, engine='python') #sep='\s*&\s*',
-#atoms = atoms.set_index('Method')
-#atoms = pd_s2f(atoms)
-##print(atoms)
-#
-#print('\nSiH2:')
-#energy = pd.read_csv('SiH2.csv', delim_whitespace=True, index_col=False, engine='python') #sep='\s*&\s*',
-#energy = energy.set_index('Method')
-#energy = pd_s2f(energy)
-#energy = energy.drop(index='CIPSI')
-##print(energy)
-#binding = pd.DataFrame(index = energy.index)
-#binding['De'] = -(energy['GS'] - atoms['Si'] - 2*atoms['H'])
+print("\nBINDING ENERGIES:")
+
+atoms = pd.read_csv('atoms.csv', delim_whitespace=True, index_col=False, engine='python') #sep='\s*&\s*',
+atoms = atoms.set_index('Method')
+atoms = pd_s2f(atoms)
+#print(atoms)
+
+print('\nSiH2:')
+energy = pd.read_csv('SiH2.csv', delim_whitespace=True, index_col=False, engine='python') #sep='\s*&\s*',
+energy = energy.set_index('Method')
+energy = pd_s2f(energy)
+energy = energy.drop(index='CIPSI')
+#print(energy)
+binding = pd.DataFrame(index = energy.index)
+binding['De'] = -(energy['GS'] - atoms['Si'] - 2*atoms['H'])*toev
 #binding['D0'] = binding['De'] - 0.0114
-#binding = pd_f2s(binding)
-#print(binding)
-#
-#print('\nSiH4:')
-#energy = pd.read_csv('SiH4.csv', delim_whitespace=True, index_col=False, engine='python') #sep='\s*&\s*',
-#energy = energy.set_index('Method')
-#energy = pd_s2f(energy)
-##print(energy)
-#binding = pd.DataFrame(index = energy.index)
-#binding['De'] = -(energy['GS'] - atoms['Si'] - 4*atoms['H'])
+binding = pd_f2s(binding)
+print(binding)
+
+print('\nSiH4:')
+energy = pd.read_csv('SiH4.csv', delim_whitespace=True, index_col=False, engine='python') #sep='\s*&\s*',
+energy = energy.set_index('Method')
+energy = pd_s2f(energy)
+#print(energy)
+binding = pd.DataFrame(index = energy.index)
+binding['De'] = -(energy['GS'] - atoms['Si'] - 4*atoms['H'])*toev
 #binding['D0'] = binding['De'] - 0.0306
-#binding = pd_f2s(binding)
-#print(binding)
-#
-#print('\nSi2H6:')
-#energy = pd.read_csv('Si2H6.csv', delim_whitespace=True, index_col=False, engine='python') #sep='\s*&\s*',
-#energy = energy.set_index('Method')
-#energy = pd_s2f(energy)
-##print(energy)
-#binding = pd.DataFrame(index = energy.index)
-#binding['De'] = -(energy['GS'] - 2*atoms['Si'] - 6*atoms['H'])
+binding = pd_f2s(binding)
+print(binding)
+
+print('\nSi2H6:')
+energy = pd.read_csv('Si2H6.csv', delim_whitespace=True, index_col=False, engine='python') #sep='\s*&\s*',
+energy = energy.set_index('Method')
+energy = pd_s2f(energy)
+#print(energy)
+binding = pd.DataFrame(index = energy.index)
+binding['De'] = -(energy['GS'] - 2*atoms['Si'] - 6*atoms['H'])*toev
 #binding['D0'] = binding['De'] - 0.0479
-#binding = pd_f2s(binding)
-#print(binding)
-#
-#
-#
-#
-#
-#
-#
+binding = pd_f2s(binding)
+print(binding)
+
+
+
+
+
+
+
