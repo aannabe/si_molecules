@@ -144,8 +144,16 @@ binding = pd_f2s(binding)
 print(binding)
 
 
+print("\nFN ANALYSIS:")
 
+fn_df = pd.read_csv('fn_analysis.csv', delim_whitespace=True, index_col=False, engine='python') #sep='\s*&\s*',
+fn_df = pd_s2f(fn_df)
 
+fn_df['error'] = fn_df['CC'] - fn_df['DMC']
+fn_df['corr'] = fn_df['CC'] - fn_df['SCF']
+fn_df['eta'] = (fn_df['error']/fn_df['corr'])*100.0
+del fn_df['CC']
+del fn_df['error']
 
-
-
+fn_df = pd_f2s(fn_df)
+print(fn_df.to_latex())
