@@ -156,4 +156,4 @@ del fn_df['CC']
 del fn_df['error']
 
 fn_df = pd_f2s(fn_df)
-print(fn_df.to_latex())
+print(fn_df.to_latex(escape=False))
