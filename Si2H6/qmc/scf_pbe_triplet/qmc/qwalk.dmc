@@ -1,0 +1,15 @@
+
+method { DMC
+	#READCONFIG qwalk_0.001.dmc.config
+        NCONFIG 2
+        NBLOCK 1000
+	NSTEP 1000
+        TIMESTEP 0.001
+        TMOVES
+	LABEL 0.001
+	#SAVE_TRACE
+	#LOW_IO True
+        }
+include qwalk.sys
+trialfunc { include qwalk.linear.wfout }
+

@@ -1,0 +1,54 @@
+#!/bin/bash   
+#BSUB -P MAT151
+#BSUB -J pbe 
+#BSUB -o pbe.out
+#BSUB -e pbe.err
+#BSUB -W 00:30
+#BSUB -nnodes 32
+#BSUB -alloc_flags "smt1"
+
+module load hdf5/1.10.4 essl
+module load gcc/7.4.0
+module load spectrum-mpi
+module load essl
+module load netlib-lapack
+module load netlib-scalapack
+module load fftw
+export FFTW_ROOT=$OLCF_FFTW_ROOT
+module load cmake
+module load boost
+module load cuda
+module load python/3.6.6-anaconda3-5.3.0
+
+### ~~~~~ Input ~~~~~~~~~
+
+solid='qwalk'
+nconfig=2                       # Walkers per core
+dmc_timestep="0.001"            # DMC timestep
+dmc_blocks=1000                  # DMC blocks
+
+compile='-summit'
+runner=jsrun                    # mpirun vs ibrun
+cores=1344                       # Total number of cores
+
+###~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+mkdir qmc
+cd qmc
+cp ../${solid}.* .
+gen_qw ${solid} $nconfig $dmc_blocks
+sed s/xxx-timestep-xxx/${dmc_timestep}/g tmp.dmc > ${solid}.dmc
+sed -i s/xxx-dmc_blocks-xxx/${dmc_blocks}/g ${solid}.dmc
+sed -i s/xxx-dmcstep-xxx/1000/g ${solid}.dmc
+
+$runner -n $cores qwalk${compile} ${solid}.hf > HF.log
+$runner -n $cores qwalk${compile} ${solid}.opt > OPT.log
+sed s/OPTIMIZEBASIS//g ${solid}.opt.wfout > fixed_basis.wf
+$runner -n $cores qwalk${compile} ${solid}.linear > LIN.log
+$runner -n $cores qwalk${compile} ${solid}.dmc > DMC.log
+cd ../
+
+#export OMP_NUM_THREADS=21
+#jsrun -b rs -c 21 -g 0 -d packed -n 200 -r 2 -a 1 /ccs/home/aannabe/codes/qmcpack/bin/qmcpack_cpu GX_qmc.in.xml
+
