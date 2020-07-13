@@ -152,8 +152,11 @@ fn_df = pd_s2f(fn_df)
 fn_df['error'] = fn_df['CC'] - fn_df['DMC']
 fn_df['corr'] = fn_df['CC'] - fn_df['SCF']
 fn_df['eta'] = (fn_df['error']/fn_df['corr'])*100.0
+fn_df['eta2'] = (-fn_df['error']/fn_df['Ne'])*toev
+
 del fn_df['CC']
 del fn_df['error']
+del fn_df['Ne']
 
 fn_df = pd_f2s(fn_df)
 print(fn_df.to_latex(escape=False))
