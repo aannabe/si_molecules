@@ -1,0 +1,12 @@
+
+method { OPTIMIZE
+	#READCONFIG qwalk.hf.config
+	NCONFIG 2
+	ITERATIONS 60
+}
+include qwalk.sys
+trialfunc { slater-jastrow
+  wf1 { include qwalk.slater }
+  wf2 { include qwalk.jast3 }
+}
+

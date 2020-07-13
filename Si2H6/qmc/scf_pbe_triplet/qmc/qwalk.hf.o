@@ -1,0 +1,246 @@
+------------------------------------------------
+Quantum Walk development version
+Contributions from: (in no particular order) 
+Michal Bajdich, Shuming Hu, Jindrich Kolorenc, Kevin Rasch, 
+Pavel Vagner, Rene Derian, Paul Kent, Jarrod McClean, 
+Fernando Reboredo, Lucas Wagner, Hiori Kino, Lubos Mitas, Brian Busemeyer, Joshua Schiller,
+Li Chen, Kiel Williams, and Huihuo Zheng
+Originated at North Carolina State University 
+Please cite J. Comp. Phys. v 228 pp 3390-3404 (2009) 
+ when publishing results from this program.
+------------------------------------------------
+Running on f09n08
+Mon Jul 13 14:47:28 2020
+
+Atomic positions 
+ Label          Charge            x               y               z   
+    Si               4               0               0         2.19208
+    Si               4               0               0        -2.19208
+     H               1               0         2.62011         3.11484
+     H               1        -2.26918        -1.31015         3.11484
+     H               1         2.26918        -1.31015         3.11484
+     H               1               0        -2.62011        -3.11484
+     H               1        -2.26918         1.31015        -3.11484
+     H               1         2.26918         1.31015        -3.11484
+
+
+                               Wavefunction  
+
+Slater Determinant
+1 determinant
+State: 
+spin up:
+  1 2 3 4 5 6 7 11 
+spin down: 
+  1 2 3 4 5 6 
+Molecular Orbital object : Cutoff MO 
+Number of molecular orbitals: 11
+Basis functions: 
+  Cubic spline for Si
+  19  radial functions
+    function  symmetry    cutoff
+           0         S     20.48
+           1         S      6.98
+           2         S     10.98
+           3         S     16.98
+           4         S     25.98
+           5         P     23.98
+           6         P      4.48
+           7         P      6.98
+           8         P     10.98
+           9         P     30.48
+          10 5D_siesta      4.98
+          11 5D_siesta      7.98
+          12 5D_siesta     13.48
+          13 5D_siesta     22.48
+          14 7F_siesta      6.48
+          15 7F_siesta     10.48
+          16 7F_siesta     16.48
+          17  9G_pyscf      7.48
+          18  9G_pyscf     10.98
+  Cubic spline for H
+  14  radial functions
+    function  symmetry    cutoff
+           0         S     17.98
+           1         S     28.48
+           2         S     16.98
+           3         S      9.98
+           4         S      5.98
+           5         P     15.98
+           6         P      9.48
+           7         P      5.48
+           8         P      3.48
+           9 5D_siesta     10.48
+          10 5D_siesta      5.98
+          11 5D_siesta      3.98
+          12 7F_siesta      7.48
+          13 7F_siesta      4.48
+Pseudopotential 
+atom Si
+Integration points 12
+Cutoff for static calculation 2.6
+Pseudopotential for spin up: 
+  R^n *Gaussian
+  Expansion 0
+       coeff         n  exponent
+     14.8328         0   9.44702
+     26.3497         0   2.55381
+  Expansion 1
+       coeff         n  exponent
+      7.6214         0      3.66
+     10.3316         0   1.90365
+  Expansion 2
+       coeff         n  exponent
+           4        -1   5.16832
+    -14.8182         0   3.93347
+     20.6733         1   8.86169
+Pseudopotential for spin down: 
+  R^n *Gaussian
+  Expansion 0
+       coeff         n  exponent
+     14.8328         0   9.44702
+     26.3497         0   2.55381
+  Expansion 1
+       coeff         n  exponent
+      7.6214         0      3.66
+     10.3316         0   1.90365
+  Expansion 2
+       coeff         n  exponent
+           4        -1   5.16832
+    -14.8182         0   3.93347
+     20.6733         1   8.86169
+atom H
+Integration points 6
+Cutoff for static calculation 20
+Pseudopotential for spin up: 
+  R^n *Gaussian
+  Expansion 0
+       coeff         n  exponent
+           0         0         1
+  Expansion 1
+       coeff         n  exponent
+           1        -1   21.2436
+    -10.8519         0    21.777
+     21.2436         1   21.2436
+Pseudopotential for spin down: 
+  R^n *Gaussian
+  Expansion 0
+       coeff         n  exponent
+           0         0         1
+  Expansion 1
+       coeff         n  exponent
+           1        -1   21.2436
+    -10.8519         0    21.777
+     21.2436         1   21.2436
+
+Variational Monte Carlo:
+Configurations per processor: 2
+Number of processors: 1344
+Total configurations: 2688
+Blocks: 10
+Steps per block: 25
+Number of decorrelation steps: 2
+Timestep: 1
+Guiding wavefunction: SUMSQUARES
+  recursion depth 2
+  timestep divider 2
+  drift type 1
+
+Entering VMC
+****Block 0 avg life 0.4335714286 max life 5 timestep 2.0115625
+Total acceptance 0.7542857143
+accept_level0   0.5364285714 tries 1400
+accept_level1   0.469953775 tries 649
+            total_energy             kinetic           potential            nonlocal
+  ##0        -10.74689625         6.714165537        -18.72366939         1.262607603   (value)
+  &&0         1.317005104         2.759728847         3.966137540         2.839321597   (sigma)
+
+****Block 1 avg life 0.625 max life 7 timestep 2.0115625
+Total acceptance 0.6985714286
+accept_level0   0.4757142857 tries 1400
+accept_level1   0.4250681199 tries 734
+            total_energy             kinetic           potential            nonlocal
+  ##0        -10.75560510         6.659672306        -18.62684153         1.211564119   (value)
+  &&0         1.156477119         2.724590985         3.245373157         2.108011634   (sigma)
+
+****Block 2 avg life 0.5635714286 max life 7 timestep 2.0115625
+Total acceptance 0.715
+accept_level0   0.5078571429 tries 1400
+accept_level1   0.4208998549 tries 689
+            total_energy             kinetic           potential            nonlocal
+  ##0        -10.75754834         6.674210575        -18.65308764         1.221328717   (value)
+  &&0         1.199808827         2.729523864         3.250123200         2.046734994   (sigma)
+
+****Block 3 avg life 0.4428571429 max life 7 timestep 2.0115625
+Total acceptance 0.735
+accept_level0   0.4992857143 tries 1400
+accept_level1   0.4707560628 tries 701
+            total_energy             kinetic           potential            nonlocal
+  ##0        -10.75258135         6.706698996        -18.67794921         1.218668864   (value)
+  &&0         1.239833129         2.949463597         3.297347350         2.435403153   (sigma)
+
+****Block 4 avg life 0.4385714286 max life 7 timestep 2.0115625
+Total acceptance 0.7278571429
+accept_level0   0.5014285714 tries 1400
+accept_level1   0.4541547278 tries 698
+            total_energy             kinetic           potential            nonlocal
+  ##0        -10.76214493         6.685371905        -18.70899155         1.261474717   (value)
+  &&0         1.164957347         2.766373432         3.450924442         2.195545812   (sigma)
+
+****Block 5 avg life 0.5157142857 max life 7 timestep 2.0115625
+Total acceptance 0.73
+accept_level0   0.5071428571 tries 1400
+accept_level1   0.452173913 tries 690
+            total_energy             kinetic           potential            nonlocal
+  ##0        -10.75291204         6.712537181        -18.69603556         1.230586335   (value)
+  &&0         1.214255665         2.751990708         3.346005958         2.105131949   (sigma)
+
+****Block 6 avg life 0.5607142857 max life 7.5 timestep 2.0115625
+Total acceptance 0.7192857143
+accept_level0   0.5064285714 tries 1400
+accept_level1   0.4312590449 tries 691
+            total_energy             kinetic           potential            nonlocal
+  ##0        -10.75710654         6.671242151        -18.65701683         1.228668134   (value)
+  &&0         1.173093420         2.724275618         3.301125082         2.135381817   (sigma)
+
+****Block 7 avg life 0.4435714286 max life 7.5 timestep 2.0115625
+Total acceptance 0.74
+accept_level0   0.5321428571 tries 1400
+accept_level1   0.4442748092 tries 655
+            total_energy             kinetic           potential            nonlocal
+  ##0        -10.76531999         6.675030756        -18.67693649         1.236585743   (value)
+  &&0         1.169423346         2.727290442         3.329033197         2.138015749   (sigma)
+
+****Block 8 avg life 0.5485714286 max life 8 timestep 2.0115625
+Total acceptance 0.7185714286
+accept_level0   0.5028571429 tries 1400
+accept_level1   0.433908046 tries 696
+            total_energy             kinetic           potential            nonlocal
+  ##0        -10.76367533         6.693083492        -18.68672791         1.229969085   (value)
+  &&0         1.191682078         2.754497933         3.326171143         2.106882093   (sigma)
+
+****Block 9 avg life 0.5935714286 max life 8 timestep 2.0115625
+Total acceptance 0.7064285714
+accept_level0   0.4785714286 tries 1400
+accept_level1   0.4369863014 tries 730
+            total_energy             kinetic           potential            nonlocal
+  ##0        -10.75046703         6.683361693        -18.66474341         1.230914687   (value)
+  &&0         1.199345954         2.725180883         3.354934262         2.156254567   (sigma)
+
+-----------------Run Ended------------
+
+Threw out the first 1 blocks in the averaging.
+total_energy0         -10.75748452 +/-  0.001645469164 (sigma     1.190142158 ) 
+kinetic0               6.684578784 +/-  0.005377455438 (sigma     2.762305144 ) 
+potential0            -18.67203668 +/-  0.007775287406 (sigma     3.322846335 ) 
+nonlocal0              1.229973378 +/-  0.004417202918 (sigma     2.161156594 ) 
+weight0                          1 +/- 7.401486831e-17 (sigma             nan ) 
+
+--------Properties differences-------------
+approximate number of independent points: 523140.3067
+
+Maximum lifetime 8 steps 
+Average lifetime : 0.5165714286 steps 
+VMC Done. 
+Wall time for this method: 1 seconds.
+Total wall time so far: 1 seconds.
