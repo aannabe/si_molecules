@@ -93,7 +93,8 @@ for i in files:
 		energy_gaps.loc['CISDT/RHF'] = rm_errors(energy_gaps.loc['CISDT/RHF'])
 	#print(energy_gaps.to_latex())
 	final = final + '/' + energy_gaps
-	print(final.to_latex())
+	final = final.fillna(' ')
+	print(final.to_latex(escape=False))
 
 h_scf = s2f('-0.49999965(1)')
 si_rccsd_t = s2f('-0.088641(52)') + s2f('-3.6724778(1)')
@@ -153,9 +154,11 @@ fn_df['error'] = fn_df['CC'] - fn_df['DMC']
 fn_df['corr'] = fn_df['CC'] - fn_df['SCF']
 fn_df['eta'] = (fn_df['error']/fn_df['corr'])*100.0
 fn_df['eta2'] = (-fn_df['error']/fn_df['Ne'])*toev
+fn_df['error'] = -fn_df['error']*toev
+fn_df.loc['MAD'] = fn_df.loc['DMC':'eta2'].mean()
 
 del fn_df['CC']
-del fn_df['error']
+#del fn_df['error']
 del fn_df['Ne']
 
 fn_df = pd_f2s(fn_df)
