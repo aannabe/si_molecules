@@ -100,8 +100,8 @@ h_scf = s2f('-0.49999965(1)')
 si_rccsd_t = s2f('-0.088641(52)') + s2f('-3.6724778(1)')
 si_ccsdt_q = s2f('-0.089575(57)') + s2f('-3.6724778(1)')
 si_dmc = s2f('-3.7601(1)')
-print(f2s(si_rccsd_t))
-print(f2s(si_ccsdt_q))
+print('Si ccsd(t):',  f2s(si_rccsd_t))
+print('Si ccsdt(q):', f2s(si_ccsdt_q))
 
 print("\nBINDING ENERGIES:")
 
@@ -150,16 +150,37 @@ print("\nFN ANALYSIS:")
 fn_df = pd.read_csv('fn_analysis.csv', delim_whitespace=True, index_col=False, engine='python') #sep='\s*&\s*',
 fn_df = pd_s2f(fn_df)
 
-fn_df['error'] = fn_df['CC'] - fn_df['DMC']
 fn_df['corr'] = fn_df['CC'] - fn_df['SCF']
+fn_df['error'] = fn_df['CC'] - fn_df['DMC']
 fn_df['eta'] = (fn_df['error']/fn_df['corr'])*100.0
 fn_df['eta2'] = (-fn_df['error']/fn_df['Ne'])*toev
 fn_df['error'] = -fn_df['error']*toev
-fn_df.loc['MAD'] = fn_df.loc['DMC':'eta2'].mean()
 
 del fn_df['CC']
-#del fn_df['error']
 del fn_df['Ne']
+
+error = np.array(fn_df['error'].values)
+eta = np.array(fn_df['eta'].values)
+eta2 = np.array(fn_df['eta2'].values)
+print('FN error MAD [eV]:', f2s(np.mean(error)))
+print('FN/corr MAD [perc.]:', f2s(np.mean(eta)))
+print('FN/Nelec MAD [ev]:', f2s(np.mean(eta2)))
 
 fn_df = pd_f2s(fn_df)
 print(fn_df.to_latex(escape=False))
+
+
+### All below are per atom
+pbe0_dmc = s2f('-3.932200(22)')
+hf_espress = s2f('-3.78878403(1)')
+atom_fci = s2f('-3.762073(57)')
+corr_atom = pbe0_dmc-hf_espress
+coh_dmc = -(pbe0_dmc-atom_fci)
+print('Si crystal corr/atom:', f2s(corr_atom))
+print('Si crystal coh [eV]:', f2s(coh_dmc*toev))
+coh_exp = s2f('4.68(1)')/toev
+fn_err_atom = coh_exp-coh_dmc
+print('Si crystal FN error/atom [eV]: ', f2s(fn_err_atom*toev))
+print('Si crystal FN error/corr per atom [perc.]: ', f2s(-fn_err_atom/corr_atom*100.0))
+print('Si crystal FN error/Ne per atom [eV]: ', f2s(fn_err_atom*toev/4.0))
+
