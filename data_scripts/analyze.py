@@ -13,6 +13,7 @@ import re
 import string
 
 toev = 27.211386245988
+kcalMoltoev = 0.0433641153087705
 pd.options.display.float_format = "{:,.6f}".format
 
 class ShorthandFormatter(string.Formatter):
@@ -143,6 +144,21 @@ binding['De'] = -(energy['GS'] - 2*atoms['Si'] - 6*atoms['H'])*toev
 #binding['D0'] = binding['De'] - 0.0479
 binding = pd_f2s(binding)
 print(binding)
+
+
+print('\nExperiments:')
+energy = pd.read_csv('bind_exp.csv', delim_whitespace=True, index_col=False, engine='python') #sep='\s*&\s*',
+energy = energy.set_index('Expt')
+#print(energy)
+energy = pd_s2f(energy)
+energy.loc['Expmin'] = energy.loc['Expmin'] + energy.loc['ZPE']
+energy.loc['Expmax'] = energy.loc['Expmax'] + energy.loc['ZPE']
+#energy = energy.drop('ZPE')
+#print(energy)
+energy = energy * kcalMoltoev
+energy = pd_f2s(energy)
+print(energy)
+
 
 
 print("\nFN ANALYSIS:")
