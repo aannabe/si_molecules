@@ -205,11 +205,30 @@ print('FN error MAD [eV]:', f2s(np.mean(error)))
 print('FN/corr MAD [perc.]:', f2s(np.mean(eta)))
 print('FN/Nelec MAD [ev]:', f2s(np.mean(eta2)))
 
+gs_mad = fn_df[fn_df['State']=='GS']
+print(gs_mad)
+gs_mad = np.array(gs_mad.loc[:,'error':'eta2'].values)
+fn_df.loc['gs_mad','error'] = np.mean(gs_mad, axis=0)[0]
+fn_df.loc['gs_mad','eta']   = np.mean(gs_mad, axis=0)[1]
+fn_df.loc['gs_mad','eta2']  = np.mean(gs_mad, axis=0)[2]
+
+ex_mad = fn_df[fn_df['State']=='EX']
+print(ex_mad)
+ex_mad = np.array(ex_mad.loc[:,'error':'eta2'].values)
+fn_df.loc['ex_mad','error'] = np.mean(ex_mad, axis=0)[0]
+fn_df.loc['ex_mad','eta']   = np.mean(ex_mad, axis=0)[1]
+fn_df.loc['ex_mad','eta2']  = np.mean(ex_mad, axis=0)[2]
+
+
 fn_df = pd_f2s(fn_df)
+del fn_df['State']
+del fn_df['Spin']
+fn_df = fn_df.replace(np.nan, ' ', regex=True)
+fn_df = fn_df.replace(np.nan, ' ', regex=True)
 print(fn_df.to_latex(escape=False))
 
-
 ### All below are per atom
+print('\nSi CRYSTAL NUMBERS: \n')
 pbe0_dmc = s2f('-3.932200(22)')
 hf_espress = s2f('-3.78878403(1)')
 atom_fci = s2f('-3.762073(57)')
