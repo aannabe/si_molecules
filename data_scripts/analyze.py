@@ -14,6 +14,8 @@ import string
 
 toev = 27.211386245988
 kcalMoltoev = 0.0433641153087705
+cmtoev = 0.00012398425731484318
+cmtoHa = 0.0000045563352812122295
 pd.options.display.float_format = "{:,.6f}".format
 
 class ShorthandFormatter(string.Formatter):
@@ -61,14 +63,15 @@ def pd_f2s(udf):   # df to df with uncertainties
             df[column] = "pd_f2s failed"
     return df
 
-def rm_errors(df_row):
-    ### df_row is something like df.loc['some_index']
-    ### Usage : df.loc['some_index'] = rm_errors(df.loc['some_index'])
-    row_values = df_row.values
-    new_values = []
-    for i in row_values:
-        new_values.append(re.sub(r'\(.\)', '', i))
-    return new_values
+#def rm_errors(df_row):
+#    ### df_row is something like df.loc['some_index']
+#    ### Usage : df.loc['some_index'] = rm_errors(df.loc['some_index'])
+#    row_values = df_row.values
+#    new_values = []
+#    for i in row_values:
+#        new_values.append(re.sub(r'\(.\)', '', i))
+#    #energy_gaps.loc['CIPSI'] = rm_errors(energy_gaps.loc['CIPSI'])
+#    return new_values
 
 def size_linear(x, a, b):
         y = a + b*x
@@ -82,19 +85,39 @@ for i in files:
 	print('\n', i)
 	energy = pd.read_csv(i, delim_whitespace=True, index_col=False, engine='python') #sep='\s*&\s*',
 	energy = energy.set_index('Method')
-	final = energy.copy()
 	energy = pd_s2f(energy)
+	if 'Exp' in list(energy.index):
+		energy.loc['Exp'] = energy.loc['Exp']*cmtoHa
 	energy_gaps = energy.sub(energy['GS'], axis=0)*toev
 	energy_gaps = pd_f2s(energy_gaps)
+	energy = pd_f2s(energy)
 	if 'CIPSI' in list(energy_gaps.index):
-		energy_gaps.loc['CIPSI'] = rm_errors(energy_gaps.loc['CIPSI'])
+		energy_gaps.loc['CIPSI'] = energy_gaps.loc['CIPSI'].str.replace('\(.\)', ' ', regex=True)
+		energy.loc['CIPSI'] = energy.loc['CIPSI'].str.replace('\(.\)', ' ', regex=True)
 	if 'CISD/RHF' in list(energy_gaps.index):
-		energy_gaps.loc['CISD/RHF'] = rm_errors(energy_gaps.loc['CISD/RHF'])
+		energy_gaps.loc['CISD/RHF'] = energy_gaps.loc['CISD/RHF'].str.replace('\(.\)', ' ', regex=True)
+		energy.loc['CISD/RHF'] = energy.loc['CISD/RHF'].str.replace('\(.\)', ' ', regex=True)
 	if 'CISDT/RHF' in list(energy_gaps.index):
-		energy_gaps.loc['CISDT/RHF'] = rm_errors(energy_gaps.loc['CISDT/RHF'])
+		energy_gaps.loc['CISDT/RHF'] = energy_gaps.loc['CISDT/RHF'].str.replace('\(.\)', ' ', regex=True)
+		energy.loc['CISDT/RHF'] = energy.loc['CISDT/RHF'].str.replace('\(.\)', ' ', regex=True)
+	if 'CIPSI/N' in list(energy_gaps.index):
+		energy_gaps.loc['CIPSI/N'] = energy_gaps.loc['CIPSI/N'].str.replace('\(.\)', ' ', regex=True)
+		energy.loc['CIPSI/N'] = energy.loc['CIPSI/N'].str.replace('\(.\)', ' ', regex=True)
+	if 'CISD/MR' in list(energy_gaps.index):
+		energy_gaps.loc['CISD/MR'] = energy_gaps.loc['CISD/MR'].str.replace('\(.\)', ' ', regex=True)
+		energy.loc['CISD/MR'] = energy.loc['CISD/MR'].str.replace('\(.\)', ' ', regex=True)
+
 	#print(energy_gaps.to_latex())
-	final = final + '/' + energy_gaps
+	#final = final + ' & ' + energy_gaps
+	final = pd.DataFrame()
+	for i in range(0,len(list(energy.columns))):
+		final[str(i)] = energy.iloc[:,i]
+		final[str(i)+'gap'] = energy_gaps.iloc[:,i]
 	final = final.fillna(' ')
+	final = final.replace('0.0(0)', '0.0', regex=False)
+	final = final.replace('nan.*', ' ', regex=True)
+	del final['0gap']
+	#print(energy_gaps.to_latex())
 	print(final.to_latex(escape=False))
 
 h_scf = s2f('-0.49999965(1)')
