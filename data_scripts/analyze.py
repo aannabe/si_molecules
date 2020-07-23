@@ -16,7 +16,7 @@ toev = 27.211386245988
 kcalMoltoev = 0.0433641153087705
 cmtoev = 0.00012398425731484318
 cmtoHa = 0.0000045563352812122295
-pd.options.display.float_format = "{:,.6f}".format
+pd.options.display.float_format = "{:,.5f}".format
 
 class ShorthandFormatter(string.Formatter):
     def format_field(self, value, format_spec):
