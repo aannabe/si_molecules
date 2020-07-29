@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<qmcsystem>
+  <wavefunction name="psi0" target="e">
+    <determinantset type="MolecularOrbital" name="LCAOBSet" source="ion0" transform="yes" href="qmc.h5">
+      <slaterdeterminant>
+        <determinant id="updet" size="4">
+          <occupation mode="ground"/>
+          <coefficient size="263" spindataset="0"/>
+        </determinant>
+        <determinant id="downdet" size="4">
+          <occupation mode="ground"/>
+          <coefficient size="263" spindataset="0"/>
+        </determinant>
+      </slaterdeterminant>
+    </determinantset>
+    <jastrow name="J2" type="Two-Body" function="Bspline" print="yes">
+      <correlation rcut="10" size="10" speciesA="u" speciesB="u">
+        <coefficients id="uu" type="Array"> 0.5458014826 0.3504244483 0.2298205257 0.1458797221 0.09049642755 0.04504485785 0.00701222672 -0.01878504939 -0.03342523963 -0.03987245221</coefficients>
+      </correlation>
+      <correlation rcut="10" size="10" speciesA="u" speciesB="d">
+        <coefficients id="ud" type="Array"> 0.9440411747 0.6151360286 0.4063392266 0.2643626011 0.1755072732 0.1135090226 0.06329704152 0.02150668174 -0.009766431105 -0.0279267302</coefficients>
+      </correlation>
+    </jastrow>
+    <jastrow name="J1" type="One-Body" function="Bspline" source="ion0" print="yes">
+      <correlation rcut="10" size="10" cusp="0" elementType="Si">
+        <coefficients id="eSi" type="Array"> -0.4545938854 -0.1720244172 -0.102678609 -0.0059148738 0.0563694504 0.03174547409 0.01581991911 0.06646472377 0.2424495169 0.2116337497</coefficients>
+      </correlation>
+      <correlation rcut="10" size="10" cusp="0" elementType="H">
+        <coefficients id="eH" type="Array"> -0.599660146 -0.5675080404 -0.4200578522 -0.2873110788 -0.1648188257 -0.06248017977 0.04149714428 0.1401210063 0.1833182965 0.1645537139</coefficients>
+      </correlation>
+    </jastrow>
+    <jastrow name="J3" type="eeI" function="polynomial" source="ion0" print="yes">
+      <correlation ispecies="Si" especies="u" isize="3" esize="3" rcut="10">
+        <coefficients id="uuSi" type="Array" optimize="yes"> -5.672264155e-05 -0.0001034925906 3.408095507e-05 9.202225793e-05 6.874122075e-06 1.117845578e-05 -9.657784705e-05 0.0001244632993 2.089189867e-06 8.576656871e-05 6.239496733e-05 -7.316757676e-05 4.452939986e-06 -0.0001032921346 -1.682305476e-07 -2.528202618e-07 -7.817055242e-05 -8.959781699e-05 5.595660919e-05 -4.646290876e-06 4.750238441e-05 -7.11392591e-06 7.869502628e-07 -1.045619069e-05 1.487060015e-06 -1.849472703e-07</coefficients>
+      </correlation>
+      <correlation ispecies="Si" especies1="u" especies2="d" isize="3" esize="3" rcut="10">
+        <coefficients id="udSi" type="Array" optimize="yes"> -5.473222897e-05 9.455651587e-05 7.074001044e-05 5.841209274e-05 -1.525679788e-06 -1.276811931e-05 0.0002553644318 -1.277808544e-05 -7.0570127e-06 -0.0001492051347 2.097830423e-05 -1.35020676e-05 6.559670388e-06 -6.404123188e-05 -1.248319801e-05 4.267135773e-07 0.0002176528968 -9.761027332e-05 1.314690177e-05 -3.064717521e-06 -1.405370153e-05 3.685840816e-06 -2.086733265e-07 3.473787854e-06 -1.051051928e-06 1.109010353e-07</coefficients>
+      </correlation>
+      <correlation ispecies="H" especies="u" isize="3" esize="3" rcut="10">
+        <coefficients id="uuH" type="Array" optimize="yes"> -2.364781208e-05 8.26011203e-06 1.749510297e-05 1.273118062e-06 -3.345791278e-06 4.073027049e-07 3.660165145e-05 -6.476733439e-06 4.099882506e-06 2.804510185e-06 -3.47066834e-06 5.944082451e-06 -1.89229342e-06 -8.884764158e-06 -5.064673763e-07 1.841207462e-07 -1.310529676e-05 -1.878050919e-06 -6.894699221e-06 1.5878496e-06 9.215223919e-06 6.402195949e-07 -1.872582848e-07 -2.759321184e-06 2.403334818e-08 1.154454478e-08</coefficients>
+      </correlation>
+      <correlation ispecies="H" especies1="u" especies2="d" isize="3" esize="3" rcut="10">
+        <coefficients id="udH" type="Array" optimize="yes"> 3.542621811e-06 -9.464661495e-06 -1.236528859e-05 -5.248321303e-06 7.157870266e-07 6.85380503e-06 -1.990224332e-05 -2.477848646e-06 -9.253410546e-06 1.479159255e-05 -4.154195876e-06 8.182206044e-06 1.195224229e-06 -4.49361153e-06 -1.274168407e-06 -2.61124902e-09 6.315893548e-06 -3.599235929e-06 -2.993533773e-06 -6.575038334e-08 -2.091542555e-06 7.015830584e-07 -3.610979973e-08 1.948149629e-06 -3.260171926e-07 3.009730027e-08</coefficients>
+      </correlation>
+    </jastrow>
+  </wavefunction>
+</qmcsystem>

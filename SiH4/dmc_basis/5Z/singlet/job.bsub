@@ -1,0 +1,53 @@
+#!/bin/bash  
+#BSUB -P MAT151
+#BSUB -J EX_5Z 
+#BSUB -o EX_5Z.out
+#BSUB -e EX_5Z.err
+#BSUB -W 02:00
+#BSUB -nnodes 16
+#BSUB -alloc_flags "smt1"
+
+module load hdf5/1.10.4 essl
+module load gcc/7.4.0
+module load spectrum-mpi
+module load essl
+module load netlib-lapack
+module load netlib-scalapack
+module load fftw
+export FFTW_ROOT=$OLCF_FFTW_ROOT
+module load cmake
+module load boost
+module load cuda
+module load python/3.6.6-anaconda3-5.3.0
+
+system='qmc'
+procs=$((16*2))
+
+#jsrun -n 1 convert4qmc -pyscf ${system}.h5 -hdf5 # -production -threshold 1e-20 
+wget https://pseudopotentiallibrary.org/recipes/Si/ccECP/Si.ccECP.xml; mv Si.ccECP.xml Si.qmcpp.xml
+wget https://pseudopotentiallibrary.org/recipes/H/ccECP/H.ccECP.xml; mv H.ccECP.xml H.qmcpp.xml
+sed -i 's/rcut="5"/rcut="10"/g' ${system}.wfj.xml
+sed -i 's/optimize="yes"/optimize="no"/g' ${system}.wfj.xml
+
+cp -a /gpfs/alpine/mat151/proj-shared/aannabe/docs/molecules_Si/SiH4/qmcpack_basis/J12 .
+cd J12
+cp ../qmc.wfj.xml .
+cp ../qmc.h5 .
+cp ../qmc.structure.xml .
+cp ../Si.qmcpp.xml .
+cp ../H.qmcpp.xml .
+export OMP_NUM_THREADS=21
+jsrun -b rs -c 21 -g 0 -d packed -n ${procs} -r 2 -a 1 /ccs/home/aannabe/codes/qmcpack_dev/bin/qmcpack_cpu qmc.qmc.in-wfj.xml > qmc.out
+cd ../
+
+cp -a /gpfs/alpine/mat151/proj-shared/aannabe/docs/molecules_Si/SiH4/qmcpack_basis/J3 .
+cd J3
+cp ../J12/qmc.s009.opt.xml qmc.wfj.xml
+cp ../qmc.h5 .
+cp ../qmc.structure.xml .
+cp ../Si.qmcpp.xml .
+cp ../H.qmcpp.xml .
+sed -i 's/optimize="no"/optimize="yes"/g' qmc.wfj.xml
+jsrun -b rs -c 21 -g 0 -d packed -n ${procs} -r 2 -a 1 /ccs/home/aannabe/codes/qmcpack_dev/bin/qmcpack_cpu qmc.qmc.in-wfj.xml > qmc.out
+cd ../
+
