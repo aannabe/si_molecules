@@ -1,0 +1,1724 @@
+  Input file(s): qmc.dump.qmc.in-wfj.xml 
+
+=====================================================
+                    QMCPACK 3.9.9
+
+       (c) Copyright 2003-  QMCPACK developers
+
+                    Please cite:
+ J. Kim et al. J. Phys. Cond. Mat. 30 195901 (2018)
+      https://doi.org/10.1088/1361-648X/aab9c3
+
+  Git branch: develop
+  Last git commit: 51afccc38c709a720e0a3b2699c25cdc16ac35ad
+  Last git commit date: Thu Jun 11 17:49:55 2020 -0400
+  Last git commit subject: Merge pull request #2531 from mmorale3/add_afqmc_hip
+=====================================================
+  Global options 
+
+  Total number of MPI ranks = 64
+  Number of MPI groups      = 1
+  MPI group ID              = 0
+  Number of ranks in group  = 64
+  MPI ranks per node        = 2
+  OMP 1st level threads     = 21
+  OMP nested threading disabled or only 1 thread on the 2nd level
+
+  Precision used in this calculation, see definitions in the manual:
+  Base precision      = double
+  Full precision      = double
+
+  Structure-of-arrays (SoA) optimization enabled
+
+  Input XML = qmc.dump.qmc.in-wfj.xml
+
+  Project = qmc.dump
+  date    = 2020-07-13 16:24:44 EDT
+  host    = e03n07
+
+ Random Number
+ -------------
+  Offset for the random number seeds based on time: 780
+
+  Range of prime numbers to use as seeds over processors and threads = 5981-18583
+
+
+ Particle Set 
+ ------------
+  Name: ion0
+  All the species have the same mass 1
+  Particle set size: 5
+
+ Particle Set 
+ ------------
+  Name: e
+  All the species have the same mass 1
+  Particle set size: 8
+
+ Wavefunction setup: 
+ ------------------- 
+  Name: psi0
+  LCAO: SoaAtomicBasisSet<MultiQuintic,0>
+Reading BasisSet from HDF5 file:qmc.dump.orbs.h5
+<input node="atomicBasisSet" name="Gaussian" expandYlm="Gamess" angular="cartesian" elementType="Si" normalized="no" type="Numerical" expM="0" />
+  AO BasisSet for Si
+   Angular momentum expanded in cartesian functions x^lx y^ly z^lz according to Gamess
+   Grid is created by the input paremters in h5
+    Using log grid ri = 1e-06 rf = 100 npts = 1001
+   R(n,l,m,s) 0 0 0 0
+   R(n,l,m,s) 1 0 0 0
+   R(n,l,m,s) 2 0 0 0
+   R(n,l,m,s) 3 0 0 0
+   R(n,l,m,s) 4 0 0 0
+   R(n,l,m,s) 5 1 0 0
+   R(n,l,m,s) 6 1 0 0
+   R(n,l,m,s) 7 1 0 0
+   R(n,l,m,s) 8 1 0 0
+   R(n,l,m,s) 9 1 0 0
+   R(n,l,m,s) 10 2 0 0
+   R(n,l,m,s) 11 2 0 0
+   R(n,l,m,s) 12 2 0 0
+   R(n,l,m,s) 13 2 0 0
+   R(n,l,m,s) 14 3 0 0
+   R(n,l,m,s) 15 3 0 0
+   R(n,l,m,s) 16 3 0 0
+   R(n,l,m,s) 17 4 0 0
+   R(n,l,m,s) 18 4 0 0
+Expanding Ylm (angular function) according to Gamess using cartesian gaussians
+Adding 1 cartesian gaussian orbitals for l= 0
+Adding 1 cartesian gaussian orbitals for l= 0
+Adding 1 cartesian gaussian orbitals for l= 0
+Adding 1 cartesian gaussian orbitals for l= 0
+Adding 1 cartesian gaussian orbitals for l= 0
+Adding 3 cartesian gaussian orbitals for l= 1
+Adding 3 cartesian gaussian orbitals for l= 1
+Adding 3 cartesian gaussian orbitals for l= 1
+Adding 3 cartesian gaussian orbitals for l= 1
+Adding 3 cartesian gaussian orbitals for l= 1
+Adding 6 cartesian gaussian orbitals for l= 2
+Adding 6 cartesian gaussian orbitals for l= 2
+Adding 6 cartesian gaussian orbitals for l= 2
+Adding 6 cartesian gaussian orbitals for l= 2
+Adding 10 cartesian gaussian orbitals for l= 3
+Adding 10 cartesian gaussian orbitals for l= 3
+Adding 10 cartesian gaussian orbitals for l= 3
+Adding 15 cartesian gaussian orbitals for l= 4
+Adding 15 cartesian gaussian orbitals for l= 4
+  Setting cutoff radius 8.64717e+15
+
+   Maximum Angular Momentum  = 4
+   Number of Radial functors = 19
+   Basis size                = 104
+
+<input node="atomicBasisSet" name="Gaussian" expandYlm="Gamess" angular="cartesian" elementType="H" normalized="no" type="Numerical" expM="0" />
+  AO BasisSet for H
+   Angular momentum expanded in cartesian functions x^lx y^ly z^lz according to Gamess
+   Grid is created by the input paremters in h5
+    Using log grid ri = 1e-06 rf = 100 npts = 1001
+   R(n,l,m,s) 0 0 0 0
+   R(n,l,m,s) 1 0 0 0
+   R(n,l,m,s) 2 0 0 0
+   R(n,l,m,s) 3 0 0 0
+   R(n,l,m,s) 4 0 0 0
+   R(n,l,m,s) 5 1 0 0
+   R(n,l,m,s) 6 1 0 0
+   R(n,l,m,s) 7 1 0 0
+   R(n,l,m,s) 8 1 0 0
+   R(n,l,m,s) 9 2 0 0
+   R(n,l,m,s) 10 2 0 0
+   R(n,l,m,s) 11 2 0 0
+   R(n,l,m,s) 12 3 0 0
+   R(n,l,m,s) 13 3 0 0
+Expanding Ylm (angular function) according to Gamess using cartesian gaussians
+Adding 1 cartesian gaussian orbitals for l= 0
+Adding 1 cartesian gaussian orbitals for l= 0
+Adding 1 cartesian gaussian orbitals for l= 0
+Adding 1 cartesian gaussian orbitals for l= 0
+Adding 1 cartesian gaussian orbitals for l= 0
+Adding 3 cartesian gaussian orbitals for l= 1
+Adding 3 cartesian gaussian orbitals for l= 1
+Adding 3 cartesian gaussian orbitals for l= 1
+Adding 3 cartesian gaussian orbitals for l= 1
+Adding 6 cartesian gaussian orbitals for l= 2
+Adding 6 cartesian gaussian orbitals for l= 2
+Adding 6 cartesian gaussian orbitals for l= 2
+Adding 10 cartesian gaussian orbitals for l= 3
+Adding 10 cartesian gaussian orbitals for l= 3
+  Setting cutoff radius 9.95675e+11
+
+   Maximum Angular Momentum  = 3
+   Number of Radial functors = 14
+   Basis size                = 55
+
+  Created SPOSet builder named 'LCAOBSet' of type molecularorbital
+Creating SPOSet in SlaterDetBuilder::put(xmlNodePtr cur).
+spo_name = spo-up
+  Building SPOSet 'spo-up' with 'LCAOBSet' basis set.
+Creating SPOSet in SlaterDetBuilder::put(xmlNodePtr cur).
+spo_name = spo-dn
+  Building SPOSet 'spo-dn' with 'LCAOBSet' basis set.
+Using Bryan's algorithm for MultiSlaterDeterminant expansion. 
+Creating base determinant (up) for MSD expansion. 
+Creating base determinant (down) for MSD expansion. 
+Found Multideterminants in H5 File
+Found determinant list. 
+Reading CI expansion from HDF5:qmc.dump.orbs.h5
+ Done reading CIs from H5!!
+ Sorting unique CIs
+ Done Sorting unique CIs
+Found 350419 terms in the MSD expansion.
+Norm of ci vector (sum of ci^2): 1
+Found 32558 unique up determinants.
+Found 32558 unique down determinants.
+Number of terms in pairs array: 1036
+Number of terms in pairs array: 1036
+CI coefficients are not optimizable. 
+  Added a fermionic WaveFunctionComponent SlaterDet
+
+   Jastrow
+   -------
+    Name: J2   Type: Two-Body   Function: Bspline
+
+    Radial function for species: u - u
+     Number of parameters: 10
+     Cusp: -0.25
+     Cutoff radius: 10
+
+     Name                        Value Type Recompute Use Index
+     ---- ---------------------------- ---- --------- --- -----
+     uu_0                 4.599154e-01    1         1  ON     0
+     uu_1                 2.898480e-01    1         1  ON     1
+     uu_2                 1.870730e-01    1         1  ON     2
+     uu_3                 1.304545e-01    1         1  ON     3
+     uu_4                 9.346046e-02    1         1  ON     4
+     uu_5                 6.494933e-02    1         1  ON     5
+     uu_6                 4.013287e-02    1         1  ON     6
+     uu_7                 1.951639e-02    1         1  ON     7
+     uu_8                 3.025443e-03    1         1  ON     8
+     uu_9                -6.488595e-03    1         1  ON     9
+
+    Radial function for species: u - d
+     Number of parameters: 10
+     Cusp: -0.5
+     Cutoff radius: 10
+
+     Name                        Value Type Recompute Use Index
+     ---- ---------------------------- ---- --------- --- -----
+     ud_0                 5.023813e-01    1         1  ON     0
+     ud_1                 2.498141e-01    1         1  ON     1
+     ud_2                 1.436519e-01    1         1  ON     2
+     ud_3                 9.623413e-02    1         1  ON     3
+     ud_4                 6.406651e-02    1         1  ON     4
+     ud_5                 3.889808e-02    1         1  ON     5
+     ud_6                 1.753289e-02    1         1  ON     6
+     ud_7                 1.219016e-03    1         1  ON     7
+     ud_8                -8.350814e-03    1         1  ON     8
+     ud_9                -1.373150e-02    1         1  ON     9
+
+
+   Jastrow
+   -------
+    Name: J1   Type: One-Body   Function: Bspline
+
+    Radial function for element: Si
+     Number of parameters: 10
+     Cusp: 0
+     Cutoff radius: 10
+
+      Name                        Value Type Recompute Use Index
+     ----- ---------------------------- ---- --------- --- -----
+     eSi_0                -2.653718e-01    1         1  ON     0
+     eSi_1                -1.587489e-01    1         1  ON     1
+     eSi_2                -1.143402e-01    1         1  ON     2
+     eSi_3                -4.844823e-02    1         1  ON     3
+     eSi_4                -1.987169e-03    1         1  ON     4
+     eSi_5                 1.766664e-02    1         1  ON     5
+     eSi_6                 8.297463e-03    1         1  ON     6
+     eSi_7                 9.809677e-03    1         1  ON     7
+     eSi_8                 1.176772e-02    1         1  ON     8
+     eSi_9                 1.905080e-02    1         1  ON     9
+
+    Radial function for element: H
+     Number of parameters: 10
+     Cusp: 0
+     Cutoff radius: 10
+
+     Name                        Value Type Recompute Use Index
+     ---- ---------------------------- ---- --------- --- -----
+     eH_0                -3.884474e-01    1         1  ON     0
+     eH_1                -3.759875e-01    1         1  ON     1
+     eH_2                -3.319971e-01    1         1  ON     2
+     eH_3                -2.869624e-01    1         1  ON     3
+     eH_4                -2.485137e-01    1         1  ON     4
+     eH_5                -2.056921e-01    1         1  ON     5
+     eH_6                -1.603846e-01    1         1  ON     6
+     eH_7                -1.168695e-01    1         1  ON     7
+     eH_8                -7.177859e-02    1         1  ON     8
+     eH_9                -1.980063e-02    1         1  ON     9
+
+
+   Jastrow
+   -------
+    Name: J3   Type: eeI   Function: polynomial
+
+     Ion: Si   electron-electron: u - u
+      Number of parameters for e-e: 3, for e-I: 3
+      Cutoff radius: 10
+
+Expected 26 parameters, but found 0 in PolynomialFunctor3D.
+         Name                        Value Type Recompute Use Index
+      ------- ---------------------------- ---- --------- --- -----
+       uuSi_0                 0.000000e+00    1         1  ON     0
+       uuSi_1                 0.000000e+00    1         1  ON     1
+       uuSi_2                 0.000000e+00    1         1  ON     2
+       uuSi_3                 0.000000e+00    1         1  ON     3
+       uuSi_4                 0.000000e+00    1         1  ON     4
+       uuSi_5                 0.000000e+00    1         1  ON     5
+       uuSi_6                 0.000000e+00    1         1  ON     6
+       uuSi_7                 0.000000e+00    1         1  ON     7
+       uuSi_8                 0.000000e+00    1         1  ON     8
+       uuSi_9                 0.000000e+00    1         1  ON     9
+      uuSi_10                 0.000000e+00    1         1  ON    10
+      uuSi_11                 0.000000e+00    1         1  ON    11
+      uuSi_12                 0.000000e+00    1         1  ON    12
+      uuSi_13                 0.000000e+00    1         1  ON    13
+      uuSi_14                 0.000000e+00    1         1  ON    14
+      uuSi_15                 0.000000e+00    1         1  ON    15
+      uuSi_16                 0.000000e+00    1         1  ON    16
+      uuSi_17                 0.000000e+00    1         1  ON    17
+      uuSi_18                 0.000000e+00    1         1  ON    18
+      uuSi_19                 0.000000e+00    1         1  ON    19
+      uuSi_20                 0.000000e+00    1         1  ON    20
+      uuSi_21                 0.000000e+00    1         1  ON    21
+      uuSi_22                 0.000000e+00    1         1  ON    22
+      uuSi_23                 0.000000e+00    1         1  ON    23
+      uuSi_24                 0.000000e+00    1         1  ON    24
+      uuSi_25                 0.000000e+00    1         1  ON    25
+
+     Ion: Si   electron-electron: u - d
+      Number of parameters for e-e: 3, for e-I: 3
+      Cutoff radius: 10
+
+Expected 26 parameters, but found 0 in PolynomialFunctor3D.
+         Name                        Value Type Recompute Use Index
+      ------- ---------------------------- ---- --------- --- -----
+       udSi_0                 0.000000e+00    1         1  ON     0
+       udSi_1                 0.000000e+00    1         1  ON     1
+       udSi_2                 0.000000e+00    1         1  ON     2
+       udSi_3                 0.000000e+00    1         1  ON     3
+       udSi_4                 0.000000e+00    1         1  ON     4
+       udSi_5                 0.000000e+00    1         1  ON     5
+       udSi_6                 0.000000e+00    1         1  ON     6
+       udSi_7                 0.000000e+00    1         1  ON     7
+       udSi_8                 0.000000e+00    1         1  ON     8
+       udSi_9                 0.000000e+00    1         1  ON     9
+      udSi_10                 0.000000e+00    1         1  ON    10
+      udSi_11                 0.000000e+00    1         1  ON    11
+      udSi_12                 0.000000e+00    1         1  ON    12
+      udSi_13                 0.000000e+00    1         1  ON    13
+      udSi_14                 0.000000e+00    1         1  ON    14
+      udSi_15                 0.000000e+00    1         1  ON    15
+      udSi_16                 0.000000e+00    1         1  ON    16
+      udSi_17                 0.000000e+00    1         1  ON    17
+      udSi_18                 0.000000e+00    1         1  ON    18
+      udSi_19                 0.000000e+00    1         1  ON    19
+      udSi_20                 0.000000e+00    1         1  ON    20
+      udSi_21                 0.000000e+00    1         1  ON    21
+      udSi_22                 0.000000e+00    1         1  ON    22
+      udSi_23                 0.000000e+00    1         1  ON    23
+      udSi_24                 0.000000e+00    1         1  ON    24
+      udSi_25                 0.000000e+00    1         1  ON    25
+
+     Ion: H   electron-electron: u - u
+      Number of parameters for e-e: 3, for e-I: 3
+      Cutoff radius: 10
+
+Expected 26 parameters, but found 0 in PolynomialFunctor3D.
+        Name                        Value Type Recompute Use Index
+      ------ ---------------------------- ---- --------- --- -----
+       uuH_0                 0.000000e+00    1         1  ON     0
+       uuH_1                 0.000000e+00    1         1  ON     1
+       uuH_2                 0.000000e+00    1         1  ON     2
+       uuH_3                 0.000000e+00    1         1  ON     3
+       uuH_4                 0.000000e+00    1         1  ON     4
+       uuH_5                 0.000000e+00    1         1  ON     5
+       uuH_6                 0.000000e+00    1         1  ON     6
+       uuH_7                 0.000000e+00    1         1  ON     7
+       uuH_8                 0.000000e+00    1         1  ON     8
+       uuH_9                 0.000000e+00    1         1  ON     9
+      uuH_10                 0.000000e+00    1         1  ON    10
+      uuH_11                 0.000000e+00    1         1  ON    11
+      uuH_12                 0.000000e+00    1         1  ON    12
+      uuH_13                 0.000000e+00    1         1  ON    13
+      uuH_14                 0.000000e+00    1         1  ON    14
+      uuH_15                 0.000000e+00    1         1  ON    15
+      uuH_16                 0.000000e+00    1         1  ON    16
+      uuH_17                 0.000000e+00    1         1  ON    17
+      uuH_18                 0.000000e+00    1         1  ON    18
+      uuH_19                 0.000000e+00    1         1  ON    19
+      uuH_20                 0.000000e+00    1         1  ON    20
+      uuH_21                 0.000000e+00    1         1  ON    21
+      uuH_22                 0.000000e+00    1         1  ON    22
+      uuH_23                 0.000000e+00    1         1  ON    23
+      uuH_24                 0.000000e+00    1         1  ON    24
+      uuH_25                 0.000000e+00    1         1  ON    25
+
+     Ion: H   electron-electron: u - d
+      Number of parameters for e-e: 3, for e-I: 3
+      Cutoff radius: 10
+
+Expected 26 parameters, but found 0 in PolynomialFunctor3D.
+        Name                        Value Type Recompute Use Index
+      ------ ---------------------------- ---- --------- --- -----
+       udH_0                 0.000000e+00    1         1  ON     0
+       udH_1                 0.000000e+00    1         1  ON     1
+       udH_2                 0.000000e+00    1         1  ON     2
+       udH_3                 0.000000e+00    1         1  ON     3
+       udH_4                 0.000000e+00    1         1  ON     4
+       udH_5                 0.000000e+00    1         1  ON     5
+       udH_6                 0.000000e+00    1         1  ON     6
+       udH_7                 0.000000e+00    1         1  ON     7
+       udH_8                 0.000000e+00    1         1  ON     8
+       udH_9                 0.000000e+00    1         1  ON     9
+      udH_10                 0.000000e+00    1         1  ON    10
+      udH_11                 0.000000e+00    1         1  ON    11
+      udH_12                 0.000000e+00    1         1  ON    12
+      udH_13                 0.000000e+00    1         1  ON    13
+      udH_14                 0.000000e+00    1         1  ON    14
+      udH_15                 0.000000e+00    1         1  ON    15
+      udH_16                 0.000000e+00    1         1  ON    16
+      udH_17                 0.000000e+00    1         1  ON    17
+      udH_18                 0.000000e+00    1         1  ON    18
+      udH_19                 0.000000e+00    1         1  ON    19
+      udH_20                 0.000000e+00    1         1  ON    20
+      udH_21                 0.000000e+00    1         1  ON    21
+      udH_22                 0.000000e+00    1         1  ON    22
+      udH_23                 0.000000e+00    1         1  ON    23
+      udH_24                 0.000000e+00    1         1  ON    24
+      udH_25                 0.000000e+00    1         1  ON    25
+
+  QMCHamiltonian::addOperator Kinetic to H, physical Hamiltonian 
+  QMCHamiltonian::addOperator ElecElec to H, physical Hamiltonian 
+QMCHamiltonian::addOperatorType added type coulomb named ElecElec
+  QMCHamiltonian::addOperator IonIon to H, physical Hamiltonian 
+QMCHamiltonian::addOperatorType added type coulomb named IonIon
+
+  ECPotential builder for pseudopotential 
+
+  Adding pseudopotential for H
+   Linear grid  ri=0 rf=10 npts = 10001
+    ECPComponentBuilder::buildSemiLocalAndLocal 
+    Assuming Hartree unit
+   Number of angular momentum channels 2
+   Maximum angular momentum channel 1
+   Creating a Linear Grid Rmax=1e-10
+  Using global grid with delta = 0.001
+   Making L=1 a local potential with a radial cutoff of 9.999
+    Non-local pseudopotential parameters
+    Maximum angular mementum = 0
+    Number of non-local channels = 1
+       l(0)=0
+    Cutoff radius = 0.001
+    Spherical grids and weights: 
+                        1                 0                 0       0.08333333333
+                       -1   1.224646799e-16                 0       0.08333333333
+             0.4472135955       0.894427191                 0       0.08333333333
+            -0.4472135955      0.7236067977      0.5257311121       0.08333333333
+             0.4472135955      0.2763932023      0.8506508084       0.08333333333
+            -0.4472135955     -0.2763932023      0.8506508084       0.08333333333
+             0.4472135955     -0.7236067977      0.5257311121       0.08333333333
+            -0.4472135955      -0.894427191   1.095357397e-16       0.08333333333
+             0.4472135955     -0.7236067977     -0.5257311121       0.08333333333
+            -0.4472135955     -0.2763932023     -0.8506508084       0.08333333333
+             0.4472135955      0.2763932023     -0.8506508084       0.08333333333
+            -0.4472135955      0.7236067977     -0.5257311121       0.08333333333
+    Maximum cutoff radius 0.001
+
+  Adding pseudopotential for Si
+   Linear grid  ri=0 rf=10 npts = 10001
+    ECPComponentBuilder::buildSemiLocalAndLocal 
+    Assuming Hartree unit
+   Number of angular momentum channels 3
+   Maximum angular momentum channel 2
+   Creating a Linear Grid Rmax=2.69
+  Using global grid with delta = 0.001
+   Making L=2 a local potential with a radial cutoff of 9.999
+    Non-local pseudopotential parameters
+    Maximum angular mementum = 1
+    Number of non-local channels = 2
+       l(0)=0
+       l(1)=1
+    Cutoff radius = 2.69
+    Spherical grids and weights: 
+                        1                 0                 0       0.08333333333
+                       -1   1.224646799e-16                 0       0.08333333333
+             0.4472135955       0.894427191                 0       0.08333333333
+            -0.4472135955      0.7236067977      0.5257311121       0.08333333333
+             0.4472135955      0.2763932023      0.8506508084       0.08333333333
+            -0.4472135955     -0.2763932023      0.8506508084       0.08333333333
+             0.4472135955     -0.7236067977      0.5257311121       0.08333333333
+            -0.4472135955      -0.894427191   1.095357397e-16       0.08333333333
+             0.4472135955     -0.7236067977     -0.5257311121       0.08333333333
+            -0.4472135955     -0.2763932023     -0.8506508084       0.08333333333
+             0.4472135955      0.2763932023     -0.8506508084       0.08333333333
+            -0.4472135955      0.7236067977     -0.5257311121       0.08333333333
+    Maximum cutoff radius 2.69
+  QMCHamiltonian::addOperator LocalECP to H, physical Hamiltonian 
+
+  Using NonLocalECP potential 
+    Maximum grid on a sphere for NonLocalECPotential: 12
+  QMCHamiltonian::addOperator NonLocalECP to H, physical Hamiltonian 
+QMCHamiltonian::addOperatorType added type pseudo named PseudoPot
+
+  QMCHamiltonian::add2WalkerProperty added
+    5 to P::PropertyList 
+    0 to P::Collectables 
+    starting Index of the observables in P::PropertyList = 9
+ParticleSetPool::randomize 1 ParticleSet.
+<init source="ion0" target="e">
+</init>
+  Initialization Execution time = 1.642 secs
+=========================================================
+ Summary of QMC systems 
+=========================================================
+ParticleSetPool has: 
+
+  ParticleSet 'e' contains 8 particles :  u(4) d(4)
+
+    u -7.8754869123e-01 -2.1711104994e-01  7.6415292519e-01
+    u -4.3932961249e-01  4.5215291694e-01  9.2403845885e-01
+    u  2.6996805740e+00  1.3431067596e+00  1.6273073491e+00
+    u -1.2507669025e+00  2.4902147729e+00 -1.0211128075e+00
+    d  7.8550120413e-01  7.2083583272e-01  3.3864938021e-01
+    d  5.6417638242e-01  8.0578167723e-02 -9.6255493898e-01
+    d -1.0889976600e+00 -1.5919897246e+00  2.6017752100e+00
+    d  5.9869569812e-01 -1.2357367434e+00 -1.3393520753e+00
+
+  Distance table for dissimilar particles (A-B):
+    source: ion0  target: e
+    Using structure-of-arrays (SoA) data layout
+    Distance computations use open boundary conditions in 3D.
+
+  Distance table for similar particles (A-A):
+    source/target: e
+    Using structure-of-arrays (SoA) data layout
+    Distance computations use open boundary conditions in 3D.
+
+
+  ParticleSet 'ion0' contains 5 particles :  Si(1) H(4)
+
+    Si  0.0000000000e+00  0.0000000000e+00  0.0000000000e+00
+    H  1.6145818874e+00  1.6145818874e+00  1.6145818874e+00
+    H -1.6145818874e+00 -1.6145818874e+00  1.6145818874e+00
+    H -1.6145818874e+00  1.6145818874e+00 -1.6145818874e+00
+    H  1.6145818874e+00 -1.6145818874e+00 -1.6145818874e+00
+
+  Distance table for similar particles (A-A):
+    source/target: ion0
+    Using structure-of-arrays (SoA) data layout
+    Distance computations use open boundary conditions in 3D.
+
+
+  Hamiltonian h0
+  Kinetic         Kinetic energy
+  ElecElec        CoulombAB source=e
+
+  IonIon          CoulombAA source/target ion0
+
+  LocalECP        LocalECPotential: ion0
+  NonLocalECP     NonLocalECPotential: ion0
+
+Loop execution max-interations = 4
+
+=========================================================
+  Start QMCFixedSampleLinearOptimize
+  File Root qmc.dump.s000 append = no 
+=========================================================
+  Skip QMCDriver::putQMCInfo 
+  Resetting Properties of the walkers 1 x 14
+  Adding 21 walkers to 0 existing sets
+  Total number of walkers: 1.3440000000e+03
+  Total weight: 1.3440000000e+03
+
+=========================================================
+  Start VMC
+  File Root qmc.dump.s000 append = no 
+=========================================================
+Resetting walkers
+  Using the current 21 walkers.
+  Total number of walkers: 1.3440000000e+03
+  Total weight: 1.3440000000e+03
+  Resetting Properties of the walkers 1 x 14
+
+<vmc function="put">
+  qmc_counter=0  my_counter=0
+  time step      = 5.0000000000e-01
+  blocks         = 20
+  steps          = 19
+  substeps       = 4
+  current        = 0
+  target samples = 5.0000000000e+05
+  walkers/mpi    = 21
+
+  stepsbetweensamples = 1
+  SpinMoves      = no
+<parameter name="blocks" condition="int">20</parameter>
+<parameter name="blocks_between_recompute" condition="int">0</parameter>
+<parameter name="check_properties" condition="int">100</parameter>
+<parameter name="checkproperties" condition="int">100</parameter>
+<parameter name="current" condition="int">0</parameter>
+<parameter name="dmcwalkersperthread" condition="real">3.7300000000e+02</parameter>
+<parameter name="maxcpusecs" condition="real">3.6000000000e+05</parameter>
+<parameter name="record_configs" condition="int">0</parameter>
+<parameter name="record_walkers" condition="int">1</parameter>
+<parameter name="recordconfigs" condition="int">0</parameter>
+<parameter name="recordwalkers" condition="int">1</parameter>
+<parameter name="rewind" condition="int">0</parameter>
+<parameter name="samples" condition="real">5.0000000000e+05</parameter>
+<parameter name="samplesperthread" condition="real">3.7300000000e+02</parameter>
+<parameter name="spinmass" condition="double">1.0000000000e+00</parameter>
+<parameter name="spinmoves" condition="string">no</parameter>
+<parameter name="steps" condition="int">19</parameter>
+<parameter name="stepsbetweensamples" condition="int">1</parameter>
+<parameter name="store_configs" condition="int">0</parameter>
+<parameter name="storeconfigs" condition="int">0</parameter>
+<parameter name="sub_steps" condition="int">4</parameter>
+<parameter name="substeps" condition="int">4</parameter>
+<parameter name="tau" condition="au">5.0000000000e-01</parameter>
+<parameter name="time_step" condition="au">5.0000000000e-01</parameter>
+<parameter name="timestep" condition="au">5.0000000000e-01</parameter>
+<parameter name="use_drift" condition="string">no</parameter>
+<parameter name="usedrift" condition="string">no</parameter>
+<parameter name="walkers" condition="int">21</parameter>
+<parameter name="warmup_steps" condition="int">100</parameter>
+<parameter name="warmupsteps" condition="int">100</parameter>
+  DumpConfig==false Nothing (configurations, state) will be saved.
+  Walker Samples are dumped every 1 steps.
+</vmc>
+  Set drift_modifier UNR parameter a = 1.0000000000e+00
+ Using QMCCostFunction::QMCCostFunction
+  Set drift_modifier UNR parameter a = 1.0000000000e+00
+<optimization-report>
+<vmc stage="main" blocks="20">
+  CloneManager::makeClones makes 21 clones for W/Psi/H.
+  Cloning methods for both Psi and H are used
+===== Memory Usage before cloning =====
+Available memory on node 0, free + buffers : 560002 MB
+Memory footprint by rank 0 on node 0       : 261 MB
+==================================================
+===== Memory Usage after cloning =====
+Available memory on node 0, free + buffers : 559364 MB
+Memory footprint by rank 0 on node 0       : 560 MB
+==================================================
+  Initial partition of walkers 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 
+
+  Using Particle by Particle moves
+  Walker moves without drift
+  Total Sample Size   =501312
+  Walker distribution on root = 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 
+  Using Locality Approximation
+===== Memory Usage after the buffer registration =====
+Available memory on node 0, free + buffers : 558871 MB
+Memory footprint by rank 0 on node 0       : 792 MB
+==================================================
+  Anonymous Buffer size per walker : 8958088 Bytes.
+MEMORY increase 179 MB VMC::resetRun
+====================================================
+  SimpleFixedNodeBranch::finalize after a VMC block
+    QMC counter        = 0
+    time step          = 0.5
+    reference energy   = -5.91172
+    reference variance = 0.0490669
+====================================================
+  Execution time = 1.0015e+02
+</vmc>
+<opt stage="setup">
+  <log>
+   Reading configurations from h5FileRoot qmc.dump.s000
+  QMCCostFunction is created with 21 threads.
+  Using Nonlocal PP in Opt: no
+   Number of samples loaded to each thread : 373 373 373 373 373 373 373 373 373 373 373 373 373 373 373 373 373 373 373 373 373 
+  VMC Eavg = -5.9113e+00
+  VMC Evar = 7.4137e-02
+  Total weights = 5.0131e+05
+  Execution time = 5.7117e+01
+  </log>
+</opt>
+<opt stage="main" walkers="501312">
+  <log>
+
+*****************************************
+Building overlap and Hamiltonian matrices
+*****************************************
+
+Among totally 144 optimized parameters, largest LM parameter change : 2.3546e-02 at parameter 31
+
+******************************************************************************
+Init Cost =  -5.3127e+00    New Cost =  -5.3140e+00  Delta Cost =  -1.2505e-03
+******************************************************************************
+
+The new set of parameters is valid. Updating the trial wave function!
+
+*****************************************************************************
+Applying the update for shift_i =   1.0000e-02     and shift_s =   2.5000e-01
+*****************************************************************************
+  Execution time = 1.5746e+02
+  </log>
+  <optVariables href="qmc.dump.s000.opt.xml">
+   uu_0                 4.626054e-01 1 1  ON 0
+   uu_1                 2.903394e-01 1 1  ON 1
+   uu_2                 1.923932e-01 1 1  ON 2
+   uu_3                 1.327639e-01 1 1  ON 3
+   uu_4                 9.705926e-02 1 1  ON 4
+   uu_5                 6.985232e-02 1 1  ON 5
+   uu_6                 4.592529e-02 1 1  ON 6
+   uu_7                 2.531124e-02 1 1  ON 7
+   uu_8                 9.124038e-03 1 1  ON 8
+   uu_9                -2.930330e-03 1 1  ON 9
+   ud_0                 5.147810e-01 1 1  ON 10
+   ud_1                 2.575058e-01 1 1  ON 11
+   ud_2                 1.503712e-01 1 1  ON 12
+   ud_3                 9.609072e-02 1 1  ON 13
+   ud_4                 6.318236e-02 1 1  ON 14
+   ud_5                 3.953763e-02 1 1  ON 15
+   ud_6                 1.964143e-02 1 1  ON 16
+   ud_7                 4.035051e-03 1 1  ON 17
+   ud_8                -6.246784e-03 1 1  ON 18
+   ud_9                -1.128026e-02 1 1  ON 19
+  eSi_0                -2.603240e-01 1 1  ON 20
+  eSi_1                -1.682411e-01 1 1  ON 21
+  eSi_2                -1.206788e-01 1 1  ON 22
+  eSi_3                -5.645022e-02 1 1  ON 23
+  eSi_4                -1.201494e-02 1 1  ON 24
+  eSi_5                 1.885793e-02 1 1  ON 25
+  eSi_6                 1.123939e-02 1 1  ON 26
+  eSi_7                 7.234835e-03 1 1  ON 27
+  eSi_8                 1.131091e-02 1 1  ON 28
+  eSi_9                 1.923895e-02 1 1  ON 29
+   eH_0                -4.060661e-01 1 1  ON 30
+   eH_1                -3.995332e-01 1 1  ON 31
+   eH_2                -3.511739e-01 1 1  ON 32
+   eH_3                -2.926186e-01 1 1  ON 33
+   eH_4                -2.450769e-01 1 1  ON 34
+   eH_5                -2.109705e-01 1 1  ON 35
+   eH_6                -1.700433e-01 1 1  ON 36
+   eH_7                -1.246165e-01 1 1  ON 37
+   eH_8                -7.627620e-02 1 1  ON 38
+   eH_9                -2.568083e-02 1 1  ON 39
+ uuSi_0                -2.648542e-05 1 1  ON 40
+ uuSi_1                -1.081695e-05 1 1  ON 41
+ uuSi_2                 8.151688e-06 1 1  ON 42
+ uuSi_3                 4.082870e-05 1 1  ON 43
+ uuSi_4                 6.555899e-06 1 1  ON 44
+ uuSi_5                -2.715291e-06 1 1  ON 45
+ uuSi_6                 2.247386e-05 1 1  ON 46
+ uuSi_7                 1.184717e-05 1 1  ON 47
+ uuSi_8                -2.738622e-05 1 1  ON 48
+ uuSi_9                 9.153613e-06 1 1  ON 49
+uuSi_10                 2.351982e-05 1 1  ON 50
+uuSi_11                -1.109451e-06 1 1  ON 51
+uuSi_12                 9.368202e-06 1 1  ON 52
+uuSi_13                -6.086800e-05 1 1  ON 53
+uuSi_14                -1.015714e-05 1 1  ON 54
+uuSi_15                 8.490643e-08 1 1  ON 55
+uuSi_16                 1.998584e-05 1 1  ON 56
+uuSi_17                -6.283317e-05 1 1  ON 57
+uuSi_18                 1.089675e-05 1 1  ON 58
+uuSi_19                -3.842043e-06 1 1  ON 59
+uuSi_20                 1.896969e-05 1 1  ON 60
+uuSi_21                 7.509782e-07 1 1  ON 61
+uuSi_22                 1.252819e-07 1 1  ON 62
+uuSi_23                -5.040009e-06 1 1  ON 63
+uuSi_24                 2.880077e-08 1 1  ON 64
+uuSi_25                -2.902944e-09 1 1  ON 65
+ udSi_0                -9.961997e-06 1 1  ON 66
+ udSi_1                 2.767877e-05 1 1  ON 67
+ udSi_2                 1.359265e-05 1 1  ON 68
+ udSi_3                 2.195590e-05 1 1  ON 69
+ udSi_4                 3.382524e-06 1 1  ON 70
+ udSi_5                -3.663342e-06 1 1  ON 71
+ udSi_6                 7.070865e-05 1 1  ON 72
+ udSi_7                -1.204359e-05 1 1  ON 73
+ udSi_8                -1.324108e-05 1 1  ON 74
+ udSi_9                -4.218141e-05 1 1  ON 75
+udSi_10                 1.251451e-05 1 1  ON 76
+udSi_11                -5.854152e-08 1 1  ON 77
+udSi_12                 5.612794e-06 1 1  ON 78
+udSi_13                -2.617192e-05 1 1  ON 79
+udSi_14                -6.686172e-06 1 1  ON 80
+udSi_15                 7.192866e-08 1 1  ON 81
+udSi_16                 4.985573e-05 1 1  ON 82
+udSi_17                -3.903806e-05 1 1  ON 83
+udSi_18                 6.288872e-06 1 1  ON 84
+udSi_19                -2.504883e-06 1 1  ON 85
+udSi_20                 4.550996e-06 1 1  ON 86
+udSi_21                 7.183550e-07 1 1  ON 87
+udSi_22                 9.492775e-08 1 1  ON 88
+udSi_23                -1.959621e-06 1 1  ON 89
+udSi_24                -3.200621e-08 1 1  ON 90
+udSi_25                -7.449683e-09 1 1  ON 91
+  uuH_0                -5.555629e-06 1 1  ON 92
+  uuH_1                 6.883707e-06 1 1  ON 93
+  uuH_2                 3.011789e-06 1 1  ON 94
+  uuH_3                -5.509012e-06 1 1  ON 95
+  uuH_4                -2.213663e-06 1 1  ON 96
+  uuH_5                 8.054040e-07 1 1  ON 97
+  uuH_6                 1.076232e-05 1 1  ON 98
+  uuH_7                -5.829253e-06 1 1  ON 99
+  uuH_8                 3.762801e-06 1 1  ON 100
+  uuH_9                 1.567535e-06 1 1  ON 101
+ uuH_10                -5.987728e-06 1 1  ON 102
+ uuH_11                 5.064286e-06 1 1  ON 103
+ uuH_12                -2.232277e-06 1 1  ON 104
+ uuH_13                 3.334323e-06 1 1  ON 105
+ uuH_14                 1.143651e-06 1 1  ON 106
+ uuH_15                 8.615254e-08 1 1  ON 107
+ uuH_16                -7.170121e-06 1 1  ON 108
+ uuH_17                 7.894584e-06 1 1  ON 109
+ uuH_18                -5.068236e-06 1 1  ON 110
+ uuH_19                 1.482077e-06 1 1  ON 111
+ uuH_20                 1.184530e-06 1 1  ON 112
+ uuH_21                 9.394747e-08 1 1  ON 113
+ uuH_22                -1.191577e-07 1 1  ON 114
+ uuH_23                -4.016967e-07 1 1  ON 115
+ uuH_24                 3.943034e-08 1 1  ON 116
+ uuH_25                 4.214836e-09 1 1  ON 117
+  udH_0                -5.917484e-06 1 1  ON 118
+  udH_1                -5.909687e-06 1 1  ON 119
+  udH_2                 2.176384e-06 1 1  ON 120
+  udH_3                 4.622732e-06 1 1  ON 121
+  udH_4                 2.838092e-07 1 1  ON 122
+  udH_5                 3.327738e-07 1 1  ON 123
+  udH_6                 1.186654e-06 1 1  ON 124
+  udH_7                -1.117873e-05 1 1  ON 125
+  udH_8                -2.663859e-06 1 1  ON 126
+  udH_9                 7.862537e-06 1 1  ON 127
+ udH_10                 2.370154e-06 1 1  ON 128
+ udH_11                 6.096023e-06 1 1  ON 129
+ udH_12                -1.533825e-07 1 1  ON 130
+ udH_13                -5.132310e-06 1 1  ON 131
+ udH_14                -1.113022e-06 1 1  ON 132
+ udH_15                 1.261710e-07 1 1  ON 133
+ udH_16                -5.345316e-06 1 1  ON 134
+ udH_17                -2.011205e-06 1 1  ON 135
+ udH_18                -4.513347e-06 1 1  ON 136
+ udH_19                 8.160315e-07 1 1  ON 137
+ udH_20                 2.309954e-06 1 1  ON 138
+ udH_21                 7.692841e-07 1 1  ON 139
+ udH_22                -1.664946e-07 1 1  ON 140
+ udH_23                -5.590836e-07 1 1  ON 141
+ udH_24                -1.271232e-07 1 1  ON 142
+ udH_25                 3.075963e-08 1 1  ON 143
+  </optVariables>
+   Restore the number of walkers to 21, removing 0 walkers.
+</opt>
+</optimization-report>
+  QMC Execution time = 157.5 secs
+
+=========================================================
+  Start QMCFixedSampleLinearOptimize
+  File Root qmc.dump.s001 append = no 
+=========================================================
+  Skip QMCDriver::putQMCInfo 
+  Resetting Properties of the walkers 1 x 14
+
+=========================================================
+  Start VMC
+  File Root qmc.dump.s001 append = no 
+=========================================================
+Using existing walkers 
+  Resetting Properties of the walkers 1 x 14
+
+<vmc function="put">
+  qmc_counter=1  my_counter=0
+  time step      = 0.5
+  blocks         = 20
+  steps          = 19
+  substeps       = 4
+  current        = 0
+  target samples = 5e+05
+  walkers/mpi    = 21
+
+  stepsbetweensamples = 1
+  SpinMoves      = no
+<parameter name="blocks" condition="int">20</parameter>
+<parameter name="blocks_between_recompute" condition="int">0</parameter>
+<parameter name="check_properties" condition="int">100</parameter>
+<parameter name="checkproperties" condition="int">100</parameter>
+<parameter name="current" condition="int">0</parameter>
+<parameter name="dmcwalkersperthread" condition="real">373</parameter>
+<parameter name="maxcpusecs" condition="real">3.6e+05</parameter>
+<parameter name="record_configs" condition="int">0</parameter>
+<parameter name="record_walkers" condition="int">1</parameter>
+<parameter name="recordconfigs" condition="int">0</parameter>
+<parameter name="recordwalkers" condition="int">1</parameter>
+<parameter name="rewind" condition="int">0</parameter>
+<parameter name="samples" condition="real">5e+05</parameter>
+<parameter name="samplesperthread" condition="real">373</parameter>
+<parameter name="spinmass" condition="double">1</parameter>
+<parameter name="spinmoves" condition="string">no</parameter>
+<parameter name="steps" condition="int">19</parameter>
+<parameter name="stepsbetweensamples" condition="int">1</parameter>
+<parameter name="store_configs" condition="int">0</parameter>
+<parameter name="storeconfigs" condition="int">0</parameter>
+<parameter name="sub_steps" condition="int">4</parameter>
+<parameter name="substeps" condition="int">4</parameter>
+<parameter name="tau" condition="au">0.5</parameter>
+<parameter name="time_step" condition="au">0.5</parameter>
+<parameter name="timestep" condition="au">0.5</parameter>
+<parameter name="use_drift" condition="string">no</parameter>
+<parameter name="usedrift" condition="string">no</parameter>
+<parameter name="walkers" condition="int">1</parameter>
+<parameter name="warmup_steps" condition="int">100</parameter>
+<parameter name="warmupsteps" condition="int">100</parameter>
+  DumpConfig==false Nothing (configurations, state) will be saved.
+  Walker Samples are dumped every 1 steps.
+</vmc>
+    Restarting, cummulative properties:
+      energy     = -5.912
+      variance   = 0
+      r2accepted = 1e-10
+      r2proposed = 1e-10
+  Set drift_modifier UNR parameter a = 1
+ Using QMCCostFunction::QMCCostFunction
+  Set drift_modifier UNR parameter a = 1.0000e+00
+  EstimatorManagerBase::add replace LocalEnergy estimator.
+<optimization-report>
+<vmc stage="main" blocks="20">
+  Cannot make clones again. Use existing 21 clones
+  Initial partition of walkers 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 
+
+  Using Particle by Particle moves
+  Walker moves without drift
+  Total Sample Size   =501312
+  Walker distribution on root = 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 
+  Using Locality Approximation
+===== Memory Usage after the buffer registration =====
+Available memory on node 0, free + buffers : 558783 MB
+Memory footprint by rank 0 on node 0       : 795 MB
+==================================================
+  Anonymous Buffer size per walker : 8958088 Bytes.
+MEMORY increase 179 MB VMC::resetRun
+====================================================
+  SimpleFixedNodeBranch::finalize after a VMC block
+    QMC counter        = 1
+    time step          = 0.5
+    reference energy   = -5.92105
+    reference variance = 0.1297
+====================================================
+  Execution time = 9.9970e+01
+</vmc>
+<opt stage="setup">
+  <log>
+   Reading configurations from h5FileRoot qmc.dump.s001
+  QMCCostFunction is created with 21 threads.
+  Using Nonlocal PP in Opt: no
+   Number of samples loaded to each thread : 373 373 373 373 373 373 373 373 373 373 373 373 373 373 373 373 373 373 373 373 373 
+  VMC Eavg = -5.9119e+00
+  VMC Evar = 6.6462e-02
+  Total weights = 5.0131e+05
+  Execution time = 5.6693e+01
+  </log>
+</opt>
+<opt stage="main" walkers="501312">
+  <log>
+
+*****************************************
+Building overlap and Hamiltonian matrices
+*****************************************
+
+Among totally 144 optimized parameters, largest LM parameter change : 1.9906e-02 at parameter 31
+
+******************************************************************************
+Init Cost =  -5.3141e+00    New Cost =  -5.3143e+00  Delta Cost =  -2.0748e-04
+******************************************************************************
+
+The new set of parameters is valid. Updating the trial wave function!
+
+*****************************************************************************
+Applying the update for shift_i =   1.0000e-02     and shift_s =   6.2500e-02
+*****************************************************************************
+  Execution time = 1.5685e+02
+  </log>
+  <optVariables href="qmc.dump.s001.opt.xml">
+   uu_0                 4.645713e-01 1 1  ON 0
+   uu_1                 2.928240e-01 1 1  ON 1
+   uu_2                 1.970422e-01 1 1  ON 2
+   uu_3                 1.366935e-01 1 1  ON 3
+   uu_4                 1.021204e-01 1 1  ON 4
+   uu_5                 7.456803e-02 1 1  ON 5
+   uu_6                 5.054180e-02 1 1  ON 6
+   uu_7                 2.993955e-02 1 1  ON 7
+   uu_8                 1.298005e-02 1 1  ON 8
+   uu_9                 1.017715e-03 1 1  ON 9
+   ud_0                 5.250286e-01 1 1  ON 10
+   ud_1                 2.660745e-01 1 1  ON 11
+   ud_2                 1.568460e-01 1 1  ON 12
+   ud_3                 9.900878e-02 1 1  ON 13
+   ud_4                 6.504577e-02 1 1  ON 14
+   ud_5                 4.115926e-02 1 1  ON 15
+   ud_6                 2.164318e-02 1 1  ON 16
+   ud_7                 6.832574e-03 1 1  ON 17
+   ud_8                -4.116287e-03 1 1  ON 18
+   ud_9                -9.392222e-03 1 1  ON 19
+  eSi_0                -2.560588e-01 1 1  ON 20
+  eSi_1                -1.752719e-01 1 1  ON 21
+  eSi_2                -1.314462e-01 1 1  ON 22
+  eSi_3                -6.598146e-02 1 1  ON 23
+  eSi_4                -2.005178e-02 1 1  ON 24
+  eSi_5                 1.784091e-02 1 1  ON 25
+  eSi_6                 1.683767e-02 1 1  ON 26
+  eSi_7                 6.234230e-03 1 1  ON 27
+  eSi_8                 9.777239e-03 1 1  ON 28
+  eSi_9                 1.575288e-02 1 1  ON 29
+   eH_0                -4.257144e-01 1 1  ON 30
+   eH_1                -4.194397e-01 1 1  ON 31
+   eH_2                -3.684203e-01 1 1  ON 32
+   eH_3                -3.031149e-01 1 1  ON 33
+   eH_4                -2.492706e-01 1 1  ON 34
+   eH_5                -2.172071e-01 1 1  ON 35
+   eH_6                -1.799529e-01 1 1  ON 36
+   eH_7                -1.353572e-01 1 1  ON 37
+   eH_8                -8.642788e-02 1 1  ON 38
+   eH_9                -3.525842e-02 1 1  ON 39
+ uuSi_0                -3.572160e-05 1 1  ON 40
+ uuSi_1                 1.093948e-06 1 1  ON 41
+ uuSi_2                 1.508335e-05 1 1  ON 42
+ uuSi_3                 4.567579e-05 1 1  ON 43
+ uuSi_4                 6.664778e-06 1 1  ON 44
+ uuSi_5                -4.734803e-06 1 1  ON 45
+ uuSi_6                 5.372409e-05 1 1  ON 46
+ uuSi_7                 1.621474e-06 1 1  ON 47
+ uuSi_8                -3.379694e-05 1 1  ON 48
+ uuSi_9                -2.365249e-06 1 1  ON 49
+uuSi_10                 2.458741e-05 1 1  ON 50
+uuSi_11                 6.770041e-06 1 1  ON 51
+uuSi_12                 1.109954e-05 1 1  ON 52
+uuSi_13                -7.002882e-05 1 1  ON 53
+uuSi_14                -1.343464e-05 1 1  ON 54
+uuSi_15                 2.168098e-07 1 1  ON 55
+uuSi_16                 3.444239e-05 1 1  ON 56
+uuSi_17                -7.325292e-05 1 1  ON 57
+uuSi_18                 6.204095e-06 1 1  ON 58
+uuSi_19                -3.943850e-06 1 1  ON 59
+uuSi_20                 2.058306e-05 1 1  ON 60
+uuSi_21                 2.163044e-06 1 1  ON 61
+uuSi_22                -2.384361e-08 1 1  ON 62
+uuSi_23                -5.640157e-06 1 1  ON 63
+uuSi_24                -2.120569e-07 1 1  ON 64
+uuSi_25                 3.627701e-08 1 1  ON 65
+ udSi_0                -1.687550e-05 1 1  ON 66
+ udSi_1                 2.013031e-05 1 1  ON 67
+ udSi_2                 1.753892e-05 1 1  ON 68
+ udSi_3                 3.440075e-05 1 1  ON 69
+ udSi_4                 4.997294e-06 1 1  ON 70
+ udSi_5                -3.117818e-06 1 1  ON 71
+ udSi_6                 7.271990e-05 1 1  ON 72
+ udSi_7                -2.564687e-06 1 1  ON 73
+ udSi_8                -1.785119e-05 1 1  ON 74
+ udSi_9                -4.205379e-05 1 1  ON 75
+udSi_10                 1.993517e-05 1 1  ON 76
+udSi_11                -4.524446e-06 1 1  ON 77
+udSi_12                 7.879564e-06 1 1  ON 78
+udSi_13                -4.054217e-05 1 1  ON 79
+udSi_14                -8.734494e-06 1 1  ON 80
+udSi_15                 5.508806e-08 1 1  ON 81
+udSi_16                 5.707524e-05 1 1  ON 82
+udSi_17                -5.461558e-05 1 1  ON 83
+udSi_18                 1.050372e-05 1 1  ON 84
+udSi_19                -3.654957e-06 1 1  ON 85
+udSi_20                 8.602690e-06 1 1  ON 86
+udSi_21                 7.674361e-07 1 1  ON 87
+udSi_22                 1.645062e-07 1 1  ON 88
+udSi_23                -3.098766e-06 1 1  ON 89
+udSi_24                -1.273962e-08 1 1  ON 90
+udSi_25                -1.536190e-08 1 1  ON 91
+  uuH_0                -4.803006e-06 1 1  ON 92
+  uuH_1                 1.886339e-05 1 1  ON 93
+  uuH_2                 2.316068e-06 1 1  ON 94
+  uuH_3                -1.155152e-05 1 1  ON 95
+  uuH_4                -3.187577e-06 1 1  ON 96
+  uuH_5                 1.995843e-07 1 1  ON 97
+  uuH_6                 2.503947e-05 1 1  ON 98
+  uuH_7                -1.931892e-05 1 1  ON 99
+  uuH_8                 3.001251e-06 1 1  ON 100
+  uuH_9                -4.211865e-06 1 1  ON 101
+ uuH_10                -1.116640e-05 1 1  ON 102
+ uuH_11                 1.386685e-05 1 1  ON 103
+ uuH_12                -2.966125e-06 1 1  ON 104
+ uuH_13                 9.604281e-06 1 1  ON 105
+ uuH_14                 9.462426e-07 1 1  ON 106
+ uuH_15                 1.612828e-07 1 1  ON 107
+ uuH_16                -6.989254e-06 1 1  ON 108
+ uuH_17                 1.520863e-05 1 1  ON 109
+ uuH_18                -1.184681e-05 1 1  ON 110
+ uuH_19                 2.412606e-06 1 1  ON 111
+ uuH_20                -4.044549e-07 1 1  ON 112
+ uuH_21                 8.588343e-07 1 1  ON 113
+ uuH_22                -2.594510e-07 1 1  ON 114
+ uuH_23                 7.369365e-09 1 1  ON 115
+ uuH_24                -9.779456e-08 1 1  ON 116
+ uuH_25                 3.033689e-08 1 1  ON 117
+  udH_0                -6.984705e-06 1 1  ON 118
+  udH_1                -5.704294e-06 1 1  ON 119
+  udH_2                 3.184537e-06 1 1  ON 120
+  udH_3                 5.142847e-06 1 1  ON 121
+  udH_4                 2.150807e-07 1 1  ON 122
+  udH_5                 5.533199e-07 1 1  ON 123
+  udH_6                 3.397138e-06 1 1  ON 124
+  udH_7                -1.392128e-05 1 1  ON 125
+  udH_8                -2.883267e-06 1 1  ON 126
+  udH_9                 8.017773e-06 1 1  ON 127
+ udH_10                 2.616580e-06 1 1  ON 128
+ udH_11                 7.028821e-06 1 1  ON 129
+ udH_12                -2.056696e-07 1 1  ON 130
+ udH_13                -5.934988e-06 1 1  ON 131
+ udH_14                -1.412067e-06 1 1  ON 132
+ udH_15                 1.605189e-07 1 1  ON 133
+ udH_16                -4.374895e-06 1 1  ON 134
+ udH_17                -3.120189e-06 1 1  ON 135
+ udH_18                -4.863823e-06 1 1  ON 136
+ udH_19                 9.132745e-07 1 1  ON 137
+ udH_20                 2.371768e-06 1 1  ON 138
+ udH_21                 8.858344e-07 1 1  ON 139
+ udH_22                -1.918810e-07 1 1  ON 140
+ udH_23                -5.759950e-07 1 1  ON 141
+ udH_24                -1.475712e-07 1 1  ON 142
+ udH_25                 3.527874e-08 1 1  ON 143
+  </optVariables>
+   Restore the number of walkers to 21, removing 0 walkers.
+</opt>
+</optimization-report>
+  QMC Execution time = 156.9 secs
+
+=========================================================
+  Start QMCFixedSampleLinearOptimize
+  File Root qmc.dump.s002 append = no 
+=========================================================
+  Skip QMCDriver::putQMCInfo 
+  Resetting Properties of the walkers 1 x 14
+
+=========================================================
+  Start VMC
+  File Root qmc.dump.s002 append = no 
+=========================================================
+Using existing walkers 
+  Resetting Properties of the walkers 1 x 14
+
+<vmc function="put">
+  qmc_counter=2  my_counter=0
+  time step      = 0.5
+  blocks         = 20
+  steps          = 19
+  substeps       = 4
+  current        = 0
+  target samples = 5e+05
+  walkers/mpi    = 21
+
+  stepsbetweensamples = 1
+  SpinMoves      = no
+<parameter name="blocks" condition="int">20</parameter>
+<parameter name="blocks_between_recompute" condition="int">0</parameter>
+<parameter name="check_properties" condition="int">100</parameter>
+<parameter name="checkproperties" condition="int">100</parameter>
+<parameter name="current" condition="int">0</parameter>
+<parameter name="dmcwalkersperthread" condition="real">373</parameter>
+<parameter name="maxcpusecs" condition="real">3.6e+05</parameter>
+<parameter name="record_configs" condition="int">0</parameter>
+<parameter name="record_walkers" condition="int">1</parameter>
+<parameter name="recordconfigs" condition="int">0</parameter>
+<parameter name="recordwalkers" condition="int">1</parameter>
+<parameter name="rewind" condition="int">0</parameter>
+<parameter name="samples" condition="real">5e+05</parameter>
+<parameter name="samplesperthread" condition="real">373</parameter>
+<parameter name="spinmass" condition="double">1</parameter>
+<parameter name="spinmoves" condition="string">no</parameter>
+<parameter name="steps" condition="int">19</parameter>
+<parameter name="stepsbetweensamples" condition="int">1</parameter>
+<parameter name="store_configs" condition="int">0</parameter>
+<parameter name="storeconfigs" condition="int">0</parameter>
+<parameter name="sub_steps" condition="int">4</parameter>
+<parameter name="substeps" condition="int">4</parameter>
+<parameter name="tau" condition="au">0.5</parameter>
+<parameter name="time_step" condition="au">0.5</parameter>
+<parameter name="timestep" condition="au">0.5</parameter>
+<parameter name="use_drift" condition="string">no</parameter>
+<parameter name="usedrift" condition="string">no</parameter>
+<parameter name="walkers" condition="int">1</parameter>
+<parameter name="warmup_steps" condition="int">100</parameter>
+<parameter name="warmupsteps" condition="int">100</parameter>
+  DumpConfig==false Nothing (configurations, state) will be saved.
+  Walker Samples are dumped every 1 steps.
+</vmc>
+    Restarting, cummulative properties:
+      energy     = -5.916
+      variance   = 0
+      r2accepted = 1e-10
+      r2proposed = 1e-10
+  Set drift_modifier UNR parameter a = 1
+ Using QMCCostFunction::QMCCostFunction
+  Set drift_modifier UNR parameter a = 1.0000e+00
+  EstimatorManagerBase::add replace LocalEnergy estimator.
+<optimization-report>
+<vmc stage="main" blocks="20">
+  Cannot make clones again. Use existing 21 clones
+  Initial partition of walkers 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 
+
+  Using Particle by Particle moves
+  Walker moves without drift
+  Total Sample Size   =501312
+  Walker distribution on root = 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 
+  Using Locality Approximation
+===== Memory Usage after the buffer registration =====
+Available memory on node 0, free + buffers : 558781 MB
+Memory footprint by rank 0 on node 0       : 796 MB
+==================================================
+  Anonymous Buffer size per walker : 8958088 Bytes.
+MEMORY increase 179 MB VMC::resetRun
+====================================================
+  SimpleFixedNodeBranch::finalize after a VMC block
+    QMC counter        = 2
+    time step          = 0.5
+    reference energy   = -5.90684
+    reference variance = 0.0452021
+====================================================
+  Execution time = 1.0001e+02
+</vmc>
+<opt stage="setup">
+  <log>
+   Reading configurations from h5FileRoot qmc.dump.s002
+  QMCCostFunction is created with 21 threads.
+  Using Nonlocal PP in Opt: no
+   Number of samples loaded to each thread : 373 373 373 373 373 373 373 373 373 373 373 373 373 373 373 373 373 373 373 373 373 
+  VMC Eavg = -5.9121e+00
+  VMC Evar = 6.8207e-02
+  Total weights = 5.0131e+05
+  Execution time = 5.7270e+01
+  </log>
+</opt>
+<opt stage="main" walkers="501312">
+  <log>
+
+*****************************************
+Building overlap and Hamiltonian matrices
+*****************************************
+
+Among totally 144 optimized parameters, largest LM parameter change : 1.0655e-02 at parameter 31
+
+******************************************************************************
+Init Cost =  -5.3140e+00    New Cost =  -5.3141e+00  Delta Cost =  -1.0675e-04
+******************************************************************************
+
+The new set of parameters is valid. Updating the trial wave function!
+
+*****************************************************************************
+Applying the update for shift_i =   1.0000e-02     and shift_s =   1.5625e-02
+*****************************************************************************
+  Execution time = 1.5748e+02
+  </log>
+  <optVariables href="qmc.dump.s002.opt.xml">
+   uu_0                 4.668122e-01 1 1  ON 0
+   uu_1                 2.962958e-01 1 1  ON 1
+   uu_2                 2.025143e-01 1 1  ON 2
+   uu_3                 1.443573e-01 1 1  ON 3
+   uu_4                 1.095656e-01 1 1  ON 4
+   uu_5                 8.219335e-02 1 1  ON 5
+   uu_6                 5.811027e-02 1 1  ON 6
+   uu_7                 3.757378e-02 1 1  ON 7
+   uu_8                 2.021875e-02 1 1  ON 8
+   uu_9                 7.179615e-03 1 1  ON 9
+   ud_0                 5.347857e-01 1 1  ON 10
+   ud_1                 2.743248e-01 1 1  ON 11
+   ud_2                 1.638007e-01 1 1  ON 12
+   ud_3                 1.048310e-01 1 1  ON 13
+   ud_4                 7.032396e-02 1 1  ON 14
+   ud_5                 4.682094e-02 1 1  ON 15
+   ud_6                 2.769143e-02 1 1  ON 16
+   ud_7                 1.285458e-02 1 1  ON 17
+   ud_8                 1.432899e-03 1 1  ON 18
+   ud_9                -5.320509e-03 1 1  ON 19
+  eSi_0                -2.538951e-01 1 1  ON 20
+  eSi_1                -1.782719e-01 1 1  ON 21
+  eSi_2                -1.373419e-01 1 1  ON 22
+  eSi_3                -7.291634e-02 1 1  ON 23
+  eSi_4                -2.780858e-02 1 1  ON 24
+  eSi_5                 2.438293e-02 1 1  ON 25
+  eSi_6                 1.884700e-02 1 1  ON 26
+  eSi_7                 7.687041e-03 1 1  ON 27
+  eSi_8                 1.304923e-02 1 1  ON 28
+  eSi_9                 1.439967e-02 1 1  ON 29
+   eH_0                -4.353246e-01 1 1  ON 30
+   eH_1                -4.300944e-01 1 1  ON 31
+   eH_2                -3.760416e-01 1 1  ON 32
+   eH_3                -3.085085e-01 1 1  ON 33
+   eH_4                -2.525644e-01 1 1  ON 34
+   eH_5                -2.195207e-01 1 1  ON 35
+   eH_6                -1.813967e-01 1 1  ON 36
+   eH_7                -1.364766e-01 1 1  ON 37
+   eH_8                -8.687371e-02 1 1  ON 38
+   eH_9                -3.449406e-02 1 1  ON 39
+ uuSi_0                -3.205526e-05 1 1  ON 40
+ uuSi_1                -5.496970e-06 1 1  ON 41
+ uuSi_2                 9.647945e-06 1 1  ON 42
+ uuSi_3                 5.317478e-05 1 1  ON 43
+ uuSi_4                 9.338867e-06 1 1  ON 44
+ uuSi_5                -3.746945e-06 1 1  ON 45
+ uuSi_6                 4.366033e-05 1 1  ON 46
+ uuSi_7                 4.515310e-06 1 1  ON 47
+ uuSi_8                -4.049254e-05 1 1  ON 48
+ uuSi_9                -1.001588e-06 1 1  ON 49
+uuSi_10                 3.026631e-05 1 1  ON 50
+uuSi_11                 5.597441e-06 1 1  ON 51
+uuSi_12                 1.355173e-05 1 1  ON 52
+uuSi_13                -7.731879e-05 1 1  ON 53
+uuSi_14                -1.511031e-05 1 1  ON 54
+uuSi_15                 1.604871e-07 1 1  ON 55
+uuSi_16                 3.605804e-05 1 1  ON 56
+uuSi_17                -8.206753e-05 1 1  ON 57
+uuSi_18                 9.308321e-06 1 1  ON 58
+uuSi_19                -5.160932e-06 1 1  ON 59
+uuSi_20                 2.320785e-05 1 1  ON 60
+uuSi_21                 2.061259e-06 1 1  ON 61
+uuSi_22                 7.560918e-08 1 1  ON 62
+uuSi_23                -6.409237e-06 1 1  ON 63
+uuSi_24                -1.561520e-07 1 1  ON 64
+uuSi_25                 2.282055e-08 1 1  ON 65
+ udSi_0                -1.556227e-05 1 1  ON 66
+ udSi_1                 3.277101e-05 1 1  ON 67
+ udSi_2                 1.822077e-05 1 1  ON 68
+ udSi_3                 3.069602e-05 1 1  ON 69
+ udSi_4                 4.147904e-06 1 1  ON 70
+ udSi_5                -4.291533e-06 1 1  ON 71
+ udSi_6                 9.099790e-05 1 1  ON 72
+ udSi_7                -1.110434e-05 1 1  ON 73
+ udSi_8                -1.773951e-05 1 1  ON 74
+ udSi_9                -5.369123e-05 1 1  ON 75
+udSi_10                 1.596569e-05 1 1  ON 76
+udSi_11                 1.489346e-07 1 1  ON 77
+udSi_12                 7.459192e-06 1 1  ON 78
+udSi_13                -3.721217e-05 1 1  ON 79
+udSi_14                -9.024509e-06 1 1  ON 80
+udSi_15                 1.108161e-07 1 1  ON 81
+udSi_16                 6.769234e-05 1 1  ON 82
+udSi_17                -5.203489e-05 1 1  ON 83
+udSi_18                 6.761326e-06 1 1  ON 84
+udSi_19                -3.205257e-06 1 1  ON 85
+udSi_20                 6.447079e-06 1 1  ON 86
+udSi_21                 1.380578e-06 1 1  ON 87
+udSi_22                 7.578894e-08 1 1  ON 88
+udSi_23                -2.713405e-06 1 1  ON 89
+udSi_24                -1.423711e-07 1 1  ON 90
+udSi_25                 4.680154e-09 1 1  ON 91
+  uuH_0                -4.888596e-06 1 1  ON 92
+  uuH_1                 4.801909e-07 1 1  ON 93
+  uuH_2                -5.327547e-07 1 1  ON 94
+  uuH_3                -3.060538e-06 1 1  ON 95
+  uuH_4                -1.510562e-06 1 1  ON 96
+  uuH_5                 1.939162e-06 1 1  ON 97
+  uuH_6                 2.065182e-06 1 1  ON 98
+  uuH_7                -6.879960e-06 1 1  ON 99
+  uuH_8                 3.814585e-07 1 1  ON 100
+  uuH_9                 7.695290e-06 1 1  ON 101
+ uuH_10                -4.812442e-06 1 1  ON 102
+ uuH_11                 7.273915e-06 1 1  ON 103
+ uuH_12                -1.626653e-06 1 1  ON 104
+ uuH_13                 1.035743e-06 1 1  ON 105
+ uuH_14                 5.957077e-07 1 1  ON 106
+ uuH_15                 8.620311e-08 1 1  ON 107
+ uuH_16                -1.064946e-05 1 1  ON 108
+ uuH_17                 6.598487e-06 1 1  ON 109
+ uuH_18                -5.781340e-06 1 1  ON 110
+ uuH_19                 1.409176e-06 1 1  ON 111
+ uuH_20                 2.193009e-06 1 1  ON 112
+ uuH_21                 1.940360e-07 1 1  ON 113
+ uuH_22                -1.256735e-07 1 1  ON 114
+ uuH_23                -5.302907e-07 1 1  ON 115
+ uuH_24                 3.112157e-08 1 1  ON 116
+ uuH_25                 5.680518e-09 1 1  ON 117
+  udH_0                -6.407975e-06 1 1  ON 118
+  udH_1                -7.128093e-06 1 1  ON 119
+  udH_2                 2.518284e-06 1 1  ON 120
+  udH_3                 5.733438e-06 1 1  ON 121
+  udH_4                 4.268508e-07 1 1  ON 122
+  udH_5                 5.658585e-07 1 1  ON 123
+  udH_6                 4.309792e-07 1 1  ON 124
+  udH_7                -1.165224e-05 1 1  ON 125
+  udH_8                -2.928403e-06 1 1  ON 126
+  udH_9                 9.301668e-06 1 1  ON 127
+ udH_10                 3.259563e-06 1 1  ON 128
+ udH_11                 5.480671e-06 1 1  ON 129
+ udH_12                -6.051079e-08 1 1  ON 130
+ udH_13                -6.893252e-06 1 1  ON 131
+ udH_14                -1.316402e-06 1 1  ON 132
+ udH_15                 1.387629e-07 1 1  ON 133
+ udH_16                -4.187519e-06 1 1  ON 134
+ udH_17                -4.384336e-06 1 1  ON 135
+ udH_18                -3.348342e-06 1 1  ON 136
+ udH_19                 7.091008e-07 1 1  ON 137
+ udH_20                 2.432454e-06 1 1  ON 138
+ udH_21                 6.907645e-07 1 1  ON 139
+ udH_22                -1.578552e-07 1 1  ON 140
+ udH_23                -5.165572e-07 1 1  ON 141
+ udH_24                -1.307198e-07 1 1  ON 142
+ udH_25                 3.152252e-08 1 1  ON 143
+  </optVariables>
+   Restore the number of walkers to 21, removing 0 walkers.
+</opt>
+</optimization-report>
+  QMC Execution time = 157.5 secs
+
+=========================================================
+  Start QMCFixedSampleLinearOptimize
+  File Root qmc.dump.s003 append = no 
+=========================================================
+  Skip QMCDriver::putQMCInfo 
+  Resetting Properties of the walkers 1 x 14
+
+=========================================================
+  Start VMC
+  File Root qmc.dump.s003 append = no 
+=========================================================
+Using existing walkers 
+  Resetting Properties of the walkers 1 x 14
+
+<vmc function="put">
+  qmc_counter=3  my_counter=0
+  time step      = 0.5
+  blocks         = 20
+  steps          = 19
+  substeps       = 4
+  current        = 0
+  target samples = 5e+05
+  walkers/mpi    = 21
+
+  stepsbetweensamples = 1
+  SpinMoves      = no
+<parameter name="blocks" condition="int">20</parameter>
+<parameter name="blocks_between_recompute" condition="int">0</parameter>
+<parameter name="check_properties" condition="int">100</parameter>
+<parameter name="checkproperties" condition="int">100</parameter>
+<parameter name="current" condition="int">0</parameter>
+<parameter name="dmcwalkersperthread" condition="real">373</parameter>
+<parameter name="maxcpusecs" condition="real">3.6e+05</parameter>
+<parameter name="record_configs" condition="int">0</parameter>
+<parameter name="record_walkers" condition="int">1</parameter>
+<parameter name="recordconfigs" condition="int">0</parameter>
+<parameter name="recordwalkers" condition="int">1</parameter>
+<parameter name="rewind" condition="int">0</parameter>
+<parameter name="samples" condition="real">5e+05</parameter>
+<parameter name="samplesperthread" condition="real">373</parameter>
+<parameter name="spinmass" condition="double">1</parameter>
+<parameter name="spinmoves" condition="string">no</parameter>
+<parameter name="steps" condition="int">19</parameter>
+<parameter name="stepsbetweensamples" condition="int">1</parameter>
+<parameter name="store_configs" condition="int">0</parameter>
+<parameter name="storeconfigs" condition="int">0</parameter>
+<parameter name="sub_steps" condition="int">4</parameter>
+<parameter name="substeps" condition="int">4</parameter>
+<parameter name="tau" condition="au">0.5</parameter>
+<parameter name="time_step" condition="au">0.5</parameter>
+<parameter name="timestep" condition="au">0.5</parameter>
+<parameter name="use_drift" condition="string">no</parameter>
+<parameter name="usedrift" condition="string">no</parameter>
+<parameter name="walkers" condition="int">1</parameter>
+<parameter name="warmup_steps" condition="int">100</parameter>
+<parameter name="warmupsteps" condition="int">100</parameter>
+  DumpConfig==false Nothing (configurations, state) will be saved.
+  Walker Samples are dumped every 1 steps.
+</vmc>
+    Restarting, cummulative properties:
+      energy     = -5.913
+      variance   = 0
+      r2accepted = 1e-10
+      r2proposed = 1e-10
+  Set drift_modifier UNR parameter a = 1
+ Using QMCCostFunction::QMCCostFunction
+  Set drift_modifier UNR parameter a = 1.0000e+00
+  EstimatorManagerBase::add replace LocalEnergy estimator.
+<optimization-report>
+<vmc stage="main" blocks="20">
+  Cannot make clones again. Use existing 21 clones
+  Initial partition of walkers 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 
+
+  Using Particle by Particle moves
+  Walker moves without drift
+  Total Sample Size   =501312
+  Walker distribution on root = 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 
+  Using Locality Approximation
+===== Memory Usage after the buffer registration =====
+Available memory on node 0, free + buffers : 558780 MB
+Memory footprint by rank 0 on node 0       : 796 MB
+==================================================
+  Anonymous Buffer size per walker : 8958088 Bytes.
+MEMORY increase 179 MB VMC::resetRun
+====================================================
+  SimpleFixedNodeBranch::finalize after a VMC block
+    QMC counter        = 3
+    time step          = 0.5
+    reference energy   = -5.90933
+    reference variance = 0.0866355
+====================================================
+  Execution time = 9.9675e+01
+</vmc>
+<opt stage="setup">
+  <log>
+   Reading configurations from h5FileRoot qmc.dump.s003
+  QMCCostFunction is created with 21 threads.
+  Using Nonlocal PP in Opt: no
+   Number of samples loaded to each thread : 373 373 373 373 373 373 373 373 373 373 373 373 373 373 373 373 373 373 373 373 373 
+  VMC Eavg = -5.9122e+00
+  VMC Evar = 6.5923e-02
+  Total weights = 5.0131e+05
+  Execution time = 5.6597e+01
+  </log>
+</opt>
+<opt stage="main" walkers="501312">
+  <log>
+
+*****************************************
+Building overlap and Hamiltonian matrices
+*****************************************
+
+Among totally 144 optimized parameters, largest LM parameter change : 1.2838e-02 at parameter 30
+
+******************************************************************************
+Init Cost =  -5.3144e+00    New Cost =  -5.3144e+00  Delta Cost =  -7.4652e-05
+******************************************************************************
+
+The new set of parameters is valid. Updating the trial wave function!
+
+*****************************************************************************
+Applying the update for shift_i =   1.0000e-02     and shift_s =   3.9062e-03
+*****************************************************************************
+  Execution time = 1.5648e+02
+  </log>
+  <optVariables href="qmc.dump.s003.opt.xml">
+   uu_0                 4.690401e-01 1 1  ON 0
+   uu_1                 3.013868e-01 1 1  ON 1
+   uu_2                 2.062971e-01 1 1  ON 2
+   uu_3                 1.473778e-01 1 1  ON 3
+   uu_4                 1.125517e-01 1 1  ON 4
+   uu_5                 8.475398e-02 1 1  ON 5
+   uu_6                 6.009997e-02 1 1  ON 6
+   uu_7                 3.888109e-02 1 1  ON 7
+   uu_8                 2.065106e-02 1 1  ON 8
+   uu_9                 7.099181e-03 1 1  ON 9
+   ud_0                 5.411473e-01 1 1  ON 10
+   ud_1                 2.804363e-01 1 1  ON 11
+   ud_2                 1.687056e-01 1 1  ON 12
+   ud_3                 1.081188e-01 1 1  ON 13
+   ud_4                 7.230618e-02 1 1  ON 14
+   ud_5                 4.808463e-02 1 1  ON 15
+   ud_6                 2.844688e-02 1 1  ON 16
+   ud_7                 1.312729e-02 1 1  ON 17
+   ud_8                 1.586509e-03 1 1  ON 18
+   ud_9                -4.455829e-03 1 1  ON 19
+  eSi_0                -2.524097e-01 1 1  ON 20
+  eSi_1                -1.828628e-01 1 1  ON 21
+  eSi_2                -1.443764e-01 1 1  ON 22
+  eSi_3                -7.985123e-02 1 1  ON 23
+  eSi_4                -3.308206e-02 1 1  ON 24
+  eSi_5                 2.543073e-02 1 1  ON 25
+  eSi_6                 1.881817e-02 1 1  ON 26
+  eSi_7                 8.495822e-03 1 1  ON 27
+  eSi_8                 1.027760e-02 1 1  ON 28
+  eSi_9                 1.288549e-02 1 1  ON 29
+   eH_0                -4.481624e-01 1 1  ON 30
+   eH_1                -4.406283e-01 1 1  ON 31
+   eH_2                -3.866220e-01 1 1  ON 32
+   eH_3                -3.177214e-01 1 1  ON 33
+   eH_4                -2.619255e-01 1 1  ON 34
+   eH_5                -2.283056e-01 1 1  ON 35
+   eH_6                -1.899704e-01 1 1  ON 36
+   eH_7                -1.438071e-01 1 1  ON 37
+   eH_8                -9.143406e-02 1 1  ON 38
+   eH_9                -3.765142e-02 1 1  ON 39
+ uuSi_0                -3.564260e-05 1 1  ON 40
+ uuSi_1                 8.043700e-08 1 1  ON 41
+ uuSi_2                 1.391920e-05 1 1  ON 42
+ uuSi_3                 5.099049e-05 1 1  ON 43
+ uuSi_4                 7.653668e-06 1 1  ON 44
+ uuSi_5                -4.328067e-06 1 1  ON 45
+ uuSi_6                 5.433026e-05 1 1  ON 46
+ uuSi_7                 6.017181e-06 1 1  ON 47
+ uuSi_8                -3.802731e-05 1 1  ON 48
+ uuSi_9                -4.576485e-06 1 1  ON 49
+uuSi_10                 2.731256e-05 1 1  ON 50
+uuSi_11                 5.338890e-06 1 1  ON 51
+uuSi_12                 1.263683e-05 1 1  ON 52
+uuSi_13                -7.819720e-05 1 1  ON 53
+uuSi_14                -1.491043e-05 1 1  ON 54
+uuSi_15                 2.236892e-07 1 1  ON 55
+uuSi_16                 4.204707e-05 1 1  ON 56
+uuSi_17                -8.330385e-05 1 1  ON 57
+uuSi_18                 8.868757e-06 1 1  ON 58
+uuSi_19                -4.700796e-06 1 1  ON 59
+uuSi_20                 2.292517e-05 1 1  ON 60
+uuSi_21                 2.240778e-06 1 1  ON 61
+uuSi_22                 3.589965e-09 1 1  ON 62
+uuSi_23                -6.415036e-06 1 1  ON 63
+uuSi_24                -2.151068e-07 1 1  ON 64
+uuSi_25                 3.873730e-08 1 1  ON 65
+ udSi_0                -1.781123e-05 1 1  ON 66
+ udSi_1                 2.534336e-05 1 1  ON 67
+ udSi_2                 1.979638e-05 1 1  ON 68
+ udSi_3                 3.745320e-05 1 1  ON 69
+ udSi_4                 4.995808e-06 1 1  ON 70
+ udSi_5                -3.884846e-06 1 1  ON 71
+ udSi_6                 8.782183e-05 1 1  ON 72
+ udSi_7                -7.795048e-06 1 1  ON 73
+ udSi_8                -1.965492e-05 1 1  ON 74
+ udSi_9                -5.164052e-05 1 1  ON 75
+udSi_10                 2.057136e-05 1 1  ON 76
+udSi_11                -3.156894e-06 1 1  ON 77
+udSi_12                 8.409945e-06 1 1  ON 78
+udSi_13                -4.414551e-05 1 1  ON 79
+udSi_14                -9.874351e-06 1 1  ON 80
+udSi_15                 1.051679e-07 1 1  ON 81
+udSi_16                 7.353954e-05 1 1  ON 82
+udSi_17                -6.085313e-05 1 1  ON 83
+udSi_18                 1.018399e-05 1 1  ON 84
+udSi_19                -3.786132e-06 1 1  ON 85
+udSi_20                 6.976951e-06 1 1  ON 86
+udSi_21                 1.298034e-06 1 1  ON 87
+udSi_22                 1.135410e-07 1 1  ON 88
+udSi_23                -2.686020e-06 1 1  ON 89
+udSi_24                -1.593904e-07 1 1  ON 90
+udSi_25                 4.690451e-09 1 1  ON 91
+  uuH_0                -2.752423e-06 1 1  ON 92
+  uuH_1                 4.954842e-06 1 1  ON 93
+  uuH_2                -1.329584e-06 1 1  ON 94
+  uuH_3                -6.246702e-06 1 1  ON 95
+  uuH_4                -2.011009e-06 1 1  ON 96
+  uuH_5                 2.278099e-06 1 1  ON 97
+  uuH_6                 7.131118e-06 1 1  ON 98
+  uuH_7                -1.106559e-05 1 1  ON 99
+  uuH_8                 4.846525e-07 1 1  ON 100
+  uuH_9                 2.225233e-06 1 1  ON 101
+ uuH_10                -7.413260e-06 1 1  ON 102
+ uuH_11                 9.958823e-06 1 1  ON 103
+ uuH_12                -1.950947e-06 1 1  ON 104
+ uuH_13                 4.565760e-06 1 1  ON 105
+ uuH_14                 5.994109e-07 1 1  ON 106
+ uuH_15                 1.124570e-07 1 1  ON 107
+ uuH_16                -5.864190e-06 1 1  ON 108
+ uuH_17                 9.330593e-06 1 1  ON 109
+ uuH_18                -8.056033e-06 1 1  ON 110
+ uuH_19                 1.729821e-06 1 1  ON 111
+ uuH_20                 6.045125e-07 1 1  ON 112
+ uuH_21                 4.991822e-07 1 1  ON 113
+ uuH_22                -1.773951e-07 1 1  ON 114
+ uuH_23                -2.264537e-07 1 1  ON 115
+ uuH_24                -3.004451e-08 1 1  ON 116
+ uuH_25                 1.610275e-08 1 1  ON 117
+  udH_0                -6.559124e-06 1 1  ON 118
+  udH_1                -8.679510e-06 1 1  ON 119
+  udH_2                 2.156385e-06 1 1  ON 120
+  udH_3                 6.549432e-06 1 1  ON 121
+  udH_4                 6.656720e-07 1 1  ON 122
+  udH_5                 8.264935e-07 1 1  ON 123
+  udH_6                -1.280349e-06 1 1  ON 124
+  udH_7                -1.212818e-05 1 1  ON 125
+  udH_8                -3.755319e-06 1 1  ON 126
+  udH_9                 1.070256e-05 1 1  ON 127
+ udH_10                 3.908625e-06 1 1  ON 128
+ udH_11                 5.934079e-06 1 1  ON 129
+ udH_12                 1.572742e-07 1 1  ON 130
+ udH_13                -7.719634e-06 1 1  ON 131
+ udH_14                -1.548962e-06 1 1  ON 132
+ udH_15                 1.421864e-07 1 1  ON 133
+ udH_16                -5.601193e-06 1 1  ON 134
+ udH_17                -5.057493e-06 1 1  ON 135
+ udH_18                -3.448032e-06 1 1  ON 136
+ udH_19                 6.459787e-07 1 1  ON 137
+ udH_20                 2.950804e-06 1 1  ON 138
+ udH_21                 7.253891e-07 1 1  ON 139
+ udH_22                -1.566781e-07 1 1  ON 140
+ udH_23                -6.782233e-07 1 1  ON 141
+ udH_24                -1.212378e-07 1 1  ON 142
+ udH_25                 2.968115e-08 1 1  ON 143
+  </optVariables>
+   Restore the number of walkers to 21, removing 0 walkers.
+</opt>
+</optimization-report>
+  QMC Execution time = 156.5 secs
+BRANCH resetRun
+  Continue with the same input as the previous block.
+ SimpleFixedNodeBranch::resetRun detected changes in <parameter>'s 
+ BranchMode : 0000001100 0000001100
+ iParam (old):                100                 1                 3                 0                 0                 0                 1                 0
+ iParam (new):                100                 1                 3                 0                 0                 0                 1                 0
+ vParam (old):                0.5               0.1                 1                 1                 1                 1                 1                 1                 1                 0                 0                 1                10                 1                 1                 1                 1
+ vParam (new):                0.5               0.1                 1                 1                 1                 1                 1                 1                 1                 0                 0                 1                10                 1                 1                 1                 1
+
+=========================================================
+  Start VMC
+  File Root qmc.dump.s004 append = no 
+=========================================================
+Resetting walkers
+  Using the current 21 walkers.
+  Total number of walkers: 1344
+  Total weight: 1344
+  Resetting Properties of the walkers 1 x 14
+
+<vmc function="put">
+  qmc_counter=0  my_counter=0
+  time step      = 0.5
+  blocks         = 1000
+  steps          = 100
+  substeps       = 5
+  current        = 0
+  target samples = 0
+  walkers/mpi    = 21
+
+  stepsbetweensamples = 100100
+  SpinMoves      = no
+<parameter name="blocks" condition="int">1000</parameter>
+<parameter name="blocks_between_recompute" condition="int">0</parameter>
+<parameter name="check_properties" condition="int">100</parameter>
+<parameter name="checkproperties" condition="int">100</parameter>
+<parameter name="current" condition="int">0</parameter>
+<parameter name="dmcwalkersperthread" condition="real">0</parameter>
+<parameter name="maxcpusecs" condition="real">360000</parameter>
+<parameter name="record_configs" condition="int">0</parameter>
+<parameter name="record_walkers" condition="int">100100</parameter>
+<parameter name="recordconfigs" condition="int">0</parameter>
+<parameter name="recordwalkers" condition="int">100100</parameter>
+<parameter name="rewind" condition="int">0</parameter>
+<parameter name="samples" condition="real">0</parameter>
+<parameter name="samplesperthread" condition="real">0</parameter>
+<parameter name="spinmass" condition="double">1</parameter>
+<parameter name="spinmoves" condition="string">no</parameter>
+<parameter name="steps" condition="int">100</parameter>
+<parameter name="stepsbetweensamples" condition="int">100100</parameter>
+<parameter name="store_configs" condition="int">0</parameter>
+<parameter name="storeconfigs" condition="int">0</parameter>
+<parameter name="sub_steps" condition="int">5</parameter>
+<parameter name="substeps" condition="int">5</parameter>
+<parameter name="tau" condition="au">0.5</parameter>
+<parameter name="time_step" condition="au">0.5</parameter>
+<parameter name="timestep" condition="au">0.5</parameter>
+<parameter name="use_drift" condition="string">yes</parameter>
+<parameter name="usedrift" condition="string">yes</parameter>
+<parameter name="walkers" condition="int">21</parameter>
+<parameter name="warmup_steps" condition="int">100</parameter>
+<parameter name="warmupsteps" condition="int">100</parameter>
+  DumpConfig==true Configurations are dumped to config.h5 with a period of 1000 blocks
+  Walker Samples are dumped every 100100 steps.
+</vmc>
+  Set drift_modifier UNR parameter a = 1
+  EstimatorManagerBase::add replace LocalEnergy estimator.
+  Cannot make clones again. Use existing 21 clones
+  Initial partition of walkers 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 
+
+  Using Particle by Particle moves
+  Walker moves with drift
+  Total Sample Size   =0
+  Walker distribution on root = 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 
+  Using Locality Approximation
+===== Memory Usage after the buffer registration =====
+Available memory on node 0, free + buffers : 558780 MB
+Memory footprint by rank 0 on node 0       : 796 MB
+==================================================
+  Anonymous Buffer size per walker : 8958088 Bytes.
+MEMORY increase 179 MB VMC::resetRun

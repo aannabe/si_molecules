@@ -1,0 +1,2160 @@
+  Input file(s): qmc.dump.qmc.in-wfj.xml 
+
+=====================================================
+                    QMCPACK 3.9.9
+
+       (c) Copyright 2003-  QMCPACK developers
+
+                    Please cite:
+ J. Kim et al. J. Phys. Cond. Mat. 30 195901 (2018)
+      https://doi.org/10.1088/1361-648X/aab9c3
+
+  Git branch: develop
+  Last git commit: 51afccc38c709a720e0a3b2699c25cdc16ac35ad
+  Last git commit date: Thu Jun 11 17:49:55 2020 -0400
+  Last git commit subject: Merge pull request #2531 from mmorale3/add_afqmc_hip
+=====================================================
+  Global options 
+
+  Total number of MPI ranks = 64
+  Number of MPI groups      = 1
+  MPI group ID              = 0
+  Number of ranks in group  = 64
+  MPI ranks per node        = 2
+  OMP 1st level threads     = 21
+  OMP nested threading disabled or only 1 thread on the 2nd level
+
+  Precision used in this calculation, see definitions in the manual:
+  Base precision      = double
+  Full precision      = double
+
+  Structure-of-arrays (SoA) optimization enabled
+
+  Input XML = qmc.dump.qmc.in-wfj.xml
+
+  Project = qmc.dump
+  date    = 2020-07-15 11:31:39 EDT
+  host    = f13n01
+
+ Random Number
+ -------------
+  Offset for the random number seeds based on time: 347
+
+  Range of prime numbers to use as seeds over processors and threads = 2351-14437
+
+
+ Particle Set 
+ ------------
+  Name: ion0
+  All the species have the same mass 1
+  Particle set size: 5
+
+ Particle Set 
+ ------------
+  Name: e
+  All the species have the same mass 1
+  Particle set size: 8
+
+ Wavefunction setup: 
+ ------------------- 
+  Name: psi0
+  LCAO: SoaAtomicBasisSet<MultiQuintic,0>
+Reading BasisSet from HDF5 file:qmc.dump.orbs.h5
+<input node="atomicBasisSet" name="Gaussian" expandYlm="Gamess" angular="cartesian" elementType="Si" normalized="no" type="Numerical" expM="0" />
+  AO BasisSet for Si
+   Angular momentum expanded in cartesian functions x^lx y^ly z^lz according to Gamess
+   Grid is created by the input paremters in h5
+    Using log grid ri = 1e-06 rf = 100 npts = 1001
+   R(n,l,m,s) 0 0 0 0
+   R(n,l,m,s) 1 0 0 0
+   R(n,l,m,s) 2 0 0 0
+   R(n,l,m,s) 3 0 0 0
+   R(n,l,m,s) 4 0 0 0
+   R(n,l,m,s) 5 1 0 0
+   R(n,l,m,s) 6 1 0 0
+   R(n,l,m,s) 7 1 0 0
+   R(n,l,m,s) 8 1 0 0
+   R(n,l,m,s) 9 1 0 0
+   R(n,l,m,s) 10 2 0 0
+   R(n,l,m,s) 11 2 0 0
+   R(n,l,m,s) 12 2 0 0
+   R(n,l,m,s) 13 2 0 0
+   R(n,l,m,s) 14 3 0 0
+   R(n,l,m,s) 15 3 0 0
+   R(n,l,m,s) 16 3 0 0
+   R(n,l,m,s) 17 4 0 0
+   R(n,l,m,s) 18 4 0 0
+Expanding Ylm (angular function) according to Gamess using cartesian gaussians
+Adding 1 cartesian gaussian orbitals for l= 0
+Adding 1 cartesian gaussian orbitals for l= 0
+Adding 1 cartesian gaussian orbitals for l= 0
+Adding 1 cartesian gaussian orbitals for l= 0
+Adding 1 cartesian gaussian orbitals for l= 0
+Adding 3 cartesian gaussian orbitals for l= 1
+Adding 3 cartesian gaussian orbitals for l= 1
+Adding 3 cartesian gaussian orbitals for l= 1
+Adding 3 cartesian gaussian orbitals for l= 1
+Adding 3 cartesian gaussian orbitals for l= 1
+Adding 6 cartesian gaussian orbitals for l= 2
+Adding 6 cartesian gaussian orbitals for l= 2
+Adding 6 cartesian gaussian orbitals for l= 2
+Adding 6 cartesian gaussian orbitals for l= 2
+Adding 10 cartesian gaussian orbitals for l= 3
+Adding 10 cartesian gaussian orbitals for l= 3
+Adding 10 cartesian gaussian orbitals for l= 3
+Adding 15 cartesian gaussian orbitals for l= 4
+Adding 15 cartesian gaussian orbitals for l= 4
+  Setting cutoff radius 8.64717e+15
+
+   Maximum Angular Momentum  = 4
+   Number of Radial functors = 19
+   Basis size                = 104
+
+<input node="atomicBasisSet" name="Gaussian" expandYlm="Gamess" angular="cartesian" elementType="H" normalized="no" type="Numerical" expM="0" />
+  AO BasisSet for H
+   Angular momentum expanded in cartesian functions x^lx y^ly z^lz according to Gamess
+   Grid is created by the input paremters in h5
+    Using log grid ri = 1e-06 rf = 100 npts = 1001
+   R(n,l,m,s) 0 0 0 0
+   R(n,l,m,s) 1 0 0 0
+   R(n,l,m,s) 2 0 0 0
+   R(n,l,m,s) 3 0 0 0
+   R(n,l,m,s) 4 0 0 0
+   R(n,l,m,s) 5 1 0 0
+   R(n,l,m,s) 6 1 0 0
+   R(n,l,m,s) 7 1 0 0
+   R(n,l,m,s) 8 1 0 0
+   R(n,l,m,s) 9 2 0 0
+   R(n,l,m,s) 10 2 0 0
+   R(n,l,m,s) 11 2 0 0
+   R(n,l,m,s) 12 3 0 0
+   R(n,l,m,s) 13 3 0 0
+Expanding Ylm (angular function) according to Gamess using cartesian gaussians
+Adding 1 cartesian gaussian orbitals for l= 0
+Adding 1 cartesian gaussian orbitals for l= 0
+Adding 1 cartesian gaussian orbitals for l= 0
+Adding 1 cartesian gaussian orbitals for l= 0
+Adding 1 cartesian gaussian orbitals for l= 0
+Adding 3 cartesian gaussian orbitals for l= 1
+Adding 3 cartesian gaussian orbitals for l= 1
+Adding 3 cartesian gaussian orbitals for l= 1
+Adding 3 cartesian gaussian orbitals for l= 1
+Adding 6 cartesian gaussian orbitals for l= 2
+Adding 6 cartesian gaussian orbitals for l= 2
+Adding 6 cartesian gaussian orbitals for l= 2
+Adding 10 cartesian gaussian orbitals for l= 3
+Adding 10 cartesian gaussian orbitals for l= 3
+  Setting cutoff radius 9.95675e+11
+
+   Maximum Angular Momentum  = 3
+   Number of Radial functors = 14
+   Basis size                = 55
+
+  Created SPOSet builder named 'LCAOBSet' of type molecularorbital
+Creating SPOSet in SlaterDetBuilder::put(xmlNodePtr cur).
+spo_name = spo-up
+  Building SPOSet 'spo-up' with 'LCAOBSet' basis set.
+Creating SPOSet in SlaterDetBuilder::put(xmlNodePtr cur).
+spo_name = spo-dn
+  Building SPOSet 'spo-dn' with 'LCAOBSet' basis set.
+Using Bryan's algorithm for MultiSlaterDeterminant expansion. 
+Creating base determinant (up) for MSD expansion. 
+Creating base determinant (down) for MSD expansion. 
+Found Multideterminants in H5 File
+Found determinant list. 
+Reading CI expansion from HDF5:qmc.dump.orbs.h5
+ Done reading CIs from H5!!
+ Sorting unique CIs
+ Done Sorting unique CIs
+Found 360162 terms in the MSD expansion.
+Norm of ci vector (sum of ci^2): 1
+Found 27171 unique up determinants.
+Found 27171 unique down determinants.
+Number of terms in pairs array: 1036
+Number of terms in pairs array: 1036
+CI coefficients are not optimizable. 
+  Added a fermionic WaveFunctionComponent SlaterDet
+
+   Jastrow
+   -------
+    Name: J2   Type: Two-Body   Function: Bspline
+
+    Radial function for species: u - u
+     Number of parameters: 10
+     Cusp: -0.25
+     Cutoff radius: 10
+
+     Name                        Value Type Recompute Use Index
+     ---- ---------------------------- ---- --------- --- -----
+     uu_0                 0.000000e+00    1         1  ON     0
+     uu_1                 0.000000e+00    1         1  ON     1
+     uu_2                 0.000000e+00    1         1  ON     2
+     uu_3                 0.000000e+00    1         1  ON     3
+     uu_4                 0.000000e+00    1         1  ON     4
+     uu_5                 0.000000e+00    1         1  ON     5
+     uu_6                 0.000000e+00    1         1  ON     6
+     uu_7                 0.000000e+00    1         1  ON     7
+     uu_8                 0.000000e+00    1         1  ON     8
+     uu_9                 0.000000e+00    1         1  ON     9
+
+    Radial function for species: u - d
+     Number of parameters: 10
+     Cusp: -0.5
+     Cutoff radius: 10
+
+     Name                        Value Type Recompute Use Index
+     ---- ---------------------------- ---- --------- --- -----
+     ud_0                 0.000000e+00    1         1  ON     0
+     ud_1                 0.000000e+00    1         1  ON     1
+     ud_2                 0.000000e+00    1         1  ON     2
+     ud_3                 0.000000e+00    1         1  ON     3
+     ud_4                 0.000000e+00    1         1  ON     4
+     ud_5                 0.000000e+00    1         1  ON     5
+     ud_6                 0.000000e+00    1         1  ON     6
+     ud_7                 0.000000e+00    1         1  ON     7
+     ud_8                 0.000000e+00    1         1  ON     8
+     ud_9                 0.000000e+00    1         1  ON     9
+
+
+   Jastrow
+   -------
+    Name: J1   Type: One-Body   Function: Bspline
+
+    Radial function for element: Si
+     Number of parameters: 10
+     Cusp: 0
+     Cutoff radius: 10
+
+      Name                        Value Type Recompute Use Index
+     ----- ---------------------------- ---- --------- --- -----
+     eSi_0                 0.000000e+00    1         1  ON     0
+     eSi_1                 0.000000e+00    1         1  ON     1
+     eSi_2                 0.000000e+00    1         1  ON     2
+     eSi_3                 0.000000e+00    1         1  ON     3
+     eSi_4                 0.000000e+00    1         1  ON     4
+     eSi_5                 0.000000e+00    1         1  ON     5
+     eSi_6                 0.000000e+00    1         1  ON     6
+     eSi_7                 0.000000e+00    1         1  ON     7
+     eSi_8                 0.000000e+00    1         1  ON     8
+     eSi_9                 0.000000e+00    1         1  ON     9
+
+    Radial function for element: H
+     Number of parameters: 10
+     Cusp: 0
+     Cutoff radius: 10
+
+     Name                        Value Type Recompute Use Index
+     ---- ---------------------------- ---- --------- --- -----
+     eH_0                 0.000000e+00    1         1  ON     0
+     eH_1                 0.000000e+00    1         1  ON     1
+     eH_2                 0.000000e+00    1         1  ON     2
+     eH_3                 0.000000e+00    1         1  ON     3
+     eH_4                 0.000000e+00    1         1  ON     4
+     eH_5                 0.000000e+00    1         1  ON     5
+     eH_6                 0.000000e+00    1         1  ON     6
+     eH_7                 0.000000e+00    1         1  ON     7
+     eH_8                 0.000000e+00    1         1  ON     8
+     eH_9                 0.000000e+00    1         1  ON     9
+
+
+   Jastrow
+   -------
+    Name: J3   Type: eeI   Function: polynomial
+
+     Ion: Si   electron-electron: u - u
+      Number of parameters for e-e: 3, for e-I: 3
+      Cutoff radius: 10
+
+Expected 26 parameters, but found 0 in PolynomialFunctor3D.
+     Ion: Si   electron-electron: u - d
+      Number of parameters for e-e: 3, for e-I: 3
+      Cutoff radius: 10
+
+Expected 26 parameters, but found 0 in PolynomialFunctor3D.
+     Ion: H   electron-electron: u - u
+      Number of parameters for e-e: 3, for e-I: 3
+      Cutoff radius: 10
+
+Expected 26 parameters, but found 0 in PolynomialFunctor3D.
+     Ion: H   electron-electron: u - d
+      Number of parameters for e-e: 3, for e-I: 3
+      Cutoff radius: 10
+
+Expected 26 parameters, but found 0 in PolynomialFunctor3D.
+  QMCHamiltonian::addOperator Kinetic to H, physical Hamiltonian 
+  QMCHamiltonian::addOperator ElecElec to H, physical Hamiltonian 
+QMCHamiltonian::addOperatorType added type coulomb named ElecElec
+  QMCHamiltonian::addOperator IonIon to H, physical Hamiltonian 
+QMCHamiltonian::addOperatorType added type coulomb named IonIon
+
+  ECPotential builder for pseudopotential 
+
+  Adding pseudopotential for H
+   Linear grid  ri=0 rf=10 npts = 10001
+    ECPComponentBuilder::buildSemiLocalAndLocal 
+    Assuming Hartree unit
+   Number of angular momentum channels 2
+   Maximum angular momentum channel 1
+   Creating a Linear Grid Rmax=1e-10
+  Using global grid with delta = 0.001
+   Making L=1 a local potential with a radial cutoff of 9.999
+    Non-local pseudopotential parameters
+    Maximum angular mementum = 0
+    Number of non-local channels = 1
+       l(0)=0
+    Cutoff radius = 0.001
+    Spherical grids and weights: 
+                        1                 0                 0       0.08333333333
+                       -1   1.224646799e-16                 0       0.08333333333
+             0.4472135955       0.894427191                 0       0.08333333333
+            -0.4472135955      0.7236067977      0.5257311121       0.08333333333
+             0.4472135955      0.2763932023      0.8506508084       0.08333333333
+            -0.4472135955     -0.2763932023      0.8506508084       0.08333333333
+             0.4472135955     -0.7236067977      0.5257311121       0.08333333333
+            -0.4472135955      -0.894427191   1.095357397e-16       0.08333333333
+             0.4472135955     -0.7236067977     -0.5257311121       0.08333333333
+            -0.4472135955     -0.2763932023     -0.8506508084       0.08333333333
+             0.4472135955      0.2763932023     -0.8506508084       0.08333333333
+            -0.4472135955      0.7236067977     -0.5257311121       0.08333333333
+    Maximum cutoff radius 0.001
+
+  Adding pseudopotential for Si
+   Linear grid  ri=0 rf=10 npts = 10001
+    ECPComponentBuilder::buildSemiLocalAndLocal 
+    Assuming Hartree unit
+   Number of angular momentum channels 3
+   Maximum angular momentum channel 2
+   Creating a Linear Grid Rmax=2.69
+  Using global grid with delta = 0.001
+   Making L=2 a local potential with a radial cutoff of 9.999
+    Non-local pseudopotential parameters
+    Maximum angular mementum = 1
+    Number of non-local channels = 2
+       l(0)=0
+       l(1)=1
+    Cutoff radius = 2.69
+    Spherical grids and weights: 
+                        1                 0                 0       0.08333333333
+                       -1   1.224646799e-16                 0       0.08333333333
+             0.4472135955       0.894427191                 0       0.08333333333
+            -0.4472135955      0.7236067977      0.5257311121       0.08333333333
+             0.4472135955      0.2763932023      0.8506508084       0.08333333333
+            -0.4472135955     -0.2763932023      0.8506508084       0.08333333333
+             0.4472135955     -0.7236067977      0.5257311121       0.08333333333
+            -0.4472135955      -0.894427191   1.095357397e-16       0.08333333333
+             0.4472135955     -0.7236067977     -0.5257311121       0.08333333333
+            -0.4472135955     -0.2763932023     -0.8506508084       0.08333333333
+             0.4472135955      0.2763932023     -0.8506508084       0.08333333333
+            -0.4472135955      0.7236067977     -0.5257311121       0.08333333333
+    Maximum cutoff radius 2.69
+  QMCHamiltonian::addOperator LocalECP to H, physical Hamiltonian 
+
+  Using NonLocalECP potential 
+    Maximum grid on a sphere for NonLocalECPotential: 12
+  QMCHamiltonian::addOperator NonLocalECP to H, physical Hamiltonian 
+QMCHamiltonian::addOperatorType added type pseudo named PseudoPot
+
+  QMCHamiltonian::add2WalkerProperty added
+    5 to P::PropertyList 
+    0 to P::Collectables 
+    starting Index of the observables in P::PropertyList = 9
+ParticleSetPool::randomize 1 ParticleSet.
+<init source="ion0" target="e">
+</init>
+  Initialization Execution time = 1.426 secs
+=========================================================
+ Summary of QMC systems 
+=========================================================
+ParticleSetPool has: 
+
+  ParticleSet 'e' contains 8 particles :  u(4) d(4)
+
+    u -4.4970409133e-01 -8.4312022729e-01 -5.8156199559e-01
+    u  1.3191109359e-01  7.4242009626e-01 -8.2626370258e-01
+    u  1.8470221505e+00  2.4730737519e+00  2.2930088066e+00
+    u -1.9151521749e+00  6.2999757276e-01 -2.0522473667e+00
+    d -4.8305587270e-01  9.8144849590e-01  2.3391390699e-01
+    d  1.0002192722e+00  1.1968066080e-01  4.8635150782e-01
+    d -1.3950252002e+00 -1.1215461905e+00  2.5943831452e+00
+    d  2.0581592233e+00 -1.1018561390e+00 -7.2483400393e-01
+
+  Distance table for dissimilar particles (A-B):
+    source: ion0  target: e
+    Using structure-of-arrays (SoA) data layout
+    Distance computations use open boundary conditions in 3D.
+
+  Distance table for similar particles (A-A):
+    source/target: e
+    Using structure-of-arrays (SoA) data layout
+    Distance computations use open boundary conditions in 3D.
+
+
+  ParticleSet 'ion0' contains 5 particles :  Si(1) H(4)
+
+    Si  0.0000000000e+00  0.0000000000e+00  0.0000000000e+00
+    H  1.6145818874e+00  1.6145818874e+00  1.6145818874e+00
+    H -1.6145818874e+00 -1.6145818874e+00  1.6145818874e+00
+    H -1.6145818874e+00  1.6145818874e+00 -1.6145818874e+00
+    H  1.6145818874e+00 -1.6145818874e+00 -1.6145818874e+00
+
+  Distance table for similar particles (A-A):
+    source/target: ion0
+    Using structure-of-arrays (SoA) data layout
+    Distance computations use open boundary conditions in 3D.
+
+
+  Hamiltonian h0
+  Kinetic         Kinetic energy
+  ElecElec        CoulombAB source=e
+
+  IonIon          CoulombAA source/target ion0
+
+  LocalECP        LocalECPotential: ion0
+  NonLocalECP     NonLocalECPotential: ion0
+
+Loop execution max-interations = 5
+
+=========================================================
+  Start QMCFixedSampleLinearOptimize
+  File Root qmc.dump.s000 append = no 
+=========================================================
+  Skip QMCDriver::putQMCInfo 
+  Resetting Properties of the walkers 1 x 14
+  Adding 21 walkers to 0 existing sets
+  Total number of walkers: 1.3440000000e+03
+  Total weight: 1.3440000000e+03
+
+=========================================================
+  Start VMC
+  File Root qmc.dump.s000 append = no 
+=========================================================
+Resetting walkers
+  Using the current 21 walkers.
+  Total number of walkers: 1.3440000000e+03
+  Total weight: 1.3440000000e+03
+  Resetting Properties of the walkers 1 x 14
+
+<vmc function="put">
+  qmc_counter=0  my_counter=0
+  time step      = 5.0000000000e-01
+  blocks         = 20
+  steps          = 3
+  substeps       = 4
+  current        = 0
+  target samples = 6.4000000000e+04
+  walkers/mpi    = 21
+
+  stepsbetweensamples = 1
+  SpinMoves      = no
+<parameter name="blocks" condition="int">20</parameter>
+<parameter name="blocks_between_recompute" condition="int">0</parameter>
+<parameter name="check_properties" condition="int">100</parameter>
+<parameter name="checkproperties" condition="int">100</parameter>
+<parameter name="current" condition="int">0</parameter>
+<parameter name="dmcwalkersperthread" condition="real">4.8000000000e+01</parameter>
+<parameter name="maxcpusecs" condition="real">3.6000000000e+05</parameter>
+<parameter name="record_configs" condition="int">0</parameter>
+<parameter name="record_walkers" condition="int">1</parameter>
+<parameter name="recordconfigs" condition="int">0</parameter>
+<parameter name="recordwalkers" condition="int">1</parameter>
+<parameter name="rewind" condition="int">0</parameter>
+<parameter name="samples" condition="real">6.4000000000e+04</parameter>
+<parameter name="samplesperthread" condition="real">4.8000000000e+01</parameter>
+<parameter name="spinmass" condition="double">1.0000000000e+00</parameter>
+<parameter name="spinmoves" condition="string">no</parameter>
+<parameter name="steps" condition="int">3</parameter>
+<parameter name="stepsbetweensamples" condition="int">1</parameter>
+<parameter name="store_configs" condition="int">0</parameter>
+<parameter name="storeconfigs" condition="int">0</parameter>
+<parameter name="sub_steps" condition="int">4</parameter>
+<parameter name="substeps" condition="int">4</parameter>
+<parameter name="tau" condition="au">5.0000000000e-01</parameter>
+<parameter name="time_step" condition="au">5.0000000000e-01</parameter>
+<parameter name="timestep" condition="au">5.0000000000e-01</parameter>
+<parameter name="use_drift" condition="string">no</parameter>
+<parameter name="usedrift" condition="string">no</parameter>
+<parameter name="walkers" condition="int">21</parameter>
+<parameter name="warmup_steps" condition="int">100</parameter>
+<parameter name="warmupsteps" condition="int">100</parameter>
+  DumpConfig==false Nothing (configurations, state) will be saved.
+  Walker Samples are dumped every 1 steps.
+</vmc>
+  Set drift_modifier UNR parameter a = 1.0000000000e+00
+ Using QMCCostFunction::QMCCostFunction
+  Set drift_modifier UNR parameter a = 1.0000000000e+00
+<optimization-report>
+<vmc stage="main" blocks="20">
+  CloneManager::makeClones makes 21 clones for W/Psi/H.
+  Cloning methods for both Psi and H are used
+===== Memory Usage before cloning =====
+Available memory on node 0, free + buffers : 559723 MB
+Memory footprint by rank 0 on node 0       : 257 MB
+==================================================
+===== Memory Usage after cloning =====
+Available memory on node 0, free + buffers : 559061 MB
+Memory footprint by rank 0 on node 0       : 552 MB
+==================================================
+  Initial partition of walkers 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 
+
+  Using Particle by Particle moves
+  Walker moves without drift
+  Total Sample Size   =64512
+  Walker distribution on root = 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 
+  Using Locality Approximation
+===== Memory Usage after the buffer registration =====
+Available memory on node 0, free + buffers : 558774 MB
+Memory footprint by rank 0 on node 0       : 692 MB
+==================================================
+  Anonymous Buffer size per walker : 7492808 Bytes.
+MEMORY increase 150 MB VMC::resetRun
+====================================================
+  SimpleFixedNodeBranch::finalize after a VMC block
+    QMC counter        = 0
+    time step          = 0.5
+    reference energy   = -5.90791
+    reference variance = 0.123667
+====================================================
+  Execution time = 2.9362e+01
+</vmc>
+<opt stage="setup">
+  <log>
+   Reading configurations from h5FileRoot qmc.dump.s000
+  QMCCostFunction is created with 21 threads.
+  Using Nonlocal PP in Opt: no
+   Number of samples loaded to each thread : 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 
+  VMC Eavg = -5.9104e+00
+  VMC Evar = 1.3483e-01
+  Total weights = 6.4512e+04
+  Execution time = 5.7402e+00
+  </log>
+</opt>
+<opt stage="main" walkers="64512">
+  <log>
+
+*****************************************
+Building overlap and Hamiltonian matrices
+*****************************************
+
+Among totally 40 optimized parameters, largest LM parameter change : 1.8668e-01 at parameter 10
+
+******************************************************************************
+Init Cost =   1.3483e-01    New Cost =   8.1371e-02  Delta Cost =  -5.3459e-02
+******************************************************************************
+
+The new set of parameters is valid. Updating the trial wave function!
+
+*****************************************************************************
+Applying the update for shift_i =   1.0000e-02     and shift_s =   2.5000e-01
+*****************************************************************************
+  Execution time = 3.5122e+01
+  </log>
+  <optVariables href="qmc.dump.s000.opt.xml">
+ uu_0                 9.151492e-02 1 1  ON 0
+ uu_1                 7.900826e-02 1 1  ON 1
+ uu_2                 2.454702e-02 1 1  ON 2
+ uu_3                 1.247407e-02 1 1  ON 3
+ uu_4                 3.641238e-03 1 1  ON 4
+ uu_5                -2.626931e-03 1 1  ON 5
+ uu_6                -7.160075e-03 1 1  ON 6
+ uu_7                -1.042147e-02 1 1  ON 7
+ uu_8                -1.117820e-02 1 1  ON 8
+ uu_9                -8.623969e-03 1 1  ON 9
+ ud_0                 1.866849e-01 1 1  ON 10
+ ud_1                 3.191997e-02 1 1  ON 11
+ ud_2                 6.263034e-03 1 1  ON 12
+ ud_3                 3.994666e-03 1 1  ON 13
+ ud_4                -4.695105e-03 1 1  ON 14
+ ud_5                -8.435702e-03 1 1  ON 15
+ ud_6                -1.229209e-02 1 1  ON 16
+ ud_7                -1.317615e-02 1 1  ON 17
+ ud_8                -1.213301e-02 1 1  ON 18
+ ud_9                -8.096146e-03 1 1  ON 19
+eSi_0                -4.679350e-02 1 1  ON 20
+eSi_1                -1.190258e-02 1 1  ON 21
+eSi_2                -6.310624e-03 1 1  ON 22
+eSi_3                 1.173135e-02 1 1  ON 23
+eSi_4                 1.583230e-02 1 1  ON 24
+eSi_5                 1.403802e-02 1 1  ON 25
+eSi_6                 4.843654e-03 1 1  ON 26
+eSi_7                 5.183207e-03 1 1  ON 27
+eSi_8                 5.767000e-03 1 1  ON 28
+eSi_9                 1.996045e-03 1 1  ON 29
+ eH_0                -3.969062e-02 1 1  ON 30
+ eH_1                -3.434338e-02 1 1  ON 31
+ eH_2                -2.142282e-02 1 1  ON 32
+ eH_3                -1.492371e-02 1 1  ON 33
+ eH_4                -6.943739e-03 1 1  ON 34
+ eH_5                 1.964707e-03 1 1  ON 35
+ eH_6                 1.244582e-02 1 1  ON 36
+ eH_7                 1.876111e-02 1 1  ON 37
+ eH_8                 2.169872e-02 1 1  ON 38
+ eH_9                 2.035799e-02 1 1  ON 39
+  </optVariables>
+   Restore the number of walkers to 21, removing 0 walkers.
+</opt>
+</optimization-report>
+  QMC Execution time = 35.12 secs
+
+=========================================================
+  Start QMCFixedSampleLinearOptimize
+  File Root qmc.dump.s001 append = no 
+=========================================================
+  Skip QMCDriver::putQMCInfo 
+  Resetting Properties of the walkers 1 x 14
+
+=========================================================
+  Start VMC
+  File Root qmc.dump.s001 append = no 
+=========================================================
+Using existing walkers 
+  Resetting Properties of the walkers 1 x 14
+
+<vmc function="put">
+  qmc_counter=1  my_counter=0
+  time step      = 0.5
+  blocks         = 20
+  steps          = 3
+  substeps       = 4
+  current        = 0
+  target samples = 6.4e+04
+  walkers/mpi    = 21
+
+  stepsbetweensamples = 1
+  SpinMoves      = no
+<parameter name="blocks" condition="int">20</parameter>
+<parameter name="blocks_between_recompute" condition="int">0</parameter>
+<parameter name="check_properties" condition="int">100</parameter>
+<parameter name="checkproperties" condition="int">100</parameter>
+<parameter name="current" condition="int">0</parameter>
+<parameter name="dmcwalkersperthread" condition="real">48</parameter>
+<parameter name="maxcpusecs" condition="real">3.6e+05</parameter>
+<parameter name="record_configs" condition="int">0</parameter>
+<parameter name="record_walkers" condition="int">1</parameter>
+<parameter name="recordconfigs" condition="int">0</parameter>
+<parameter name="recordwalkers" condition="int">1</parameter>
+<parameter name="rewind" condition="int">0</parameter>
+<parameter name="samples" condition="real">6.4e+04</parameter>
+<parameter name="samplesperthread" condition="real">48</parameter>
+<parameter name="spinmass" condition="double">1</parameter>
+<parameter name="spinmoves" condition="string">no</parameter>
+<parameter name="steps" condition="int">3</parameter>
+<parameter name="stepsbetweensamples" condition="int">1</parameter>
+<parameter name="store_configs" condition="int">0</parameter>
+<parameter name="storeconfigs" condition="int">0</parameter>
+<parameter name="sub_steps" condition="int">4</parameter>
+<parameter name="substeps" condition="int">4</parameter>
+<parameter name="tau" condition="au">0.5</parameter>
+<parameter name="time_step" condition="au">0.5</parameter>
+<parameter name="timestep" condition="au">0.5</parameter>
+<parameter name="use_drift" condition="string">no</parameter>
+<parameter name="usedrift" condition="string">no</parameter>
+<parameter name="walkers" condition="int">1</parameter>
+<parameter name="warmup_steps" condition="int">100</parameter>
+<parameter name="warmupsteps" condition="int">100</parameter>
+  DumpConfig==false Nothing (configurations, state) will be saved.
+  Walker Samples are dumped every 1 steps.
+</vmc>
+    Restarting, cummulative properties:
+      energy     = -5.908
+      variance   = 0
+      r2accepted = 1e-10
+      r2proposed = 1e-10
+  Set drift_modifier UNR parameter a = 1
+ Using QMCCostFunction::QMCCostFunction
+  Set drift_modifier UNR parameter a = 1.0000e+00
+  EstimatorManagerBase::add replace LocalEnergy estimator.
+<optimization-report>
+<vmc stage="main" blocks="20">
+  Cannot make clones again. Use existing 21 clones
+  Initial partition of walkers 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 
+
+  Using Particle by Particle moves
+  Walker moves without drift
+  Total Sample Size   =64512
+  Walker distribution on root = 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 
+  Using Locality Approximation
+===== Memory Usage after the buffer registration =====
+Available memory on node 0, free + buffers : 558737 MB
+Memory footprint by rank 0 on node 0       : 697 MB
+==================================================
+  Anonymous Buffer size per walker : 7492808 Bytes.
+MEMORY increase 150 MB VMC::resetRun
+====================================================
+  SimpleFixedNodeBranch::finalize after a VMC block
+    QMC counter        = 1
+    time step          = 0.5
+    reference energy   = -5.91378
+    reference variance = 0.0525245
+====================================================
+  Execution time = 2.9238e+01
+</vmc>
+<opt stage="setup">
+  <log>
+   Reading configurations from h5FileRoot qmc.dump.s001
+  QMCCostFunction is created with 21 threads.
+  Using Nonlocal PP in Opt: no
+   Number of samples loaded to each thread : 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 
+  VMC Eavg = -5.9176e+00
+  VMC Evar = 7.3692e-02
+  Total weights = 6.4512e+04
+  Execution time = 5.8015e+00
+  </log>
+</opt>
+<opt stage="main" walkers="64512">
+  <log>
+
+*****************************************
+Building overlap and Hamiltonian matrices
+*****************************************
+
+Among totally 40 optimized parameters, largest LM parameter change : 7.4237e-02 at parameter 0
+
+******************************************************************************
+Init Cost =   7.3692e-02    New Cost =   6.9607e-02  Delta Cost =  -4.0841e-03
+******************************************************************************
+
+The new set of parameters is valid. Updating the trial wave function!
+
+*****************************************************************************
+Applying the update for shift_i =   1.0000e-02     and shift_s =   6.2500e-02
+*****************************************************************************
+  Execution time = 3.5059e+01
+  </log>
+  <optVariables href="qmc.dump.s001.opt.xml">
+ uu_0                 1.657517e-01 1 1  ON 0
+ uu_1                 1.188595e-01 1 1  ON 1
+ uu_2                 4.613956e-02 1 1  ON 2
+ uu_3                 2.559875e-02 1 1  ON 3
+ uu_4                 9.618213e-03 1 1  ON 4
+ uu_5                -1.900405e-03 1 1  ON 5
+ uu_6                -1.118448e-02 1 1  ON 6
+ uu_7                -1.721877e-02 1 1  ON 7
+ uu_8                -1.854721e-02 1 1  ON 8
+ uu_9                -1.640346e-02 1 1  ON 9
+ ud_0                 2.563092e-01 1 1  ON 10
+ ud_1                 5.986507e-02 1 1  ON 11
+ ud_2                 1.940039e-02 1 1  ON 12
+ ud_3                 8.044065e-03 1 1  ON 13
+ ud_4                -7.689507e-03 1 1  ON 14
+ ud_5                -1.727344e-02 1 1  ON 15
+ ud_6                -2.515879e-02 1 1  ON 16
+ ud_7                -2.913256e-02 1 1  ON 17
+ ud_8                -2.675779e-02 1 1  ON 18
+ ud_9                -2.122413e-02 1 1  ON 19
+eSi_0                -8.580896e-02 1 1  ON 20
+eSi_1                -3.136422e-02 1 1  ON 21
+eSi_2                -1.796148e-02 1 1  ON 22
+eSi_3                 1.202337e-02 1 1  ON 23
+eSi_4                 2.588988e-02 1 1  ON 24
+eSi_5                 2.363116e-02 1 1  ON 25
+eSi_6                 1.210441e-02 1 1  ON 26
+eSi_7                 8.845911e-03 1 1  ON 27
+eSi_8                 8.821282e-03 1 1  ON 28
+eSi_9                 2.698617e-03 1 1  ON 29
+ eH_0                -8.054968e-02 1 1  ON 30
+ eH_1                -7.337909e-02 1 1  ON 31
+ eH_2                -5.502439e-02 1 1  ON 32
+ eH_3                -4.442228e-02 1 1  ON 33
+ eH_4                -3.093230e-02 1 1  ON 34
+ eH_5                -1.406450e-02 1 1  ON 35
+ eH_6                 5.189072e-03 1 1  ON 36
+ eH_7                 2.161094e-02 1 1  ON 37
+ eH_8                 3.202336e-02 1 1  ON 38
+ eH_9                 3.317787e-02 1 1  ON 39
+  </optVariables>
+   Restore the number of walkers to 21, removing 0 walkers.
+</opt>
+</optimization-report>
+  QMC Execution time = 35.06 secs
+
+=========================================================
+  Start QMCFixedSampleLinearOptimize
+  File Root qmc.dump.s002 append = no 
+=========================================================
+  Skip QMCDriver::putQMCInfo 
+  Resetting Properties of the walkers 1 x 14
+
+=========================================================
+  Start VMC
+  File Root qmc.dump.s002 append = no 
+=========================================================
+Using existing walkers 
+  Resetting Properties of the walkers 1 x 14
+
+<vmc function="put">
+  qmc_counter=2  my_counter=0
+  time step      = 0.5
+  blocks         = 20
+  steps          = 3
+  substeps       = 4
+  current        = 0
+  target samples = 6.4e+04
+  walkers/mpi    = 21
+
+  stepsbetweensamples = 1
+  SpinMoves      = no
+<parameter name="blocks" condition="int">20</parameter>
+<parameter name="blocks_between_recompute" condition="int">0</parameter>
+<parameter name="check_properties" condition="int">100</parameter>
+<parameter name="checkproperties" condition="int">100</parameter>
+<parameter name="current" condition="int">0</parameter>
+<parameter name="dmcwalkersperthread" condition="real">48</parameter>
+<parameter name="maxcpusecs" condition="real">3.6e+05</parameter>
+<parameter name="record_configs" condition="int">0</parameter>
+<parameter name="record_walkers" condition="int">1</parameter>
+<parameter name="recordconfigs" condition="int">0</parameter>
+<parameter name="recordwalkers" condition="int">1</parameter>
+<parameter name="rewind" condition="int">0</parameter>
+<parameter name="samples" condition="real">6.4e+04</parameter>
+<parameter name="samplesperthread" condition="real">48</parameter>
+<parameter name="spinmass" condition="double">1</parameter>
+<parameter name="spinmoves" condition="string">no</parameter>
+<parameter name="steps" condition="int">3</parameter>
+<parameter name="stepsbetweensamples" condition="int">1</parameter>
+<parameter name="store_configs" condition="int">0</parameter>
+<parameter name="storeconfigs" condition="int">0</parameter>
+<parameter name="sub_steps" condition="int">4</parameter>
+<parameter name="substeps" condition="int">4</parameter>
+<parameter name="tau" condition="au">0.5</parameter>
+<parameter name="time_step" condition="au">0.5</parameter>
+<parameter name="timestep" condition="au">0.5</parameter>
+<parameter name="use_drift" condition="string">no</parameter>
+<parameter name="usedrift" condition="string">no</parameter>
+<parameter name="walkers" condition="int">1</parameter>
+<parameter name="warmup_steps" condition="int">100</parameter>
+<parameter name="warmupsteps" condition="int">100</parameter>
+  DumpConfig==false Nothing (configurations, state) will be saved.
+  Walker Samples are dumped every 1 steps.
+</vmc>
+    Restarting, cummulative properties:
+      energy     = -5.911
+      variance   = 0
+      r2accepted = 1e-10
+      r2proposed = 1e-10
+  Set drift_modifier UNR parameter a = 1
+ Using QMCCostFunction::QMCCostFunction
+  Set drift_modifier UNR parameter a = 1.0000e+00
+  EstimatorManagerBase::add replace LocalEnergy estimator.
+<optimization-report>
+<vmc stage="main" blocks="20">
+  Cannot make clones again. Use existing 21 clones
+  Initial partition of walkers 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 
+
+  Using Particle by Particle moves
+  Walker moves without drift
+  Total Sample Size   =64512
+  Walker distribution on root = 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 
+  Using Locality Approximation
+===== Memory Usage after the buffer registration =====
+Available memory on node 0, free + buffers : 558735 MB
+Memory footprint by rank 0 on node 0       : 697 MB
+==================================================
+  Anonymous Buffer size per walker : 7492808 Bytes.
+MEMORY increase 150 MB VMC::resetRun
+====================================================
+  SimpleFixedNodeBranch::finalize after a VMC block
+    QMC counter        = 2
+    time step          = 0.5
+    reference energy   = -5.90845
+    reference variance = 0.0619234
+====================================================
+  Execution time = 2.9139e+01
+</vmc>
+<opt stage="setup">
+  <log>
+   Reading configurations from h5FileRoot qmc.dump.s002
+  QMCCostFunction is created with 21 threads.
+  Using Nonlocal PP in Opt: no
+   Number of samples loaded to each thread : 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 
+  VMC Eavg = -5.9206e+00
+  VMC Evar = 6.0614e-02
+  Total weights = 6.4512e+04
+  Execution time = 5.8247e+00
+  </log>
+</opt>
+<opt stage="main" walkers="64512">
+  <log>
+
+*****************************************
+Building overlap and Hamiltonian matrices
+*****************************************
+
+Among totally 40 optimized parameters, largest LM parameter change : 4.6381e-02 at parameter 0
+
+******************************************************************************
+Init Cost =   6.0614e-02    New Cost =   5.9789e-02  Delta Cost =  -8.2533e-04
+******************************************************************************
+
+The new set of parameters is valid. Updating the trial wave function!
+
+*****************************************************************************
+Applying the update for shift_i =   1.0000e-02     and shift_s =   1.5625e-02
+*****************************************************************************
+  Execution time = 3.4983e+01
+  </log>
+  <optVariables href="qmc.dump.s002.opt.xml">
+ uu_0                 2.121328e-01 1 1  ON 0
+ uu_1                 1.304928e-01 1 1  ON 1
+ uu_2                 5.723125e-02 1 1  ON 2
+ uu_3                 3.353429e-02 1 1  ON 3
+ uu_4                 1.597977e-02 1 1  ON 4
+ uu_5                 2.298222e-03 1 1  ON 5
+ uu_6                -8.586121e-03 1 1  ON 6
+ uu_7                -1.657673e-02 1 1  ON 7
+ uu_8                -1.934936e-02 1 1  ON 8
+ uu_9                -1.649192e-02 1 1  ON 9
+ ud_0                 2.773948e-01 1 1  ON 10
+ ud_1                 7.019337e-02 1 1  ON 11
+ ud_2                 2.932976e-02 1 1  ON 12
+ ud_3                 1.622611e-02 1 1  ON 13
+ ud_4                -6.576780e-04 1 1  ON 14
+ ud_5                -1.237671e-02 1 1  ON 15
+ ud_6                -2.191721e-02 1 1  ON 16
+ ud_7                -2.707157e-02 1 1  ON 17
+ ud_8                -2.814654e-02 1 1  ON 18
+ ud_9                -2.272819e-02 1 1  ON 19
+eSi_0                -1.115076e-01 1 1  ON 20
+eSi_1                -3.235346e-02 1 1  ON 21
+eSi_2                -2.306634e-02 1 1  ON 22
+eSi_3                 8.725743e-03 1 1  ON 23
+eSi_4                 2.232904e-02 1 1  ON 24
+eSi_5                 2.290046e-02 1 1  ON 25
+eSi_6                 1.095893e-02 1 1  ON 26
+eSi_7                 1.238505e-02 1 1  ON 27
+eSi_8                 7.796851e-03 1 1  ON 28
+eSi_9                 1.073581e-02 1 1  ON 29
+ eH_0                -1.059686e-01 1 1  ON 30
+ eH_1                -9.690573e-02 1 1  ON 31
+ eH_2                -7.890614e-02 1 1  ON 32
+ eH_3                -6.468335e-02 1 1  ON 33
+ eH_4                -4.879013e-02 1 1  ON 34
+ eH_5                -2.750023e-02 1 1  ON 35
+ eH_6                -5.845619e-03 1 1  ON 36
+ eH_7                 1.238124e-02 1 1  ON 37
+ eH_8                 2.565441e-02 1 1  ON 38
+ eH_9                 3.203515e-02 1 1  ON 39
+  </optVariables>
+   Restore the number of walkers to 21, removing 0 walkers.
+</opt>
+</optimization-report>
+  QMC Execution time = 34.98 secs
+
+=========================================================
+  Start QMCFixedSampleLinearOptimize
+  File Root qmc.dump.s003 append = no 
+=========================================================
+  Skip QMCDriver::putQMCInfo 
+  Resetting Properties of the walkers 1 x 14
+
+=========================================================
+  Start VMC
+  File Root qmc.dump.s003 append = no 
+=========================================================
+Using existing walkers 
+  Resetting Properties of the walkers 1 x 14
+
+<vmc function="put">
+  qmc_counter=3  my_counter=0
+  time step      = 0.5
+  blocks         = 20
+  steps          = 3
+  substeps       = 4
+  current        = 0
+  target samples = 6.4e+04
+  walkers/mpi    = 21
+
+  stepsbetweensamples = 1
+  SpinMoves      = no
+<parameter name="blocks" condition="int">20</parameter>
+<parameter name="blocks_between_recompute" condition="int">0</parameter>
+<parameter name="check_properties" condition="int">100</parameter>
+<parameter name="checkproperties" condition="int">100</parameter>
+<parameter name="current" condition="int">0</parameter>
+<parameter name="dmcwalkersperthread" condition="real">48</parameter>
+<parameter name="maxcpusecs" condition="real">3.6e+05</parameter>
+<parameter name="record_configs" condition="int">0</parameter>
+<parameter name="record_walkers" condition="int">1</parameter>
+<parameter name="recordconfigs" condition="int">0</parameter>
+<parameter name="recordwalkers" condition="int">1</parameter>
+<parameter name="rewind" condition="int">0</parameter>
+<parameter name="samples" condition="real">6.4e+04</parameter>
+<parameter name="samplesperthread" condition="real">48</parameter>
+<parameter name="spinmass" condition="double">1</parameter>
+<parameter name="spinmoves" condition="string">no</parameter>
+<parameter name="steps" condition="int">3</parameter>
+<parameter name="stepsbetweensamples" condition="int">1</parameter>
+<parameter name="store_configs" condition="int">0</parameter>
+<parameter name="storeconfigs" condition="int">0</parameter>
+<parameter name="sub_steps" condition="int">4</parameter>
+<parameter name="substeps" condition="int">4</parameter>
+<parameter name="tau" condition="au">0.5</parameter>
+<parameter name="time_step" condition="au">0.5</parameter>
+<parameter name="timestep" condition="au">0.5</parameter>
+<parameter name="use_drift" condition="string">no</parameter>
+<parameter name="usedrift" condition="string">no</parameter>
+<parameter name="walkers" condition="int">1</parameter>
+<parameter name="warmup_steps" condition="int">100</parameter>
+<parameter name="warmupsteps" condition="int">100</parameter>
+  DumpConfig==false Nothing (configurations, state) will be saved.
+  Walker Samples are dumped every 1 steps.
+</vmc>
+    Restarting, cummulative properties:
+      energy     = -5.91
+      variance   = 0
+      r2accepted = 1e-10
+      r2proposed = 1e-10
+  Set drift_modifier UNR parameter a = 1
+ Using QMCCostFunction::QMCCostFunction
+  Set drift_modifier UNR parameter a = 1.0000e+00
+  EstimatorManagerBase::add replace LocalEnergy estimator.
+<optimization-report>
+<vmc stage="main" blocks="20">
+  Cannot make clones again. Use existing 21 clones
+  Initial partition of walkers 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 
+
+  Using Particle by Particle moves
+  Walker moves without drift
+  Total Sample Size   =64512
+  Walker distribution on root = 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 
+  Using Locality Approximation
+===== Memory Usage after the buffer registration =====
+Available memory on node 0, free + buffers : 558735 MB
+Memory footprint by rank 0 on node 0       : 697 MB
+==================================================
+  Anonymous Buffer size per walker : 7492808 Bytes.
+MEMORY increase 150 MB VMC::resetRun
+====================================================
+  SimpleFixedNodeBranch::finalize after a VMC block
+    QMC counter        = 3
+    time step          = 0.5
+    reference energy   = -5.91728
+    reference variance = 0.0419955
+====================================================
+  Execution time = 2.9639e+01
+</vmc>
+<opt stage="setup">
+  <log>
+   Reading configurations from h5FileRoot qmc.dump.s003
+  QMCCostFunction is created with 21 threads.
+  Using Nonlocal PP in Opt: no
+   Number of samples loaded to each thread : 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 
+  VMC Eavg = -5.9188e+00
+  VMC Evar = 1.0249e-01
+  Total weights = 6.4512e+04
+  Execution time = 5.6848e+00
+  </log>
+</opt>
+<opt stage="main" walkers="64512">
+  <log>
+
+*****************************************
+Building overlap and Hamiltonian matrices
+*****************************************
+
+Among totally 40 optimized parameters, largest LM parameter change : 2.9164e-02 at parameter 0
+
+******************************************************************************
+Init Cost =   1.0249e-01    New Cost =   1.0224e-01  Delta Cost =  -2.5150e-04
+******************************************************************************
+
+The new set of parameters is valid. Updating the trial wave function!
+
+*****************************************************************************
+Applying the update for shift_i =   1.0000e-02     and shift_s =   3.9062e-03
+*****************************************************************************
+  Execution time = 3.5341e+01
+  </log>
+  <optVariables href="qmc.dump.s003.opt.xml">
+ uu_0                 2.412964e-01 1 1  ON 0
+ uu_1                 1.393847e-01 1 1  ON 1
+ uu_2                 6.773802e-02 1 1  ON 2
+ uu_3                 4.179878e-02 1 1  ON 3
+ uu_4                 2.529903e-02 1 1  ON 4
+ uu_5                 1.078543e-02 1 1  ON 5
+ uu_6                -1.002847e-03 1 1  ON 6
+ uu_7                -9.443281e-03 1 1  ON 7
+ uu_8                -1.287228e-02 1 1  ON 8
+ uu_9                -1.349547e-02 1 1  ON 9
+ ud_0                 2.767185e-01 1 1  ON 10
+ ud_1                 7.295609e-02 1 1  ON 11
+ ud_2                 3.076457e-02 1 1  ON 12
+ ud_3                 1.695944e-02 1 1  ON 13
+ ud_4                -2.879619e-04 1 1  ON 14
+ ud_5                -1.126234e-02 1 1  ON 15
+ ud_6                -2.032648e-02 1 1  ON 16
+ ud_7                -2.587305e-02 1 1  ON 17
+ ud_8                -2.585314e-02 1 1  ON 18
+ ud_9                -1.953376e-02 1 1  ON 19
+eSi_0                -1.204138e-01 1 1  ON 20
+eSi_1                -4.578401e-02 1 1  ON 21
+eSi_2                -3.189880e-02 1 1  ON 22
+eSi_3                 2.744594e-03 1 1  ON 23
+eSi_4                 2.202673e-02 1 1  ON 24
+eSi_5                 2.372907e-02 1 1  ON 25
+eSi_6                 9.812044e-03 1 1  ON 26
+eSi_7                 5.773029e-03 1 1  ON 27
+eSi_8                 1.075128e-02 1 1  ON 28
+eSi_9                 1.596812e-02 1 1  ON 29
+ eH_0                -1.266232e-01 1 1  ON 30
+ eH_1                -1.173351e-01 1 1  ON 31
+ eH_2                -9.886791e-02 1 1  ON 32
+ eH_3                -8.325712e-02 1 1  ON 33
+ eH_4                -6.735672e-02 1 1  ON 34
+ eH_5                -4.753038e-02 1 1  ON 35
+ eH_6                -2.629533e-02 1 1  ON 36
+ eH_7                -4.992739e-03 1 1  ON 37
+ eH_8                 1.296725e-02 1 1  ON 38
+ eH_9                 2.617826e-02 1 1  ON 39
+  </optVariables>
+   Restore the number of walkers to 21, removing 0 walkers.
+</opt>
+</optimization-report>
+  QMC Execution time = 35.34 secs
+
+=========================================================
+  Start QMCFixedSampleLinearOptimize
+  File Root qmc.dump.s004 append = no 
+=========================================================
+  Skip QMCDriver::putQMCInfo 
+  Resetting Properties of the walkers 1 x 14
+
+=========================================================
+  Start VMC
+  File Root qmc.dump.s004 append = no 
+=========================================================
+Using existing walkers 
+  Resetting Properties of the walkers 1 x 14
+
+<vmc function="put">
+  qmc_counter=4  my_counter=0
+  time step      = 0.5
+  blocks         = 20
+  steps          = 3
+  substeps       = 4
+  current        = 0
+  target samples = 6.4e+04
+  walkers/mpi    = 21
+
+  stepsbetweensamples = 1
+  SpinMoves      = no
+<parameter name="blocks" condition="int">20</parameter>
+<parameter name="blocks_between_recompute" condition="int">0</parameter>
+<parameter name="check_properties" condition="int">100</parameter>
+<parameter name="checkproperties" condition="int">100</parameter>
+<parameter name="current" condition="int">0</parameter>
+<parameter name="dmcwalkersperthread" condition="real">48</parameter>
+<parameter name="maxcpusecs" condition="real">3.6e+05</parameter>
+<parameter name="record_configs" condition="int">0</parameter>
+<parameter name="record_walkers" condition="int">1</parameter>
+<parameter name="recordconfigs" condition="int">0</parameter>
+<parameter name="recordwalkers" condition="int">1</parameter>
+<parameter name="rewind" condition="int">0</parameter>
+<parameter name="samples" condition="real">6.4e+04</parameter>
+<parameter name="samplesperthread" condition="real">48</parameter>
+<parameter name="spinmass" condition="double">1</parameter>
+<parameter name="spinmoves" condition="string">no</parameter>
+<parameter name="steps" condition="int">3</parameter>
+<parameter name="stepsbetweensamples" condition="int">1</parameter>
+<parameter name="store_configs" condition="int">0</parameter>
+<parameter name="storeconfigs" condition="int">0</parameter>
+<parameter name="sub_steps" condition="int">4</parameter>
+<parameter name="substeps" condition="int">4</parameter>
+<parameter name="tau" condition="au">0.5</parameter>
+<parameter name="time_step" condition="au">0.5</parameter>
+<parameter name="timestep" condition="au">0.5</parameter>
+<parameter name="use_drift" condition="string">no</parameter>
+<parameter name="usedrift" condition="string">no</parameter>
+<parameter name="walkers" condition="int">1</parameter>
+<parameter name="warmup_steps" condition="int">100</parameter>
+<parameter name="warmupsteps" condition="int">100</parameter>
+  DumpConfig==false Nothing (configurations, state) will be saved.
+  Walker Samples are dumped every 1 steps.
+</vmc>
+    Restarting, cummulative properties:
+      energy     = -5.912
+      variance   = 0
+      r2accepted = 1e-10
+      r2proposed = 1e-10
+  Set drift_modifier UNR parameter a = 1
+ Using QMCCostFunction::QMCCostFunction
+  Set drift_modifier UNR parameter a = 1.0000e+00
+  EstimatorManagerBase::add replace LocalEnergy estimator.
+<optimization-report>
+<vmc stage="main" blocks="20">
+  Cannot make clones again. Use existing 21 clones
+  Initial partition of walkers 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 
+
+  Using Particle by Particle moves
+  Walker moves without drift
+  Total Sample Size   =64512
+  Walker distribution on root = 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 
+  Using Locality Approximation
+===== Memory Usage after the buffer registration =====
+Available memory on node 0, free + buffers : 558735 MB
+Memory footprint by rank 0 on node 0       : 697 MB
+==================================================
+  Anonymous Buffer size per walker : 7492808 Bytes.
+MEMORY increase 150 MB VMC::resetRun
+====================================================
+  SimpleFixedNodeBranch::finalize after a VMC block
+    QMC counter        = 4
+    time step          = 0.5
+    reference energy   = -5.92071
+    reference variance = 0.0385264
+====================================================
+  Execution time = 2.9145e+01
+</vmc>
+<opt stage="setup">
+  <log>
+   Reading configurations from h5FileRoot qmc.dump.s004
+  QMCCostFunction is created with 21 threads.
+  Using Nonlocal PP in Opt: no
+   Number of samples loaded to each thread : 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 
+  VMC Eavg = -5.9205e+00
+  VMC Evar = 6.0105e-02
+  Total weights = 6.4512e+04
+  Execution time = 5.8909e+00
+  </log>
+</opt>
+<opt stage="main" walkers="64512">
+  <log>
+
+*****************************************
+Building overlap and Hamiltonian matrices
+*****************************************
+
+Among totally 40 optimized parameters, largest LM parameter change : 2.9038e-02 at parameter 0
+
+******************************************************************************
+Init Cost =   6.0105e-02    New Cost =   5.9992e-02  Delta Cost =  -1.1284e-04
+******************************************************************************
+
+The new set of parameters is valid. Updating the trial wave function!
+
+*****************************************************************************
+Applying the update for shift_i =   1.0000e-02     and shift_s =   3.9062e-03
+*****************************************************************************
+  Execution time = 3.5055e+01
+  </log>
+  <optVariables href="qmc.dump.s004.opt.xml">
+ uu_0                 2.703345e-01 1 1  ON 0
+ uu_1                 1.517192e-01 1 1  ON 1
+ uu_2                 7.968248e-02 1 1  ON 2
+ uu_3                 5.196652e-02 1 1  ON 3
+ uu_4                 3.328949e-02 1 1  ON 4
+ uu_5                 1.733163e-02 1 1  ON 5
+ uu_6                 4.604627e-03 1 1  ON 6
+ uu_7                -5.690014e-03 1 1  ON 7
+ uu_8                -1.032385e-02 1 1  ON 8
+ uu_9                -1.139269e-02 1 1  ON 9
+ ud_0                 2.914089e-01 1 1  ON 10
+ ud_1                 8.233499e-02 1 1  ON 11
+ ud_2                 3.837113e-02 1 1  ON 12
+ ud_3                 2.311137e-02 1 1  ON 13
+ ud_4                 4.450297e-03 1 1  ON 14
+ ud_5                -8.042755e-03 1 1  ON 15
+ ud_6                -1.780641e-02 1 1  ON 16
+ ud_7                -2.501136e-02 1 1  ON 17
+ ud_8                -2.610924e-02 1 1  ON 18
+ ud_9                -2.081428e-02 1 1  ON 19
+eSi_0                -1.380099e-01 1 1  ON 20
+eSi_1                -5.616926e-02 1 1  ON 21
+eSi_2                -4.055152e-02 1 1  ON 22
+eSi_3                -2.954087e-03 1 1  ON 23
+eSi_4                 1.763764e-02 1 1  ON 24
+eSi_5                 2.012589e-02 1 1  ON 25
+eSi_6                 6.159530e-03 1 1  ON 26
+eSi_7                 8.345356e-03 1 1  ON 27
+eSi_8                 1.600946e-02 1 1  ON 28
+eSi_9                 1.457402e-02 1 1  ON 29
+ eH_0                -1.544523e-01 1 1  ON 30
+ eH_1                -1.445281e-01 1 1  ON 31
+ eH_2                -1.249065e-01 1 1  ON 32
+ eH_3                -1.077395e-01 1 1  ON 33
+ eH_4                -9.005287e-02 1 1  ON 34
+ eH_5                -6.884043e-02 1 1  ON 35
+ eH_6                -4.581780e-02 1 1  ON 36
+ eH_7                -2.316186e-02 1 1  ON 37
+ eH_8                -1.587415e-03 1 1  ON 38
+ eH_9                 1.651093e-02 1 1  ON 39
+  </optVariables>
+   Restore the number of walkers to 21, removing 0 walkers.
+</opt>
+</optimization-report>
+  QMC Execution time = 35.06 secs
+Loop execution max-interations = 5
+BRANCH resetRun
+  Continue with the same input as the previous block.
+ SimpleFixedNodeBranch::resetRun detected changes in <parameter>'s 
+ BranchMode : 0000001100 0000001100
+ iParam (old):                100                 1                 4                 0                 0                 0                 1                 0
+ iParam (new):                100                 1                 4                 0                 0                 0                 1                 0
+ vParam (old):                0.5               0.1                 1                 1                 1                 1                 1                 1                 1                 0                 0                 1                10                 1                 1                 1                 1
+ vParam (new):                0.5               0.1                 1                 1                 1                 1                 1                 1                 1                 0                 0                 1                10                 1                 1                 1                 1
+
+=========================================================
+  Start QMCFixedSampleLinearOptimize
+  File Root qmc.dump.s005 append = no 
+=========================================================
+  Skip QMCDriver::putQMCInfo 
+  Resetting Properties of the walkers 1 x 14
+
+=========================================================
+  Start VMC
+  File Root qmc.dump.s005 append = no 
+=========================================================
+Resetting walkers
+  Using the current 21 walkers.
+  Total number of walkers: 1344
+  Total weight: 1344
+  Resetting Properties of the walkers 1 x 14
+
+<vmc function="put">
+  qmc_counter=0  my_counter=0
+  time step      = 0.5
+  blocks         = 20
+  steps          = 5
+  substeps       = 4
+  current        = 0
+  target samples = 128000
+  walkers/mpi    = 21
+
+  stepsbetweensamples = 1
+  SpinMoves      = no
+<parameter name="blocks" condition="int">20</parameter>
+<parameter name="blocks_between_recompute" condition="int">0</parameter>
+<parameter name="check_properties" condition="int">100</parameter>
+<parameter name="checkproperties" condition="int">100</parameter>
+<parameter name="current" condition="int">0</parameter>
+<parameter name="dmcwalkersperthread" condition="real">96</parameter>
+<parameter name="maxcpusecs" condition="real">360000</parameter>
+<parameter name="record_configs" condition="int">0</parameter>
+<parameter name="record_walkers" condition="int">1</parameter>
+<parameter name="recordconfigs" condition="int">0</parameter>
+<parameter name="recordwalkers" condition="int">1</parameter>
+<parameter name="rewind" condition="int">0</parameter>
+<parameter name="samples" condition="real">128000</parameter>
+<parameter name="samplesperthread" condition="real">96</parameter>
+<parameter name="spinmass" condition="double">1</parameter>
+<parameter name="spinmoves" condition="string">no</parameter>
+<parameter name="steps" condition="int">5</parameter>
+<parameter name="stepsbetweensamples" condition="int">1</parameter>
+<parameter name="store_configs" condition="int">0</parameter>
+<parameter name="storeconfigs" condition="int">0</parameter>
+<parameter name="sub_steps" condition="int">4</parameter>
+<parameter name="substeps" condition="int">4</parameter>
+<parameter name="tau" condition="au">0.5</parameter>
+<parameter name="time_step" condition="au">0.5</parameter>
+<parameter name="timestep" condition="au">0.5</parameter>
+<parameter name="use_drift" condition="string">no</parameter>
+<parameter name="usedrift" condition="string">no</parameter>
+<parameter name="walkers" condition="int">21</parameter>
+<parameter name="warmup_steps" condition="int">100</parameter>
+<parameter name="warmupsteps" condition="int">100</parameter>
+  DumpConfig==false Nothing (configurations, state) will be saved.
+  Walker Samples are dumped every 1 steps.
+</vmc>
+    Restarting, cummulative properties:
+      energy     = -5.913627014
+      variance   = 0
+      r2accepted = 1e-10
+      r2proposed = 1e-10
+  Set drift_modifier UNR parameter a = 1
+ Using QMCCostFunction::QMCCostFunction
+  Set drift_modifier UNR parameter a = 1.0000000000e+00
+  EstimatorManagerBase::add replace LocalEnergy estimator.
+<optimization-report>
+<vmc stage="main" blocks="20">
+  Cannot make clones again. Use existing 21 clones
+  Initial partition of walkers 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 
+
+  Using Particle by Particle moves
+  Walker moves without drift
+  Total Sample Size   =129024
+  Walker distribution on root = 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 
+  Using Locality Approximation
+===== Memory Usage after the buffer registration =====
+Available memory on node 0, free + buffers : 558735 MB
+Memory footprint by rank 0 on node 0       : 697 MB
+==================================================
+  Anonymous Buffer size per walker : 7492808 Bytes.
+MEMORY increase 150 MB VMC::resetRun
+====================================================
+  SimpleFixedNodeBranch::finalize after a VMC block
+    QMC counter        = 5
+    time step          = 0.5
+    reference energy   = -5.91047
+    reference variance = 0.0603734
+====================================================
+  Execution time = 3.6425e+01
+</vmc>
+<opt stage="setup">
+  <log>
+   Reading configurations from h5FileRoot qmc.dump.s005
+  QMCCostFunction is created with 21 threads.
+  Using Nonlocal PP in Opt: no
+   Number of samples loaded to each thread : 96 96 96 96 96 96 96 96 96 96 96 96 96 96 96 96 96 96 96 96 96 
+  VMC Eavg = -5.9202e+00
+  VMC Evar = 6.0098e-02
+  Total weights = 1.2902e+05
+  Execution time = 1.1240e+01
+  </log>
+</opt>
+<opt stage="main" walkers="129024">
+  <log>
+
+*****************************************
+Building overlap and Hamiltonian matrices
+*****************************************
+
+Among totally 40 optimized parameters, largest LM parameter change : 1.9788e-02 at parameter 0
+
+******************************************************************************
+Init Cost =  -4.7241e+00    New Cost =  -4.7242e+00  Delta Cost =  -9.5715e-05
+******************************************************************************
+
+The new set of parameters is valid. Updating the trial wave function!
+
+*****************************************************************************
+Applying the update for shift_i =   1.0000e-02     and shift_s =   2.5000e-01
+*****************************************************************************
+  Execution time = 4.7702e+01
+  </log>
+  <optVariables href="qmc.dump.s005.opt.xml">
+ uu_0                 2.901229e-01 1 1  ON 0
+ uu_1                 1.569522e-01 1 1  ON 1
+ uu_2                 8.683101e-02 1 1  ON 2
+ uu_3                 5.896227e-02 1 1  ON 3
+ uu_4                 4.046682e-02 1 1  ON 4
+ uu_5                 2.406643e-02 1 1  ON 5
+ uu_6                 1.068108e-02 1 1  ON 6
+ uu_7                 1.058593e-04 1 1  ON 7
+ uu_8                -4.883575e-03 1 1  ON 8
+ uu_9                -7.098567e-03 1 1  ON 9
+ ud_0                 2.990809e-01 1 1  ON 10
+ ud_1                 9.036316e-02 1 1  ON 11
+ ud_2                 4.724637e-02 1 1  ON 12
+ ud_3                 3.181063e-02 1 1  ON 13
+ ud_4                 1.291317e-02 1 1  ON 14
+ ud_5                -3.248805e-04 1 1  ON 15
+ ud_6                -1.102793e-02 1 1  ON 16
+ ud_7                -1.855749e-02 1 1  ON 17
+ ud_8                -1.904595e-02 1 1  ON 18
+ ud_9                -1.691455e-02 1 1  ON 19
+eSi_0                -1.439481e-01 1 1  ON 20
+eSi_1                -6.044782e-02 1 1  ON 21
+eSi_2                -4.458695e-02 1 1  ON 22
+eSi_3                -6.360187e-03 1 1  ON 23
+eSi_4                 1.575128e-02 1 1  ON 24
+eSi_5                 1.902643e-02 1 1  ON 25
+eSi_6                 4.939002e-03 1 1  ON 26
+eSi_7                 6.932757e-03 1 1  ON 27
+eSi_8                 1.282500e-02 1 1  ON 28
+eSi_9                 1.621869e-02 1 1  ON 29
+ eH_0                -1.646411e-01 1 1  ON 30
+ eH_1                -1.547057e-01 1 1  ON 31
+ eH_2                -1.358003e-01 1 1  ON 32
+ eH_3                -1.192708e-01 1 1  ON 33
+ eH_4                -1.018905e-01 1 1  ON 34
+ eH_5                -8.012860e-02 1 1  ON 35
+ eH_6                -5.685561e-02 1 1  ON 36
+ eH_7                -3.236570e-02 1 1  ON 37
+ eH_8                -8.275428e-03 1 1  ON 38
+ eH_9                 9.629439e-03 1 1  ON 39
+  </optVariables>
+   Restore the number of walkers to 21, removing 0 walkers.
+</opt>
+</optimization-report>
+  QMC Execution time = 47.7 secs
+
+=========================================================
+  Start QMCFixedSampleLinearOptimize
+  File Root qmc.dump.s006 append = no 
+=========================================================
+  Skip QMCDriver::putQMCInfo 
+  Resetting Properties of the walkers 1 x 14
+
+=========================================================
+  Start VMC
+  File Root qmc.dump.s006 append = no 
+=========================================================
+Using existing walkers 
+  Resetting Properties of the walkers 1 x 14
+
+<vmc function="put">
+  qmc_counter=1  my_counter=0
+  time step      = 0.5
+  blocks         = 20
+  steps          = 5
+  substeps       = 4
+  current        = 0
+  target samples = 1.28e+05
+  walkers/mpi    = 21
+
+  stepsbetweensamples = 1
+  SpinMoves      = no
+<parameter name="blocks" condition="int">20</parameter>
+<parameter name="blocks_between_recompute" condition="int">0</parameter>
+<parameter name="check_properties" condition="int">100</parameter>
+<parameter name="checkproperties" condition="int">100</parameter>
+<parameter name="current" condition="int">0</parameter>
+<parameter name="dmcwalkersperthread" condition="real">96</parameter>
+<parameter name="maxcpusecs" condition="real">3.6e+05</parameter>
+<parameter name="record_configs" condition="int">0</parameter>
+<parameter name="record_walkers" condition="int">1</parameter>
+<parameter name="recordconfigs" condition="int">0</parameter>
+<parameter name="recordwalkers" condition="int">1</parameter>
+<parameter name="rewind" condition="int">0</parameter>
+<parameter name="samples" condition="real">1.28e+05</parameter>
+<parameter name="samplesperthread" condition="real">96</parameter>
+<parameter name="spinmass" condition="double">1</parameter>
+<parameter name="spinmoves" condition="string">no</parameter>
+<parameter name="steps" condition="int">5</parameter>
+<parameter name="stepsbetweensamples" condition="int">1</parameter>
+<parameter name="store_configs" condition="int">0</parameter>
+<parameter name="storeconfigs" condition="int">0</parameter>
+<parameter name="sub_steps" condition="int">4</parameter>
+<parameter name="substeps" condition="int">4</parameter>
+<parameter name="tau" condition="au">0.5</parameter>
+<parameter name="time_step" condition="au">0.5</parameter>
+<parameter name="timestep" condition="au">0.5</parameter>
+<parameter name="use_drift" condition="string">no</parameter>
+<parameter name="usedrift" condition="string">no</parameter>
+<parameter name="walkers" condition="int">1</parameter>
+<parameter name="warmup_steps" condition="int">100</parameter>
+<parameter name="warmupsteps" condition="int">100</parameter>
+  DumpConfig==false Nothing (configurations, state) will be saved.
+  Walker Samples are dumped every 1 steps.
+</vmc>
+    Restarting, cummulative properties:
+      energy     = -5.913
+      variance   = 0
+      r2accepted = 1e-10
+      r2proposed = 1e-10
+  Set drift_modifier UNR parameter a = 1
+ Using QMCCostFunction::QMCCostFunction
+  Set drift_modifier UNR parameter a = 1.0000e+00
+  EstimatorManagerBase::add replace LocalEnergy estimator.
+<optimization-report>
+<vmc stage="main" blocks="20">
+  Cannot make clones again. Use existing 21 clones
+  Initial partition of walkers 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 
+
+  Using Particle by Particle moves
+  Walker moves without drift
+  Total Sample Size   =129024
+  Walker distribution on root = 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 
+  Using Locality Approximation
+===== Memory Usage after the buffer registration =====
+Available memory on node 0, free + buffers : 558733 MB
+Memory footprint by rank 0 on node 0       : 697 MB
+==================================================
+  Anonymous Buffer size per walker : 7492808 Bytes.
+MEMORY increase 150 MB VMC::resetRun
+====================================================
+  SimpleFixedNodeBranch::finalize after a VMC block
+    QMC counter        = 6
+    time step          = 0.5
+    reference energy   = -5.92065
+    reference variance = 0.0466131
+====================================================
+  Execution time = 3.6567e+01
+</vmc>
+<opt stage="setup">
+  <log>
+   Reading configurations from h5FileRoot qmc.dump.s006
+  QMCCostFunction is created with 21 threads.
+  Using Nonlocal PP in Opt: no
+   Number of samples loaded to each thread : 96 96 96 96 96 96 96 96 96 96 96 96 96 96 96 96 96 96 96 96 96 
+  VMC Eavg = -5.9211e+00
+  VMC Evar = 5.9430e-02
+  Total weights = 1.2902e+05
+  Execution time = 1.1330e+01
+  </log>
+</opt>
+<opt stage="main" walkers="129024">
+  <log>
+
+*****************************************
+Building overlap and Hamiltonian matrices
+*****************************************
+
+Among totally 40 optimized parameters, largest LM parameter change : 1.5662e-02 at parameter 0
+
+******************************************************************************
+Init Cost =  -4.7250e+00    New Cost =  -4.7251e+00  Delta Cost =  -8.8388e-05
+******************************************************************************
+
+The new set of parameters is valid. Updating the trial wave function!
+
+*****************************************************************************
+Applying the update for shift_i =   1.0000e-02     and shift_s =   6.2500e-02
+*****************************************************************************
+  Execution time = 4.7933e+01
+  </log>
+  <optVariables href="qmc.dump.s006.opt.xml">
+ uu_0                 3.057845e-01 1 1  ON 0
+ uu_1                 1.593412e-01 1 1  ON 1
+ uu_2                 8.919999e-02 1 1  ON 2
+ uu_3                 6.218190e-02 1 1  ON 3
+ uu_4                 4.363454e-02 1 1  ON 4
+ uu_5                 2.734740e-02 1 1  ON 5
+ uu_6                 1.408032e-02 1 1  ON 6
+ uu_7                 3.635119e-03 1 1  ON 7
+ uu_8                -2.165611e-03 1 1  ON 8
+ uu_9                -3.543760e-03 1 1  ON 9
+ ud_0                 3.038527e-01 1 1  ON 10
+ ud_1                 9.498773e-02 1 1  ON 11
+ ud_2                 5.210730e-02 1 1  ON 12
+ ud_3                 3.757093e-02 1 1  ON 13
+ ud_4                 1.913394e-02 1 1  ON 14
+ ud_5                 6.277742e-03 1 1  ON 15
+ ud_6                -4.015337e-03 1 1  ON 16
+ ud_7                -1.151770e-02 1 1  ON 17
+ ud_8                -1.340915e-02 1 1  ON 18
+ ud_9                -1.215280e-02 1 1  ON 19
+eSi_0                -1.442823e-01 1 1  ON 20
+eSi_1                -6.276506e-02 1 1  ON 21
+eSi_2                -4.688886e-02 1 1  ON 22
+eSi_3                -1.039922e-02 1 1  ON 23
+eSi_4                 1.167640e-02 1 1  ON 24
+eSi_5                 1.515803e-02 1 1  ON 25
+eSi_6                 5.487798e-03 1 1  ON 26
+eSi_7                 5.118075e-03 1 1  ON 27
+eSi_8                 9.165643e-03 1 1  ON 28
+eSi_9                 1.337216e-02 1 1  ON 29
+ eH_0                -1.718180e-01 1 1  ON 30
+ eH_1                -1.623641e-01 1 1  ON 31
+ eH_2                -1.423639e-01 1 1  ON 32
+ eH_3                -1.264256e-01 1 1  ON 33
+ eH_4                -1.093977e-01 1 1  ON 34
+ eH_5                -8.751868e-02 1 1  ON 35
+ eH_6                -6.481668e-02 1 1  ON 36
+ eH_7                -4.264891e-02 1 1  ON 37
+ eH_8                -2.130635e-02 1 1  ON 38
+ eH_9                -2.770482e-03 1 1  ON 39
+  </optVariables>
+   Restore the number of walkers to 21, removing 0 walkers.
+</opt>
+</optimization-report>
+  QMC Execution time = 47.93 secs
+
+=========================================================
+  Start QMCFixedSampleLinearOptimize
+  File Root qmc.dump.s007 append = no 
+=========================================================
+  Skip QMCDriver::putQMCInfo 
+  Resetting Properties of the walkers 1 x 14
+
+=========================================================
+  Start VMC
+  File Root qmc.dump.s007 append = no 
+=========================================================
+Using existing walkers 
+  Resetting Properties of the walkers 1 x 14
+
+<vmc function="put">
+  qmc_counter=2  my_counter=0
+  time step      = 0.5
+  blocks         = 20
+  steps          = 5
+  substeps       = 4
+  current        = 0
+  target samples = 1.28e+05
+  walkers/mpi    = 21
+
+  stepsbetweensamples = 1
+  SpinMoves      = no
+<parameter name="blocks" condition="int">20</parameter>
+<parameter name="blocks_between_recompute" condition="int">0</parameter>
+<parameter name="check_properties" condition="int">100</parameter>
+<parameter name="checkproperties" condition="int">100</parameter>
+<parameter name="current" condition="int">0</parameter>
+<parameter name="dmcwalkersperthread" condition="real">96</parameter>
+<parameter name="maxcpusecs" condition="real">3.6e+05</parameter>
+<parameter name="record_configs" condition="int">0</parameter>
+<parameter name="record_walkers" condition="int">1</parameter>
+<parameter name="recordconfigs" condition="int">0</parameter>
+<parameter name="recordwalkers" condition="int">1</parameter>
+<parameter name="rewind" condition="int">0</parameter>
+<parameter name="samples" condition="real">1.28e+05</parameter>
+<parameter name="samplesperthread" condition="real">96</parameter>
+<parameter name="spinmass" condition="double">1</parameter>
+<parameter name="spinmoves" condition="string">no</parameter>
+<parameter name="steps" condition="int">5</parameter>
+<parameter name="stepsbetweensamples" condition="int">1</parameter>
+<parameter name="store_configs" condition="int">0</parameter>
+<parameter name="storeconfigs" condition="int">0</parameter>
+<parameter name="sub_steps" condition="int">4</parameter>
+<parameter name="substeps" condition="int">4</parameter>
+<parameter name="tau" condition="au">0.5</parameter>
+<parameter name="time_step" condition="au">0.5</parameter>
+<parameter name="timestep" condition="au">0.5</parameter>
+<parameter name="use_drift" condition="string">no</parameter>
+<parameter name="usedrift" condition="string">no</parameter>
+<parameter name="walkers" condition="int">1</parameter>
+<parameter name="warmup_steps" condition="int">100</parameter>
+<parameter name="warmupsteps" condition="int">100</parameter>
+  DumpConfig==false Nothing (configurations, state) will be saved.
+  Walker Samples are dumped every 1 steps.
+</vmc>
+    Restarting, cummulative properties:
+      energy     = -5.914
+      variance   = 0
+      r2accepted = 1e-10
+      r2proposed = 1e-10
+  Set drift_modifier UNR parameter a = 1
+ Using QMCCostFunction::QMCCostFunction
+  Set drift_modifier UNR parameter a = 1.0000e+00
+  EstimatorManagerBase::add replace LocalEnergy estimator.
+<optimization-report>
+<vmc stage="main" blocks="20">
+  Cannot make clones again. Use existing 21 clones
+  Initial partition of walkers 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 
+
+  Using Particle by Particle moves
+  Walker moves without drift
+  Total Sample Size   =129024
+  Walker distribution on root = 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 
+  Using Locality Approximation
+===== Memory Usage after the buffer registration =====
+Available memory on node 0, free + buffers : 558733 MB
+Memory footprint by rank 0 on node 0       : 697 MB
+==================================================
+  Anonymous Buffer size per walker : 7492808 Bytes.
+MEMORY increase 150 MB VMC::resetRun
+====================================================
+  SimpleFixedNodeBranch::finalize after a VMC block
+    QMC counter        = 7
+    time step          = 0.5
+    reference energy   = -5.91393
+    reference variance = 0.0449154
+====================================================
+  Execution time = 3.6328e+01
+</vmc>
+<opt stage="setup">
+  <log>
+   Reading configurations from h5FileRoot qmc.dump.s007
+  QMCCostFunction is created with 21 threads.
+  Using Nonlocal PP in Opt: no
+   Number of samples loaded to each thread : 96 96 96 96 96 96 96 96 96 96 96 96 96 96 96 96 96 96 96 96 96 
+  VMC Eavg = -5.9201e+00
+  VMC Evar = 6.5369e-02
+  Total weights = 1.2902e+05
+  Execution time = 1.1125e+01
+  </log>
+</opt>
+<opt stage="main" walkers="129024">
+  <log>
+
+*****************************************
+Building overlap and Hamiltonian matrices
+*****************************************
+
+Among totally 40 optimized parameters, largest LM parameter change : 1.1725e-02 at parameter 0
+
+******************************************************************************
+Init Cost =  -4.7230e+00    New Cost =  -4.7231e+00  Delta Cost =  -9.8270e-05
+******************************************************************************
+
+The new set of parameters is valid. Updating the trial wave function!
+
+*****************************************************************************
+Applying the update for shift_i =   1.0000e-02     and shift_s =   1.5625e-02
+*****************************************************************************
+  Execution time = 4.7490e+01
+  </log>
+  <optVariables href="qmc.dump.s007.opt.xml">
+ uu_0                 3.175092e-01 1 1  ON 0
+ uu_1                 1.708274e-01 1 1  ON 1
+ uu_2                 1.007274e-01 1 1  ON 2
+ uu_3                 7.263195e-02 1 1  ON 3
+ uu_4                 5.270721e-02 1 1  ON 4
+ uu_5                 3.563046e-02 1 1  ON 5
+ uu_6                 2.142477e-02 1 1  ON 6
+ uu_7                 1.035670e-02 1 1  ON 7
+ uu_8                 2.193135e-03 1 1  ON 8
+ uu_9                -2.830468e-03 1 1  ON 9
+ ud_0                 3.098244e-01 1 1  ON 10
+ ud_1                 1.019949e-01 1 1  ON 11
+ ud_2                 5.900994e-02 1 1  ON 12
+ ud_3                 4.352283e-02 1 1  ON 13
+ ud_4                 2.416772e-02 1 1  ON 14
+ ud_5                 1.035262e-02 1 1  ON 15
+ ud_6                -7.908273e-04 1 1  ON 16
+ ud_7                -8.708208e-03 1 1  ON 17
+ ud_8                -1.198852e-02 1 1  ON 18
+ ud_9                -1.136234e-02 1 1  ON 19
+eSi_0                -1.488333e-01 1 1  ON 20
+eSi_1                -7.017599e-02 1 1  ON 21
+eSi_2                -5.219333e-02 1 1  ON 22
+eSi_3                -1.198226e-02 1 1  ON 23
+eSi_4                 1.278474e-02 1 1  ON 24
+eSi_5                 1.722197e-02 1 1  ON 25
+eSi_6                 5.057506e-03 1 1  ON 26
+eSi_7                 1.234037e-03 1 1  ON 27
+eSi_8                 4.108341e-03 1 1  ON 28
+eSi_9                 1.223266e-02 1 1  ON 29
+ eH_0                -1.827746e-01 1 1  ON 30
+ eH_1                -1.730913e-01 1 1  ON 31
+ eH_2                -1.533407e-01 1 1  ON 32
+ eH_3                -1.366906e-01 1 1  ON 33
+ eH_4                -1.188050e-01 1 1  ON 34
+ eH_5                -9.638876e-02 1 1  ON 35
+ eH_6                -7.293225e-02 1 1  ON 36
+ eH_7                -4.881794e-02 1 1  ON 37
+ eH_8                -2.312822e-02 1 1  ON 38
+ eH_9                -2.689980e-03 1 1  ON 39
+  </optVariables>
+   Restore the number of walkers to 21, removing 0 walkers.
+</opt>
+</optimization-report>
+  QMC Execution time = 47.49 secs
+
+=========================================================
+  Start QMCFixedSampleLinearOptimize
+  File Root qmc.dump.s008 append = no 
+=========================================================
+  Skip QMCDriver::putQMCInfo 
+  Resetting Properties of the walkers 1 x 14
+
+=========================================================
+  Start VMC
+  File Root qmc.dump.s008 append = no 
+=========================================================
+Using existing walkers 
+  Resetting Properties of the walkers 1 x 14
+
+<vmc function="put">
+  qmc_counter=3  my_counter=0
+  time step      = 0.5
+  blocks         = 20
+  steps          = 5
+  substeps       = 4
+  current        = 0
+  target samples = 1.28e+05
+  walkers/mpi    = 21
+
+  stepsbetweensamples = 1
+  SpinMoves      = no
+<parameter name="blocks" condition="int">20</parameter>
+<parameter name="blocks_between_recompute" condition="int">0</parameter>
+<parameter name="check_properties" condition="int">100</parameter>
+<parameter name="checkproperties" condition="int">100</parameter>
+<parameter name="current" condition="int">0</parameter>
+<parameter name="dmcwalkersperthread" condition="real">96</parameter>
+<parameter name="maxcpusecs" condition="real">3.6e+05</parameter>
+<parameter name="record_configs" condition="int">0</parameter>
+<parameter name="record_walkers" condition="int">1</parameter>
+<parameter name="recordconfigs" condition="int">0</parameter>
+<parameter name="recordwalkers" condition="int">1</parameter>
+<parameter name="rewind" condition="int">0</parameter>
+<parameter name="samples" condition="real">1.28e+05</parameter>
+<parameter name="samplesperthread" condition="real">96</parameter>
+<parameter name="spinmass" condition="double">1</parameter>
+<parameter name="spinmoves" condition="string">no</parameter>
+<parameter name="steps" condition="int">5</parameter>
+<parameter name="stepsbetweensamples" condition="int">1</parameter>
+<parameter name="store_configs" condition="int">0</parameter>
+<parameter name="storeconfigs" condition="int">0</parameter>
+<parameter name="sub_steps" condition="int">4</parameter>
+<parameter name="substeps" condition="int">4</parameter>
+<parameter name="tau" condition="au">0.5</parameter>
+<parameter name="time_step" condition="au">0.5</parameter>
+<parameter name="timestep" condition="au">0.5</parameter>
+<parameter name="use_drift" condition="string">no</parameter>
+<parameter name="usedrift" condition="string">no</parameter>
+<parameter name="walkers" condition="int">1</parameter>
+<parameter name="warmup_steps" condition="int">100</parameter>
+<parameter name="warmupsteps" condition="int">100</parameter>
+  DumpConfig==false Nothing (configurations, state) will be saved.
+  Walker Samples are dumped every 1 steps.
+</vmc>
+    Restarting, cummulative properties:
+      energy     = -5.914
+      variance   = 0
+      r2accepted = 1e-10
+      r2proposed = 1e-10
+  Set drift_modifier UNR parameter a = 1
+ Using QMCCostFunction::QMCCostFunction
+  Set drift_modifier UNR parameter a = 1.0000e+00
+  EstimatorManagerBase::add replace LocalEnergy estimator.
+<optimization-report>
+<vmc stage="main" blocks="20">
+  Cannot make clones again. Use existing 21 clones
+  Initial partition of walkers 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 
+
+  Using Particle by Particle moves
+  Walker moves without drift
+  Total Sample Size   =129024
+  Walker distribution on root = 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 
+  Using Locality Approximation
+===== Memory Usage after the buffer registration =====
+Available memory on node 0, free + buffers : 558733 MB
+Memory footprint by rank 0 on node 0       : 697 MB
+==================================================
+  Anonymous Buffer size per walker : 7492808 Bytes.
+MEMORY increase 150 MB VMC::resetRun
+====================================================
+  SimpleFixedNodeBranch::finalize after a VMC block
+    QMC counter        = 8
+    time step          = 0.5
+    reference energy   = -5.9069
+    reference variance = 0.0924027
+====================================================
+  Execution time = 3.6312e+01
+</vmc>
+<opt stage="setup">
+  <log>
+   Reading configurations from h5FileRoot qmc.dump.s008
+  QMCCostFunction is created with 21 threads.
+  Using Nonlocal PP in Opt: no
+   Number of samples loaded to each thread : 96 96 96 96 96 96 96 96 96 96 96 96 96 96 96 96 96 96 96 96 96 
+  VMC Eavg = -5.9209e+00
+  VMC Evar = 5.8920e-02
+  Total weights = 1.2902e+05
+  Execution time = 1.1246e+01
+  </log>
+</opt>
+<opt stage="main" walkers="129024">
+  <log>
+
+*****************************************
+Building overlap and Hamiltonian matrices
+*****************************************
+
+Among totally 40 optimized parameters, largest LM parameter change : 1.1670e-02 at parameter 38
+
+******************************************************************************
+Init Cost =  -4.7250e+00    New Cost =  -4.7250e+00  Delta Cost =  -2.8702e-05
+******************************************************************************
+
+The new set of parameters is valid. Updating the trial wave function!
+
+*****************************************************************************
+Applying the update for shift_i =   1.0000e-02     and shift_s =   3.9062e-03
+*****************************************************************************
+  Execution time = 4.7597e+01
+  </log>
+  <optVariables href="qmc.dump.s008.opt.xml">
+ uu_0                 3.251894e-01 1 1  ON 0
+ uu_1                 1.712572e-01 1 1  ON 1
+ uu_2                 1.022294e-01 1 1  ON 2
+ uu_3                 7.458021e-02 1 1  ON 3
+ uu_4                 5.536563e-02 1 1  ON 4
+ uu_5                 3.818982e-02 1 1  ON 5
+ uu_6                 2.357628e-02 1 1  ON 6
+ uu_7                 1.248567e-02 1 1  ON 7
+ uu_8                 5.253810e-03 1 1  ON 8
+ uu_9                 1.437218e-04 1 1  ON 9
+ ud_0                 3.090476e-01 1 1  ON 10
+ ud_1                 1.033726e-01 1 1  ON 11
+ ud_2                 6.113902e-02 1 1  ON 12
+ ud_3                 4.673944e-02 1 1  ON 13
+ ud_4                 2.822345e-02 1 1  ON 14
+ ud_5                 1.493968e-02 1 1  ON 15
+ ud_6                 3.578170e-03 1 1  ON 16
+ ud_7                -5.030330e-03 1 1  ON 17
+ ud_8                -8.451633e-03 1 1  ON 18
+ ud_9                -8.955932e-03 1 1  ON 19
+eSi_0                -1.503860e-01 1 1  ON 20
+eSi_1                -7.397441e-02 1 1  ON 21
+eSi_2                -5.647498e-02 1 1  ON 22
+eSi_3                -1.549339e-02 1 1  ON 23
+eSi_4                 1.024831e-02 1 1  ON 24
+eSi_5                 1.720735e-02 1 1  ON 25
+eSi_6                 9.576363e-03 1 1  ON 26
+eSi_7                -1.723651e-04 1 1  ON 27
+eSi_8                -2.607336e-03 1 1  ON 28
+eSi_9                 4.179001e-03 1 1  ON 29
+ eH_0                -1.884180e-01 1 1  ON 30
+ eH_1                -1.793409e-01 1 1  ON 31
+ eH_2                -1.603623e-01 1 1  ON 32
+ eH_3                -1.447290e-01 1 1  ON 33
+ eH_4                -1.276442e-01 1 1  ON 34
+ eH_5                -1.059624e-01 1 1  ON 35
+ eH_6                -8.281885e-02 1 1  ON 36
+ eH_7                -5.931198e-02 1 1  ON 37
+ eH_8                -3.479792e-02 1 1  ON 38
+ eH_9                -1.292793e-02 1 1  ON 39
+  </optVariables>
+   Restore the number of walkers to 21, removing 0 walkers.
+</opt>
+</optimization-report>
+  QMC Execution time = 47.6 secs
+
+=========================================================
+  Start QMCFixedSampleLinearOptimize
+  File Root qmc.dump.s009 append = no 
+=========================================================
+  Skip QMCDriver::putQMCInfo 
+  Resetting Properties of the walkers 1 x 14
+
+=========================================================
+  Start VMC
+  File Root qmc.dump.s009 append = no 
+=========================================================
+Using existing walkers 
+  Resetting Properties of the walkers 1 x 14
+
+<vmc function="put">
+  qmc_counter=4  my_counter=0
+  time step      = 0.5
+  blocks         = 20
+  steps          = 5
+  substeps       = 4
+  current        = 0
+  target samples = 1.28e+05
+  walkers/mpi    = 21
+
+  stepsbetweensamples = 1
+  SpinMoves      = no
+<parameter name="blocks" condition="int">20</parameter>
+<parameter name="blocks_between_recompute" condition="int">0</parameter>
+<parameter name="check_properties" condition="int">100</parameter>
+<parameter name="checkproperties" condition="int">100</parameter>
+<parameter name="current" condition="int">0</parameter>
+<parameter name="dmcwalkersperthread" condition="real">96</parameter>
+<parameter name="maxcpusecs" condition="real">3.6e+05</parameter>
+<parameter name="record_configs" condition="int">0</parameter>
+<parameter name="record_walkers" condition="int">1</parameter>
+<parameter name="recordconfigs" condition="int">0</parameter>
+<parameter name="recordwalkers" condition="int">1</parameter>
+<parameter name="rewind" condition="int">0</parameter>
+<parameter name="samples" condition="real">1.28e+05</parameter>
+<parameter name="samplesperthread" condition="real">96</parameter>
+<parameter name="spinmass" condition="double">1</parameter>
+<parameter name="spinmoves" condition="string">no</parameter>
+<parameter name="steps" condition="int">5</parameter>
+<parameter name="stepsbetweensamples" condition="int">1</parameter>
+<parameter name="store_configs" condition="int">0</parameter>
+<parameter name="storeconfigs" condition="int">0</parameter>
+<parameter name="sub_steps" condition="int">4</parameter>
+<parameter name="substeps" condition="int">4</parameter>
+<parameter name="tau" condition="au">0.5</parameter>
+<parameter name="time_step" condition="au">0.5</parameter>
+<parameter name="timestep" condition="au">0.5</parameter>
+<parameter name="use_drift" condition="string">no</parameter>
+<parameter name="usedrift" condition="string">no</parameter>
+<parameter name="walkers" condition="int">1</parameter>
+<parameter name="warmup_steps" condition="int">100</parameter>
+<parameter name="warmupsteps" condition="int">100</parameter>
+  DumpConfig==false Nothing (configurations, state) will be saved.
+  Walker Samples are dumped every 1 steps.
+</vmc>
+    Restarting, cummulative properties:
+      energy     = -5.913
+      variance   = 0
+      r2accepted = 1e-10
+      r2proposed = 1e-10
+  Set drift_modifier UNR parameter a = 1
+ Using QMCCostFunction::QMCCostFunction
+  Set drift_modifier UNR parameter a = 1.0000e+00
+  EstimatorManagerBase::add replace LocalEnergy estimator.
+<optimization-report>
+<vmc stage="main" blocks="20">
+  Cannot make clones again. Use existing 21 clones
+  Initial partition of walkers 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 
+
+  Using Particle by Particle moves
+  Walker moves without drift
+  Total Sample Size   =129024
+  Walker distribution on root = 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 
+  Using Locality Approximation
+===== Memory Usage after the buffer registration =====
+Available memory on node 0, free + buffers : 558733 MB
+Memory footprint by rank 0 on node 0       : 697 MB
+==================================================
+  Anonymous Buffer size per walker : 7492808 Bytes.
+MEMORY increase 150 MB VMC::resetRun
+====================================================
+  SimpleFixedNodeBranch::finalize after a VMC block
+    QMC counter        = 9
+    time step          = 0.5
+    reference energy   = -5.92335
+    reference variance = 0.0497556
+====================================================
+  Execution time = 3.6461e+01
+</vmc>
+<opt stage="setup">
+  <log>
+   Reading configurations from h5FileRoot qmc.dump.s009
+  QMCCostFunction is created with 21 threads.
+  Using Nonlocal PP in Opt: no
+   Number of samples loaded to each thread : 96 96 96 96 96 96 96 96 96 96 96 96 96 96 96 96 96 96 96 96 96 
+  VMC Eavg = -5.9198e+00
+  VMC Evar = 6.5813e-02
+  Total weights = 1.2902e+05
+  Execution time = 1.1194e+01
+  </log>
+</opt>
+<opt stage="main" walkers="129024">
+  <log>
+
+*****************************************
+Building overlap and Hamiltonian matrices
+*****************************************
+
+Among totally 40 optimized parameters, largest LM parameter change : 1.7205e-02 at parameter 10
+
+******************************************************************************
+Init Cost =  -4.7227e+00    New Cost =  -4.7229e+00  Delta Cost =  -2.2985e-04
+******************************************************************************
+
+The new set of parameters is valid. Updating the trial wave function!
+
+*****************************************************************************
+Applying the update for shift_i =   1.0000e-02     and shift_s =   3.9062e-03
+*****************************************************************************
+  Execution time = 4.7691e+01
+  </log>
+  <optVariables href="qmc.dump.s009.opt.xml">
+ uu_0                 3.334019e-01 1 1  ON 0
+ uu_1                 1.820161e-01 1 1  ON 1
+ uu_2                 1.103160e-01 1 1  ON 2
+ uu_3                 8.035683e-02 1 1  ON 3
+ uu_4                 5.900015e-02 1 1  ON 4
+ uu_5                 4.061002e-02 1 1  ON 5
+ uu_6                 2.522978e-02 1 1  ON 6
+ uu_7                 1.293847e-02 1 1  ON 7
+ uu_8                 4.998637e-03 1 1  ON 8
+ uu_9                -2.132817e-03 1 1  ON 9
+ ud_0                 3.262525e-01 1 1  ON 10
+ ud_1                 1.168247e-01 1 1  ON 11
+ ud_2                 7.155806e-02 1 1  ON 12
+ ud_3                 5.425810e-02 1 1  ON 13
+ ud_4                 3.333966e-02 1 1  ON 14
+ ud_5                 1.832913e-02 1 1  ON 15
+ ud_6                 5.800837e-03 1 1  ON 16
+ ud_7                -3.163208e-03 1 1  ON 17
+ ud_8                -7.795476e-03 1 1  ON 18
+ ud_9                -7.880765e-03 1 1  ON 19
+eSi_0                -1.631139e-01 1 1  ON 20
+eSi_1                -7.861298e-02 1 1  ON 21
+eSi_2                -5.884611e-02 1 1  ON 22
+eSi_3                -1.616723e-02 1 1  ON 23
+eSi_4                 1.132238e-02 1 1  ON 24
+eSi_5                 1.895653e-02 1 1  ON 25
+eSi_6                 7.919269e-03 1 1  ON 26
+eSi_7                 2.271826e-04 1 1  ON 27
+eSi_8                 4.702388e-03 1 1  ON 28
+eSi_9                 2.722270e-03 1 1  ON 29
+ eH_0                -2.024811e-01 1 1  ON 30
+ eH_1                -1.924008e-01 1 1  ON 31
+ eH_2                -1.722453e-01 1 1  ON 32
+ eH_3                -1.547828e-01 1 1  ON 33
+ eH_4                -1.354599e-01 1 1  ON 34
+ eH_5                -1.112824e-01 1 1  ON 35
+ eH_6                -8.575994e-02 1 1  ON 36
+ eH_7                -6.062468e-02 1 1  ON 37
+ eH_8                -3.435617e-02 1 1  ON 38
+ eH_9                -9.017500e-03 1 1  ON 39
+  </optVariables>
+   Restore the number of walkers to 21, removing 0 walkers.
+</opt>
+</optimization-report>
+  QMC Execution time = 47.69 secs
+  Total Execution time = 414 secs
+
+=========================================================
+  A new xml input file : qmc.dump.s009.cont.xml

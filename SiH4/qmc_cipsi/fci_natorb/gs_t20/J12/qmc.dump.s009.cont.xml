@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<simulation>
+  <project id="qmc.dump" series="10"><host>f18n13</host><date>Wed Jul 15 11:34:30 2020
+</date></project>
+  <include href="qmc.dump.structure.xml"/>
+  <include href="qmc.dump.wfj.xml"/>
+  <hamiltonian name="h0" type="generic" target="e">
+    <pairpot name="ElecElec" type="coulomb" source="e" target="e" physical="true"/>
+    <pairpot name="IonIon" type="coulomb" source="ion0" target="ion0"/>
+    <pairpot name="PseudoPot" type="pseudo" source="ion0" wavefunction="psi0" format="xml">
+      <pseudo elementType="H" href="H.qmcpp.xml"/>
+      <pseudo elementType="Si" href="Si.qmcpp.xml"/>
+    </pairpot>
+  </hamiltonian><mcwalkerset fileroot="qmc.dump.s009" node="-1" nprocs="64" version="3 9" collected="yes"/>
+
+  <loop max="5">
+    <qmc method="linear" move="pbyp" checkpoint="-1">
+      <cost name="energy">    0.0                </cost>
+      <cost name="unreweightedvariance">    1.0                </cost>
+      <cost name="reweightedvariance">    0.0                </cost>
+      <estimator name="LocalEnergy" hdf5="no"/>
+      <parameter name="warmupSteps">100</parameter>
+      <parameter name="blocks">20</parameter>
+      <parameter name="timestep">0.5</parameter>
+      <parameter name="walkers">1</parameter>
+      <parameter name="samples">64000</parameter>
+      <parameter name="substeps">4</parameter>
+      <parameter name="usedrift">no</parameter>
+      <parameter name="MinMethod">OneShiftOnly</parameter>
+      <parameter name="minwalkers">0.0001</parameter>
+    </qmc>
+  </loop>
+  <!--
+        
+Example follow-up VMC optimization using more samples for greater accuracy
+
+-->
+  <loop max="5">
+    <qmc method="linear" move="pbyp" checkpoint="-1">
+      <cost name="energy">    0.8                </cost>
+      <cost name="unreweightedvariance">    0.0                </cost>
+      <cost name="reweightedvariance">    0.2                </cost>
+      <estimator name="LocalEnergy" hdf5="no"/>
+      <parameter name="warmupSteps">100</parameter>
+      <parameter name="blocks">20</parameter>
+      <parameter name="timestep">0.5</parameter>
+      <parameter name="walkers">1</parameter>
+      <parameter name="samples">128000</parameter>
+      <parameter name="substeps">4</parameter>
+      <parameter name="usedrift">no</parameter>
+      <parameter name="MinMethod">OneShiftOnly</parameter>
+      <parameter name="minwalkers">0.1</parameter>
+    </qmc>
+  </loop>
+
+
+
+</simulation>
