@@ -1,0 +1,760 @@
+/global/cscratch1/sd/aannabe/docs/molecules_Si/SiH4/qp2_qmc/fci_natorb/ex_t20/dmc
+  Input file(s): qmc.dump.qmc.in-wfj.xml 
+
+=====================================================
+                    QMCPACK 3.9.2
+
+       (c) Copyright 2003-  QMCPACK developers
+
+                    Please cite:
+ J. Kim et al. J. Phys. Cond. Mat. 30 195901 (2018)
+      https://doi.org/10.1088/1361-648X/aab9c3
+
+  Git branch: develop
+  Last git commit: 8064ebfec9a8dd88748e8864013168c9aa7e05dd
+  Last git commit date: Tue Apr 28 13:44:48 2020 -0500
+  Last git commit subject: Merge pull request #2412 from QMCPACK/rc_392
+=====================================================
+  Global options 
+
+  Total number of MPI ranks = 2176
+  Number of MPI groups      = 1
+  MPI group ID              = 0
+  Number of ranks in group  = 2176
+  MPI ranks per node        = 68
+  OMP 1st level threads     = 1
+  OMP nested threading disabled or only 1 thread on the 2nd level
+
+  Precision used in this calculation, see definitions in the manual:
+  Base precision      = double
+  Full precision      = double
+
+  Structure-of-arrays (SoA) optimization enabled
+
+  Input XML = qmc.dump.qmc.in-wfj.xml
+
+  Project = qmc.dump
+  date    = 2020-09-05 19:32:00 PDT
+  host    = nid02649
+
+ Random Number
+ -------------
+  Offset for the random number seeds based on time: 544
+
+  Range of prime numbers to use as seeds over processors and threads = 3931-24533
+
+
+ Particle Set 
+ ------------
+  Name: ion0
+  All the species have the same mass 1
+  Particle set size: 5
+
+ Particle Set 
+ ------------
+  Name: e
+  All the species have the same mass 1
+  Particle set size: 8
+
+ Wavefunction setup: 
+ ------------------- 
+  Name: psi0
+  LCAO: SoaAtomicBasisSet<MultiQuintic,0>
+Reading BasisSet from HDF5 file:qmc.dump.orbs.h5
+<input node="atomicBasisSet" name="Gaussian" expandYlm="Gamess" angular="cartesian" elementType="Si" normalized="no" type="Numerical" expM="0" />
+  AO BasisSet for Si
+   Angular momentum expanded in cartesian functions x^lx y^ly z^lz according to Gamess
+   Grid is created by the input paremters in h5
+    Using log grid ri = 1e-06 rf = 100 npts = 1001
+   R(n,l,m,s) 0 0 0 0
+   R(n,l,m,s) 1 0 0 0
+   R(n,l,m,s) 2 0 0 0
+   R(n,l,m,s) 3 0 0 0
+   R(n,l,m,s) 4 0 0 0
+   R(n,l,m,s) 5 1 0 0
+   R(n,l,m,s) 6 1 0 0
+   R(n,l,m,s) 7 1 0 0
+   R(n,l,m,s) 8 1 0 0
+   R(n,l,m,s) 9 1 0 0
+   R(n,l,m,s) 10 2 0 0
+   R(n,l,m,s) 11 2 0 0
+   R(n,l,m,s) 12 2 0 0
+   R(n,l,m,s) 13 2 0 0
+   R(n,l,m,s) 14 3 0 0
+   R(n,l,m,s) 15 3 0 0
+   R(n,l,m,s) 16 3 0 0
+   R(n,l,m,s) 17 4 0 0
+   R(n,l,m,s) 18 4 0 0
+Expanding Ylm (angular function) according to Gamess using cartesian gaussians
+Adding 1 cartesian gaussian orbitals for l= 0
+Adding 1 cartesian gaussian orbitals for l= 0
+Adding 1 cartesian gaussian orbitals for l= 0
+Adding 1 cartesian gaussian orbitals for l= 0
+Adding 1 cartesian gaussian orbitals for l= 0
+Adding 3 cartesian gaussian orbitals for l= 1
+Adding 3 cartesian gaussian orbitals for l= 1
+Adding 3 cartesian gaussian orbitals for l= 1
+Adding 3 cartesian gaussian orbitals for l= 1
+Adding 3 cartesian gaussian orbitals for l= 1
+Adding 6 cartesian gaussian orbitals for l= 2
+Adding 6 cartesian gaussian orbitals for l= 2
+Adding 6 cartesian gaussian orbitals for l= 2
+Adding 6 cartesian gaussian orbitals for l= 2
+Adding 10 cartesian gaussian orbitals for l= 3
+Adding 10 cartesian gaussian orbitals for l= 3
+Adding 10 cartesian gaussian orbitals for l= 3
+Adding 15 cartesian gaussian orbitals for l= 4
+Adding 15 cartesian gaussian orbitals for l= 4
+  Setting cutoff radius 8.64717e+15
+
+   Maximum Angular Momentum  = 4
+   Number of Radial functors = 19
+   Basis size                = 104
+
+<input node="atomicBasisSet" name="Gaussian" expandYlm="Gamess" angular="cartesian" elementType="H" normalized="no" type="Numerical" expM="0" />
+  AO BasisSet for H
+   Angular momentum expanded in cartesian functions x^lx y^ly z^lz according to Gamess
+   Grid is created by the input paremters in h5
+    Using log grid ri = 1e-06 rf = 100 npts = 1001
+   R(n,l,m,s) 0 0 0 0
+   R(n,l,m,s) 1 0 0 0
+   R(n,l,m,s) 2 0 0 0
+   R(n,l,m,s) 3 0 0 0
+   R(n,l,m,s) 4 0 0 0
+   R(n,l,m,s) 5 1 0 0
+   R(n,l,m,s) 6 1 0 0
+   R(n,l,m,s) 7 1 0 0
+   R(n,l,m,s) 8 1 0 0
+   R(n,l,m,s) 9 2 0 0
+   R(n,l,m,s) 10 2 0 0
+   R(n,l,m,s) 11 2 0 0
+   R(n,l,m,s) 12 3 0 0
+   R(n,l,m,s) 13 3 0 0
+Expanding Ylm (angular function) according to Gamess using cartesian gaussians
+Adding 1 cartesian gaussian orbitals for l= 0
+Adding 1 cartesian gaussian orbitals for l= 0
+Adding 1 cartesian gaussian orbitals for l= 0
+Adding 1 cartesian gaussian orbitals for l= 0
+Adding 1 cartesian gaussian orbitals for l= 0
+Adding 3 cartesian gaussian orbitals for l= 1
+Adding 3 cartesian gaussian orbitals for l= 1
+Adding 3 cartesian gaussian orbitals for l= 1
+Adding 3 cartesian gaussian orbitals for l= 1
+Adding 6 cartesian gaussian orbitals for l= 2
+Adding 6 cartesian gaussian orbitals for l= 2
+Adding 6 cartesian gaussian orbitals for l= 2
+Adding 10 cartesian gaussian orbitals for l= 3
+Adding 10 cartesian gaussian orbitals for l= 3
+  Setting cutoff radius 9.95675e+11
+
+   Maximum Angular Momentum  = 3
+   Number of Radial functors = 14
+   Basis size                = 55
+
+  Created SPOSet builder named 'LCAOBSet' of type molecularorbital
+Creating SPOSet in SlaterDetBuilder::put(xmlNodePtr cur).
+spo_name = spo-up
+  Building SPOSet 'spo-up' with 'LCAOBSet' basis set.
+Creating SPOSet in SlaterDetBuilder::put(xmlNodePtr cur).
+spo_name = spo-dn
+  Building SPOSet 'spo-dn' with 'LCAOBSet' basis set.
+Using Bryan's algorithm for MultiSlaterDeterminant expansion. 
+Creating base determinant (up) for MSD expansion. 
+Creating base determinant (down) for MSD expansion. 
+Found Multideterminants in H5 File
+Found determinant list. 
+Reading CI expansion from HDF5:qmc.dump.orbs.h5
+ Done reading CIs from H5!!
+ Sorting unique CIs
+ Done Sorting unique CIs
+Found 360162 terms in the MSD expansion.
+Norm of ci vector (sum of ci^2): 1
+Found 27171 unique up determinants.
+Found 27171 unique down determinants.
+Number of terms in pairs array: 1036
+Number of terms in pairs array: 1036
+CI coefficients are not optimizable. 
+  Added a fermionic WaveFunctionComponent SlaterDet
+
+   Jastrow
+   -------
+    Name: J2   Type: Two-Body   Function: Bspline
+
+    Radial function for species: u - u
+     Number of parameters: 10
+     Cusp: -0.25
+     Cutoff radius: 10
+
+     Name                        Value Type Recompute Use Index
+     ---- ---------------------------- ---- --------- --- -----
+     uu_0                 3.741018e-01    1         1  ON     0
+     uu_1                 2.201713e-01    1         1  ON     1
+     uu_2                 1.347360e-01    1         1  ON     2
+     uu_3                 9.091169e-02    1         1  ON     3
+     uu_4                 7.020856e-02    1         1  ON     4
+     uu_5                 5.338664e-02    1         1  ON     5
+     uu_6                 3.685170e-02    1         1  ON     6
+     uu_7                 2.391228e-02    1         1  ON     7
+     uu_8                 1.359777e-02    1         1  ON     8
+     uu_9                 6.011953e-03    1         1  ON     9
+
+    Radial function for species: u - d
+     Number of parameters: 10
+     Cusp: -0.5
+     Cutoff radius: 10
+
+     Name                        Value Type Recompute Use Index
+     ---- ---------------------------- ---- --------- --- -----
+     ud_0                 4.584594e-01    1         1  ON     0
+     ud_1                 2.027936e-01    1         1  ON     1
+     ud_2                 9.921325e-02    1         1  ON     2
+     ud_3                 5.764260e-02    1         1  ON     3
+     ud_4                 3.785044e-02    1         1  ON     4
+     ud_5                 2.424370e-02    1         1  ON     5
+     ud_6                 1.225164e-02    1         1  ON     6
+     ud_7                 2.583730e-03    1         1  ON     7
+     ud_8                -3.278278e-03    1         1  ON     8
+     ud_9                -5.623615e-03    1         1  ON     9
+
+
+   Jastrow
+   -------
+    Name: J1   Type: One-Body   Function: Bspline
+
+    Radial function for element: Si
+     Number of parameters: 10
+     Cusp: 0
+     Cutoff radius: 10
+
+      Name                        Value Type Recompute Use Index
+     ----- ---------------------------- ---- --------- --- -----
+     eSi_0                -1.589945e-01    1         1  ON     0
+     eSi_1                -8.975741e-02    1         1  ON     1
+     eSi_2                -7.227775e-02    1         1  ON     2
+     eSi_3                -3.629100e-02    1         1  ON     3
+     eSi_4                -2.916667e-03    1         1  ON     4
+     eSi_5                 3.289415e-02    1         1  ON     5
+     eSi_6                 1.405313e-02    1         1  ON     6
+     eSi_7                 1.711951e-03    1         1  ON     7
+     eSi_8                -2.754938e-03    1         1  ON     8
+     eSi_9                 3.741845e-04    1         1  ON     9
+
+    Radial function for element: H
+     Number of parameters: 10
+     Cusp: 0
+     Cutoff radius: 10
+
+     Name                        Value Type Recompute Use Index
+     ---- ---------------------------- ---- --------- --- -----
+     eH_0                -2.161141e-01    1         1  ON     0
+     eH_1                -2.191011e-01    1         1  ON     1
+     eH_2                -2.058040e-01    1         1  ON     2
+     eH_3                -1.726076e-01    1         1  ON     3
+     eH_4                -1.420095e-01    1         1  ON     4
+     eH_5                -1.295189e-01    1         1  ON     5
+     eH_6                -1.059493e-01    1         1  ON     6
+     eH_7                -7.417592e-02    1         1  ON     7
+     eH_8                -4.271663e-02    1         1  ON     8
+     eH_9                -1.386613e-02    1         1  ON     9
+
+
+   Jastrow
+   -------
+    Name: J3   Type: eeI   Function: polynomial
+
+     Ion: Si   electron-electron: u - u
+      Number of parameters for e-e: 3, for e-I: 3
+      Cutoff radius: 10
+
+         Name                        Value Type Recompute Use Index
+      ------- ---------------------------- ---- --------- --- -----
+       uuSi_0                -3.194450e-05    1         1  ON     0
+       uuSi_1                -1.028071e-05    1         1  ON     1
+       uuSi_2                 1.492306e-05    1         1  ON     2
+       uuSi_3                 4.325747e-05    1         1  ON     3
+       uuSi_4                 5.502440e-06    1         1  ON     4
+       uuSi_5                -2.399131e-06    1         1  ON     5
+       uuSi_6                 3.432765e-05    1         1  ON     6
+       uuSi_7                 1.610075e-05    1         1  ON     7
+       uuSi_8                -2.529059e-05    1         1  ON     8
+       uuSi_9                 3.082994e-06    1         1  ON     9
+      uuSi_10                 2.362596e-05    1         1  ON    10
+      uuSi_11                -3.308664e-06    1         1  ON    11
+      uuSi_12                 9.022843e-06    1         1  ON    12
+      uuSi_13                -6.455592e-05    1         1  ON    13
+      uuSi_14                -1.037439e-05    1         1  ON    14
+      uuSi_15                 1.338418e-07    1         1  ON    15
+      uuSi_16                 2.748906e-05    1         1  ON    16
+      uuSi_17                -6.715340e-05    1         1  ON    17
+      uuSi_18                 1.108093e-05    1         1  ON    18
+      uuSi_19                -3.627872e-06    1         1  ON    19
+      uuSi_20                 1.976876e-05    1         1  ON    20
+      uuSi_21                 9.969818e-07    1         1  ON    21
+      uuSi_22                 6.849627e-08    1         1  ON    22
+      uuSi_23                -5.255929e-06    1         1  ON    23
+      uuSi_24                -4.304607e-08    1         1  ON    24
+      uuSi_25                 1.133699e-08    1         1  ON    25
+
+     Ion: Si   electron-electron: u - d
+      Number of parameters for e-e: 3, for e-I: 3
+      Cutoff radius: 10
+
+         Name                        Value Type Recompute Use Index
+      ------- ---------------------------- ---- --------- --- -----
+       udSi_0                 3.218188e-06    1         1  ON     0
+       udSi_1                 5.006738e-05    1         1  ON     1
+       udSi_2                 1.610939e-05    1         1  ON     2
+       udSi_3                -3.150605e-06    1         1  ON     3
+       udSi_4                -1.862565e-06    1         1  ON     4
+       udSi_5                -2.983424e-06    1         1  ON     5
+       udSi_6                 9.143327e-05    1         1  ON     6
+       udSi_7                -1.831295e-05    1         1  ON     7
+       udSi_8                 1.122682e-06    1         1  ON     8
+       udSi_9                -7.184432e-05    1         1  ON     9
+      udSi_10                -4.554322e-06    1         1  ON    10
+      udSi_11                 4.800058e-07    1         1  ON    11
+      udSi_12                 1.445141e-06    1         1  ON    12
+      udSi_13                 4.961632e-06    1         1  ON    13
+      udSi_14                -3.110192e-06    1         1  ON    14
+      udSi_15                 1.001555e-07    1         1  ON    15
+      udSi_16                 7.514670e-05    1         1  ON    16
+      udSi_17                -1.564713e-05    1         1  ON    17
+      udSi_18                 1.017948e-06    1         1  ON    18
+      udSi_19                -9.884241e-07    1         1  ON    19
+      udSi_20                -1.000595e-05    1         1  ON    20
+      udSi_21                 1.213549e-06    1         1  ON    21
+      udSi_22                -3.294715e-08    1         1  ON    22
+      udSi_23                 1.614468e-06    1         1  ON    23
+      udSi_24                -2.920378e-07    1         1  ON    24
+      udSi_25                 2.673149e-08    1         1  ON    25
+
+     Ion: H   electron-electron: u - u
+      Number of parameters for e-e: 3, for e-I: 3
+      Cutoff radius: 10
+
+        Name                        Value Type Recompute Use Index
+      ------ ---------------------------- ---- --------- --- -----
+       uuH_0                -2.352607e-06    1         1  ON     0
+       uuH_1                -1.908159e-06    1         1  ON     1
+       uuH_2                -1.229228e-06    1         1  ON     2
+       uuH_3                -3.312284e-06    1         1  ON     3
+       uuH_4                -1.473253e-06    1         1  ON     4
+       uuH_5                 2.552601e-08    1         1  ON     5
+       uuH_6                -8.077025e-06    1         1  ON     6
+       uuH_7                 7.165559e-06    1         1  ON     7
+       uuH_8                 1.800166e-06    1         1  ON     8
+       uuH_9                 8.654048e-06    1         1  ON     9
+      uuH_10                -3.989259e-06    1         1  ON    10
+      uuH_11                 5.789099e-07    1         1  ON    11
+      uuH_12                -1.382752e-06    1         1  ON    12
+      uuH_13                -3.530439e-07    1         1  ON    13
+      uuH_14                 1.204538e-06    1         1  ON    14
+      uuH_15                 1.140273e-08    1         1  ON    15
+      uuH_16                -9.757369e-06    1         1  ON    16
+      uuH_17                 3.908746e-06    1         1  ON    17
+      uuH_18                -1.124906e-06    1         1  ON    18
+      uuH_19                 7.846051e-07    1         1  ON    19
+      uuH_20                 2.397864e-06    1         1  ON    20
+      uuH_21                -4.037230e-07    1         1  ON    21
+      uuH_22                -1.197869e-08    1         1  ON    22
+      uuH_23                -5.424374e-07    1         1  ON    23
+      uuH_24                 1.162148e-07    1         1  ON    24
+      uuH_25                -1.377140e-08    1         1  ON    25
+
+     Ion: H   electron-electron: u - d
+      Number of parameters for e-e: 3, for e-I: 3
+      Cutoff radius: 10
+
+        Name                        Value Type Recompute Use Index
+      ------ ---------------------------- ---- --------- --- -----
+       udH_0                -2.277165e-06    1         1  ON     0
+       udH_1                -8.501837e-06    1         1  ON     1
+       udH_2                -2.544141e-06    1         1  ON     2
+       udH_3                 7.167012e-06    1         1  ON     3
+       udH_4                 1.120607e-06    1         1  ON     4
+       udH_5                -3.429273e-06    1         1  ON     5
+       udH_6                -8.408744e-06    1         1  ON     6
+       udH_7                -1.238982e-06    1         1  ON     7
+       udH_8                -7.061365e-06    1         1  ON     8
+       udH_9                 1.312790e-05    1         1  ON     9
+      udH_10                 4.041058e-06    1         1  ON    10
+      udH_11                 4.606526e-06    1         1  ON    11
+      udH_12                 9.558001e-07    1         1  ON    12
+      udH_13                -1.154650e-05    1         1  ON    13
+      udH_14                -1.575164e-06    1         1  ON    14
+      udH_15                 8.219723e-08    1         1  ON    15
+      udH_16                -1.348853e-05    1         1  ON    16
+      udH_17                -7.161389e-06    1         1  ON    17
+      udH_18                -1.281046e-06    1         1  ON    18
+      udH_19                 1.875909e-07    1         1  ON    19
+      udH_20                 7.150561e-06    1         1  ON    20
+      udH_21                 9.034300e-08    1         1  ON    21
+      udH_22                -5.399855e-08    1         1  ON    22
+      udH_23                -2.132510e-06    1         1  ON    23
+      udH_24                 1.184560e-07    1         1  ON    24
+      udH_25                -4.951078e-09    1         1  ON    25
+
+  QMCHamiltonian::addOperator Kinetic to H, physical Hamiltonian 
+  QMCHamiltonian::addOperator ElecElec to H, physical Hamiltonian 
+QMCHamiltonian::addOperatorType added type coulomb named ElecElec
+  QMCHamiltonian::addOperator IonIon to H, physical Hamiltonian 
+QMCHamiltonian::addOperatorType added type coulomb named IonIon
+
+  ECPotential builder for pseudopotential 
+
+  Adding pseudopotential for H
+   Linear grid  ri=0 rf=10 npts = 10001
+    ECPComponentBuilder::buildSemiLocalAndLocal 
+    Assuming Hartree unit
+   Number of angular momentum channels 2
+   Maximum angular momentum channel 1
+   Creating a Linear Grid Rmax=1e-10
+  Using global grid with delta = 0.001
+   Making L=1 a local potential with a radial cutoff of 9.999
+    Non-local pseudopotential parameters
+    Maximum angular mementum = 0
+    Number of non-local channels = 1
+       l(0)=0
+    Cutoff radius = 0.001
+    Spherical grids and weights: 
+                        1                 0                 0       0.08333333333
+                       -1   1.224646799e-16                 0       0.08333333333
+             0.4472135955       0.894427191                 0       0.08333333333
+            -0.4472135955      0.7236067977      0.5257311121       0.08333333333
+             0.4472135955      0.2763932023      0.8506508084       0.08333333333
+            -0.4472135955     -0.2763932023      0.8506508084       0.08333333333
+             0.4472135955     -0.7236067977      0.5257311121       0.08333333333
+            -0.4472135955      -0.894427191   1.095357397e-16       0.08333333333
+             0.4472135955     -0.7236067977     -0.5257311121       0.08333333333
+            -0.4472135955     -0.2763932023     -0.8506508084       0.08333333333
+             0.4472135955      0.2763932023     -0.8506508084       0.08333333333
+            -0.4472135955      0.7236067977     -0.5257311121       0.08333333333
+    Maximum cutoff radius 0.001
+
+  Adding pseudopotential for Si
+   Linear grid  ri=0 rf=10 npts = 10001
+    ECPComponentBuilder::buildSemiLocalAndLocal 
+    Assuming Hartree unit
+   Number of angular momentum channels 3
+   Maximum angular momentum channel 2
+   Creating a Linear Grid Rmax=2.69
+  Using global grid with delta = 0.001
+   Making L=2 a local potential with a radial cutoff of 9.999
+    Non-local pseudopotential parameters
+    Maximum angular mementum = 1
+    Number of non-local channels = 2
+       l(0)=0
+       l(1)=1
+    Cutoff radius = 2.69
+    Spherical grids and weights: 
+                        1                 0                 0       0.08333333333
+                       -1   1.224646799e-16                 0       0.08333333333
+             0.4472135955       0.894427191                 0       0.08333333333
+            -0.4472135955      0.7236067977      0.5257311121       0.08333333333
+             0.4472135955      0.2763932023      0.8506508084       0.08333333333
+            -0.4472135955     -0.2763932023      0.8506508084       0.08333333333
+             0.4472135955     -0.7236067977      0.5257311121       0.08333333333
+            -0.4472135955      -0.894427191   1.095357397e-16       0.08333333333
+             0.4472135955     -0.7236067977     -0.5257311121       0.08333333333
+            -0.4472135955     -0.2763932023     -0.8506508084       0.08333333333
+             0.4472135955      0.2763932023     -0.8506508084       0.08333333333
+            -0.4472135955      0.7236067977     -0.5257311121       0.08333333333
+    Maximum cutoff radius 2.69
+  QMCHamiltonian::addOperator LocalECP to H, physical Hamiltonian 
+
+  Using NonLocalECP potential 
+    Maximum grid on a sphere for NonLocalECPotential: 12
+  QMCHamiltonian::addOperator NonLocalECP to H, physical Hamiltonian 
+QMCHamiltonian::addOperatorType added type pseudo named PseudoPot
+
+  QMCHamiltonian::add2WalkerProperty added
+    5 to P::PropertyList 
+    0 to P::Collectables 
+    starting Index of the observables in P::PropertyList = 9
+ParticleSetPool::randomize 1 ParticleSet.
+<init source="ion0" target="e">
+</init>
+  Initialization Execution time = 7.114 secs
+=========================================================
+ Summary of QMC systems 
+=========================================================
+ParticleSetPool has: 
+
+  ParticleSet 'e' contains 8 particles :  u(4) d(4)
+
+    u  4.1465693333e-01 -6.2112907275e-01 -8.3280138374e-01
+    u -8.1304159964e-01  7.6708933097e-01 -4.2862077615e-02
+    u  1.8201385547e+00  2.6348585691e+00  2.0245596812e+00
+    u -2.5042699765e+00  1.2738241708e+00 -1.0283744797e+00
+    d  3.5840343744e-01 -1.0311011080e+00  2.4428942520e-01
+    d -1.0612527457e+00  2.9665409535e-02 -3.5236687612e-01
+    d -6.6247657636e-01 -1.2825350968e+00  2.0988754427e+00
+    d  1.5897262415e+00 -1.8320482005e+00 -5.1759034611e-01
+
+  Distance table for dissimilar particles (A-B):
+    source: ion0  target: e
+    Using structure-of-arrays (SoA) data layout
+    Distance computations use open boundary conditions in 3D.
+
+  Distance table for similar particles (A-A):
+    source/target: e
+    Using structure-of-arrays (SoA) data layout
+    Distance computations use open boundary conditions in 3D.
+
+
+  ParticleSet 'ion0' contains 5 particles :  Si(1) H(4)
+
+    Si  0.0000000000e+00  0.0000000000e+00  0.0000000000e+00
+    H  1.6145818874e+00  1.6145818874e+00  1.6145818874e+00
+    H -1.6145818874e+00 -1.6145818874e+00  1.6145818874e+00
+    H -1.6145818874e+00  1.6145818874e+00 -1.6145818874e+00
+    H  1.6145818874e+00 -1.6145818874e+00 -1.6145818874e+00
+
+  Distance table for similar particles (A-A):
+    source/target: ion0
+    Using structure-of-arrays (SoA) data layout
+    Distance computations use open boundary conditions in 3D.
+
+
+  Hamiltonian h0
+  Kinetic         Kinetic energy
+  ElecElec        CoulombAB source=e
+
+  IonIon          CoulombAA source/target ion0
+
+  LocalECP        LocalECPotential: ion0
+  NonLocalECP     NonLocalECPotential: ion0
+
+
+=========================================================
+  Start VMC
+  File Root qmc.dump.s000 append = no 
+=========================================================
+Resetting walkers
+  Adding 1 walkers to 0 existing sets
+  Total number of walkers: 2.1760000000e+03
+  Total weight: 2.1760000000e+03
+  Resetting Properties of the walkers 1 x 14
+
+<vmc function="put">
+  qmc_counter=0  my_counter=0
+  time step      = 5.0000000000e-01
+  blocks         = 5
+  steps          = 10
+  substeps       = 5
+  current        = 0
+  target samples = 0.0000000000e+00
+  walkers/mpi    = 1
+
+  stepsbetweensamples = 60
+  SpinMoves      = no
+<parameter name="blocks" condition="int">5</parameter>
+<parameter name="blocks_between_recompute" condition="int">0</parameter>
+<parameter name="check_properties" condition="int">100</parameter>
+<parameter name="checkproperties" condition="int">100</parameter>
+<parameter name="current" condition="int">0</parameter>
+<parameter name="dmcwalkersperthread" condition="real">0.0000000000e+00</parameter>
+<parameter name="maxcpusecs" condition="real">3.6000000000e+05</parameter>
+<parameter name="record_configs" condition="int">0</parameter>
+<parameter name="record_walkers" condition="int">60</parameter>
+<parameter name="recordconfigs" condition="int">0</parameter>
+<parameter name="recordwalkers" condition="int">60</parameter>
+<parameter name="rewind" condition="int">0</parameter>
+<parameter name="samples" condition="real">0.0000000000e+00</parameter>
+<parameter name="samplesperthread" condition="real">0.0000000000e+00</parameter>
+<parameter name="spinmass" condition="double">1.0000000000e+00</parameter>
+<parameter name="spinmoves" condition="string">no</parameter>
+<parameter name="steps" condition="int">10</parameter>
+<parameter name="stepsbetweensamples" condition="int">60</parameter>
+<parameter name="store_configs" condition="int">0</parameter>
+<parameter name="storeconfigs" condition="int">0</parameter>
+<parameter name="sub_steps" condition="int">5</parameter>
+<parameter name="substeps" condition="int">5</parameter>
+<parameter name="tau" condition="au">5.0000000000e-01</parameter>
+<parameter name="time_step" condition="au">5.0000000000e-01</parameter>
+<parameter name="timestep" condition="au">5.0000000000e-01</parameter>
+<parameter name="use_drift" condition="string">no</parameter>
+<parameter name="usedrift" condition="string">no</parameter>
+<parameter name="walkers" condition="int">1</parameter>
+<parameter name="warmup_steps" condition="int">10</parameter>
+<parameter name="warmupsteps" condition="int">10</parameter>
+  DumpConfig==true Configurations are dumped to config.h5 with a period of 5 blocks
+  Walker Samples are dumped every 60 steps.
+</vmc>
+  Set drift_modifier UNR parameter a = 1.0000000000e+00
+  Initial partition of walkers 0 1 
+
+  Using Particle by Particle moves
+  Walker moves without drift
+  Total Sample Size   =0
+  Walker distribution on root = 0 1 
+  Using Locality Approximation
+===== Memory Usage after the buffer registration =====
+Available memory on node 0, free + buffers : 82729 MB
+Memory footprint by rank 0 on node 0       : 170 MB
+==================================================
+  Anonymous Buffer size per walker : 7478856 Bytes.
+MEMORY increase 7 MB VMC::resetRun
+====================================================
+  SimpleFixedNodeBranch::finalize after a VMC block
+    QMC counter        = 0
+    time step          = 0.5
+    reference energy   = -5.92054
+    reference variance = 0.0530584
+====================================================
+  QMC Execution time = 3.6219e+01 secs
+BRANCH resetRun
+ SimpleFixedNodeBranch::resetRun detected changes in <parameter>'s 
+ BranchMode : 0000001100 0000001100
+ iParam (old): 10                1                 0                 0                 2176              2176              1                 0                 
+ iParam (new): 10                1                 0                 8704              2176              2176              1                 0                 
+ vParam (old): 5.0000000000e-01  5.0000000000e-01  -5.9205406766e+00 -5.9205406766e+00 1.0000000000e+00  1.0000000000e+00  1.0000000000e+00  1.0000000000e+00  5.3058416314e-02  -5.9205406766e+00 1.0000000000e+00  1.0000000000e+00  1.0000000000e+01  1.0000000000e+00  1.0000000000e+00  1.0000000000e+00  1.0000000000e+00  
+ vParam (new): 1.0000000000e-02  5.0000000000e-01  -5.9205406766e+00 -5.9205406766e+00 1.0000000000e+00  1.0000000000e+00  1.0000000000e+00  1.0000000000e+00  5.3058416314e-02  -5.9205406766e+00 1.0000000000e+00  1.0000000000e+00  1.0000000000e+01  1.0000000000e+00  1.0000000000e+00  1.0000000000e+00  1.0000000000e+00  
+
+=========================================================
+  Start DMC
+  File Root qmc.dump.s001 append = no 
+=========================================================
+Using existing walkers 
+  Resetting Properties of the walkers 1 x 14
+  Set drift_modifier UNR parameter a = 1.0000000000e+00
+  EstimatorManagerBase::add replace LocalEnergy estimator.
+  Cannot make clones again. Use existing 1 clones
+  Total number of walkers: 2.1760000000e+03
+  Total weight: 2.1760000000e+03
+  Creating WalkerController: target  number of walkers = 8704
+  Using WalkerControlMPI for dynamic population control.
+  START ALL OVER 
+  WalkerControlBase parameters 
+    maxCopy = 2
+    Max Walkers per MPI rank 9
+    Min Walkers per MPI rank 1
+    Using non-blocking send/recv
+  QMC counter      = 1
+  time step        = 1.0000000000e-02
+  effective time step = 1.0000000000e-02
+  trial energy     = -5.9205406766e+00
+  reference energy = -5.9205406766e+00
+  Feedback = 1.0000000000e+00
+  reference variance = 5.3058416314e-02
+  target walkers = 8704
+  branching cutoff scheme classic
+  branch cutoff = 5.0000000000e+01 7.5000000000e+01
+  Max and minimum walkers per node= 9 1
+  QMC Status (BranchMode) = 0000001101
+  Total number of walkers: 8.7040000000e+03
+  Total weight: 8.7040000000e+03
+  Initial partition of walkers on a node: 0 4 
+  Updates by particle-by-particle moves
+  DMC moves are rejected when a node crossing is detected
+  Using Non-local T-moves v1, M. Casula et al., JCP 132, 154113 (2010)
+===== Memory Usage after the buffer registration =====
+Available memory on node 0, free + buffers : 82764 MB
+Memory footprint by rank 0 on node 0       : 176 MB
+==================================================
+SimpleFixedNodeBranch::checkParameters 
+  Average Energy of a population  = -5.92056
+  Energy Variance = 0.0530065
+
+  Fluctuating population
+  Persistent walkers are killed after 1 MC sweeps
+  BranchInterval = 1
+  Steps per block = 20
+  Number of blocks = 5
+
+  DMC Engine Initialization = 2.9626710415e+00 secs
+
+ Warmup is completed after 10
+
+  TauEff     = 9.9821747475e-03
+ TauEff/Tau = 9.9821747475e-01
+  Etrial     = -5.9366789206e+00
+ Running average of energy = -5.9222049820e+00
+                  Variance = 5.7513798999e-02
+branch cutoff = 1.0000000000e+01 1.5000000000e+01
+====================================================
+  SimpleFixedNodeBranch::finalize after a DMC block
+    QMC counter                   = 1
+    time step                     = 0.01
+    effective time step           = 0.0099814
+    trial energy                  = -5.9268
+    reference energy              = -5.92841
+    reference variance            = 0.0575138
+    target walkers                = 8704
+    branch cutoff                 = 10 15
+    Max and minimum walkers per node= 9 1
+    Feedback                      = 1
+    QMC Status (BranchMode)       = 0000001111
+====================================================
+  QMC Execution time = 4.0221e+02 secs
+BRANCH resetRun
+ SimpleFixedNodeBranch::resetRun detected changes in <parameter>'s 
+ BranchMode : 0000001111 0000001111
+  WalkerControlBase parameters 
+    maxCopy = 2
+    Max Walkers per MPI rank 9
+    Min Walkers per MPI rank 1
+    Using non-blocking send/recv
+ iParam (old): 0                 1                 1                 8704              9                 1                 1                 0                 
+ iParam (new): 100               1                 1                 8704              9                 1                 1                 0                 
+ vParam (old): 1.0000000000e-02  9.9813994291e-03  -5.9268005506e+00 -5.9284103014e+00 -5.9300216436e+00 1.5000000000e+01  1.0000000000e+01  2.0000000000e-01  5.7513798999e-02  -5.3948694877e+02 9.1000000000e+01  1.0000000000e+00  1.0000000000e+01  1.0000000000e+00  1.0000000000e+00  1.0000000000e+00  1.0000000000e+00  
+ vParam (new): 1.0000000000e-03  9.9813994291e-03  -5.9268005506e+00 -5.9284103014e+00 -5.9300216436e+00 1.5000000000e+01  1.0000000000e+01  2.0000000000e-01  5.7513798999e-02  -5.3948694877e+02 9.1000000000e+01  1.0000000000e+00  1.0000000000e+01  1.0000000000e+00  1.0000000000e+00  1.0000000000e+00  1.0000000000e+00  
+
+ Using branching cutoff scheme classic
+
+=========================================================
+  Start DMC
+  File Root qmc.dump.s002 append = no 
+=========================================================
+Using existing walkers 
+  Resetting Properties of the walkers 1 x 14
+  Set drift_modifier UNR parameter a = 1.0000000000e+00
+  EstimatorManagerBase::add replace LocalEnergy estimator.
+  Cannot make clones again. Use existing 1 clones
+  Total number of walkers: 8.6900000000e+03
+  Total weight: 8.6900000000e+03
+  WalkerControlBase parameters 
+    maxCopy = 2
+    Max Walkers per MPI rank 9
+    Min Walkers per MPI rank 1
+    Using non-blocking send/recv
+  QMC counter      = 2
+  time step        = 1.0000000000e-03
+  effective time step = 9.9813994291e-03
+  trial energy     = -5.9268005506e+00
+  reference energy = -5.9284103014e+00
+  Feedback = 1.0000000000e+00
+  reference variance = 5.7513798999e-02
+  target walkers = 8704
+  branching cutoff scheme classic
+  branch cutoff = 1.0000000000e+01 1.5000000000e+01
+  Max and minimum walkers per node= 9 1
+  QMC Status (BranchMode) = 0000001101
+  Initial partition of walkers on a node: 0 3 
+  Updates by particle-by-particle moves
+  DMC moves are rejected when a node crossing is detected
+  Using Non-local T-moves v1, M. Casula et al., JCP 132, 154113 (2010)
+===== Memory Usage after the buffer registration =====
+Available memory on node 0, free + buffers : 81299 MB
+Memory footprint by rank 0 on node 0       : 182 MB
+==================================================
+SimpleFixedNodeBranch::checkParameters 
+  Average Energy of a population  = -5.92894
+  Energy Variance = 0.0653618
+
+  Fluctuating population
+  Persistent walkers are killed after 1 MC sweeps
+  BranchInterval = 1
+  Steps per block = 1000
+  Number of blocks = 1000
+
+  DMC Engine Initialization = 2.5765740871e+00 secs
+
+ Warmup is completed after 100
+
+  TauEff     = 9.9993222454e-04
+ TauEff/Tau = 9.9993222454e-01
+  Etrial     = -5.9308267704e+00
+ Running average of energy = -5.9301196036e+00
+                  Variance = 6.8679243886e-02
+branch cutoff = 1.0000000000e+01 1.5000000000e+01
