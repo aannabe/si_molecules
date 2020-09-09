@@ -1,5 +1,5 @@
 ***,SiH4
-memory,2,g
+memory,512,m
 gthresh,twoint=1.0E-13
 
 basis={
@@ -46,7 +46,7 @@ scf = energy
 pop;
 
 {multi
-occ,2,2,2,2;
+occ,5,3,3,3;
 closed,0,0,0,0;
 wf,8,1,0
 STATE,2,root;

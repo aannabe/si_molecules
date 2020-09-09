@@ -1,5 +1,5 @@
 ***,Si2H6
-memory,2,g
+memory,512,m
 gthresh,twoint=1.0E-13
 
 basis={
@@ -46,7 +46,7 @@ wf,14,1,0   ! nelec,symm,spin
 !closed,3,1,2,1;
 
 {multi
-occ,4,2,3,2;
+occ,4,2,4,2;
 closed,0,0,0,0;
 wf,14,1,0
 STATE,2,root;
