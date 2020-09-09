@@ -1,0 +1,316 @@
+------------------------------------------------
+Quantum Walk development version
+Contributions from: (in no particular order) 
+Michal Bajdich, Shuming Hu, Jindrich Kolorenc, Kevin Rasch, 
+Pavel Vagner, Rene Derian, Paul Kent, Jarrod McClean, 
+Fernando Reboredo, Lucas Wagner, Hiori Kino, Lubos Mitas, Brian Busemeyer, Joshua Schiller,
+Li Chen, Kiel Williams, and Huihuo Zheng
+Originated at North Carolina State University 
+Please cite J. Comp. Phys. v 228 pp 3390-3404 (2009) 
+ when publishing results from this program.
+------------------------------------------------
+Running on nid08638
+Thu Sep  3 17:29:18 2020
+
+     System 
+Atomic positions 
+ Label          Charge            x               y               z   
+    Si               4               0               0               0
+     H               1         1.61458         1.61458         1.61458
+     H               1        -1.61458        -1.61458         1.61458
+     H               1        -1.61458         1.61458        -1.61458
+     H               1         1.61458        -1.61458        -1.61458
+
+
+     Wavefunction 
+Slater Determinant
+1 determinant
+State: 
+spin up:
+  1 2 3 4 5 
+spin down: 
+  1 2 3 
+Molecular Orbital object : Cutoff MO 
+Number of molecular orbitals: 5
+Basis functions: 
+  Cubic spline for Si
+  19  radial functions
+    function  symmetry    cutoff
+           0         S     20.48
+           1         S      6.98
+           2         S     10.98
+           3         S     16.98
+           4         S     25.98
+           5         P     23.98
+           6         P      4.48
+           7         P      6.98
+           8         P     10.98
+           9         P     30.48
+          10 5D_siesta      4.98
+          11 5D_siesta      7.98
+          12 5D_siesta     13.48
+          13 5D_siesta     22.48
+          14 7F_siesta      6.48
+          15 7F_siesta     10.48
+          16 7F_siesta     16.48
+          17  9G_pyscf      7.48
+          18  9G_pyscf     10.98
+  Cubic spline for H
+  14  radial functions
+    function  symmetry    cutoff
+           0         S     17.98
+           1         S     28.48
+           2         S     16.98
+           3         S      9.98
+           4         S      5.98
+           5         P     15.98
+           6         P      9.48
+           7         P      5.48
+           8         P      3.48
+           9 5D_siesta     10.48
+          10 5D_siesta      5.98
+          11 5D_siesta      3.98
+          12 7F_siesta      7.48
+          13 7F_siesta      4.48
+
+Jastrow2 function
+Group 0
+  Separate spin two-body
+    Coefficients frozen
+    Like coefficients 0.25  0  
+    Unlike Coefficients 0  0.5  
+
+  Electron-electron basis
+    Cutoff cusp
+    Gamma 29.7454   Cusp 1
+    Cutoff cusp
+    Gamma 13.3554   Cusp 1
+
+Group 1
+  One-body terms 
+    Atom   Coefficients 
+    H  0.446357  0.190475  -0.0355119  -0.0338426  0.00665852  
+    Si  0.242264  0.600962  -0.195033  0.113427  -0.0657667  
+
+  Two-body terms 
+    Coefficients -0.215239  -0.374361  -0.211413  -0.0171288  -0.00426456  
+   Three-body terms 
+    Atom   Coefficients 
+    H  0.0678069  0.0562361  -0.0697968  -0.170515  0.0981703  0.114782  -0.0955026  -0.03849  0.109633  0.0178433  -0.0126969  -0.0290198  
+    Si  -0.054641  0.00671919  -0.0311361  0.245248  -0.0510509  -0.0840059  0.0303049  0.117045  -0.161523  0.0153693  -0.0417457  0.00129035  
+
+  Electron-ion basis
+    Poly_pade function
+    beta : 0.0917637  4.40759  25.784  131.662  656.079  
+    cutoff distance : 15
+
+    Poly_pade function
+    beta : 0.135683  4.62512  26.8614  136.999  682.511  
+    cutoff distance : 15
+
+
+  Electron-electron basis
+    Poly_pade function
+    beta : 0.309412  5.48561  31.1234  158.108  787.069  
+    cutoff distance : 15
+
+
+
+Pseudopotential 
+atom Si
+Integration points 12
+Cutoff for static calculation 2.6
+Pseudopotential for spin up: 
+  R^n *Gaussian
+  Expansion 0
+       coeff         n  exponent
+     14.8328         0   9.44702
+     26.3497         0   2.55381
+  Expansion 1
+       coeff         n  exponent
+      7.6214         0      3.66
+     10.3316         0   1.90365
+  Expansion 2
+       coeff         n  exponent
+           4        -1   5.16832
+    -14.8182         0   3.93347
+     20.6733         1   8.86169
+Pseudopotential for spin down: 
+  R^n *Gaussian
+  Expansion 0
+       coeff         n  exponent
+     14.8328         0   9.44702
+     26.3497         0   2.55381
+  Expansion 1
+       coeff         n  exponent
+      7.6214         0      3.66
+     10.3316         0   1.90365
+  Expansion 2
+       coeff         n  exponent
+           4        -1   5.16832
+    -14.8182         0   3.93347
+     20.6733         1   8.86169
+atom H
+Integration points 6
+Cutoff for static calculation 20
+Pseudopotential for spin up: 
+  R^n *Gaussian
+  Expansion 0
+       coeff         n  exponent
+           0         0         1
+  Expansion 1
+       coeff         n  exponent
+           1        -1   21.2436
+    -10.8519         0    21.777
+     21.2436         1   21.2436
+Pseudopotential for spin down: 
+  R^n *Gaussian
+  Expansion 0
+       coeff         n  exponent
+           0         0         1
+  Expansion 1
+       coeff         n  exponent
+           1        -1   21.2436
+    -10.8519         0    21.777
+     21.2436         1   21.2436
+
+
+-----------------------------
+Linear wave function optimization:  
+Number of processors: 2176
+Number of MC steps : 21760
+Number of correlated sampling walkers : 2176
+Wave function output to file  : qw.linear.wfout
+nparms 39
+----------------------------
+####################
+step 0: current energy -5.923678102 +/- 0.0002883937501
+prop_psi0 0.805429695 stabilization 0.0007404597628 energy -0.005573173084 +/- 0.001961141716
+prop_psi0 0.9604501535 stabilization 0.003702298814 energy -0.004318605266 +/- 0.001591861211
+prop_psi0 0.9939806657 stabilization 0.01851149407 energy -0.003008611517 +/- 0.001244565966
+prop_psi0 0.9985199036 stabilization 0.09255747035 energy -0.001831331906 +/- 0.001028226604
+prop_psi0 0.999661732 stabilization 0.4627873517 energy -0.001106647735 +/- 0.0007233854827
+prop_psi0 0.9999491897 stabilization 2.313936759 energy -0.0007121941207 +/- 0.0003893359144
+prop_psi0 0.9999950889 stabilization 11.56968379 energy -0.0002377508763 +/- 0.0001501959405
+prop_psi0 0.9999997024 stabilization 57.84841897 energy -2.078337495e-05 +/- 4.910938054e-05
+prop_psi0 0.9999999854 stabilization 289.2420948 energy 2.669647326e-06 +/- 1.392564713e-05
+prop_psi0 0.9999999994 stabilization 1446.210474 energy 1.020815172e-06 +/- 3.098053639e-06
+prop_psi0 1 stabilization 7231.052371 energy 2.265619727e-07 +/- 6.343066285e-07
+prop_psi0 1 stabilization 36155.26186 energy 4.623502514e-08 +/- 1.274694278e-07
+prop_psi0 1 energy 0 +/- 0
+Minimum stabilization 0.0007404597628
+Estimated change -0.002241067773 +/- 0.00162928542
+####################
+step 1: current energy -5.926682487 +/- 0.0003761846012
+prop_psi0 0.9326637472 stabilization 0.0007408353109 energy -6.95933002e-05 +/- 0.0005023439899
+prop_psi0 0.9926615912 stabilization 0.003704176554 energy -6.033338663e-05 +/- 0.0002317047665
+prop_psi0 0.9995749566 stabilization 0.01852088277 energy 1.193104238e-05 +/- 0.0001318036464
+prop_psi0 0.9999758499 stabilization 0.09260441386 energy 1.425501856e-05 +/- 0.0001272715183
+prop_psi0 0.9999968415 stabilization 0.4630220693 energy -7.639534452e-06 +/- 0.0001258679093
+prop_psi0 0.9999993614 stabilization 2.315110347 energy -1.527633826e-05 +/- 0.0001101564728
+prop_psi0 0.9999998587 stabilization 11.57555173 energy -1.797245922e-05 +/- 9.361676949e-05
+prop_psi0 0.9999999671 stabilization 57.87775866 energy -1.374107665e-05 +/- 5.299984964e-05
+prop_psi0 0.999999997 stabilization 289.3887933 energy -5.018321866e-06 +/- 1.643355091e-05
+prop_psi0 0.9999999998 stabilization 1446.943967 energy -1.182606655e-06 +/- 3.68884276e-06
+prop_psi0 1 stabilization 7234.719833 energy -2.450622256e-07 +/- 7.562337249e-07
+prop_psi0 1 stabilization 36173.59916 energy -4.936724256e-08 +/- 1.520073061e-07
+prop_psi0 1 energy 0 +/- 0
+Minimum stabilization 0.0007408353109
+Estimated change -0.0005285625178 +/- 0.0003872097946
+####################
+step 2: current energy -5.926672474 +/- 0.0003427642224
+prop_psi0 0.8138824073 stabilization 0.0001481668118 energy 0.0007940727703 +/- 0.0005337382444
+prop_psi0 0.9700755922 stabilization 0.0007408340592 energy 0.000406973465 +/- 0.0002573400682
+prop_psi0 0.9976874197 stabilization 0.003704170296 energy 0.0001182446186 +/- 0.0001042236835
+prop_psi0 0.9998766292 stabilization 0.01852085148 energy 2.363633887e-05 +/- 6.22534278e-05
+prop_psi0 0.9999919498 stabilization 0.0926042574 energy 1.700770181e-05 +/- 4.093287745e-05
+prop_psi0 0.9999992329 stabilization 0.463021287 energy 1.523577039e-05 +/- 2.639544845e-05
+prop_psi0 0.9999999199 stabilization 2.315106435 energy 5.250592837e-07 +/- 1.854973594e-05
+prop_psi0 0.9999999892 stabilization 11.57553218 energy -6.530859574e-06 +/- 1.46791526e-05
+prop_psi0 0.9999999979 stabilization 57.87766088 energy -4.853406932e-06 +/- 8.438237345e-06
+prop_psi0 0.9999999998 stabilization 289.3883044 energy -1.606551564e-06 +/- 2.633262697e-06
+prop_psi0 1 stabilization 1446.941522 energy -3.663926753e-07 +/- 5.919627017e-07
+prop_psi0 1 stabilization 7234.70761 energy -7.536662161e-08 +/- 1.213928361e-07
+prop_psi0 1 stabilization 36173.53805 energy -1.51594973e-08 +/- 2.440215856e-08
+prop_psi0 1 energy 0 +/- 0
+Minimum stabilization 11.57553218
+Estimated change 2.155090623e-05 +/- 1.918194013e-05
+Did not find a downhill move; increasing total vmc steps to 87040
+####################
+step 3: current energy -5.927232129 +/- 0.0001520863915
+prop_psi0 0.8203321121 stabilization 0.0001481808032 energy -4.62708957e-05 +/- 0.0006328468097
+prop_psi0 0.9697576014 stabilization 0.0007409040162 energy 6.624082175e-05 +/- 0.0003148728526
+prop_psi0 0.9975589087 stabilization 0.003704520081 energy 6.080197253e-05 +/- 0.0001127976556
+prop_psi0 0.9998704956 stabilization 0.0185226004 energy 7.977723331e-05 +/- 5.527772049e-05
+prop_psi0 0.99999306 stabilization 0.09261300202 energy 0.0001005734509 +/- 3.186182288e-05
+prop_psi0 0.9999995707 stabilization 0.4630650101 energy 7.168109669e-05 +/- 2.238657565e-05
+prop_psi0 0.9999999645 stabilization 2.31532505 energy 3.299660428e-05 +/- 1.414972933e-05
+prop_psi0 0.9999999964 stabilization 11.57662525 energy 1.591935166e-05 +/- 7.269957994e-06
+prop_psi0 0.9999999996 stabilization 57.88312626 energy 7.498804522e-06 +/- 2.989253189e-06
+prop_psi0 1 stabilization 289.4156313 energy 2.236129894e-06 +/- 8.51862535e-07
+prop_psi0 1 stabilization 1447.078157 energy 4.979718916e-07 +/- 1.87930105e-07
+prop_psi0 1 stabilization 7235.390783 energy 1.01924073e-07 +/- 3.839316393e-08
+prop_psi0 1 stabilization 36176.95391 energy 2.048076784e-08 +/- 7.711886874e-09
+prop_psi0 1 energy 0 +/- 0
+Minimum stabilization 0.0001481808032
+Estimated change -0.0008150109722 +/- 0.0006483105772
+####################
+step 4: current energy -5.927409699 +/- 0.0001700291304
+prop_psi0 0.9061200256 stabilization 0.0001481852425 energy 0.0002026798963 +/- 0.0001865164093
+prop_psi0 0.9920455246 stabilization 0.0007409262124 energy 5.972726932e-05 +/- 9.803728834e-05
+prop_psi0 0.9995487205 stabilization 0.003704631062 energy 1.998518905e-05 +/- 6.3047903e-05
+prop_psi0 0.9999738605 stabilization 0.01852315531 energy 1.252867327e-05 +/- 5.038939728e-05
+prop_psi0 0.9999981539 stabilization 0.09261577655 energy 5.210428392e-06 +/- 4.240079485e-05
+prop_psi0 0.9999998007 stabilization 0.4630788827 energy 2.257962162e-06 +/- 3.381924063e-05
+prop_psi0 0.9999999632 stabilization 2.315394414 energy -7.644399564e-07 +/- 2.256714239e-05
+prop_psi0 0.999999995 stabilization 11.57697207 energy -2.861250072e-06 +/- 1.249443295e-05
+prop_psi0 0.9999999994 stabilization 57.88486034 energy -2.099403006e-06 +/- 5.668609957e-06
+prop_psi0 1 stabilization 289.4243017 energy -6.894260446e-07 +/- 1.664827003e-06
+prop_psi0 1 stabilization 1447.121509 energy -1.567064425e-07 +/- 3.695690916e-07
+prop_psi0 1 stabilization 7235.607543 energy -3.220870597e-08 +/- 7.559489492e-08
+prop_psi0 1 stabilization 36178.03771 energy -6.477498316e-09 +/- 1.518822426e-08
+prop_psi0 1 energy 0 +/- 0
+Minimum stabilization 11.57697207
+Estimated change 2.192330828e-05 +/- 9.483899801e-06
+Iterations without a downhill move:1
+####################
+step 5: current energy -5.926978009 +/- 0.0001816021035
+prop_psi0 0.9071894581 stabilization 0.0001481744502 energy 1.062127175e-05 +/- 0.0002028159527
+prop_psi0 0.9920198157 stabilization 0.0007408722512 energy -6.108586502e-05 +/- 9.089303173e-05
+prop_psi0 0.9995308328 stabilization 0.003704361256 energy -0.0001128312191 +/- 6.526336489e-05
+prop_psi0 0.9999685163 stabilization 0.01852180628 energy -0.0001067324409 +/- 5.252784663e-05
+prop_psi0 0.9999970702 stabilization 0.0926090314 energy -8.7554355e-05 +/- 4.008191761e-05
+prop_psi0 0.9999995702 stabilization 0.463045157 energy -6.397312736e-05 +/- 3.180767855e-05
+prop_psi0 0.9999999317 stabilization 2.315225785 energy -3.772512105e-05 +/- 1.853702491e-05
+prop_psi0 0.9999999941 stabilization 11.57612892 energy -1.389926921e-05 +/- 6.802624733e-06
+prop_psi0 0.9999999997 stabilization 57.88064462 energy -3.124699768e-06 +/- 1.877100236e-06
+prop_psi0 1 stabilization 289.4032231 energy -5.986627695e-07 +/- 4.571111077e-07
+prop_psi0 1 stabilization 1447.016116 energy -1.169217829e-07 +/- 9.752067804e-08
+prop_psi0 1 stabilization 7235.080578 energy -2.324664909e-08 +/- 1.979084542e-08
+prop_psi0 1 stabilization 36175.40289 energy -4.643587337e-09 +/- 3.97003823e-09
+prop_psi0 1 energy 0 +/- 0
+Minimum stabilization 0.003704361256
+Estimated change -7.656714195e-05 +/- 8.083075204e-05
+####################
+step 6: current energy -5.927421067 +/- 0.0001634755303
+prop_psi0 0.9083049127 stabilization 0.0001481855267 energy -1.065720625e-05 +/- 0.0002249580675
+prop_psi0 0.9923127015 stabilization 0.0007409276334 energy 8.770206961e-05 +/- 9.176318893e-05
+prop_psi0 0.9995858694 stabilization 0.003704638167 energy 4.54090633e-05 +/- 4.73567888e-05
+prop_psi0 0.9999800682 stabilization 0.01852319083 energy 1.787555512e-05 +/- 3.514166661e-05
+prop_psi0 0.9999987931 stabilization 0.09261595417 energy 1.261699481e-05 +/- 2.512999053e-05
+prop_psi0 0.9999998929 stabilization 0.4630797709 energy 1.317423437e-05 +/- 1.41238087e-05
+prop_psi0 0.9999999912 stabilization 2.315398854 energy 1.361937805e-05 +/- 9.848715411e-06
+prop_psi0 0.9999999986 stabilization 11.57699427 energy 1.128773284e-05 +/- 8.351339014e-06
+prop_psi0 0.9999999997 stabilization 57.88497136 energy 6.052923396e-06 +/- 4.689132777e-06
+prop_psi0 1 stabilization 289.4248568 energy 1.84140922e-06 +/- 1.449514297e-06
+prop_psi0 1 stabilization 1447.124284 energy 4.114248171e-07 +/- 3.25141915e-07
+prop_psi0 1 stabilization 7235.62142 energy 8.426184217e-08 +/- 6.66462187e-08
+prop_psi0 1 stabilization 36178.1071 energy 1.693375697e-08 +/- 1.339587867e-08
+prop_psi0 1 energy 0 +/- 0
+Minimum stabilization 0.0001481855267
+Estimated change 0.0002875888851 +/- 0.000239303687
+Iterations without a downhill move:2
+Reached 2 without a downhill move and at the maximum number of samples.
+Halting.
+Wall time for this method: 199 seconds.
+Total wall time so far: 200 seconds.

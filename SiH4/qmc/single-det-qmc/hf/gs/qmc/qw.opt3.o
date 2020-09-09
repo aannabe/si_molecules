@@ -1,0 +1,250 @@
+------------------------------------------------
+Quantum Walk development version
+Contributions from: (in no particular order) 
+Michal Bajdich, Shuming Hu, Jindrich Kolorenc, Kevin Rasch, 
+Pavel Vagner, Rene Derian, Paul Kent, Jarrod McClean, 
+Fernando Reboredo, Lucas Wagner, Hiori Kino, Lubos Mitas, Brian Busemeyer, Joshua Schiller,
+Li Chen, Kiel Williams, and Huihuo Zheng
+Originated at North Carolina State University 
+Please cite J. Comp. Phys. v 228 pp 3390-3404 (2009) 
+ when publishing results from this program.
+------------------------------------------------
+Running on nid02520
+Thu Sep  3 16:29:04 2020
+
+     System 
+Atomic positions 
+ Label          Charge            x               y               z   
+    Si               4               0               0               0
+     H               1         1.61458         1.61458         1.61458
+     H               1        -1.61458        -1.61458         1.61458
+     H               1        -1.61458         1.61458        -1.61458
+     H               1         1.61458        -1.61458        -1.61458
+
+
+     Wavefunction 
+Slater Determinant
+1 determinant
+State: 
+spin up:
+  1 2 3 4 
+spin down: 
+  1 2 3 4 
+Molecular Orbital object : Cutoff MO 
+Number of molecular orbitals: 4
+Basis functions: 
+  Cubic spline for Si
+  19  radial functions
+    function  symmetry    cutoff
+           0         S     20.48
+           1         S      6.98
+           2         S     10.98
+           3         S     16.98
+           4         S     25.98
+           5         P     23.98
+           6         P      4.48
+           7         P      6.98
+           8         P     10.98
+           9         P     30.48
+          10 5D_siesta      4.98
+          11 5D_siesta      7.98
+          12 5D_siesta     13.48
+          13 5D_siesta     22.48
+          14 7F_siesta      6.48
+          15 7F_siesta     10.48
+          16 7F_siesta     16.48
+          17  9G_pyscf      7.48
+          18  9G_pyscf     10.98
+  Cubic spline for H
+  14  radial functions
+    function  symmetry    cutoff
+           0         S     17.98
+           1         S     28.48
+           2         S     16.98
+           3         S      9.98
+           4         S      5.98
+           5         P     15.98
+           6         P      9.48
+           7         P      5.48
+           8         P      3.48
+           9 5D_siesta     10.48
+          10 5D_siesta      5.98
+          11 5D_siesta      3.98
+          12 7F_siesta      7.48
+          13 7F_siesta      4.48
+
+Jastrow2 function
+Group 0
+  Basis optimization turned on
+  Separate spin two-body
+    Coefficients frozen
+    Like coefficients 0.25  0  
+    Unlike Coefficients 0  0.5  
+
+  Electron-electron basis
+    Cutoff cusp
+    Gamma 33.0745   Cusp 1
+    Cutoff cusp
+    Gamma 9.88195   Cusp 1
+
+Group 1
+  Basis optimization turned on
+  One-body terms 
+    Atom   Coefficients 
+    H  0.342128  0.222889  -0.000372946  0.00543105  0.00557896  
+    Si  0.229067  0.739624  -0.150731  0.0662272  -0.0424347  
+
+  Two-body terms 
+    Coefficients -0.0753765  -0.233975  -0.11715  0.00961733  -0.00401268  
+   Three-body terms 
+    Atom   Coefficients 
+    H  0  0  0  0  0  0  0  0  0  0  0  0  
+    Si  0  0  0  0  0  0  0  0  0  0  0  0  
+
+  Electron-ion basis
+    Poly_pade function
+    beta : 0.16433  4.76701  27.5642  140.479  699.752  
+    cutoff distance : 15
+
+    Poly_pade function
+    beta : 0.0568901  4.23486  24.9284  127.424  635.09  
+    cutoff distance : 15
+
+
+  Electron-electron basis
+    Poly_pade function
+    beta : 0.311029  5.49362  31.1631  158.305  788.043  
+    cutoff distance : 15
+
+
+
+Pseudopotential 
+atom Si
+Integration points 12
+Cutoff for static calculation 2.6
+Pseudopotential for spin up: 
+  R^n *Gaussian
+  Expansion 0
+       coeff         n  exponent
+     14.8328         0   9.44702
+     26.3497         0   2.55381
+  Expansion 1
+       coeff         n  exponent
+      7.6214         0      3.66
+     10.3316         0   1.90365
+  Expansion 2
+       coeff         n  exponent
+           4        -1   5.16832
+    -14.8182         0   3.93347
+     20.6733         1   8.86169
+Pseudopotential for spin down: 
+  R^n *Gaussian
+  Expansion 0
+       coeff         n  exponent
+     14.8328         0   9.44702
+     26.3497         0   2.55381
+  Expansion 1
+       coeff         n  exponent
+      7.6214         0      3.66
+     10.3316         0   1.90365
+  Expansion 2
+       coeff         n  exponent
+           4        -1   5.16832
+    -14.8182         0   3.93347
+     20.6733         1   8.86169
+atom H
+Integration points 6
+Cutoff for static calculation 20
+Pseudopotential for spin up: 
+  R^n *Gaussian
+  Expansion 0
+       coeff         n  exponent
+           0         0         1
+  Expansion 1
+       coeff         n  exponent
+           1        -1   21.2436
+    -10.8519         0    21.777
+     21.2436         1   21.2436
+Pseudopotential for spin down: 
+  R^n *Gaussian
+  Expansion 0
+       coeff         n  exponent
+           0         0         1
+  Expansion 1
+       coeff         n  exponent
+           1        -1   21.2436
+    -10.8519         0    21.777
+     21.2436         1   21.2436
+
+
+-----------------------------
+Wave function optimization:  
+Number of configurations : 2176
+Maximum iterations: 30
+nparms 44
+Minimization function : Variance 
+----------------------------
+Running with reference energy -6.26939
+iteration # 1  dispersion= 0.234544
+  average gradient: 0.122504 tolerance 0.0001
+iteration # 2  dispersion= 0.233276
+  average gradient: 0.0540163 tolerance 0.0001
+iteration # 3  dispersion= 0.231244
+  average gradient: 0.0177282 tolerance 0.0001
+iteration # 4  dispersion= 0.22841
+  average gradient: 0.0576772 tolerance 0.0001
+iteration # 5  dispersion= 0.222087
+  average gradient: 0.0361728 tolerance 0.0001
+iteration # 6  dispersion= 0.219908
+  average gradient: 0.187435 tolerance 0.0001
+iteration # 7  dispersion= 0.214656
+  average gradient: 0.0272837 tolerance 0.0001
+iteration # 8  dispersion= 0.211187
+  average gradient: 0.0132177 tolerance 0.0001
+iteration # 9  dispersion= 0.210338
+  average gradient: 0.0421726 tolerance 0.0001
+iteration # 10  dispersion= 0.207786
+  average gradient: 0.0122141 tolerance 0.0001
+iteration # 11  dispersion= 0.2056
+  average gradient: 0.0278259 tolerance 0.0001
+iteration # 12  dispersion= 0.203679
+  average gradient: 0.0205349 tolerance 0.0001
+iteration # 13  dispersion= 0.203129
+  average gradient: 0.0136721 tolerance 0.0001
+iteration # 14  dispersion= 0.202652
+  average gradient: 0.00272796 tolerance 0.0001
+iteration # 15  dispersion= 0.201362
+  average gradient: 0.00678071 tolerance 0.0001
+iteration # 16  dispersion= 0.200987
+  average gradient: 0.0142706 tolerance 0.0001
+iteration # 17  dispersion= 0.200523
+  average gradient: 0.00236607 tolerance 0.0001
+iteration # 18  dispersion= 0.199074
+  average gradient: 0.00577352 tolerance 0.0001
+iteration # 19  dispersion= 0.198844
+  average gradient: 0.00666275 tolerance 0.0001
+iteration # 20  dispersion= 0.198451
+  average gradient: 0.00212526 tolerance 0.0001
+iteration # 21  dispersion= 0.198217
+  average gradient: 0.000792196 tolerance 0.0001
+iteration # 22  dispersion= 0.198092
+  average gradient: 0.00762492 tolerance 0.0001
+iteration # 23  dispersion= 0.197857
+  average gradient: 0.00421103 tolerance 0.0001
+iteration # 24  dispersion= 0.197552
+  average gradient: 0.00373426 tolerance 0.0001
+iteration # 25  dispersion= 0.197069
+  average gradient: 0.00454323 tolerance 0.0001
+iteration # 26  dispersion= 0.196855
+  average gradient: 0.0111328 tolerance 0.0001
+iteration # 27  dispersion= 0.196137
+  average gradient: 0.0014408 tolerance 0.0001
+iteration # 28  dispersion= 0.194809
+  average gradient: 0.0328201 tolerance 0.0001
+iteration # 29  dispersion= 0.194246
+  average gradient: 0.0115388 tolerance 0.0001
+iteration # 30  dispersion= 0.193689
+  average gradient: 0.00431137 tolerance 0.0001
+Optimization finished.  New wave function is in qw.opt3.wfout
+Wall time for this method: 13 seconds.
+Total wall time so far: 13 seconds.
