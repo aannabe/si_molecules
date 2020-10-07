@@ -232,12 +232,14 @@ print('\nSi CRYSTAL NUMBERS: \n')
 pbe0_dmc = s2f('-3.932200(22)')
 hf_espress = s2f('-3.78878403(1)')
 atom_fci = s2f('-3.762073(57)')
-corr_atom = pbe0_dmc-hf_espress
+#corr_atom = pbe0_dmc-hf_espress
+coh_exp = s2f('4.680(1)')/toev   # Exp: 4.68(8)
 coh_dmc = -(pbe0_dmc-atom_fci)
-print('Si crystal corr/atom:', f2s(corr_atom))
-print('Si crystal coh [eV]:', f2s(coh_dmc*toev))
-coh_exp = s2f('4.68(1)')/toev
+corr_atom = (atom_fci-coh_exp)-hf_espress  # True estimated correlation
 fn_err_atom = coh_exp-coh_dmc
+
+print('Si crystal corr/atom [Ha]:', f2s(corr_atom))
+print('Si crystal coh [eV]:', f2s(coh_dmc*toev))
 print('Si crystal FN error/atom [eV]: ', f2s(fn_err_atom*toev))
 print('Si crystal FN error/corr per atom [perc.]: ', f2s(-fn_err_atom/corr_atom*100.0))
 print('Si crystal FN error/Ne per atom [eV]: ', f2s(fn_err_atom*toev/4.0))
