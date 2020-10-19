@@ -17,6 +17,7 @@ kcalMoltoev = 0.0433641153087705
 cmtoev = 0.00012398425731484318
 cmtoHa = 0.0000045563352812122295
 pd.options.display.float_format = "{:,.5f}".format
+pd.set_option('display.max_columns', None)
 
 class ShorthandFormatter(string.Formatter):
     def format_field(self, value, format_spec):
@@ -184,41 +185,43 @@ print(energy)
 
 
 
-print("\nFN ANALYSIS:")
+print("\nFN ANALYSIS:\n")
 
 fn_df = pd.read_csv('fn_analysis.csv', delim_whitespace=True, index_col=False, engine='python') #sep='\s*&\s*',
 fn_df = pd_s2f(fn_df)
 
-fn_df['corr'] = fn_df['CC'] - fn_df['SCF']
-fn_df['error'] = fn_df['CC'] - fn_df['DMC']
-fn_df['eta'] = (fn_df['error']/fn_df['corr'])*100.0
-fn_df['eta2'] = (-fn_df['error']/fn_df['Ne'])*toev
-fn_df['error'] = -fn_df['error']*toev
+fn_df['corr']     = fn_df['CC'] - fn_df['SCF']
+fn_df['error']    = fn_df['CC'] - fn_df['DMC']
+fn_df['err_corr'] = (fn_df['error']/fn_df['corr'])*100.0
+fn_df['err_Ne']   = (-fn_df['error']/fn_df['Ne'])*toev
+fn_df['err_Nat']  = (-fn_df['error']/fn_df['N_Si'])*toev
+fn_df['error']    = -fn_df['error']*toev
 
 del fn_df['CC']
 del fn_df['Ne']
+del fn_df['N_Si']
 
 error = np.array(fn_df['error'].values)
-eta = np.array(fn_df['eta'].values)
-eta2 = np.array(fn_df['eta2'].values)
+err_corr = np.array(fn_df['err_corr'].values)
+err_Ne = np.array(fn_df['err_Ne'].values)
+err_Nat = np.array(fn_df['err_Nat'].values)
 print('FN error MAD [eV]:', f2s(np.mean(error)))
-print('FN/corr MAD [perc.]:', f2s(np.mean(eta)))
-print('FN/Nelec MAD [ev]:', f2s(np.mean(eta2)))
+print('FN/corr MAD [perc.]:', f2s(np.mean(err_corr)))
+print('FN/Nelec MAD [ev]:', f2s(np.mean(err_Ne)))
+print('FN/Natom MAD [ev]:', f2s(np.mean(err_Nat)))
 
 gs_mad = fn_df[fn_df['State']=='GS']
-print(gs_mad)
-gs_mad = np.array(gs_mad.loc[:,'error':'eta2'].values)
-fn_df.loc['gs_mad','error'] = np.mean(gs_mad, axis=0)[0]
-fn_df.loc['gs_mad','eta']   = np.mean(gs_mad, axis=0)[1]
-fn_df.loc['gs_mad','eta2']  = np.mean(gs_mad, axis=0)[2]
+#print(fn_df['State']=='GS')
+gs_mad = gs_mad.loc[:,'error':]
+df_height = len(gs_mad.index)
+#print(df_height)
+fn_df.loc['gs_mad','error':]  = gs_mad.sum()/df_height
+#print(pd_f2s(fn_df))
 
 ex_mad = fn_df[fn_df['State']=='EX']
-print(ex_mad)
-ex_mad = np.array(ex_mad.loc[:,'error':'eta2'].values)
-fn_df.loc['ex_mad','error'] = np.mean(ex_mad, axis=0)[0]
-fn_df.loc['ex_mad','eta']   = np.mean(ex_mad, axis=0)[1]
-fn_df.loc['ex_mad','eta2']  = np.mean(ex_mad, axis=0)[2]
-
+ex_mad = ex_mad.loc[:,'error':]
+df_height = len(ex_mad.index)
+fn_df.loc['ex_mad','error':]  = ex_mad.sum()/df_height
 
 fn_df = pd_f2s(fn_df)
 del fn_df['State']
@@ -227,20 +230,20 @@ fn_df = fn_df.replace(np.nan, ' ', regex=True)
 fn_df = fn_df.replace(np.nan, ' ', regex=True)
 print(fn_df.to_latex(escape=False))
 
-### All below are per atom
+#### All below are per atom
 print('\nSi CRYSTAL NUMBERS: \n')
 pbe0_dmc = s2f('-3.932200(22)')
 hf_espress = s2f('-3.78878403(1)')
 atom_fci = s2f('-3.762073(57)')
 #corr_atom = pbe0_dmc-hf_espress
-coh_exp = s2f('4.680(1)')/toev   # Exp: 4.68(8)
+coh_exp = s2f('4.68(1)')/toev   # Exp: 4.68(8)
 coh_dmc = -(pbe0_dmc-atom_fci)
 corr_atom = (atom_fci-coh_exp)-hf_espress  # True estimated correlation
 fn_err_atom = coh_exp-coh_dmc
 
-print('Si crystal corr/atom [Ha]:', f2s(corr_atom))
+print('Si crystal corr (per atom) [Ha]:', f2s(corr_atom))
 print('Si crystal coh [eV]:', f2s(coh_dmc*toev))
-print('Si crystal FN error/atom [eV]: ', f2s(fn_err_atom*toev))
-print('Si crystal FN error/corr per atom [perc.]: ', f2s(-fn_err_atom/corr_atom*100.0))
-print('Si crystal FN error/Ne per atom [eV]: ', f2s(fn_err_atom*toev/4.0))
+print('Si crystal FN error (per atom) [eV]: ', f2s(fn_err_atom*toev))
+print('Si crystal FN error/corr (per atom) [perc.]: ', f2s(-fn_err_atom/corr_atom*100.0))
+print('Si crystal FN error/Ne (per atom) [eV]: ', f2s(fn_err_atom*toev/4.0))
 
